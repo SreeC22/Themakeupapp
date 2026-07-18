@@ -386,7 +386,7 @@ const WAITLIST_ENDPOINT = "https://formsubmit.co/ajax/f698957b0718bfcbc78ae5cdaf
 document.querySelectorAll("[data-app-name]").forEach(el => el.textContent = APP_NAME);
 document.title = APP_NAME;
 
-/* depth: continuous slider interpolated across 12 anchor colors */
+/* depth: continuous slider interpolated across 10 anchor colors */
 /* Monk Skin Tone scale (skintone.google): research-backed 10-point range */
 const ANCHORS = ["#F6EDE4","#F3E7DB","#F7EAD0","#EADABA","#D7BD96","#A07E56","#825C43","#604134","#3A312A","#292420"];
 const DEPTH_NAMES = ["Porcelain 1","Fair 2","Light 3","Medium 4","Tan 5","Bronze 6","Deep 7","Deep 8","Rich 9","Rich 10"];
@@ -402,7 +402,7 @@ function depthSegment(v){
   while (i < STOPS.length - 2 && v > STOPS[i+1]) i++;
   return {i, t: (v - STOPS[i]) / (STOPS[i+1] - STOPS[i])};
 }
-function depthColor(v){                       // v: 0–100 → smooth color along the visible track
+function depthColor(v){                       // v: 0 to 100, smooth color along the visible track
   const {i, t} = depthSegment(v);
   return hexLerp(ANCHORS[i], ANCHORS[i+1], Math.min(1, Math.max(0, t)));
 }
