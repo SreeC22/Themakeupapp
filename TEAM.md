@@ -93,7 +93,7 @@ Definition of done: each check stated, run, and its result pasted, pass or fail 
 
 ### Chief Security Officer (`chief-security-officer`, reports to Founder)
 Mandate: keep user privacy and app security intact.
-Owns: PII handling (waitlist email plus tone profile, app profiles and posts), Supabase RLS and secret hygiene, auth, App Store privacy labels, data minimization, against OWASP, Apple privacy guidelines, and GDPR/CCPA.
+Owns: PII handling (waitlist email plus tone profile, app profiles and posts), Supabase RLS and secret hygiene, auth, App Store privacy labels, data minimization, against OWASP, Apple privacy guidelines, and GDPR/CCPA. Stays current by reading security and privacy research on arXiv (cs.CR); papers are cited and advisory, standards stay the baseline.
 Definition of done: no secret in the client or repo, RLS proven, every stored field maps to a shipped feature, users can delete their data.
 
 ## Wired agents (quick reference)
