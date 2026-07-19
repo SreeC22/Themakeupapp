@@ -14,6 +14,7 @@ The Makeup App (working title): makeup recommendations organized by skin tone. A
 - Next build milestone: M1 in APP_PLAN.md. Expo (React Native, TypeScript) app in app/, quiz working offline, tone profile in AsyncStorage. iOS first.
 - Name: undecided. The site renames via the APP_NAME constant in index.html. Candidate list lives with the owner; Everytone is the current front-runner.
 - Strategy note from the last product grill: wedge segments are olive and deep undertones (sharpest verified pain, no incumbent coverage); v1 must be useful single-player (seeded tone-tagged picks) before community features.
+- Strategy notes from the 2026-07-19 grill: do not overclaim "match" (tone is the strongest single filter, not a complete one). Single-player value lands at M1: the quiz ends in seeded tone-tagged picks, offline. Seed unevenly: over-seed olive at every depth and deep 7 to 10, and pull the recruiting empty states forward from M3 (the matrix is ~40 cells, twins see ~3, even seeding leaves feeds empty). Harden olive detection (today it rides on one vein option): add a confirming signal when the quiz derives neutral, or elevate the override there. Name the return loop before building community (fresh twin posts, saved routines, restock nudges). The moat is the tone-tagged corpus, so v1 effort goes to quiz accuracy and corpus growth. Watch two validators: waitlist tone distribution (is the wedge real) and quiz override rate (is the quiz right).
 
 ## House rules (owner's law, do not relitigate)
 
