@@ -4,7 +4,7 @@ Context for Claude Code sessions in this repo. Read TEAM.md (roles), APP_PLAN.md
 
 ## What this is
 
-The Makeup App (working title): makeup recommendations organized by skin tone. A quiz derives a tone profile (depth on the Monk Skin Tone Scale + undertone), and users see product picks from people who match them. Live site: https://sreec22.github.io/Themakeupapp/ (GitHub Pages from main, root).
+Neu: makeup recommendations organized by skin tone. A quiz derives a tone profile (depth on the Monk Skin Tone Scale + undertone), and users see product picks from people who match them. Live site: https://sreec22.github.io/Themakeupapp/ (GitHub Pages from main, root).
 
 ## Current state (2026-07-18)
 
@@ -12,9 +12,9 @@ The Makeup App (working title): makeup recommendations organized by skin tone. A
 - Waitlist: form POSTs to FormSubmit (alias endpoint in the WAITLIST_ENDPOINT constant in index.html); signups arrive in the owner's Gmail with tone profile attached.
 - SCHEMA.sql: Supabase schema ready to paste (waitlist table + app tables with RLS). Waiting on the owner to create the free Supabase project and provide URL + anon key. Then point the site's form at the Supabase REST insert and keep FormSubmit for email notification.
 - Next build milestone: M1 in APP_PLAN.md. Expo (React Native, TypeScript) app in app/, quiz working offline, tone profile in AsyncStorage. iOS first.
-- Name: undecided. The site renames via the APP_NAME constant in index.html. Candidate list lives with the owner; Everytone is the current front-runner.
+- Name: Neu, decided 2026-07-19 (wordmark lowercase "neu"). Trademark screen required before launch: NEU Cosmetics (UAE distributor) and the phonetic neighbor Nu Skin exist in-industry. The site renames via the APP_NAME constant in index.html.
 - Strategy note from the last product grill: wedge segments are olive and deep undertones (sharpest verified pain, no incumbent coverage); v1 must be useful single-player (seeded tone-tagged picks) before community features.
-- Strategy notes from the 2026-07-19 grill: do not overclaim "match" (tone is the strongest single filter, not a complete one). Single-player value lands at M1: the quiz ends in seeded tone-tagged picks, offline. Seed unevenly: over-seed olive at every depth and deep 7 to 10, and pull the recruiting empty states forward from M3 (the matrix is ~40 cells, twins see ~3, even seeding leaves feeds empty). Harden olive detection (today it rides on one vein option): add a confirming signal when the quiz derives neutral, or elevate the override there. Name the return loop before building community (fresh twin posts, saved routines, restock nudges). The moat is the tone-tagged corpus, so v1 effort goes to quiz accuracy and corpus growth. Watch two validators: waitlist tone distribution (is the wedge real) and quiz override rate (is the quiz right).
+- Strategy notes from the 2026-07-19 grill: do not overclaim "match" (tone is the strongest single filter, not a complete one). Single-player value lands at M1: the quiz ends in seeded tone-tagged picks, offline. Seed unevenly: over-seed olive at every depth and deep 7 to 10, and pull the recruiting empty states forward from M3 (the matrix is ~40 cells, twins see ~3, even seeding leaves feeds empty). Harden olive detection (today it rides on one vein option): add a confirming signal when the quiz derives neutral, or elevate the override there. Name the return loop before building community (fresh twin posts, saved routines, restock nudges). The moat is the tone-tagged corpus, so v1 effort goes to quiz accuracy and corpus growth. Watch two validators: waitlist tone distribution (is the wedge real) and quiz override rate (is the quiz right). Competitive: TrueHue AI exists (camera AI matched to model imagery); differentiation is the no-camera quiz plus a real-people corpus.
 
 ## House rules (owner's law, do not relitigate)
 

@@ -1,4 +1,4 @@
-# The Makeup App (working title)
+# Neu
 
 Makeup recommendations from people with your skin tone.
 
@@ -54,7 +54,7 @@ React Native (Expo, TypeScript), iOS first. Supabase backend. See [APP_PLAN.md](
 | Phase | Status |
 |---|---|
 | Landing page + tone quiz + waitlist | Done, in this repo |
-| Name + domain | Deciding (site renames via a single `APP_NAME` constant) |
+| Name + domain | Neu decided; domain and trademark screen pending |
 | React Native app, milestone 1 (offline quiz + feed skeleton) | Next |
 | TestFlight beta, invite the tone-tagged waitlist | After |
 

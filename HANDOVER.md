@@ -27,7 +27,7 @@ Done when it runs in Expo Go with zero TypeScript errors and the quiz matches th
 ## Blocked on owner (Sree only)
 
 1. Supabase project. Owner creates the free project and hands the URL plus anon key to the Tech Lead. Gates M2 (backend, auth, seed feed). SCHEMA.sql is ready to paste.
-2. App name. Undecided, Everytone is the front-runner. Site renames via one constant (index.html:384).
+2. App name: resolved. Neu, decided 2026-07-19, trademark screen required before launch. Site renamed via the constant (index.html:384).
 3. Apple Developer account ($99/yr). Gates M4 (TestFlight). Not needed before then.
 
 ## Gotchas

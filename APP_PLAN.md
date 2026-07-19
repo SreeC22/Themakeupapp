@@ -1,4 +1,4 @@
-# The Makeup App: React Native App Plan
+# Neu: React Native App Plan
 
 iOS-first React Native app. Skin tone is the organizing principle: quiz → tone profile → community recommendations from people who match you ("tone twins").
 
@@ -31,8 +31,8 @@ Match score (v1, computed client-side or SQL view): same undertone +50, tone dep
 
 ```
 (onboarding)/welcome        value prop, sign in with Apple / email OTP
-(onboarding)/quiz           tone quiz, shade + 3 undertone checks (same logic as the landing page)
-(onboarding)/profile-ready  tone profile card reveal → enter app
+(onboarding)/quiz           tone quiz: shade + 3 undertone checks + neutral-confirm (same logic as the site)
+(onboarding)/profile-ready  tone profile card reveal → starter picks → enter app
 (tabs)/feed                 default: posts by tone twins, match % chip on each card
 (tabs)/explore              filter by category / any tone / brand search
 (tabs)/post                 create a rec: pick/add product, shade, note, rating
@@ -42,9 +42,9 @@ post/[id]                   post detail + comments (comments can slip to v1.1)
 
 ## Milestones
 
-**M1: Skeleton (days 1 to 2).** Expo app scaffolded in `app/` with TypeScript, Expo Router, design tokens, tab navigation, quiz flow working fully offline (no backend), tone profile persisted locally (AsyncStorage). *Demoable in simulator/Expo Go.*
+**M1: Skeleton (days 1 to 2).** Expo app scaffolded in `app/` with TypeScript, Expo Router, design tokens, tab navigation, quiz flow working fully offline (no backend), tone profile persisted locally (AsyncStorage). The quiz ends on starter picks: seeded tone-tagged recs from a bundled JSON, offline, labeled curated. Single-player value lands here, not at M3. *Demoable in simulator/Expo Go.*
 
-**M2: Backend (days 3 to 4).** Supabase project; schema above with RLS (users write only their own rows, read all); Sign in with Apple + email OTP; quiz result saved to `profiles`; seed ~30 realistic posts across tones so every tone profile sees a live feed.
+**M2: Backend (days 3 to 4).** Supabase project; schema above with RLS (users write only their own rows, read all); Sign in with Apple + email OTP; quiz result saved to `profiles`; seed unevenly so the wedge fills first: olive at every depth and deep 7 to 10 get full feeds, other cells get recruiting empty states. All seed posts are labeled curated starter picks, never fake users.
 
 **M3: Community loop (days 5 to 7).** Feed filtered by tone-match with match chips; post creation; like/save; Explore with filters; empty states that recruit ("be the first Deep 8 · Warm poster").
 
@@ -54,7 +54,9 @@ post/[id]                   post detail + comments (comments can slip to v1.1)
 
 - **No camera/AI shade detection in v1**: quiz only (same promise the landing page makes).
 - **iOS first**, Android later (RN makes it cheap when the time comes).
-- **Name pending**: code uses `APP_NAME` config constant, same as the site.
+- **Quiz v1.1 neutral-confirm (site and app, identical):** when the signals derive neutral without the olive vein answer, ask one more: "Does your skin ever look slightly gray or green in photos or against white?" Yes = olive, no or unsure = neutral with the override elevated. Specced here; the site change ships separately with owner approval.
+- **Return loop (named):** fresh twin posts in the feed, saved recs, and a "new for your tone" digest after v1. Community features wait until this loop is real.
+- **Name: Neu** (decided 2026-07-19, trademark screen required before launch). Wordmark lowercase "neu". Code uses the `APP_NAME` constant, same as the site.
 - Waitlist emails + tone profiles arrive via FormSubmit → Gmail; export to CSV when inviting to TestFlight.
 
 ## Repo layout
