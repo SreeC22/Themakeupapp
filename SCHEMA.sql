@@ -1,4 +1,4 @@
--- The Makeup App: Supabase schema (paste into Supabase SQL editor)
+-- Neu: Supabase schema (paste into Supabase SQL editor)
 -- Waitlist now; app tables for milestone M2. Matches APP_PLAN.md.
 
 -- ---------- waitlist (live site writes here) ----------
