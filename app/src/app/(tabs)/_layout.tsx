@@ -4,6 +4,7 @@ import { Tabs } from 'expo-router';
 import { usePalette } from '../../components/neu';
 import { font, type } from '../../theme/tokens';
 
+// LAUNCH.md: three tabs. Feed, Saved, Me. Find/Discover is cut.
 export default function TabsLayout() {
   const c = usePalette();
   return (
@@ -18,18 +19,9 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'For You',
+          title: 'Feed',
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="sparkles-outline" color={color} size={size} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="discover"
-        options={{
-          title: 'Discover',
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="search-outline" color={color} size={size} />
           ),
         }}
       />
@@ -43,9 +35,9 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen
-        name="you"
+        name="me"
         options={{
-          title: 'You',
+          title: 'Me',
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="person-circle-outline" color={color} size={size} />
           ),

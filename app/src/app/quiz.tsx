@@ -13,19 +13,14 @@ import {
   usePalette,
 } from '../components/neu';
 import { useAppState } from '../lib/app-state';
-import {
-  depthColor,
-  depthName,
-  finalUndertone,
-  needsNeutralConfirm,
-  NeutralConfirm,
-  shadeValues,
-  Signals,
-} from '../lib/tone';
+import { depthColor, depthName, deriveUndertone, shadeValues, Signals } from '../lib/tone';
 import { font, radius, space, type, veinHues } from '../theme/tokens';
 
-type Step = 'shade' | 'vein' | 'sun' | 'jewel' | 'confirm';
-const ORDER: Step[] = ['shade', 'vein', 'sun', 'jewel', 'confirm'];
+// LAUNCH.md call 6: the app ships base deriveUndertone only. The
+// neutral-confirm extension in tone.ts lands on site and app in the
+// same change, post-launch, or not at all.
+type Step = 'shade' | 'vein' | 'sun' | 'jewel';
+const ORDER: Step[] = ['shade', 'vein', 'sun', 'jewel'];
 
 export default function Quiz() {
   const c = usePalette();
@@ -33,9 +28,8 @@ export default function Quiz() {
   const [step, setStep] = useState<Step>('shade');
   const [depth, setDepth] = useState(50);
   const [signals, setSignals] = useState<Signals>({});
-  const [confirm, setConfirm] = useState<NeutralConfirm | undefined>();
 
-  const total = needsNeutralConfirm(signals) && signals.jewel ? 5 : 4;
+  const total = 4;
   const stepNum = ORDER.indexOf(step) + 1;
 
   const nearestShade = useMemo(() => {
@@ -56,18 +50,16 @@ export default function Quiz() {
     setSignals(next);
     if (key === 'vein') setStep('sun');
     else if (key === 'sun') setStep('jewel');
-    else if (needsNeutralConfirm(next)) setStep('confirm');
-    else setTimeout(() => finishWith(next, undefined), 180);
+    else setTimeout(() => finishWith(next), 180);
   }
 
-  function finishWith(sig: Signals, conf?: NeutralConfirm) {
+  function finishWith(sig: Signals) {
     setProfile({
       depth,
       color: depthColor(depth),
-      undertone: finalUndertone(sig, conf),
+      undertone: deriveUndertone(sig),
       overridden: false,
       signals: sig,
-      neutralConfirm: conf,
       createdAt: new Date().toISOString(),
     });
     router.replace('/result');
@@ -260,37 +252,6 @@ export default function Quiz() {
           </StepBlock>
         )}
 
-        {step === 'confirm' && (
-          <StepBlock
-            eyebrow="One more"
-            title="Does your skin ever look slightly gray or green in photos or against white?"
-            sub="This is the olive signal most tools miss.">
-            <QuizOption
-              label="Yes"
-              selected={confirm === 'yes'}
-              onPress={() => {
-                setConfirm('yes');
-                setTimeout(() => finishWith(signals, 'yes'), 180);
-              }}
-            />
-            <QuizOption
-              label="No"
-              selected={confirm === 'no'}
-              onPress={() => {
-                setConfirm('no');
-                setTimeout(() => finishWith(signals, 'no'), 180);
-              }}
-            />
-            <QuizOption
-              label="Not sure"
-              selected={confirm === 'unsure'}
-              onPress={() => {
-                setConfirm('unsure');
-                setTimeout(() => finishWith(signals, 'unsure'), 180);
-              }}
-            />
-          </StepBlock>
-        )}
       </ScrollView>
     </Screen>
   );
