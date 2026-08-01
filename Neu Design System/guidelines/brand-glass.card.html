@@ -1,0 +1,12 @@
+<!-- @dsCard group="Brand" viewport="700x200" name="Glassmorphism" subtitle="Frosted panels over a faint amethyst aurora — light & dark" -->
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<style>body{margin:0;font-family:var(--font-body);display:flex}
+.pane{flex:1;height:200px;position:relative;overflow:hidden;background:var(--aurora);display:flex;align-items:center;justify-content:center;gap:14px}
+.g{width:150px;padding:16px;border-radius:var(--r-lg);background:var(--glass);backdrop-filter:blur(var(--glass-blur)) saturate(140%);-webkit-backdrop-filter:blur(var(--glass-blur)) saturate(140%);border:1px solid var(--glass-border);box-shadow:var(--glass-shadow),inset 0 1px 0 var(--glass-highlight);color:var(--ink)}
+.t{font-family:var(--font-mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.h{font-weight:600;font-size:15px;margin-top:4px}
+.pill{margin-top:10px;font-weight:600;font-size:11px;padding:5px 11px;border-radius:var(--r-pill);background:var(--accent);color:#fff;display:inline-block}</style></head>
+<body>
+<div class="pane"><div class="g"><div class="t">Glass · light</div><div class="h">Frosted surface</div><span class="pill">Amethyst</span></div></div>
+<div class="pane theme-dark"><div class="g"><div class="t">Glass · dark</div><div class="h">Frosted surface</div><span class="pill">Amethyst</span></div></div>
+</body></html>

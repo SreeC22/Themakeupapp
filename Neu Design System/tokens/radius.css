@@ -1,0 +1,5 @@
+:root{
+  /* soft, editorial — rounded but not bubbly */
+  --r-xs:6px; --r-sm:10px; --r-md:14px; --r-lg:20px; --r-xl:28px;
+  --r-pill:999px; --r-circle:50%;
+}

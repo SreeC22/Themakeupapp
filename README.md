@@ -1,4 +1,4 @@
-# The Makeup App (working title)
+# Neu
 
 Makeup recommendations from people with your skin tone.
 
@@ -31,6 +31,7 @@ The fix is not more reviews. It is reviews from people who share your tone. That
 |---|---|
 | `index.html` | The live landing page: explains the app, runs the real tone quiz, and captures the waitlist. Fully self-contained (single file, inline CSS/JS, no build step). |
 | `APP_PLAN.md` | The full iOS app plan: React Native (Expo) stack, data model, screens, and milestones to TestFlight. |
+| `Neu Design System/` | Design tokens (light + dark), components, wireframes, brand voice, and the UI kit for the app. |
 | `README.md` | This file. |
 
 ## Landing page details
@@ -49,7 +50,7 @@ React Native (Expo, TypeScript), iOS first. Supabase backend. See [APP_PLAN.md](
 | Phase | Status |
 |---|---|
 | Landing page + tone quiz + waitlist | Done, in this repo |
-| Name + domain | Deciding (site renames via a single `APP_NAME` constant) |
+| Name + domain | Name locked: Neu. Domain pending; site rename lands with the next tested pass |
 | React Native app, milestone 1 (offline quiz + feed skeleton) | Next |
 | TestFlight beta, invite the tone-tagged waitlist | After |
 

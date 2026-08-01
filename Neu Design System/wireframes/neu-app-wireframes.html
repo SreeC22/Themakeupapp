@@ -1,0 +1,244 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neu — App Wireframes</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Gaegu:wght@400;700&display=swap">
+<style>
+  :root{
+    --ink:#2b2b2b; --line:#3a3a3a; --faint:#c9c4bc; --fill:#e9e5de; --fill-2:#f1eee8;
+    --paper:#f7f5f1; --board:#cfcabf; --olive:#6E7A4C; --hand:'Caveat',cursive; --body:'Gaegu',cursive;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--board);font-family:var(--body);color:var(--ink);padding:36px 28px 80px}
+  header{max-width:1200px;margin:0 auto 26px}
+  h1{font-family:var(--hand);font-size:42px;font-weight:700;margin:0;letter-spacing:.5px}
+  .sub{font-size:16px;color:#4d4a44;margin-top:2px}
+  .lane{max-width:1300px;margin:0 auto}
+  .lane-title{font-family:var(--hand);font-size:26px;font-weight:700;margin:34px 0 4px;display:flex;align-items:center;gap:10px}
+  .lane-title::before{content:'';width:22px;height:22px;border:2.5px solid var(--olive);border-radius:50%;background:radial-gradient(circle at 40% 35%,#cbb88f,#8a6446);display:inline-block}
+  .lane-note{font-size:15px;color:#4d4a44;margin:0 0 16px;max-width:640px}
+  .row{display:flex;gap:26px;flex-wrap:wrap}
+
+  /* phone frame */
+  .ph{width:250px;flex:none}
+  .cap{font-family:var(--hand);font-size:20px;font-weight:600;margin-bottom:7px;display:flex;align-items:center;gap:8px}
+  .num{width:22px;height:22px;border:2px solid var(--line);border-radius:50%;font-size:13px;display:flex;align-items:center;justify-content:center;font-family:var(--body)}
+  .scr{position:relative;height:508px;background:var(--paper);border:2.5px solid var(--line);border-radius:26px;padding:14px 13px;box-shadow:3px 4px 0 rgba(0,0,0,.14);overflow:hidden}
+  .scr::before{content:'';position:absolute;top:9px;left:50%;transform:translateX(-50%);width:52px;height:5px;background:var(--faint);border-radius:3px}
+  .stat{display:flex;justify-content:space-between;font-size:12px;color:#8a857c;margin:6px 2px 12px}
+
+  /* sketch primitives */
+  .bar{height:12px;background:var(--fill);border-radius:6px}
+  .bar.s{width:55%}.bar.m{width:78%}.bar.l{width:92%}
+  .h-lg{height:24px;background:var(--fill);border-radius:5px;margin-bottom:7px}
+  .h-lg.two{width:88%}
+  .box{border:2px dashed var(--faint);border-radius:12px;background:var(--fill-2)}
+  .pill{border:2px solid var(--line);border-radius:20px;padding:7px 0;text-align:center;font-size:14px}
+  .pill.fill{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .pill.olive{border-color:var(--olive);color:var(--olive)}
+  .chip{border:2px solid var(--faint);border-radius:20px;padding:4px 12px;font-size:13px;display:inline-block}
+  .chip.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .dot{width:34px;height:34px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#cbb88f,#8a6446);flex:none}
+  .dot.ring{box-shadow:0 0 0 3px var(--paper),0 0 0 6px var(--olive)}
+  .x{border:2px solid var(--faint);border-radius:10px;position:relative;background:var(--fill-2)}
+  .x::after{content:'';position:absolute;inset:0;background:
+    linear-gradient(to top right,transparent 49%,var(--faint) 49.5%,var(--faint) 50.5%,transparent 51%),
+    linear-gradient(to bottom right,transparent 49%,var(--faint) 49.5%,var(--faint) 50.5%,transparent 51%)}
+  .tabs{position:absolute;left:0;right:0;bottom:0;height:44px;border-top:2px solid var(--line);display:flex;background:var(--paper)}
+  .tabs div{flex:1;display:flex;align-items:center;justify-content:center;font-size:11px;color:#8a857c}
+  .tabs div.on{color:var(--olive);font-weight:700}
+  .tabs div::before{content:'';width:15px;height:15px;border:2px solid currentColor;border-radius:4px;margin-right:0;position:absolute;transform:translateY(-13px)}
+  .lbl{font-family:var(--hand);font-size:15px;color:#7a756c;margin:9px 2px 5px}
+  .flex{display:flex;gap:8px}
+  .col{display:flex;flex-direction:column}
+  .g2{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+  .card{border:2px solid var(--line);border-radius:12px;overflow:hidden}
+  .anno{font-family:var(--hand);font-size:14px;color:var(--olive);margin-top:8px;line-height:1.25}
+  .anno::before{content:'\261E  '}
+</style></head>
+<body>
+<header>
+  <h1>Neu — app wireframes</h1>
+  <div class="sub">Low-fi structure &amp; flow for the core journey. Grey = placeholder, olive = the tone/undertone signal. Not final visuals.</div>
+</header>
+
+<!-- CORE FLOW -->
+<div class="lane">
+  <div class="lane-title">Core flow</div>
+  <p class="lane-note">Onboarding quiz &rarr; your Monk-scale placement &rarr; a feed filtered through your tone twins &rarr; product truth &rarr; your profile.</p>
+  <div class="row">
+
+    <!-- 1 quiz -->
+    <div class="ph"><div class="cap"><span class="num">1</span> Quiz</div>
+      <div class="scr">
+        <div class="stat"><span>9:41</span><span>&#9679;&#9679;&#9679;</span></div>
+        <div class="flex" style="align-items:center;gap:10px;margin-bottom:14px">
+          <div style="width:20px;height:20px;border:2px solid var(--line);border-radius:5px"></div>
+          <div class="bar" style="flex:1;height:8px"></div>
+          <span style="font-size:12px;color:#8a857c">3/6</span>
+        </div>
+        <div class="lbl" style="margin-top:0;text-transform:uppercase;letter-spacing:1px">Your undertone</div>
+        <div class="h-lg"></div><div class="h-lg two"></div>
+        <div class="bar l" style="margin:10px 0 18px"></div>
+        <div class="col" style="gap:10px">
+          <div class="pill olive" style="text-align:left;padding:12px;display:flex;gap:10px;align-items:center"><span style="width:22px;height:22px;border-radius:50%;background:#e4a96b;flex:none"></span> Warm</div>
+          <div class="pill" style="text-align:left;padding:12px;display:flex;gap:10px;align-items:center;border-color:var(--faint)"><span style="width:22px;height:22px;border-radius:50%;background:#c98ba0;flex:none"></span> Cool</div>
+          <div class="pill" style="text-align:left;padding:12px;display:flex;gap:10px;align-items:center;border-color:var(--faint);background:var(--fill)"><span style="width:22px;height:22px;border-radius:50%;background:#8c9166;flex:none"></span> Olive &#10003;</div>
+        </div>
+        <div class="pill fill" style="position:absolute;left:13px;right:13px;bottom:14px">Continue</div>
+      </div>
+      <div class="anno">30 sec, no camera. One big tap per screen.</div>
+    </div>
+
+    <!-- 2 result -->
+    <div class="ph"><div class="cap"><span class="num">2</span> Tone result</div>
+      <div class="scr">
+        <div class="stat"><span>9:41</span><span>&#9679;&#9679;&#9679;</span></div>
+        <div class="lbl" style="margin-top:0;text-transform:uppercase;letter-spacing:1px">Your result</div>
+        <div class="h-lg"></div><div class="h-lg two"></div>
+        <div class="bar m" style="margin:10px 0 4px"></div><div class="bar s" style="margin-bottom:16px"></div>
+        <div class="box" style="padding:14px;margin-bottom:14px">
+          <div class="lbl" style="margin:0 0 10px">Monk Skin Tone Scale</div>
+          <div class="flex" style="gap:4px;align-items:flex-end;height:56px">
+            <div style="flex:1;height:34px;background:#f3e7db;border-radius:4px"></div>
+            <div style="flex:1;height:34px;background:#eadaba;border-radius:4px"></div>
+            <div style="flex:1;height:34px;background:#d7bd96;border-radius:4px"></div>
+            <div style="flex:1;height:34px;background:#a07e56;border-radius:4px"></div>
+            <div style="flex:1;height:56px;background:#825c43;border-radius:4px;box-shadow:0 0 0 2px var(--paper),0 0 0 4px var(--olive)"></div>
+            <div style="flex:1;height:34px;background:#604134;border-radius:4px"></div>
+            <div style="flex:1;height:34px;background:#3a312a;border-radius:4px"></div>
+          </div>
+          <div class="flex" style="margin-top:12px"><span class="chip olive" style="border-color:var(--olive);color:var(--olive)">Olive</span><span class="chip">Warm-lean</span></div>
+        </div>
+        <div class="box" style="padding:12px;display:flex;gap:10px;align-items:center;border-style:solid;border-color:var(--olive)">
+          <div class="dot"></div><div class="col" style="gap:5px;flex:1"><div class="bar l" style="height:9px"></div><div class="bar m" style="height:9px"></div></div>
+        </div>
+        <div class="pill fill" style="position:absolute;left:13px;right:13px;bottom:14px">Meet my tone twins</div>
+      </div>
+      <div class="anno">Placement is the hero. Olive named, not hidden.</div>
+    </div>
+
+    <!-- 3 feed -->
+    <div class="ph"><div class="cap"><span class="num">3</span> For You feed</div>
+      <div class="scr">
+        <div class="stat"><span>9:41</span><span>&#9679;&#9679;&#9679;</span></div>
+        <div class="flex" style="justify-content:space-between;align-items:flex-start">
+          <div class="col" style="gap:6px"><div class="lbl" style="margin:0;text-transform:uppercase;letter-spacing:1px">For you &middot; MST-07 olive</div><div class="h-lg" style="width:150px;margin:0"></div></div>
+          <div class="dot ring"></div>
+        </div>
+        <div class="flex" style="margin:14px 0 12px;overflow:hidden"><span class="chip on">All</span><span class="chip">Foundation</span><span class="chip">SPF</span><span class="chip">Blush</span></div>
+        <div class="g2">
+          <div class="card"><div class="x" style="height:78px;border:none;border-radius:0"></div><div class="col" style="padding:8px;gap:5px"><div class="bar s" style="height:8px"></div><div class="bar m" style="height:11px"></div><span class="chip olive" style="font-size:10px;padding:2px 7px;border-color:var(--olive);color:var(--olive)">No cast</span></div></div>
+          <div class="card"><div class="x" style="height:78px;border:none;border-radius:0"></div><div class="col" style="padding:8px;gap:5px"><div class="bar s" style="height:8px"></div><div class="bar m" style="height:11px"></div><span class="chip olive" style="font-size:10px;padding:2px 7px;border-color:var(--olive);color:var(--olive)">Buildable</span></div></div>
+          <div class="card"><div class="x" style="height:78px;border:none;border-radius:0"></div><div class="col" style="padding:8px;gap:5px"><div class="bar s" style="height:8px"></div><div class="bar m" style="height:11px"></div></div></div>
+          <div class="card"><div class="x" style="height:78px;border:none;border-radius:0"></div><div class="col" style="padding:8px;gap:5px"><div class="bar s" style="height:8px"></div><div class="bar m" style="height:11px"></div></div></div>
+        </div>
+        <div class="tabs"><div class="on">You</div><div>Find</div><div>Saved</div><div>Me</div></div>
+      </div>
+      <div class="anno">Every card carries a tone-twin verdict badge.</div>
+    </div>
+
+    <!-- 4 product -->
+    <div class="ph"><div class="cap"><span class="num">4</span> Product</div>
+      <div class="scr">
+        <div class="x" style="height:150px;margin:-14px -13px 12px;border:none;border-radius:0;border-bottom:2px solid var(--line)"></div>
+        <div class="lbl" style="margin-top:0;text-transform:uppercase;letter-spacing:1px">Brand</div>
+        <div class="h-lg" style="width:85%"></div>
+        <div class="flex" style="align-items:center;gap:10px;margin:6px 0 12px"><div class="bar" style="width:44px;height:14px"></div><span class="chip olive" style="border-color:var(--olive);color:var(--olive)">Shade 320N</span></div>
+        <div class="flex" style="margin-bottom:12px"><span class="chip">Didn't oxidize</span><span class="chip">True to olive</span></div>
+        <div class="box" style="padding:11px;display:flex;gap:9px;align-items:center;border-style:solid;border-color:var(--olive);margin-bottom:14px">
+          <div style="width:18px;height:18px;border:2px solid var(--olive);border-radius:50%;flex:none"></div>
+          <div class="col" style="gap:5px;flex:1"><div class="bar l" style="height:8px"></div><div class="bar m" style="height:8px"></div></div>
+        </div>
+        <div class="lbl" style="margin:0 0 8px">From your tone twins</div>
+        <div class="flex" style="gap:9px;margin-bottom:9px"><div class="dot" style="width:28px;height:28px"></div><div class="col" style="gap:4px;flex:1"><div class="bar s" style="height:8px"></div><div class="bar l" style="height:8px"></div></div></div>
+        <div class="flex" style="gap:9px"><div class="dot" style="width:28px;height:28px"></div><div class="col" style="gap:4px;flex:1"><div class="bar s" style="height:8px"></div><div class="bar m" style="height:8px"></div></div></div>
+        <div class="pill fill" style="position:absolute;left:13px;right:13px;bottom:14px">Shop this shade</div>
+      </div>
+      <div class="anno">Shade match + real verdicts from tone twins.</div>
+    </div>
+
+    <!-- 5 profile -->
+    <div class="ph"><div class="cap"><span class="num">5</span> You</div>
+      <div class="scr">
+        <div class="stat"><span>9:41</span><span>&#9679;&#9679;&#9679;</span></div>
+        <div class="col" style="align-items:center;gap:8px;margin:6px 0 16px">
+          <div class="dot ring" style="width:64px;height:64px"></div>
+          <div class="h-lg" style="width:90px;margin:0"></div>
+          <div class="bar" style="width:110px;height:9px"></div>
+          <div class="flex"><span class="chip olive" style="border-color:var(--olive);color:var(--olive)">Olive</span><span class="chip">Warm-lean</span></div>
+        </div>
+        <div class="box" style="padding:12px;display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;border-style:solid;border-color:var(--line)">
+          <div class="col" style="gap:6px"><div class="bar" style="width:80px;height:12px"></div><div class="bar" style="width:100px;height:8px"></div></div>
+          <div class="flex" style="gap:-8px">
+            <div class="dot" style="width:26px;height:26px"></div><div class="dot" style="width:26px;height:26px;margin-left:-8px"></div><div class="dot" style="width:26px;height:26px;margin-left:-8px"></div>
+          </div>
+        </div>
+        <div class="flex" style="justify-content:space-between;margin-bottom:9px"><div class="lbl" style="margin:0">What works on me</div><span style="color:var(--olive);font-size:14px">Post</span></div>
+        <div class="g2" style="grid-template-columns:1fr 1fr 1fr">
+          <div class="x" style="aspect-ratio:1"></div><div class="x" style="aspect-ratio:1"></div><div class="x" style="aspect-ratio:1"></div>
+          <div class="x" style="aspect-ratio:1"></div><div class="x" style="aspect-ratio:1"></div><div class="x" style="aspect-ratio:1"></div>
+        </div>
+        <div class="tabs"><div>You</div><div>Find</div><div>Saved</div><div class="on">Me</div></div>
+      </div>
+      <div class="anno">Your tone, your twins, what you post.</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ALTERNATES -->
+<div class="lane">
+  <div class="lane-title">Feed layout — alternates to weigh</div>
+  <p class="lane-note">Same content, three structures. Which makes the tone-twin proof most obvious?</p>
+  <div class="row">
+
+    <!-- A grid -->
+    <div class="ph"><div class="cap">A &middot; 2-up grid</div>
+      <div class="scr">
+        <div class="stat"><span>9:41</span><span>&#9679;&#9679;&#9679;</span></div>
+        <div class="h-lg" style="width:150px"></div>
+        <div class="flex" style="margin:12px 0"><span class="chip on">All</span><span class="chip">SPF</span><span class="chip">Blush</span></div>
+        <div class="g2">
+          <div class="card"><div class="x" style="height:90px;border:none"></div><div class="col" style="padding:8px;gap:5px"><div class="bar m" style="height:10px"></div><span class="chip olive" style="font-size:10px;padding:2px 7px;border-color:var(--olive);color:var(--olive)">No cast</span></div></div>
+          <div class="card"><div class="x" style="height:90px;border:none"></div><div class="col" style="padding:8px;gap:5px"><div class="bar m" style="height:10px"></div><span class="chip olive" style="font-size:10px;padding:2px 7px;border-color:var(--olive);color:var(--olive)">Fave</span></div></div>
+          <div class="card"><div class="x" style="height:90px;border:none"></div><div class="col" style="padding:8px;gap:5px"><div class="bar m" style="height:10px"></div></div></div>
+          <div class="card"><div class="x" style="height:90px;border:none"></div><div class="col" style="padding:8px;gap:5px"><div class="bar m" style="height:10px"></div></div></div>
+        </div>
+        <div class="tabs"><div class="on">You</div><div>Find</div><div>Saved</div><div>Me</div></div>
+      </div>
+      <div class="anno">Browsy, scannable. Verdict badges small.</div>
+    </div>
+
+    <!-- B list -->
+    <div class="ph"><div class="cap">B &middot; Verdict list</div>
+      <div class="scr">
+        <div class="stat"><span>9:41</span><span>&#9679;&#9679;&#9679;</span></div>
+        <div class="h-lg" style="width:150px"></div>
+        <div class="col" style="gap:11px;margin-top:14px">
+          <div class="box" style="padding:10px;display:flex;gap:10px;border-style:solid;border-color:var(--line)"><div class="x" style="width:60px;height:60px;flex:none"></div><div class="col" style="gap:5px;flex:1;justify-content:center"><div class="bar s" style="height:8px"></div><div class="bar m" style="height:11px"></div><div class="flex" style="gap:5px"><span class="chip olive" style="font-size:10px;padding:2px 7px;border-color:var(--olive);color:var(--olive)">No cast</span><span class="chip" style="font-size:10px;padding:2px 7px">214 twins</span></div></div></div>
+          <div class="box" style="padding:10px;display:flex;gap:10px;border-style:solid;border-color:var(--line)"><div class="x" style="width:60px;height:60px;flex:none"></div><div class="col" style="gap:5px;flex:1;justify-content:center"><div class="bar s" style="height:8px"></div><div class="bar m" style="height:11px"></div><div class="flex" style="gap:5px"><span class="chip olive" style="font-size:10px;padding:2px 7px;border-color:var(--olive);color:var(--olive)">Buildable</span><span class="chip" style="font-size:10px;padding:2px 7px">156 twins</span></div></div></div>
+          <div class="box" style="padding:10px;display:flex;gap:10px;border-style:solid;border-color:var(--line)"><div class="x" style="width:60px;height:60px;flex:none"></div><div class="col" style="gap:5px;flex:1;justify-content:center"><div class="bar s" style="height:8px"></div><div class="bar m" style="height:11px"></div><div class="flex" style="gap:5px"><span class="chip olive" style="font-size:10px;padding:2px 7px;border-color:var(--olive);color:var(--olive)">True olive</span></div></div></div>
+        </div>
+        <div class="tabs"><div class="on">You</div><div>Find</div><div>Saved</div><div>Me</div></div>
+      </div>
+      <div class="anno">Verdict + twin count lead. More proof, less browse.</div>
+    </div>
+
+    <!-- C hero -->
+    <div class="ph"><div class="cap">C &middot; Daily hero</div>
+      <div class="scr">
+        <div class="stat"><span>9:41</span><span>&#9679;&#9679;&#9679;</span></div>
+        <div class="lbl" style="margin-top:0;text-transform:uppercase;letter-spacing:1px">Twins are wearing</div>
+        <div class="card" style="margin-bottom:14px"><div class="x" style="height:150px;border:none"></div><div class="col" style="padding:11px;gap:7px"><div class="bar m" style="height:13px"></div><div class="flex"><span class="chip olive" style="border-color:var(--olive);color:var(--olive)">Didn't oxidize</span></div><div class="flex" style="gap:6px;align-items:center;margin-top:2px"><div class="dot" style="width:22px;height:22px"></div><div class="dot" style="width:22px;height:22px;margin-left:-8px"></div><div class="bar s" style="height:8px"></div></div></div></div>
+        <div class="flex" style="gap:9px">
+          <div class="card" style="flex:1"><div class="x" style="height:60px;border:none"></div><div style="padding:6px"><div class="bar m" style="height:9px"></div></div></div>
+          <div class="card" style="flex:1"><div class="x" style="height:60px;border:none"></div><div style="padding:6px"><div class="bar m" style="height:9px"></div></div></div>
+        </div>
+        <div class="tabs"><div class="on">You</div><div>Find</div><div>Saved</div><div>Me</div></div>
+      </div>
+      <div class="anno">One editorial pick a day, then a small rail.</div>
+    </div>
+
+  </div>
+</div>
+
+</body></html>

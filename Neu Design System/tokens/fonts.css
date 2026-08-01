@@ -1,0 +1,7 @@
+/* Neu webfonts.
+   BRAND FACE: "Circular Corner" (Medium) — licensed, not bundled here.
+   Upload the licensed woff2 and add its @font-face rule; until then the
+   Poppins fallback (rounded geometric) renders. Approved close substitutes:
+   Circular Std, Avenir Next, Sofia Pro, Nunito Sans.
+   Space Mono carries tone codes / uppercase labels. */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');

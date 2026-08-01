@@ -1,0 +1,38 @@
+:root{
+  /* ---- Families ---- */
+  /* "Circular Corner" Medium is the brand face (licensed, not bundled).
+     Fallback: Poppins (rounded geometric). Approved substitutes if needed:
+     Circular Std, Avenir Next, Sofia Pro, Nunito Sans. Display + body share
+     the one geometric family; display just runs heavier + tighter. */
+  --font-display: 'Circular Corner', 'Poppins', 'Nunito Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Circular Corner', 'Poppins', 'Nunito Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'Space Mono', ui-monospace, 'SFMono-Regular', monospace;  /* tone codes/data */
+
+  /* ---- Weights ---- */
+  --w-reg: 400;  /* @kind other */
+  --w-med: 500;  /* @kind other */
+  --w-semi: 600; /* @kind other */
+  --w-bold: 700; /* @kind other */
+
+  /* ---- Type scale (px) ---- */
+  --t-display: 52px;   /* hero headline */
+  --t-h1: 36px;
+  --t-h2: 27px;
+  --t-h3: 21px;
+  --t-title: 17px;     /* iOS-ish nav / row title */
+  --t-body: 16px;
+  --t-sm: 14px;
+  --t-cap: 13px;
+  --t-micro: 11px;     /* mono labels, tone codes */
+
+  /* ---- Line heights ---- */
+  --lh-tight: 1.04;    /* @kind other */
+  --lh-head: 1.14;     /* @kind other */
+  --lh-body: 1.5;      /* @kind other */
+  --lh-relaxed: 1.62;  /* @kind other */
+
+  /* ---- Tracking ---- */
+  --track-tight: -0.03em;  /* geometric display sits tighter */
+  --track-body: 0em;
+  --track-label: 0.08em;   /* uppercase mono labels */
+}

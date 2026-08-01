@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 240" width="700" height="240" role="img" aria-label="Neu">
+  <g transform="translate(24,32) scale(0.274) translate(-176,-192)">
+    <path d="M188 792 V470 C188 300 330 204 474 204 C606 204 684 280 716 382 L640 515 C624 432 574 364 476 364 C386 364 330 422 330 506 V792 Z" fill="#2E2440"></path>
+    <path d="M516 790 L703 420 Q720 390 747 414 L821 475 Q846 496 822 522 L554 806 Z" fill="#B79ED6"></path>
+    <path d="M536 806 L821 526 Q845 504 868 534 L910 594 Q930 624 898 641 L558 824 Z" fill="#7C6A99"></path>
+    <path d="M554 824 L898 644 Q926 629 943 661 L958 718 Q970 758 930 778 L568 846 Z" fill="#4E4562"></path>
+  </g>
+  <text x="270" y="168" font-family="&#39;Circular Corner&#39;,&#39;Poppins&#39;,sans-serif" font-weight="500" font-size="170" letter-spacing="-2" fill="#2E2440">neu</text>
+</svg>

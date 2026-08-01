@@ -1,0 +1,19 @@
+<!-- @dsCard group="Colors" viewport="700x210" name="Light / dark" subtitle="White always in light, true black in dark — amethyst signal holds" -->
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<style>body{margin:0;font-family:var(--font-body);display:flex}
+.pane{flex:1;background:var(--paper);color:var(--ink);padding:20px 22px}
+.lab{font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin:0 0 14px}
+.row{display:flex;gap:8px;margin-bottom:14px}
+.sw{flex:1;height:44px;border-radius:var(--r-sm);border:1px solid var(--line);display:flex;align-items:flex-end;padding:5px;font-family:var(--font-mono);font-size:9px}
+.demo{display:flex;gap:8px;align-items:center}
+.chip{font-weight:600;font-size:12px;padding:6px 12px;border-radius:var(--r-pill);background:var(--accent);color:#fff}
+.badge{font-weight:600;font-size:11px;padding:4px 10px;border-radius:var(--r-pill);background:var(--good-soft);color:var(--amethyst-deep)}
+.dot{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--mst-4),var(--mst-7));box-shadow:0 0 0 3px var(--paper),0 0 0 6px var(--accent)}</style></head>
+<body>
+<div class="pane"><p class="lab">☀ Light · white</p>
+<div class="row"><div class="sw" style="background:var(--paper)">paper</div><div class="sw" style="background:var(--surface-2)">surf</div><div class="sw" style="background:var(--amethyst);color:#fff">amethyst</div><div class="sw" style="background:var(--ink);color:#fff">ink</div></div>
+<div class="demo"><div class="dot"></div><span class="chip">Take the quiz</span><span class="badge">No cast</span></div></div>
+<div class="pane theme-dark"><p class="lab">☾ Dark · black</p>
+<div class="row"><div class="sw" style="background:var(--paper)">paper</div><div class="sw" style="background:var(--surface)">surf</div><div class="sw" style="background:var(--amethyst);color:#1b1425">amethyst</div><div class="sw" style="background:var(--ink);color:#141019">ink</div></div>
+<div class="demo"><div class="dot"></div><span class="chip">Take the quiz</span><span class="badge">No cast</span></div></div>
+</body></html>

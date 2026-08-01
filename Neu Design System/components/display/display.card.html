@@ -1,0 +1,29 @@
+<!-- @dsCard group="Components" viewport="700x340" name="Display" subtitle="ProductCard, ToneSwatch, Badge, Avatar, Card" -->
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{margin:0;background:var(--paper);font-family:var(--font-body);padding:22px}
+.grid{display:flex;gap:18px;align-items:flex-start}.col{display:flex;flex-direction:column;gap:12px}
+.lab{font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.rowc{display:flex;gap:10px;align-items:center;flex-wrap:wrap}</style></head>
+<body><div id="root"></div>
+<script type="text/babel">
+const { ProductCard, ToneSwatch, Badge, Avatar, Card } = window.NeuDesignSystem_32f7fb;
+function Demo(){return(<div className="grid">
+  <div style={{width:240}}><ProductCard brand="Rare Beauty" name="Soft Pinch Blush" price="$23"
+    image="linear-gradient(135deg,var(--berry-soft),var(--amethyst-soft))"
+    verdicts={["Didn't go muddy","Buildable"]} twins={{count:214,tone:7}}/></div>
+  <div className="col">
+    <span className="lab">ToneSwatch — placement</span>
+    <div className="rowc"><ToneSwatch tone={4} label/><ToneSwatch tone={6} label/><ToneSwatch tone={7} selected label/><ToneSwatch tone={9} label/></div>
+    <span className="lab" style={{marginTop:8}}>Badge</span>
+    <div className="rowc"><Badge tone="good">No white cast</Badge><Badge tone="olive">Olive-friendly</Badge><Badge tone="berry">Tone twin fave</Badge><Badge tone="warm">Buildable</Badge></div>
+    <span className="lab" style={{marginTop:8}}>Avatar — tone twins</span>
+    <div className="rowc"><Avatar name="Ama K" tone={8}/><Avatar name="Priya S" tone={6}/><Avatar name="Lena O" tone={4}/></div>
+    <Card style={{marginTop:8}}><div style={{fontFamily:'var(--font-display)',fontSize:18,color:'var(--ink)'}}>Base Card surface</div><div style={{color:'var(--ink-2)',fontSize:14,marginTop:4}}>Warm, soft-shadowed, hairline border.</div></Card>
+  </div>
+</div>);}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script></body></html>

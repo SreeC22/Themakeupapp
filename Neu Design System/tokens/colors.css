@@ -1,0 +1,170 @@
+:root{
+  /* ---- Neutrals — WHITE background, always (light mode) ---- */
+  --paper: #FFFFFF;        /* app background — pure white, locked */
+  --paper-sink: #F6F4F9;   /* recessed / grouped background (faint amethyst tint) */
+  --surface: #FFFFFF;      /* raised cards */
+  --surface-2: #FAF8FC;    /* subtle raised */
+  --line: #ECEAF1;         /* hairline borders */
+  --line-strong: #DBD6E4;
+
+  --ink: #2E2440;          /* primary text — dolphin/aubergine */
+  --ink-2: #655A7C;        /* secondary text — dolphin */
+  --ink-3: #A99CC0;        /* tertiary / captions */
+  --ink-inv: #FFFFFF;      /* text on dark fills */
+
+  /* ---- Brand hues ---- */
+  --amethyst: #7C6A99;     /* the signature — trust signal */
+  --amethyst-deep: #4E4562;
+  --amethyst-soft: #EEE9F4;/* amethyst tint surface */
+
+  --lilac: #AB92BF;        /* soft supporting tint (Amethyst screenshot) */
+  --lilac-soft: #F1EBF6;
+
+  --berry: #C75C86;        /* beauty / blush cue */
+  --berry-deep: #9E3A62;
+  --berry-soft: #F7E3EC;
+
+  --gold: #C08552;         /* warm caramel — highlight / spark accent */
+  --gold-soft: #F3E6D9;
+
+  /* ---- Semantic aliases ---- */
+  --bg: var(--paper);
+  --bg-grouped: var(--paper-sink);
+  --text: var(--ink);
+  --text-muted: var(--ink-2);
+  --text-faint: var(--ink-3);
+  --border: var(--line);
+
+  --action: var(--amethyst);       /* primary CTA fill */
+  --action-press: var(--amethyst-deep);
+  --action-text: #FFFFFF;
+  --action-quiet: var(--ink);      /* dark/confident secondary action */
+
+  --link: var(--amethyst-deep);
+  --link-hover: var(--amethyst);
+
+  --accent: var(--amethyst);       /* brand accent / trust signal */
+  --highlight: var(--berry);
+
+  --good: var(--amethyst);         /* "didn't oxidize / no cast" verdict */
+  --good-soft: var(--amethyst-soft);
+  --warn: var(--gold);
+  --bad: var(--berry-deep);
+
+  /* ---- Glassmorphism ---- */
+  --glass: rgba(255,255,255,0.55);        /* frosted panel fill */
+  --glass-strong: rgba(255,255,255,0.72); /* denser glass (nav, overlays) */
+  --glass-border: rgba(255,255,255,0.75);
+  --glass-highlight: rgba(255,255,255,0.9);/* inset top-edge sheen */
+  --glass-shadow: 0 8px 24px rgba(70,50,110,0.12);
+  --glass-blur: 18px;
+  /* faint amethyst aurora so glass has something to refract on white */
+  --aurora: radial-gradient(120% 80% at 15% 0%, #EBE2F6 0%, rgba(235,226,246,0) 55%),
+            radial-gradient(120% 70% at 100% 25%, #F3E3EE 0%, rgba(243,227,238,0) 50%),
+            radial-gradient(140% 80% at 50% 100%, #E9EAF6 0%, rgba(233,234,246,0) 55%),
+            #FFFFFF; /* @kind other */
+
+  /* ---- Monk Skin Tone Scale (official 10 tones — fixed across modes) ---- */
+  --mst-1:#F6EDE4; --mst-2:#F3E7DB; --mst-3:#F7EAD0; --mst-4:#EADABA; --mst-5:#D7BD96;
+  --mst-6:#A07E56; --mst-7:#825C43; --mst-8:#604134; --mst-9:#3A312A; --mst-10:#292420;
+
+  /* ---- Undertone chips (representative skin-undertone hues) ---- */
+  --tone-warm:#E6A867;     /* golden / peach */
+  --tone-cool:#D298A6;     /* rosy pink, slight blue */
+  --tone-neutral:#D0BEA2;  /* balanced beige */
+  --tone-olive:#9B9C6E;    /* green-grey — the ignored one */
+
+  /* ---- Wrist-vein colors (undertone quiz cue) ----
+     Per the classic wrist test: cool = blue/purple, neutral = blue-green,
+     warm = green/olive veins. */
+  --vein-blue:#3F6FB0;     /* blue veins */
+  --vein-purple:#A98CC6;   /* purple veins → cool */
+  --vein-teal:#4F9E9A;     /* blue-green veins → neutral */
+  --vein-green:#6F9E88;    /* green veins → warm */
+  --vein-olive:#8A9A6B;    /* olive veins → warm-leaning / olive */
+  /* legacy single-hue aliases */
+  --vein-cool:var(--vein-purple);
+  --vein-neutral:var(--vein-teal);
+  --vein-warm:var(--vein-green);
+
+  /* ---- Product "cast" cues (a PRODUCT flaw, not your undertone) ----
+     The surface tint a product leaves behind — what tone-twin verdicts flag. */
+  --cast-white:#EFEAE4;    /* SPF flashback / white cast */
+  --cast-grey:#9A9488;     /* ashy / grey cast */
+  --cast-orange:#C87A44;   /* oxidized / orange cast */
+  --cast-pink:#D69AA6;     /* pink pull */
+
+  /* ---- Back-compat aliases (older components still reference these) ---- */
+  --olive:var(--amethyst); --olive-deep:var(--amethyst-deep); --olive-soft:var(--amethyst-soft);
+  --clay:var(--amethyst); --clay-deep:var(--amethyst-deep); --clay-soft:var(--amethyst-soft);
+  --ring:0 0 0 3px rgba(124,106,153,0.30);
+
+  color-scheme: light;
+}
+
+/* ---- Dark mode — TRUE BLACK background, always ----
+   Neutrals go black/aubergine; amethyst lifts to a brighter lilac so the
+   signal + glass stay crisp. Semantic aliases re-point automatically. */
+:root[data-theme="dark"], .theme-dark{
+  --paper: #000000;        /* app background — true black, locked */
+  --paper-sink: #0C0A10;   /* recessed / grouped */
+  --surface: #141019;      /* raised cards — aubergine black */
+  --surface-2: #1E1926;    /* subtle raised */
+  --line: #2A2434;         /* hairline borders */
+  --line-strong: #3B3348;
+
+  --ink: #F1EDF6;          /* primary text — soft white */
+  --ink-2: #B6ACC6;        /* secondary text */
+  --ink-3: #726A82;        /* tertiary / captions */
+  --ink-inv: #141019;      /* text on light fills */
+
+  /* Brand hues — lifted for contrast on black */
+  --amethyst: #B79ED6;     /* the signature, brightened */
+  --amethyst-deep: #D3C2E8;/* lighter step for text/rings */
+  --amethyst-soft: #251E30;/* amethyst tint surface (dark) */
+
+  --lilac: #C4AEDA;
+  --lilac-soft: #221B2C;
+
+  --berry: #E58AAC;        /* blush cue, lifted */
+  --berry-deep: #F0AEC6;
+  --berry-soft: #2E1922;
+
+  --gold: #E0AC72;
+  --gold-soft: #2C2214;
+
+  --action: var(--amethyst);
+  --action-press: #A98BCC;
+  --action-text: #1B1425;  /* dark text on the light amethyst fill */
+  --action-quiet: var(--ink);
+
+  --link: var(--amethyst-deep);
+  --link-hover: var(--amethyst);
+
+  --accent: var(--amethyst);
+  --highlight: var(--berry);
+
+  --good: var(--amethyst);
+  --good-soft: var(--amethyst-soft);
+  --warn: var(--gold);
+  --bad: var(--berry-deep);
+
+  /* ---- Back-compat aliases ---- */
+  --olive:var(--amethyst); --olive-deep:var(--amethyst-deep); --olive-soft:var(--amethyst-soft);
+  --clay:var(--amethyst); --clay-deep:var(--amethyst-deep); --clay-soft:var(--amethyst-soft);
+  --ring:0 0 0 3px rgba(183,158,214,0.34);
+
+  /* ---- Glassmorphism (dark) ---- */
+  --glass: rgba(40,32,54,0.5);
+  --glass-strong: rgba(30,24,40,0.66);
+  --glass-border: rgba(255,255,255,0.14);
+  --glass-highlight: rgba(255,255,255,0.12);
+  --glass-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  --glass-blur: 18px;
+  --aurora: radial-gradient(120% 80% at 15% 0%, #2E2247 0%, rgba(46,34,71,0) 55%),
+            radial-gradient(120% 70% at 100% 20%, #3C2138 0%, rgba(60,33,56,0) 50%),
+            radial-gradient(140% 80% at 50% 100%, #1B1F3A 0%, rgba(27,31,58,0) 55%),
+            #000000; /* @kind other */
+
+  color-scheme: dark;
+}
