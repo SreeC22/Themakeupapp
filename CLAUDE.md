@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Context for Claude Code sessions in this repo. Read TEAM.md (roles), APP_PLAN.md (app spec), README.md (product).
+Context for Claude Code sessions in this repo. Read TEAM.md (roles), BRAIN.md (org chart, agent charters, the loop), HANDOFF.md (top entry, where the last session stopped), APP_PLAN.md (app spec), README.md (product).
 
 ## What this isdi
 
@@ -8,10 +8,13 @@ Neu: makeup recommendations organized by skin tone. A quiz derives a tone profil
 
 ## Current state (2026-08-01)
 
+- Launch scope locked by owner (2026-08-01): the persona loop. Onboarding asks skin color, vein color, and what products you use. Then a feed of people with a similar tone and their products. Save products in-app. A where-to-buy view for saved items. Nothing else in v1. Spec: LAUNCH.md (Head of Product).
+- Sequencing locked by owner (2026-08-01): frontend first. Backend is frozen until the owner declares every screen final. A clickable demo prototype comes before Expo build-out.
+- Org and process: BRAIN.md (exec team in .claude/agents/, ownership map, the loop, session handoff protocol in HANDOFF.md).
 - index.html: landing + working quiz + waitlist. Live and verified. Self-contained single file, no build step.
 - Waitlist: form POSTs to FormSubmit (alias endpoint in the WAITLIST_ENDPOINT constant in index.html); signups arrive in the owner's Gmail with tone profile attached.
 - SCHEMA.sql: Supabase schema ready to paste (waitlist table + app tables with RLS). Waiting on the owner to create the free Supabase project and provide URL + anon key. Then point the site's form at the Supabase REST insert and keep FormSubmit for email notification.
-- Next build milestone: M1 in APP_PLAN.md. Expo (React Native, TypeScript) app in app/, quiz working offline, tone profile in AsyncStorage. iOS first.
+- app/: M1 skeleton built (2026-08-01). Expo SDK 57, TypeScript, Expo Router. Offline quiz with site parity proof (cd app && npm run parity, 2180 checks), neutral-confirm step included, tone profile + saves in AsyncStorage, curated starter picks bundled (14, olive and deep over-seeded), tabs For You / Discover / Saved / You, light + dark. Next: M2, blocked on the owner's Supabase project.
 - Name: Neu, decided 2026-07-19, reconfirmed by owner 2026-08-01 (wordmark lowercase "neu"). Trademark screen required before launch: NEU Cosmetics (UAE distributor) and the phonetic neighbor Nu Skin exist in-industry. The site renames via the APP_NAME constant in index.html.
 - Neu Design System/ at repo root: tokens (light + dark), components, wireframes, brand voice, UI kit (quiz, result, feed, product, profile). Source of truth for app styling. Fonts: Poppins substitutes for Circular Corner until licensed.
 - Feed layout: A (2-up grid) provisional, owner has not picked between wireframe alternates A/B/C.

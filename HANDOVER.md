@@ -2,27 +2,25 @@
 
 Start-here note for the next session. Full spec lives in CLAUDE.md, TEAM.md, APP_PLAN.md. This file is the pick-up point.
 
-## State (2026-07-18)
+## State (2026-08-01)
 
-Repo is docs plus one live file. Nothing is built past the landing site. `app/` does not exist yet. Latest commit on main: 73db212.
+M1 is built. `app/` is an Expo app (SDK 57, TypeScript, Expo Router): offline quiz with the neutral-confirm step, tone profile and saves in AsyncStorage, 14 curated starter picks bundled (olive and deep over-seeded), tabs For You / Discover / Saved / You, Neu DS tokens (light + dark), Poppins + Space Mono.
 
-Tracked: index.html (live, 563 lines), README.md, CLAUDE.md, TEAM.md, APP_PLAN.md, SCHEMA.sql, .gitignore. No build step, no tests, no CI.
+Checks: `cd app && npm run typecheck` (clean), `npm run parity` (2180 checks against index.html, identical), `npx expo export` (bundles). Run it: `cd app && npm start`, then Expo Go or iOS simulator.
 
 ## Done
 
 - Landing page, tone quiz, and waitlist. Live on GitHub Pages: https://sreec22.github.io/Themakeupapp/. Self-contained single file (index.html), inline CSS and JS.
 - Waitlist wired to FormSubmit. Signups reach sreechityalawork@gmail.com with the tone profile attached.
 - Supabase schema written (SCHEMA.sql): waitlist plus app tables with RLS. Not deployed.
-- Team roles and the four-milestone app plan documented.
+- Neu Design System committed at repo root; app tokens mirror it.
+- M1 skeleton (above). Parity is enforced by app/scripts/parity.mjs, which extracts the site's quiz functions from index.html at run time.
 
 ## Next (unblocked, needs no owner input)
 
-M1 skeleton, per APP_PLAN.md. Expo (React Native, TypeScript, Expo Router) app in `app/`:
-- Tab navigation, design tokens ported from index.html (t1 to t10, ink #111111, accent #C2452D).
-- Quiz working fully offline, identical results to the site for identical inputs.
-- Tone profile persisted in AsyncStorage.
-
-Done when it runs in Expo Go with zero TypeScript errors and the quiz matches the site on the same inputs (including the olive path and manual override).
+- App icon + splash from Neu DS assets (assets/neu-icon.svg) wired into app.json.
+- Composer sheet UI (M3 surface, no backend needed): binary repurchase + verdict chips, per the Mobbin research PDF.
+- Site neutral-confirm pass is specced in APP_PLAN.md but user-facing: needs owner approval, ship with the Playwright gate.
 
 ## Blocked on owner (Sree only)
 
