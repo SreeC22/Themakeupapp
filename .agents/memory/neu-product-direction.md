@@ -20,3 +20,15 @@ Do not use em dashes anywhere in the Neu website or its previews.
 **Why:** The user repeated that they should not see any of these in the whole thing.
 
 **How to apply:** Use periods, commas, colons, or parentheses instead, and check all Neu preview copy rather than only the selected frame.
+
+The homepage animation should show unbranded, easily recognizable makeup illustrations, including lipstick moving up and down. Do not put the Neu name on the illustrated products.
+
+**Why:** The user rejected the earlier animation and explicitly asked for an illustration without Neu branding.
+
+**How to apply:** Keep product silhouettes recognizable and motions specific to how the products open, close, or operate.
+
+The user likes the Color Studio homepage direction, but does not want the dome-shaped artwork container.
+
+**Why:** The user explicitly confirmed the direction and requested removal of the dome shape.
+
+**How to apply:** Preserve that direction when refining Color Studio; use a rectangular artwork area rather than an arched silhouette.

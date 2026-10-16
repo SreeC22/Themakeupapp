@@ -223,7 +223,7 @@
   position: absolute;
   inset: 0 7% 0 3%;
   overflow: hidden;
-  border-radius: 46% 46% 8px 8px;
+  border-radius: 8px;
   background: #f4c08d;
   transform: rotate(2deg);
   animation: cs-image-breathe 8s ease-in-out infinite alternate;

@@ -370,6 +370,181 @@ function PreviewBanner() {
   );
 }
 
+function ProductIllustrationLoop() {
+  return (
+    <div className="neu-art-product-stage" aria-hidden="true">
+      <span className="neu-illustration-stage-glow" />
+      <span className="neu-illustration-orbit neu-illustration-orbit--one" />
+      <span className="neu-illustration-orbit neu-illustration-orbit--two" />
+
+      <div className="neu-illustration-product neu-illustration-product--lipstick">
+        <svg viewBox="0 0 360 520" role="presentation">
+          <defs>
+            <linearGradient id="ill-lip-case" x1="0" x2="1">
+              <stop offset="0" stopColor="#442431" />
+              <stop offset=".28" stopColor="#814a59" />
+              <stop offset=".54" stopColor="#a76b79" />
+              <stop offset=".78" stopColor="#6b3948" />
+              <stop offset="1" stopColor="#39202c" />
+            </linearGradient>
+            <linearGradient id="ill-lip-metal" x1="0" x2="1">
+              <stop offset="0" stopColor="#a77a55" />
+              <stop offset=".35" stopColor="#f1d8ab" />
+              <stop offset=".62" stopColor="#d1aa79" />
+              <stop offset="1" stopColor="#896244" />
+            </linearGradient>
+            <linearGradient id="ill-lip-color" x1="0" x2="1">
+              <stop offset="0" stopColor="#a7354d" />
+              <stop offset=".48" stopColor="#e45d70" />
+              <stop offset="1" stopColor="#9b2d4a" />
+            </linearGradient>
+          </defs>
+          <ellipse cx="183" cy="460" rx="94" ry="18" fill="#6e414c" opacity=".16" />
+          <rect x="112" y="265" width="142" height="190" rx="26" fill="url(#ill-lip-case)" stroke="#4d2d38" strokeWidth="3" />
+          <path d="M125 283v146" stroke="#f2c9c0" strokeWidth="7" strokeLinecap="round" opacity=".34" />
+          <rect x="108" y="239" width="150" height="40" rx="9" fill="url(#ill-lip-metal)" stroke="#9b765e" strokeWidth="3" />
+          <path d="M117 249h132M118 269h132" stroke="#fff0d7" strokeWidth="3" opacity=".66" />
+          <g className="neu-illustrated-lipstick-bullet">
+            <path d="M155 243V131c0-29 22-50 48-66 2 30 43 42 43 73v105z" fill="url(#ill-lip-color)" stroke="#7d2c42" strokeWidth="3" strokeLinejoin="round" />
+            <path d="M173 222V141c0-22 11-39 27-54" fill="none" stroke="#ffc0b8" strokeWidth="7" strokeLinecap="round" opacity=".5" />
+          </g>
+          <g className="neu-illustrated-lipstick-cap">
+            <rect x="126" y="44" width="116" height="162" rx="20" fill="url(#ill-lip-case)" stroke="#4d2d38" strokeWidth="3" />
+            <path d="M144 65v105" stroke="#f5d1c5" strokeWidth="8" strokeLinecap="round" opacity=".4" />
+            <rect x="126" y="184" width="116" height="14" rx="6" fill="url(#ill-lip-metal)" />
+          </g>
+          <circle cx="291" cy="116" r="6" fill="#f6dcae" />
+          <path d="M291 102v28m-14-14h28" stroke="#f6dcae" strokeWidth="2" opacity=".8" />
+        </svg>
+      </div>
+
+      <div className="neu-illustration-product neu-illustration-product--mascara">
+        <svg viewBox="0 0 360 520" role="presentation">
+          <defs>
+            <linearGradient id="ill-mascara-tube" x1="0" x2="1">
+              <stop offset="0" stopColor="#1e2024" />
+              <stop offset=".3" stopColor="#4a4147" />
+              <stop offset=".52" stopColor="#81727a" />
+              <stop offset=".74" stopColor="#40343d" />
+              <stop offset="1" stopColor="#1d1e22" />
+            </linearGradient>
+            <linearGradient id="ill-mascara-cap" x1="0" x2="1">
+              <stop offset="0" stopColor="#614355" />
+              <stop offset=".48" stopColor="#a77a86" />
+              <stop offset="1" stopColor="#5c3b4b" />
+            </linearGradient>
+          </defs>
+          <ellipse cx="180" cy="461" rx="90" ry="17" fill="#51414a" opacity=".15" />
+          <rect x="120" y="220" width="120" height="220" rx="26" fill="url(#ill-mascara-tube)" stroke="#342c34" strokeWidth="3" />
+          <rect x="126" y="210" width="108" height="28" rx="8" fill="url(#ill-mascara-cap)" />
+          <path d="M139 261v135" stroke="#f5e8dd" strokeWidth="6" strokeLinecap="round" opacity=".26" />
+          <g className="neu-illustrated-mascara-wand">
+            <rect x="168" y="108" width="24" height="100" rx="8" fill="url(#ill-mascara-cap)" stroke="#503644" strokeWidth="2" />
+            <path d="M178 205V300" stroke="#b8a189" strokeWidth="6" strokeLinecap="round" />
+            <path d="M157 271c2-32 14-49 23-49s22 17 24 49l-6 19h-35z" fill="#252329" stroke="#50434a" strokeWidth="2" />
+            <path d="m160 260 39 12m-40-1 41 12m-37-31 31 28m-19-57-6 48m18-47 7 49" stroke="#cab0aa" strokeWidth="2.5" strokeLinecap="round" />
+            <rect x="153" y="70" width="54" height="88" rx="16" fill="url(#ill-mascara-cap)" stroke="#503644" strokeWidth="3" />
+            <path d="M163 84v54" stroke="#f5d9d5" strokeWidth="6" strokeLinecap="round" opacity=".42" />
+          </g>
+          <circle cx="276" cy="120" r="5" fill="#f4d7a8" />
+        </svg>
+      </div>
+
+      <div className="neu-illustration-product neu-illustration-product--concealer">
+        <svg viewBox="0 0 360 520" role="presentation">
+          <defs>
+            <linearGradient id="ill-concealer-bottle" x1="0" x2="1">
+              <stop offset="0" stopColor="#b67661" />
+              <stop offset=".34" stopColor="#f0c4a0" />
+              <stop offset=".63" stopColor="#d5967b" />
+              <stop offset="1" stopColor="#a66a5d" />
+            </linearGradient>
+            <linearGradient id="ill-concealer-cap" x1="0" x2="1">
+              <stop offset="0" stopColor="#6b3b48" />
+              <stop offset=".5" stopColor="#9e6170" />
+              <stop offset="1" stopColor="#552e3d" />
+            </linearGradient>
+          </defs>
+          <ellipse cx="180" cy="460" rx="91" ry="17" fill="#6c4650" opacity=".14" />
+          <rect x="120" y="212" width="120" height="226" rx="25" fill="url(#ill-concealer-bottle)" stroke="#a1675d" strokeWidth="3" />
+          <path d="M137 242v147" stroke="#fff0d8" strokeWidth="7" strokeLinecap="round" opacity=".42" />
+          <rect x="111" y="194" width="138" height="35" rx="11" fill="url(#ill-concealer-cap)" stroke="#5e3b42" strokeWidth="2" />
+          <g className="neu-illustrated-concealer-wand">
+            <path d="M179 206V112" stroke="#c8a37f" strokeWidth="6" strokeLinecap="round" />
+            <path d="M174 115c-17-8-25-23-18-35 12-20 32-15 44-6 10 7 8 24-2 39z" fill="#efd6bd" stroke="#b78f76" strokeWidth="2" />
+            <rect x="145" y="52" width="70" height="105" rx="19" fill="url(#ill-concealer-cap)" stroke="#5e3b42" strokeWidth="3" />
+            <path d="M158 67v66" stroke="#f4d7d1" strokeWidth="7" strokeLinecap="round" opacity=".4" />
+          </g>
+          <path d="M133 422h94" stroke="#f6ddbf" strokeWidth="5" opacity=".6" />
+          <circle cx="283" cy="119" r="5" fill="#f4d7a8" />
+        </svg>
+      </div>
+
+      <div className="neu-illustration-product neu-illustration-product--blush">
+        <svg viewBox="0 0 360 520" role="presentation">
+          <defs>
+            <linearGradient id="ill-blush-shell" x1="0" x2="1">
+              <stop offset="0" stopColor="#b88670" />
+              <stop offset=".42" stopColor="#edd1b5" />
+              <stop offset=".7" stopColor="#d9ad95" />
+              <stop offset="1" stopColor="#a77b6b" />
+            </linearGradient>
+            <radialGradient id="ill-blush-powder">
+              <stop offset="0" stopColor="#f0a4a0" />
+              <stop offset=".75" stopColor="#c75e71" />
+              <stop offset="1" stopColor="#a64862" />
+            </radialGradient>
+          </defs>
+          <ellipse cx="181" cy="444" rx="121" ry="19" fill="#69434e" opacity=".14" />
+          <g className="neu-illustrated-blush-lid">
+            <rect x="76" y="94" width="208" height="142" rx="25" fill="url(#ill-blush-shell)" stroke="#a27a69" strokeWidth="4" />
+            <rect x="90" y="107" width="180" height="116" rx="19" fill="#deb7a9" stroke="#f8e6d2" strokeWidth="3" />
+            <ellipse cx="180" cy="165" rx="46" ry="32" fill="#f6dfd1" opacity=".68" />
+            <path d="M94 122h154" stroke="#fff2df" strokeWidth="5" strokeLinecap="round" opacity=".68" />
+          </g>
+          <rect x="76" y="218" width="208" height="166" rx="25" fill="url(#ill-blush-shell)" stroke="#a27a69" strokeWidth="4" />
+          <ellipse cx="180" cy="282" rx="75" ry="49" fill="#936d70" opacity=".38" />
+          <ellipse cx="180" cy="274" rx="67" ry="43" fill="url(#ill-blush-powder)" stroke="#f0d2bd" strokeWidth="5" />
+          <path d="M130 271c18-24 70-34 101-10" fill="none" stroke="#ffd0c2" strokeWidth="4" opacity=".55" />
+          <path d="M114 359h133" stroke="#f8e5d3" strokeWidth="6" strokeLinecap="round" opacity=".6" />
+        </svg>
+      </div>
+
+      <div className="neu-illustration-product neu-illustration-product--powder">
+        <svg viewBox="0 0 360 520" role="presentation">
+          <defs>
+            <linearGradient id="ill-powder-jar" x1="0" x2="1">
+              <stop offset="0" stopColor="#f2e0cd" stopOpacity=".7" />
+              <stop offset=".28" stopColor="#fff4e6" stopOpacity=".95" />
+              <stop offset=".58" stopColor="#dfc3aa" stopOpacity=".8" />
+              <stop offset="1" stopColor="#ad8f7e" stopOpacity=".82" />
+            </linearGradient>
+            <linearGradient id="ill-powder-lid" x1="0" x2="1">
+              <stop offset="0" stopColor="#755261" />
+              <stop offset=".48" stopColor="#a67c84" />
+              <stop offset="1" stopColor="#5b3e4d" />
+            </linearGradient>
+          </defs>
+          <ellipse cx="180" cy="449" rx="118" ry="18" fill="#67454e" opacity=".13" />
+          <rect x="95" y="205" width="170" height="204" rx="26" fill="url(#ill-powder-jar)" stroke="#a98979" strokeWidth="4" />
+          <path d="M110 241h140" stroke="#fff4e8" strokeWidth="6" opacity=".8" />
+          <ellipse cx="180" cy="270" rx="67" ry="32" fill="#dfc9b0" />
+          <ellipse cx="180" cy="265" rx="58" ry="25" fill="#eee0cc" />
+          <g className="neu-illustrated-powder-puff">
+            <ellipse cx="180" cy="156" rx="58" ry="37" fill="#faf0e4" stroke="#d7bdab" strokeWidth="4" />
+            <ellipse cx="180" cy="154" rx="39" ry="21" fill="#fff8ed" />
+            <path d="M159 156h42" stroke="#d5bbac" strokeWidth="3" strokeLinecap="round" />
+          </g>
+          <g className="neu-illustrated-powder-lid">
+            <rect x="91" y="149" width="178" height="52" rx="17" fill="url(#ill-powder-lid)" stroke="#57404b" strokeWidth="3" />
+            <path d="M108 164h143" stroke="#f1d7d1" strokeWidth="5" strokeLinecap="round" opacity=".48" />
+          </g>
+        </svg>
+      </div>
+    </div>
+  );
+}
+
 function HomeView({
   onProfile,
   onBrowse,
@@ -407,44 +582,26 @@ function HomeView({
         <div
           className="neu-home-art"
           role="img"
-          aria-label="Looping animation of a lipstick opening, closing, and transforming into concealer and blush"
+          aria-label="Animated illustration of a lipstick opening and closing, followed by mascara, concealer, blush, and setting powder"
         >
           <div className="neu-art-sun" />
-          <div className="neu-art-stamp"><span>NEU BEAUTY</span><b>01 / 03</b></div>
           <div className="neu-art-swatch neu-art-swatch--one"><span /></div>
           <div className="neu-art-swatch neu-art-swatch--two"><span /></div>
-          <div className="neu-art-product-stage" aria-hidden="true">
-            <div className="neu-art-product-halo" />
-            <div className="neu-art-product-scene neu-art-product-scene--lipstick">
-              <div className="neu-art-lipstick">
-                <div className="neu-art-lipstick-case"><span>neu</span></div>
-                <div className="neu-art-lipstick-bullet"><i /></div>
-                <div className="neu-art-lipstick-cap"><span>COLOR</span></div>
-                <div className="neu-art-lipstick-base" />
-              </div>
-            </div>
-            <div className="neu-art-product-scene neu-art-product-scene--concealer">
-              <div className="neu-art-concealer">
-                <div className="neu-art-concealer-bottle"><span>neu<br /><i>tone veil</i></span></div>
-                <div className="neu-art-concealer-cap"><span>NEU</span><i /></div>
-              </div>
-            </div>
-            <div className="neu-art-product-scene neu-art-product-scene--blush">
-              <div className="neu-art-blush">
-                <div className="neu-art-blush-lid"><span>neu</span></div>
-                <div className="neu-art-blush-pan" />
-              </div>
-            </div>
-            <span className="neu-art-floor-shadow" />
+          <ProductIllustrationLoop />
+          <div className="neu-illustration-caption neu-illustration-caption--lipstick">
+            <span>01 / LIP COLOR</span><b>Lipstick</b><i>Up. Down. Your shade.</i>
           </div>
-          <div className="neu-art-product-caption neu-art-product-caption--lipstick">
-            <span>01 / COLOR</span><b>Lipstick</b><i>Open. Play. Repeat.</i>
+          <div className="neu-illustration-caption neu-illustration-caption--mascara">
+            <span>02 / EYES</span><b>Mascara</b><i>One more coat.</i>
           </div>
-          <div className="neu-art-product-caption neu-art-product-caption--concealer">
-            <span>02 / COMPLEXION</span><b>Concealer</b><i>Find your kind of cover.</i>
+          <div className="neu-illustration-caption neu-illustration-caption--concealer">
+            <span>03 / COMPLEXION</span><b>Concealer</b><i>A little here, a little there.</i>
           </div>
-          <div className="neu-art-product-caption neu-art-product-caption--blush">
-            <span>03 / CHEEKS</span><b>Blush</b><i>Colour with a point of view.</i>
+          <div className="neu-illustration-caption neu-illustration-caption--blush">
+            <span>04 / CHEEKS</span><b>Blush compact</b><i>Tap on a little colour.</i>
+          </div>
+          <div className="neu-illustration-caption neu-illustration-caption--powder">
+            <span>05 / SETTING</span><b>Setting powder</b><i>Soft focus, your way.</i>
           </div>
           <div className="neu-art-product-track"><span /></div>
         </div>
