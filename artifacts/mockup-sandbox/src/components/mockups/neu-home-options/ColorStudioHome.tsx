@@ -3,11 +3,11 @@ import { ArrowRight, ArrowUpRight, Check, Heart } from "lucide-react";
 import "./colorstudiohome.css";
 
 const pigments = [
-  { name: "Tangerine", color: "#e6704e", note: "A little warmth, a lot of play." },
-  { name: "Petal", color: "#d6848b", note: "Soft color can still say plenty." },
-  { name: "Berry", color: "#923e55", note: "Deep contrast, no permission needed." },
-  { name: "Golden hour", color: "#dbab50", note: "Let your light have its moment." },
-  { name: "Olive leaf", color: "#74805a", note: "Unexpected is a color direction." },
+  { name: "Tangerine", color: "#ef7959", note: "A little warmth, a lot of play." },
+  { name: "Petal", color: "#eb9aa6", note: "Soft color can still say plenty." },
+  { name: "Berry", color: "#974957", note: "Deep contrast, no permission needed." },
+  { name: "Golden hour", color: "#efc85c", note: "Let your light have its moment." },
+  { name: "Olive leaf", color: "#78815c", note: "Unexpected is a color direction." },
 ];
 
 const categories = ["Foundation", "Concealer", "Blush", "Bronzer", "Eyes", "Lips", "Skin prep"];
@@ -35,7 +35,7 @@ export function ColorStudioHome() {
         <section className="cs-hero">
           <div className="cs-hero-copy">
             <p className="cs-kicker"><span className="cs-kicker-line" /> Beauty, with the volume up</p>
-            <h1>Makeup made<br />to look like<br /><em>you.</em></h1>
+            <h1>Makeup<br />made to look<br /><em>like you.</em></h1>
             <p className="cs-hero-desc">
               Find shades and products through people with skin like yours. A starting point for the looks you want to make your own.
             </p>
@@ -46,7 +46,7 @@ export function ColorStudioHome() {
             <div className="cs-note"><span className="cs-note-dot" /> Look around first. Join when you want to save.</div>
           </div>
           <div className="cs-art-frame" aria-label="Colorful beauty product still life">
-            <div className="cs-art-image"><img src="/__mockup/images/neu-home-color-studio.png" alt="Bright makeup palette and pigment swatches" /></div>
+            <div className="cs-art-image"><img src="/__mockup/images/neu-home-color-studio.png" alt="Unbranded blush, lip color and warm complexion shades arranged on peach and coral paper" /></div>
             <div className="cs-art-sticker">COLOR IS<br />A FEELING<br />FIRST</div>
             <div className="cs-art-caption"><small>YOUR SHADE STORY</small>A little color.<br />A lot of you.</div>
             <div className="cs-index">01 / 03</div>
