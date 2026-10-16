@@ -579,32 +579,26 @@ function HomeView({
             No account needed to look around.
           </div>
         </div>
-        <div
-          className="neu-home-art"
-          role="img"
-          aria-label="Animated illustration of a lipstick opening and closing, followed by mascara, concealer, blush, and setting powder"
-        >
-          <div className="neu-art-sun" />
-          <div className="neu-art-swatch neu-art-swatch--one"><span /></div>
-          <div className="neu-art-swatch neu-art-swatch--two"><span /></div>
-          <ProductIllustrationLoop />
-          <div className="neu-illustration-caption neu-illustration-caption--lipstick">
-            <span>01 / LIP COLOR</span><b>Lipstick</b><i>Up. Down. Your shade.</i>
+        <figure className="neu-home-art">
+          <div className="neu-home-art-plate">
+            <img
+              className="neu-home-art-image"
+              src="/__mockup/images/neu-home-color-studio.png"
+              alt="A colorful makeup still life with pink, coral, and yellow swatches, blush compacts, and complexion shades."
+            />
+            <span className="neu-home-art-index">
+              <span>COLOR NOTES</span>
+              <b>01 / 03</b>
+            </span>
           </div>
-          <div className="neu-illustration-caption neu-illustration-caption--mascara">
-            <span>02 / EYES</span><b>Mascara</b><i>One more coat.</i>
-          </div>
-          <div className="neu-illustration-caption neu-illustration-caption--concealer">
-            <span>03 / COMPLEXION</span><b>Concealer</b><i>A little here, a little there.</i>
-          </div>
-          <div className="neu-illustration-caption neu-illustration-caption--blush">
-            <span>04 / CHEEKS</span><b>Blush compact</b><i>Tap on a little colour.</i>
-          </div>
-          <div className="neu-illustration-caption neu-illustration-caption--powder">
-            <span>05 / SETTING</span><b>Setting powder</b><i>Soft focus, your way.</i>
-          </div>
-          <div className="neu-art-product-track"><span /></div>
-        </div>
+          <figcaption className="neu-home-art-caption">
+            <div className="neu-home-art-sticker">COLOR IS A FEELING FIRST</div>
+            <span className="neu-home-art-caption-copy">
+              <span>YOUR SHADE STORY</span>
+              <strong>A little color. A lot of you.</strong>
+            </span>
+          </figcaption>
+        </figure>
       </section>
 
       <section className="neu-home-how">

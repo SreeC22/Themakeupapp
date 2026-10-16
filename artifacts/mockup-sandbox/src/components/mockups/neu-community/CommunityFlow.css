@@ -3857,3 +3857,155 @@
     white-space: nowrap;
   }
 }
+
+.neu-home-art {
+  display: grid;
+  width: 100%;
+  min-height: 0;
+  grid-template-rows: auto auto;
+  gap: 15px;
+  margin: 0;
+  overflow: visible;
+  border: 0;
+  background: transparent;
+}
+
+.neu-home-art-plate {
+  position: relative;
+  aspect-ratio: 1.08 / 1;
+  overflow: hidden;
+  border: 1px solid rgba(121, 91, 106, 0.2);
+  background: #f3ddd0;
+  box-shadow: 0 13px 32px rgba(79, 58, 68, 0.075);
+  isolation: isolate;
+}
+
+.neu-home-art-plate::after {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  border: 5px solid rgba(251, 247, 242, 0.28);
+  content: "";
+  pointer-events: none;
+}
+
+.neu-home-art::before {
+  display: none;
+}
+
+.neu-home-art-image {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(0.94) contrast(0.98);
+}
+
+.neu-home-art-index {
+  position: absolute;
+  z-index: 2;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 7px 10px;
+  border: 1px solid rgba(219, 202, 198, 0.72);
+  background: rgba(251, 247, 242, 0.92);
+  color: #82747a;
+  font-family: "Space Mono", monospace;
+  font-size: 7px;
+  letter-spacing: 0.08em;
+}
+
+.neu-home-art-index b {
+  color: #a16a78;
+  font-size: 7px;
+  font-weight: 400;
+}
+
+.neu-home-art-sticker {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  max-width: 145px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #88747a;
+  font-family: "Space Mono", monospace;
+  font-size: 7px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  text-align: left;
+}
+
+.neu-home-art-sticker::before {
+  width: 7px;
+  height: 7px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e89d83, #d77a82 54%, #e6c26c);
+  content: "";
+}
+
+.neu-home-art-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 0 2px;
+}
+
+.neu-home-art-caption-copy {
+  display: grid;
+  max-width: 200px;
+  gap: 3px;
+  text-align: right;
+}
+
+.neu-home-art-caption-copy > span {
+  color: #96818a;
+  font-family: "Space Mono", monospace;
+  font-size: 6px;
+  letter-spacing: 0.14em;
+}
+
+.neu-home-art-caption-copy strong {
+  max-width: 200px;
+  color: #4c4149;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.05;
+  text-wrap: balance;
+}
+
+@media (max-width: 600px) {
+  .neu-home-art {
+    width: 100%;
+    min-height: 0;
+    gap: 12px;
+  }
+
+  .neu-home-art-plate {
+    aspect-ratio: 1.04 / 1;
+  }
+
+  .neu-home-art-sticker {
+    gap: 7px;
+    font-size: 6px;
+  }
+
+  .neu-home-art-caption-copy > span {
+    font-size: 5px;
+  }
+
+  .neu-home-art-caption-copy strong {
+    font-size: 17px;
+  }
+}

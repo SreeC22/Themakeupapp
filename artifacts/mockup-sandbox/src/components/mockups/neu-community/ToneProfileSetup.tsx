@@ -71,19 +71,17 @@ export function ToneProfileSetup() {
               <div className="tone-art">
                 <div className="tone-art-stamp">NEU<br />NO. 01</div>
                 <div className="tone-art-caption"><span>YOUR STARTING POINT</span><b>A palette<br />that sees you.</b></div>
-                <div className="tone-art-face">
-                  <span className="tone-face-halo" />
-                  <span className="tone-face-shape" style={{ "--sample": currentTone } as CSSProperties}>
-                    <i className="tone-face-hair" />
-                    <i className="tone-face-eye tone-face-eye-left" />
-                    <i className="tone-face-eye tone-face-eye-right" />
-                    <i className="tone-face-nose" />
-                    <i className="tone-face-mouth" />
-                    <i className="tone-face-blush tone-face-blush-left" />
-                    <i className="tone-face-blush tone-face-blush-right" />
-                  </span>
-                  <span className="tone-art-orbit tone-orbit-a" />
-                  <span className="tone-art-orbit tone-orbit-b" />
+                <div className="tone-art-flatlay" aria-hidden="true">
+                  <span className="tone-art-swipe tone-art-swipe-coral" />
+                  <span className="tone-art-swipe tone-art-swipe-berry" />
+                  <div className="tone-art-compact">
+                    <span className="tone-art-pan tone-art-pan-peach" />
+                    <span className="tone-art-pan tone-art-pan-pink" />
+                    <span className="tone-art-pan tone-art-pan-coral" />
+                    <span className="tone-art-pan tone-art-pan-gold" />
+                  </div>
+                  <span className="tone-art-lipstick"><i /><span /></span>
+                  <span className="tone-art-jar" />
                 </div>
                 <div className="tone-art-bottom"><span>01 / 03</span><span>NO PHOTO NEEDED</span></div>
               </div>

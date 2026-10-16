@@ -21,11 +21,11 @@ Do not use em dashes anywhere in the Neu website or its previews.
 
 **How to apply:** Use periods, commas, colons, or parentheses instead, and check all Neu preview copy rather than only the selected frame.
 
-The homepage animation should show unbranded, easily recognizable makeup illustrations, including lipstick moving up and down. Do not put the Neu name on the illustrated products.
+Use the user's chosen Color Studio makeup still-life artwork instead of the animated product illustration on the main homepage. Keep illustrated products unbranded.
 
-**Why:** The user rejected the earlier animation and explicitly asked for an illustration without Neu branding.
+**Why:** After exploring product animations, the user explicitly asked for the shared image instead of the current product illustration.
 
-**How to apply:** Keep product silhouettes recognizable and motions specific to how the products open, close, or operate.
+**How to apply:** Preserve the chosen colorful artwork when refining the main homepage. Do not reintroduce product animation unless requested.
 
 The user likes the Color Studio homepage direction, but does not want the dome-shaped artwork container.
 
