@@ -842,9 +842,9 @@ function LearnView({
         </div>
         <div className="neu-learn-explain-copy">
           <p><strong>Depth:</strong> how light or deep is the shade family that disappears most naturally into my skin?</p>
-          <p><strong>Undertone:</strong> does the skin seem to lean golden, peach, pink, blue, muted green—or a blend?</p>
+          <p><strong>Undertone:</strong> does the skin seem to lean golden, peach, pink, blue, muted green, or a blend?</p>
           <p>People can have warm undertones at deeper depths, cool undertones at lighter depths, or an olive cast alongside another temperature. You do not need to fit one tidy box.</p>
-          <div className="neu-learn-clue-note"><Info size={16} /><span>Vein color and gold-versus-silver jewelry are clues some people like to try, not reliable diagnoses. If they disagree, trust your own side-by-side swatches—or leave the label open.</span></div>
+          <div className="neu-learn-clue-note"><Info size={16} /><span>Vein color and gold-versus-silver jewelry are clues some people like to try, not reliable diagnoses. If they disagree, trust your own side-by-side swatches, or leave the label open.</span></div>
         </div>
       </section>
 
@@ -951,7 +951,7 @@ function LearnView({
             </div>
             <div className="neu-harmony-depth-note">
               <span className="neu-harmony-depth-chip" style={{ backgroundColor: TONE_SWATCHES[depth - 1].hex }} />
-              <p>Try the same hue at different depths or transparencies. Your skin depth changes contrast—not permission.</p>
+              <p>Try the same hue at different depths or transparencies. Your skin depth changes contrast, not permission.</p>
             </div>
           </div>
         </div>

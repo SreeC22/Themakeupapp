@@ -14,3 +14,9 @@ The website needs an education section explaining undertones and color theory, s
 **Why:** The user explicitly requested education alongside makeup discovery.
 
 **How to apply:** Include learning within the website navigation and connect it to tone/profile and product exploration.
+
+Do not use em dashes anywhere in the Neu website or its previews.
+
+**Why:** The user repeated that they should not see any of these in the whole thing.
+
+**How to apply:** Use periods, commas, colons, or parentheses instead, and check all Neu preview copy rather than only the selected frame.

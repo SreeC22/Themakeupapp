@@ -66,7 +66,7 @@ export function ToneProfileSetup() {
             <section className="tone-intro">
               <p className="tone-kicker"><span className="tone-kicker-line" /> A BETTER SHADE STARTS HERE</p>
               <h1>Let’s find<br />your <em>true tone.</em></h1>
-              <p className="tone-intro-copy">A few little details help Neu bring you recommendations that feel like <i>you</i>—never a guess.</p>
+              <p className="tone-intro-copy">A few little details help Neu bring you recommendations that feel like <i>you</i>, never a guess.</p>
 
               <div className="tone-art">
                 <div className="tone-art-stamp">NEU<br />NO. 01</div>
@@ -128,7 +128,7 @@ export function ToneProfileSetup() {
                   type="range"
                   value={depth}
                 />
-                <p className="tone-help">Think of your bare skin in natural daylight—before makeup or self-tan.</p>
+                <p className="tone-help">Think of your bare skin in natural daylight, before makeup or self-tan.</p>
               </fieldset>
 
               <fieldset className="tone-undertone-section">

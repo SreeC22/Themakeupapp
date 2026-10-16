@@ -1,0 +1,604 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+.cs-home {
+  --cs-ink: #2d2024;
+  --cs-paper: #fff8ef;
+  --cs-red: #e75440;
+  --cs-pink: #ea9d99;
+  --cs-yellow: #f5cd66;
+  --cs-green: #71815b;
+  min-height: 100dvh;
+  color: var(--cs-ink);
+  background: var(--cs-paper);
+  font-family: "DM Sans", sans-serif;
+}
+
+.cs-home *,
+.cs-home *::before,
+.cs-home *::after {
+  box-sizing: border-box;
+}
+
+.cs-home button,
+.cs-home a {
+  color: inherit;
+  font: inherit;
+}
+
+.cs-promo {
+  display: flex;
+  min-height: 33px;
+  align-items: center;
+  justify-content: center;
+  background: var(--cs-ink);
+  color: #fff8ef;
+  font-size: 10px;
+  letter-spacing: .11em;
+  text-align: center;
+}
+
+.cs-nav {
+  display: flex;
+  min-height: 76px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 clamp(22px, 6vw, 88px);
+  border-bottom: 1px solid rgba(45, 32, 36, .13);
+}
+
+.cs-wordmark {
+  display: flex;
+  align-items: baseline;
+  gap: 3px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 29px;
+  font-weight: 700;
+  letter-spacing: -.09em;
+}
+
+.cs-wordmark-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--cs-red);
+}
+
+.cs-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 31px;
+}
+
+.cs-nav-links a,
+.cs-nav-cta {
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.cs-nav-links a {
+  opacity: .74;
+}
+
+.cs-nav-links a:hover,
+.cs-nav-links a:focus-visible {
+  opacity: 1;
+}
+
+.cs-nav-cta,
+.cs-button-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 0;
+  background: var(--cs-red);
+  color: #fff8ef !important;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.cs-nav-cta {
+  min-height: 39px;
+  padding: 0 17px;
+  border-radius: 999px;
+}
+
+.cs-hero {
+  display: grid;
+  min-height: 660px;
+  grid-template-columns: .88fr 1.12fr;
+  align-items: center;
+  gap: clamp(35px, 7vw, 112px);
+  padding: 66px clamp(24px, 8vw, 118px) 80px;
+  overflow: hidden;
+}
+
+.cs-hero-copy {
+  max-width: 540px;
+  animation: cs-rise .8s .08s both;
+}
+
+.cs-kicker {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 24px;
+  color: #925443;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.cs-kicker-line {
+  width: 28px;
+  height: 1px;
+  background: var(--cs-red);
+}
+
+.cs-hero h1 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(55px, 7.5vw, 104px);
+  font-weight: 500;
+  letter-spacing: -.085em;
+  line-height: .92;
+}
+
+.cs-hero h1 em {
+  color: var(--cs-red);
+  font-style: normal;
+}
+
+.cs-hero-desc {
+  max-width: 435px;
+  margin: 26px 0 0;
+  color: #66575a;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.cs-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 19px;
+  margin-top: 31px;
+}
+
+.cs-button-primary {
+  min-height: 49px;
+  padding: 0 23px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.cs-button-primary svg,
+.cs-nav-cta svg {
+  transition: transform .22s ease;
+}
+
+.cs-button-primary:hover svg,
+.cs-nav-cta:hover svg {
+  transform: translateX(3px);
+}
+
+.cs-button-quiet {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cs-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 25px;
+  color: #776b66;
+  font-size: 11px;
+}
+
+.cs-note-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--cs-green);
+}
+
+.cs-art-frame {
+  position: relative;
+  min-height: 465px;
+  animation: cs-rise .9s .18s both;
+}
+
+.cs-art-image {
+  position: absolute;
+  inset: 0 7% 0 3%;
+  overflow: hidden;
+  border-radius: 46% 46% 8px 8px;
+  background: #f4c08d;
+  transform: rotate(2deg);
+  animation: cs-image-breathe 8s ease-in-out infinite alternate;
+}
+
+.cs-art-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cs-art-sticker {
+  position: absolute;
+  top: 39px;
+  left: -5px;
+  display: grid;
+  width: 112px;
+  height: 112px;
+  place-items: center;
+  border: 1px solid rgba(45, 32, 36, .2);
+  border-radius: 50%;
+  background: var(--cs-yellow);
+  color: #493b21;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.35;
+  text-align: center;
+  transform: rotate(-11deg);
+  animation: cs-sticker-drift 5s ease-in-out infinite alternate;
+}
+
+.cs-art-caption {
+  position: absolute;
+  right: -1%;
+  bottom: 33px;
+  max-width: 175px;
+  padding: 17px 19px;
+  background: #fff9ee;
+  box-shadow: 0 18px 44px rgba(57, 36, 31, .11);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.cs-art-caption small {
+  display: block;
+  margin-bottom: 8px;
+  color: #9b5e4c;
+  font-family: "DM Sans", sans-serif;
+  font-size: 8px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.cs-index {
+  position: absolute;
+  right: 10%;
+  top: 19px;
+  color: #553a33;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 10px;
+  letter-spacing: .14em;
+}
+
+.cs-discovery {
+  padding: 75px clamp(22px, 7vw, 102px) 86px;
+  background: #f2e8d8;
+}
+
+.cs-section-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.cs-section-head h2 {
+  max-width: 520px;
+  margin: 8px 0 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(34px, 4.4vw, 58px);
+  font-weight: 500;
+  letter-spacing: -.07em;
+  line-height: 1;
+}
+
+.cs-section-head p {
+  max-width: 310px;
+  color: #70635e;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.cs-eyebrow {
+  color: #99614f;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .17em;
+  text-transform: uppercase;
+}
+
+.cs-category-row {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 2px 0 17px;
+}
+
+.cs-category-chip {
+  flex: 0 0 auto;
+  min-height: 38px;
+  padding: 0 15px;
+  border: 1px solid rgba(45, 32, 36, .2);
+  border-radius: 999px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.cs-category-chip.is-active {
+  border-color: var(--cs-ink);
+  background: var(--cs-ink);
+  color: var(--cs-paper);
+}
+
+.cs-color-shelf {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 22px;
+  align-items: stretch;
+  margin-top: 15px;
+}
+
+.cs-palette-card,
+.cs-pick-card {
+  border: 1px solid rgba(45, 32, 36, .13);
+  background: #fff8ed;
+}
+
+.cs-palette-card {
+  padding: clamp(22px, 4vw, 42px);
+}
+
+.cs-palette-card h3 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 27px;
+  font-weight: 500;
+  letter-spacing: -.05em;
+}
+
+.cs-palette-card p {
+  margin: 8px 0 21px;
+  color: #71635f;
+  font-size: 12px;
+}
+
+.cs-swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cs-swatches button {
+  position: relative;
+  width: 43px;
+  height: 43px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.cs-swatches button.is-active {
+  outline: 2px solid var(--cs-ink);
+  outline-offset: 3px;
+}
+
+.cs-selected-pigment {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-top: 24px;
+  color: #5e5150;
+  font-size: 11px;
+}
+
+.cs-selected-pigment span {
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background: var(--cs-selected-color);
+}
+
+.cs-pick-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 27px;
+}
+
+.cs-pick-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.cs-pick-label {
+  color: #8f6557;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.cs-pick-card h3 {
+  margin: 25px 0 7px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 23px;
+  font-weight: 500;
+  letter-spacing: -.05em;
+}
+
+.cs-pick-card p {
+  margin: 0;
+  color: #746560;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.cs-pick-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 24px;
+  padding-top: 17px;
+  border-top: 1px solid rgba(45, 32, 36, .12);
+}
+
+.cs-pick-meta button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--cs-red);
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.cs-pick-meta span {
+  color: #82716a;
+  font-size: 10px;
+}
+
+.cs-how {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 60px;
+  align-items: center;
+  padding: 84px clamp(22px, 8vw, 118px) 90px;
+}
+
+.cs-how h2 {
+  margin: 12px 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(37px, 5vw, 64px);
+  font-weight: 500;
+  letter-spacing: -.075em;
+  line-height: .98;
+}
+
+.cs-how-intro {
+  max-width: 390px;
+  color: #72635f;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.cs-steps {
+  display: grid;
+  gap: 0;
+}
+
+.cs-step {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 17px;
+  padding: 21px 0;
+  border-bottom: 1px solid rgba(45, 32, 36, .14);
+}
+
+.cs-step-num {
+  color: var(--cs-red);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 12px;
+}
+
+.cs-step h3 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.cs-step p {
+  margin: 6px 0 0;
+  color: #71635f;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.cs-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 24px clamp(22px, 6vw, 88px);
+  border-top: 1px solid rgba(45, 32, 36, .13);
+  color: #776963;
+  font-size: 10px;
+}
+
+.cs-footer strong {
+  color: var(--cs-ink);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+}
+
+.cs-home button:focus-visible,
+.cs-home a:focus-visible {
+  outline: 3px solid #476e56;
+  outline-offset: 3px;
+}
+
+@keyframes cs-rise {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes cs-image-breathe {
+  from { transform: rotate(2deg) translateY(0); }
+  to { transform: rotate(1deg) translateY(-9px); }
+}
+
+@keyframes cs-sticker-drift {
+  from { transform: rotate(-11deg) translateY(0); }
+  to { transform: rotate(-7deg) translateY(-8px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cs-home *,
+  .cs-home *::before,
+  .cs-home *::after {
+    animation: none !important;
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .cs-nav { min-height: 65px; padding: 0 18px; }
+  .cs-nav-links { display: none; }
+  .cs-nav-cta { min-height: 36px; padding: 0 13px; font-size: 11px; }
+  .cs-hero { grid-template-columns: 1fr; gap: 32px; padding: 58px 20px 48px; }
+  .cs-hero h1 { font-size: clamp(53px, 14vw, 80px); }
+  .cs-art-frame { min-height: 370px; }
+  .cs-art-image { inset: 0 5% 0 5%; }
+  .cs-art-sticker { left: 0; width: 88px; height: 88px; font-size: 9px; }
+  .cs-art-caption { right: 0; bottom: 19px; }
+  .cs-section-head { display: block; }
+  .cs-section-head p { margin-top: 16px; }
+  .cs-discovery { padding: 58px 19px; }
+  .cs-color-shelf { grid-template-columns: 1fr; }
+  .cs-how { grid-template-columns: 1fr; gap: 27px; padding: 60px 20px; }
+  .cs-footer { align-items: flex-start; flex-direction: column; padding: 22px 20px; }
+}

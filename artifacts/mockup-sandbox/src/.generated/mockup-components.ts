@@ -2,5 +2,9 @@
 type ModuleMap = Record<string, () => Promise<Record<string, unknown>>>;
 export const modules: ModuleMap = {
   "./components/mockups/neu-community/CommunityFlow.tsx": () => import("../components/mockups/neu-community/CommunityFlow.tsx"),
-  "./components/mockups/neu-community/ToneProfileSetup.tsx": () => import("../components/mockups/neu-community/ToneProfileSetup.tsx")
+  "./components/mockups/neu-community/ToneProfileSetup.tsx": () => import("../components/mockups/neu-community/ToneProfileSetup.tsx"),
+  "./components/mockups/neu-community/TrustCenter.tsx": () => import("../components/mockups/neu-community/TrustCenter.tsx"),
+  "./components/mockups/neu-home-options/BeautyDiaryHome.tsx": () => import("../components/mockups/neu-home-options/BeautyDiaryHome.tsx"),
+  "./components/mockups/neu-home-options/ColorPlaygroundHome.tsx": () => import("../components/mockups/neu-home-options/ColorPlaygroundHome.tsx"),
+  "./components/mockups/neu-home-options/ColorStudioHome.tsx": () => import("../components/mockups/neu-home-options/ColorStudioHome.tsx")
 };
