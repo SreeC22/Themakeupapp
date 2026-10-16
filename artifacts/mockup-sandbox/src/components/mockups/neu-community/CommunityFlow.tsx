@@ -404,28 +404,49 @@ function HomeView({
             No account needed to look around.
           </div>
         </div>
-        <div className="neu-home-art" aria-label="Editorial still life of beauty products">
+        <div
+          className="neu-home-art"
+          role="img"
+          aria-label="Looping animation of a lipstick opening, closing, and transforming into concealer and blush"
+        >
           <div className="neu-art-sun" />
-          <div className="neu-art-caption">A little colour, a lot of you.</div>
-          <div className="neu-art-swatch neu-art-swatch--one" />
-          <div className="neu-art-swatch neu-art-swatch--two" />
-          <div className="neu-art-palette">
-            <div className="neu-art-palette-row">
-              <span /><span /><span /><span />
+          <div className="neu-art-stamp"><span>NEU BEAUTY</span><b>01 / 03</b></div>
+          <div className="neu-art-swatch neu-art-swatch--one"><span /></div>
+          <div className="neu-art-swatch neu-art-swatch--two"><span /></div>
+          <div className="neu-art-product-stage" aria-hidden="true">
+            <div className="neu-art-product-halo" />
+            <div className="neu-art-product-scene neu-art-product-scene--lipstick">
+              <div className="neu-art-lipstick">
+                <div className="neu-art-lipstick-case"><span>neu</span></div>
+                <div className="neu-art-lipstick-bullet"><i /></div>
+                <div className="neu-art-lipstick-cap"><span>COLOR</span></div>
+                <div className="neu-art-lipstick-base" />
+              </div>
             </div>
-            <div className="neu-art-palette-row">
-              <span /><span /><span /><span />
+            <div className="neu-art-product-scene neu-art-product-scene--concealer">
+              <div className="neu-art-concealer">
+                <div className="neu-art-concealer-bottle"><span>neu<br /><i>tone veil</i></span></div>
+                <div className="neu-art-concealer-cap"><span>NEU</span><i /></div>
+              </div>
             </div>
+            <div className="neu-art-product-scene neu-art-product-scene--blush">
+              <div className="neu-art-blush">
+                <div className="neu-art-blush-lid"><span>neu</span></div>
+                <div className="neu-art-blush-pan" />
+              </div>
+            </div>
+            <span className="neu-art-floor-shadow" />
           </div>
-          <div className="neu-art-tube">
-            <span>neu</span>
+          <div className="neu-art-product-caption neu-art-product-caption--lipstick">
+            <span>01 / COLOR</span><b>Lipstick</b><i>Open. Play. Repeat.</i>
           </div>
-          <div className="neu-art-compact">
-            <div className="neu-art-compact-inner" />
+          <div className="neu-art-product-caption neu-art-product-caption--concealer">
+            <span>02 / COMPLEXION</span><b>Concealer</b><i>Find your kind of cover.</i>
           </div>
-          <div className="neu-art-pencil" />
-          <div className="neu-art-vertical-type">YOUR SHADE, YOUR STORY</div>
-          <div className="neu-art-index">01 / 04</div>
+          <div className="neu-art-product-caption neu-art-product-caption--blush">
+            <span>03 / CHEEKS</span><b>Blush</b><i>Colour with a point of view.</i>
+          </div>
+          <div className="neu-art-product-track"><span /></div>
         </div>
       </section>
 
