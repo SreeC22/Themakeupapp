@@ -10,5 +10,14 @@ export const modules: ModuleMap = {
   "./components/mockups/neu-image-directions/ColorOnSkin.tsx": () => import("../components/mockups/neu-image-directions/ColorOnSkin.tsx"),
   "./components/mockups/neu-image-directions/DesignGuide.tsx": () => import("../components/mockups/neu-image-directions/DesignGuide.tsx"),
   "./components/mockups/neu-image-directions/PigmentStudy.tsx": () => import("../components/mockups/neu-image-directions/PigmentStudy.tsx"),
-  "./components/mockups/neu-image-directions/ShadeSession.tsx": () => import("../components/mockups/neu-image-directions/ShadeSession.tsx")
+  "./components/mockups/neu-image-directions/ShadeSession.tsx": () => import("../components/mockups/neu-image-directions/ShadeSession.tsx"),
+  "./components/mockups/neu-match-flow/SkinMatchFlow.tsx": () => import("../components/mockups/neu-match-flow/SkinMatchFlow.tsx"),
+  "./components/mockups/neu-website-journey/AccountSafetyPages.tsx": () => import("../components/mockups/neu-website-journey/AccountSafetyPages.tsx"),
+  "./components/mockups/neu-website-journey/DiscoveryPages.tsx": () => import("../components/mockups/neu-website-journey/DiscoveryPages.tsx"),
+  "./components/mockups/neu-website-journey/LearnProfilePages.tsx": () => import("../components/mockups/neu-website-journey/LearnProfilePages.tsx"),
+  "./components/mockups/neu-website-journey/MemberPages.tsx": () => import("../components/mockups/neu-website-journey/MemberPages.tsx"),
+  "./components/mockups/neu-website-journey/QuizFlow.tsx": () => import("../components/mockups/neu-website-journey/QuizFlow.tsx"),
+  "./components/mockups/neu-website-journey/Shared.tsx": () => import("../components/mockups/neu-website-journey/Shared.tsx"),
+  "./components/mockups/neu-website-journey/SiteChrome.tsx": () => import("../components/mockups/neu-website-journey/SiteChrome.tsx"),
+  "./components/mockups/neu-website-journey/WebsiteJourney.tsx": () => import("../components/mockups/neu-website-journey/WebsiteJourney.tsx")
 };
