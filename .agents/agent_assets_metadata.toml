@@ -1,0 +1,16 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "gSminOXdpEKqnBum6MDj6"
+uri = "file://docs/NEU_PLANNING_PROMPT.md"
+type = "text"
+title = "Neu product-planning prompt"
+description = "A reusable prompt for a complete page-by-page product brief, covering the approved design, current build, community flows, permissions, safety, and launch checks."
+logical_id = "f25039c3-2f0f-471a-88b6-547459fc9754"
+content_hash = "sha256:bda6d77ea3a607bbc9807c73adc719e2ca8202ee81026351a7858c287cbf5066"
+size = 10787
+mtime_ms = 1792277289798
+storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:0417277c-b89f-42fe-9e01-86281ec8ea11/f25039c3-2f0f-471a-88b6-547459fc9754/88f40e8e-8299-419a-8d42-d7dcda11c33b"
+storage_version_token = "1792277297602820"
+content_type = "text/markdown"
