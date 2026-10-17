@@ -8,6 +8,7 @@ export const modules: ModuleMap = {
   "./components/mockups/neu-home-options/ColorPlaygroundHome.tsx": () => import("../components/mockups/neu-home-options/ColorPlaygroundHome.tsx"),
   "./components/mockups/neu-home-options/ColorStudioHome.tsx": () => import("../components/mockups/neu-home-options/ColorStudioHome.tsx"),
   "./components/mockups/neu-image-directions/ColorOnSkin.tsx": () => import("../components/mockups/neu-image-directions/ColorOnSkin.tsx"),
+  "./components/mockups/neu-image-directions/DesignGuide.tsx": () => import("../components/mockups/neu-image-directions/DesignGuide.tsx"),
   "./components/mockups/neu-image-directions/PigmentStudy.tsx": () => import("../components/mockups/neu-image-directions/PigmentStudy.tsx"),
   "./components/mockups/neu-image-directions/ShadeSession.tsx": () => import("../components/mockups/neu-image-directions/ShadeSession.tsx")
 };
