@@ -1,0 +1,493 @@
+# NEU: Build the Complete Skin Tone & Makeup Discovery Quiz
+
+## Objective
+
+Build a fully functional, adaptive, beginner-friendly skin tone and makeup discovery quiz for Neu.
+
+The quiz should help users understand their skin depth, undertone, olive characteristics, and what makeup products may work for them based on products they already use and experiences from people with similar skin characteristics.
+
+**The goal is not to assign someone a perfect skin shade. The goal is to understand their existing makeup experiences and help them discover better matches.**
+
+This must be a real, functional feature connected to Neu's product discovery experience, not a static UI mockup.
+
+## 1. Preserve the approved design
+
+Use Neu's existing visual design system.
+
+- Warm cream background: `#FBF7F2`
+- Soft blush sections: `#F3ECEB`
+- Deep plum buttons: `#514659`
+- Dark text: `#322B34`
+- Dusty plum accents: `#786B88`
+- Cormorant Garamond for elegant headlines
+- DM Sans for readable interface text
+- Generous whitespace, large readable questions and minimal distractions
+- No human photographs required
+- No excessive cards, decorative illustrations or unnecessary animations
+- One question per screen
+- Clear progress indicator, Back, Continue and Skip where appropriate
+- Responsive across mobile, tablet and desktop
+
+Do not redesign the approved homepage.
+
+## 2. Quiz introduction
+
+**Headline:** Let's get to know your skin.
+
+**Subheading:** Tell us what you wear, what works, and what doesn't. We'll help you discover makeup worth trying.
+
+Show:
+
+- Find your skin tone
+- Understand your undertone
+- Discover potential makeup matches
+
+Primary CTA: **Find my match**
+
+Allow guests to complete the entire quiz without creating an account.
+
+Do not collect photographs, use facial recognition or require camera permissions.
+
+## 3. Step 1: What makeup do you currently use?
+
+Question:
+
+**Do you currently use foundation, concealer or skin tint?**
+
+Options:
+
+- Yes, I know my exact product and shade.
+- Yes, but I don't know the shade name.
+- No, I'm new to complexion makeup.
+- I'm not sure.
+
+If the user knows their product, provide searchable dropdowns:
+
+1. Brand
+2. Product line
+3. Exact shade
+4. Product type
+
+Support prestige and drugstore brands, including brands such as Maybelline, L'Oréal, e.l.f., NYX, Milani, Revlon, CoverGirl, Fenty Beauty, NARS, MAC, Rare Beauty, Huda Beauty, Estée Lauder, Clinique and others.
+
+Use verified catalog records. Do not invent product shades or brand data.
+
+Let users enter a product manually if it is missing. Flag manual entries as unverified.
+
+Allow multiple current products.
+
+## 4. Step 2: How well does the product match?
+
+Question:
+
+**How does this shade look on your skin?**
+
+Allow the user to select:
+
+- It blends into my skin really well.
+- It looks too light.
+- It looks too dark.
+- It looks too orange.
+- It looks too pink.
+- It looks too yellow.
+- It looks gray or ashy.
+- It changes color after application.
+- I'm not sure.
+
+Allow multiple responses when they describe different characteristics.
+
+If multiple products were entered, capture feedback for each separately.
+
+Ask whether the product was tested on the jawline or elsewhere and whether its color changes after drying.
+
+Do not automatically infer a particular undertone from one mismatch.
+
+## 5. Step 3: Identify skin depth
+
+Question:
+
+**Which shade looks closest to your natural skin?**
+
+Show a visually clear, inclusive skin-depth continuum with an adjustable slider.
+
+Cover very fair through very deep complexions, including a meaningful range of medium, tan and deep shades.
+
+Use the existing Neu shade-selection approach as the starting point.
+
+Explain that display calibration, lighting and color rendering can affect accuracy.
+
+Allow:
+
+- Manual selection
+- Fine-tuning
+- Unsure
+- Going back to adjust the selection
+
+Never assume someone has a particular undertone based on how light or deep their skin is.
+
+## 6. Step 4: Explain undertones
+
+Before asking users to identify their undertone, display a short educational introduction.
+
+**Headline:** Let's understand your undertone.
+
+Explain:
+
+Skin tone describes how light or deep your skin appears. Undertone describes subtle color characteristics that can affect how makeup looks on your skin.
+
+Include four educational descriptions:
+
+**Warm:** Golden, yellow or peach characteristics.
+
+**Cool:** Pink, rosy or sometimes bluish characteristics.
+
+**Neutral:** A relatively balanced combination of warm and cool characteristics.
+
+**Olive:** A muted greenish or gray-green cast that may coexist with warm, cool or neutral undertones.
+
+Do not treat olive as exclusively warm or as a mutually exclusive fourth category.
+
+Add a "Learn more" interaction for beginners.
+
+## 7. Step 5: Wrist vein guidance
+
+Question:
+
+**What color do your wrist veins appear?**
+
+Provide a clear tutorial:
+
+1. Stand near a window in indirect natural daylight.
+2. Turn your hand palm-up.
+3. Relax your wrist.
+4. Look at the thin veins around your inner wrist or lower forearm.
+5. Select the appearance closest to what you see.
+
+Options:
+
+- Mostly blue or purple
+- Mostly green or teal
+- A combination of blue and green
+- I can't see my veins clearly
+- I'm not sure
+
+Explain the traditional associations:
+
+- Blue or purple may suggest cool characteristics.
+- Green may suggest warm characteristics.
+- Mixed appearance may suggest neutral characteristics.
+
+**Critical rule:** Vein appearance is a weak, non-diagnostic clue. Do not classify undertones solely from vein colors.
+
+Veins can appear different because of skin depth, lighting and how light interacts with the skin.
+
+Do not interpret green-looking veins as proof of olive skin.
+
+Provide an explanation for users who cannot see their veins, particularly those with deeper complexions.
+
+All answers must allow progression.
+
+## 8. Step 6: Additional undertone observations
+
+Use optional, beginner-friendly questions.
+
+**Question A: Jewelry**
+
+Which usually looks more harmonious against your skin?
+
+- Gold
+- Silver
+- Both
+- I don't know
+
+Explain that jewelry preference is subjective and is not a reliable standalone undertone test.
+
+**Question B: Foundation behavior**
+
+When you try complexion makeup, what tends to happen?
+
+- Too orange
+- Too pink
+- Too yellow
+- Too gray
+- Usually matches well
+- It varies
+- I'm new to makeup
+
+Use the earlier product-specific answers when available. Do not ask users to repeat information unnecessarily.
+
+**Question C: Natural skin appearance**
+
+Do you notice your skin leaning more golden, rosy, balanced or muted?
+
+Provide plain-language explanations and a clear "I'm not sure" option.
+
+Keep this educational rather than diagnostic.
+
+## 9. Step 7: Olive characteristics
+
+Question:
+
+**Does your skin sometimes have a muted greenish or gray-green appearance?**
+
+Explain that olive can occur at any skin depth.
+
+Options:
+
+- Yes, I've noticed this.
+- Maybe, I'm not sure.
+- No, I haven't noticed this.
+- I don't know what that looks like.
+
+Include a "How can I tell?" educational explanation.
+
+Mention that some olive complexions may find standard foundation ranges overly pink, orange or saturated.
+
+However, those mismatches are not proof of olive characteristics.
+
+Store olive separately from undertone:
+
+- Undertone: warm, cool, neutral or unknown
+- Olive cast: yes, no or unknown
+
+Allow people to edit both attributes.
+
+## 10. Step 8: What makeup are you looking for?
+
+Question:
+
+**What would you love help finding?**
+
+Allow multiple selections:
+
+- Foundation
+- Concealer
+- Skin tint
+- Blush
+- Bronzer
+- Contour
+- Highlighter
+- Lipstick
+- Lip liner
+- Lip gloss
+- Eyeshadow
+- Setting powder
+- Setting spray
+- Primer
+- SPF
+- Everything
+
+Then ask optional preferences:
+
+**Budget**
+
+- Drugstore
+- Mid-range
+- Luxury
+- Show me everything
+
+**Finish**
+
+- Natural
+- Dewy
+- Matte
+- Satin
+- No preference
+
+**Skin type**
+
+- Dry
+- Oily
+- Combination
+- Normal
+- Unsure
+
+Do not assume someone's skin type from their undertone.
+
+The product categories and preferences must affect the discovery results.
+
+## 11. Build an explainable matching engine
+
+The recommendation system must combine:
+
+1. Product and exact shade history
+2. Whether previously used products matched well
+3. Self-selected skin depth
+4. Undertone observations
+5. Olive characteristics
+6. Product-category interests
+7. Budget and finish preferences
+8. Genuine reviews from members with similar skin profiles
+
+Prioritize reliable firsthand product experiences over weak signals such as wrist vein color.
+
+Separate three distinct outputs:
+
+**Estimated skin profile:** A tentative, editable summary.
+
+**Potential shade matches:** Products worth trying, based on product characteristics and available evidence.
+
+**Community recommendations:** Actual experiences from other users with comparable skin characteristics.
+
+Do not claim that a product is a perfect match.
+
+Do not invent community reviews, popularity figures or ratings.
+
+Only display numerical confidence or match percentages if calibrated against actual evaluation data. Otherwise use descriptive labels such as "Similar skin profile" or "Worth exploring."
+
+If evidence is insufficient, explain what additional information could improve recommendations.
+
+The system must work even if the user skips every optional undertone question.
+
+## 12. Results page
+
+After the quiz, show:
+
+**Headline:** Your beauty, a little more understood.
+
+Display an editable skin profile:
+
+- Estimated skin depth
+- Undertone or "Still exploring"
+- Olive characteristic, if provided
+- Current products and shade history
+- Product categories of interest
+
+Include an explanation:
+
+**Why Neu suggested this**
+
+Tell the user which answers contributed to the estimate and what remains uncertain.
+
+Below the profile, display:
+
+### Your potential holy grails
+
+Products worth exploring based on available matching evidence.
+
+Each product should display:
+
+- Brand
+- Product
+- Exact shade, where applicable
+- Category
+- Price or price range, when verified
+- Why it was recommended
+- Relevant genuine reviews, if available
+- Save action
+
+### Loved by people with skin like yours
+
+Show community experiences from people with similar skin depth and undertone characteristics.
+
+When applicable, display:
+
+- Member's voluntarily shared skin context
+- Product and shade
+- Written experience
+- Repurchase status
+- Relevant shade-match observations
+
+Never fabricate users or reviews.
+
+If there are insufficient real reviews, show clearly labeled curated starter products and an honest explanation.
+
+### Explore more
+
+Provide links to the full product discovery experience, including drugstore alternatives and other categories.
+
+## 13. Guest experience, saving and accounts
+
+Users must be able to complete the quiz and browse initial recommendations without an account.
+
+When someone clicks Save:
+
+- Prompt them to sign up or log in.
+- Preserve their quiz progress and intended save action.
+- Return them to the same product after authentication.
+
+Use Neu's account system and mandatory two-factor authentication requirements.
+
+Do not treat email confirmation alone as the required second factor.
+
+Persist saved products and editable skin profiles securely after account creation.
+
+Guest quiz data must not be silently uploaded to an account without clear user consent.
+
+## 14. Database and backend
+
+Before implementing, inspect the current application and existing Supabase schema.
+
+Extend the actual schema only where needed to support:
+
+- Skin profiles
+- Undertone and olive attributes
+- Quiz sessions and answers
+- Brands
+- Product lines
+- Exact product shades
+- Product shade history
+- Product experiences
+- Recommendations
+- Saved products
+- Member reviews
+
+Keep verified product facts separate from user-submitted information.
+
+Require row-level security and appropriate access rules for all user-specific data.
+
+Do not expose service-role credentials in browser code.
+
+Do not invent working integrations or seed fake user reviews.
+
+## 15. Testing and acceptance criteria
+
+The completed feature must pass these scenarios:
+
+1. A user knows their foundation and exact shade.
+2. A user wears multiple foundation shades.
+3. A user is completely new to makeup.
+4. A user cannot see their wrist veins.
+5. A user is unsure about their undertone.
+6. A user identifies as warm olive.
+7. A user identifies as cool olive.
+8. A user has deep skin and cannot find a close visual swatch.
+9. A foundation matches in depth but appears orange.
+10. A product oxidizes after application.
+11. A user skips optional questions.
+12. A user wants only drugstore products.
+13. A user wants multiple makeup categories.
+14. A selected product is missing from the catalog.
+15. No real community reviews are available.
+16. The user updates their undertone after receiving results.
+17. A guest signs up to save a product.
+18. Two users cannot access each other's private quiz information.
+19. Returning users can edit their profile.
+20. The quiz works on mobile, tablet and desktop.
+
+Test keyboard navigation, readable contrast, loading and error states, failed saves, session expiry and account switching.
+
+## 16. Implementation instructions
+
+First inspect the existing Neu project, including the approved design, current quiz, product catalog, Supabase connection and routes.
+
+Document which parts are already functional, illustrative or not connected.
+
+Preserve the approved visual design and existing working functionality.
+
+Implement in stages:
+
+1. Quiz interface and adaptive navigation
+2. Product search and exact shade history
+3. Skin-depth selection
+4. Undertone education and guided questions
+5. Olive characteristics
+6. Product interests and preferences
+7. Explainable profile estimation
+8. Product discovery integration
+9. Results and saved products
+10. Backend persistence, accessibility and automated testing
+
+Do not redesign the homepage, create fake data, deploy, or push to GitHub without approval.
+
+**Final outcome:** A beginner should be able to open Neu, understand their skin characteristics, explain what makeup has or hasn't worked for them, and discover real products and experiences relevant to their skin, without needing beauty expertise or a photograph.

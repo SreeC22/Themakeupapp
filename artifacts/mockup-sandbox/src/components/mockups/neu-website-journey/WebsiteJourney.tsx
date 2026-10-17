@@ -12,6 +12,87 @@ import "./websitejourney.css";
 const KNOWN_PAGES = new Set<string>(Object.keys(PAGE_TITLES));
 type DeferredIntent = { kind: "save"; productId: string } | { kind: "share" } | null;
 
+function QuickShadeEntry({ onPreview }: { onPreview: (product: ProductExample) => void }) {
+  const [brand, setBrand] = useState("");
+  const [productId, setProductId] = useState("");
+  const [shadeName, setShadeName] = useState("");
+  const brands = [...new Set(SAMPLE_PRODUCTS.map((product) => product.brand))];
+  const brandProducts = SAMPLE_PRODUCTS.filter((product) => product.brand === brand);
+  const product = SAMPLE_PRODUCTS.find((item) => item.id === productId) ?? null;
+
+  const selectBrand = (value: string) => {
+    const firstProduct = SAMPLE_PRODUCTS.find((item) => item.brand === value);
+    setBrand(value);
+    setProductId(firstProduct?.id ?? "");
+    setShadeName("");
+  };
+
+  return (
+    <details className="wj-quick-shade" open={new URLSearchParams(window.location.search).get("quick") === "open"}>
+      <summary>
+        <span>Already wear a complexion shade?</span>
+        <span className="wj-quick-shade-action">Choose a product to start with</span>
+      </summary>
+      <div className="wj-quick-shade-content">
+        <p>Choose a brand and product to fill in the example details. Enter your shade name yourself. Neu has no verified shade list in this preview.</p>
+        <div className="wj-quick-shade-fields">
+          <label>
+            <span>Brand</span>
+            <select value={brand} onChange={(event) => selectBrand(event.target.value)}>
+              <option value="">Choose a brand</option>
+              {brands.map((item) => <option key={item} value={item}>{item}</option>)}
+            </select>
+          </label>
+          <label>
+            <span>Product or line</span>
+            <select
+              value={productId}
+              disabled={!brandProducts.length}
+              onChange={(event) => { setProductId(event.target.value); setShadeName(""); }}
+            >
+              {!brandProducts.length && <option value="">Choose a brand first</option>}
+              {brandProducts.map((item) => <option key={item.id} value={item.id}>{item.name}</option>)}
+            </select>
+          </label>
+          <div className="wj-quick-shade-autofill" aria-live="polite">
+            <span>Automatically filled from the example</span>
+            <strong>{product ? `${product.category} · ${product.finish}` : "Product type · finish notes"}</strong>
+          </div>
+          <label>
+            <span>Your shade name</span>
+            <input
+              value={shadeName}
+              onChange={(event) => setShadeName(event.target.value)}
+              placeholder="Enter the name on your product"
+              autoComplete="off"
+            />
+          </label>
+        </div>
+        <div className="wj-quick-shade-footer">
+          <p>Product categories and finish notes are examples. Your typed shade stays in this preview only. It is not saved or verified.</p>
+          <button
+            type="button"
+            className="wj-primary"
+            disabled={!product || !shadeName.trim()}
+            onClick={() => {
+              if (!product || !shadeName.trim()) return;
+              onPreview({
+                ...product,
+                shade: `${shadeName.trim()} · unverified`,
+                notes: `A private preview note for "${shadeName.trim()}". Product and formula details are examples. The shade has not been verified.`,
+                routine: "This entry stays in the current design preview only.",
+                author: "Your private preview entry",
+              });
+            }}
+          >
+            Preview this shade
+          </button>
+        </div>
+      </div>
+    </details>
+  );
+}
+
 function pageFromUrl(): NeuPage {
   const value = new URLSearchParams(window.location.search).get("page") || "home";
   return KNOWN_PAGES.has(value) ? value as NeuPage : "not-found";
@@ -142,6 +223,10 @@ export default function WebsiteJourney() {
     navigate("account");
   };
   const sampleReview = () => <ReviewPage product={selectedProduct} onNavigate={navigate} onReport={() => openReport("Illustrative member note")} />;
+  const useQuickShadeEntry = (product: ProductExample) => {
+    setSelectedProduct(product);
+    navigate("product");
+  };
 
   let content;
   switch (page) {
@@ -227,6 +312,7 @@ export default function WebsiteJourney() {
     <div className="wj-app">
       <PreviewNotice />
       <SiteHeader page={page} previewMember={previewMember} onNavigate={navigate} />
+      {page === "quiz" && <QuickShadeEntry onPreview={useQuickShadeEntry} />}
       {content}
       <SiteFooter onNavigate={navigate} />
       {reportOpen && <ReportDialog context={reportContext} onClose={() => setReportOpen(false)} onSubmit={createLocalReport} />}

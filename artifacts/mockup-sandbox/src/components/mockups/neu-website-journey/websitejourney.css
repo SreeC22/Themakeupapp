@@ -60,6 +60,14 @@
 .wj-primary-nav button.is-active { color: var(--wj-ink); }
 .wj-primary-nav button.is-active::after, .wj-primary-nav button:hover::after { transform: scaleX(1); }
 .wj-header-actions { display: flex; align-items: center; gap: 20px; }
+.wj-header-actions > .wj-profile-link, .wj-header-actions > .wj-header-share, .wj-header-actions > .wj-header-cta { display: none; }
+.wj-header-actions > .wj-signin-link { min-height: 44px; gap: 8px; padding-left: 4px; font-size: 14px; }
+.wj-header-actions > .wj-mobile-menu-button { display: grid; width: 44px; height: 44px; place-items: center; border: 1px solid var(--wj-border); border-radius: 50%; background: transparent; color: var(--wj-plum); }
+.wj-header-wrap .wj-mobile-nav { display: none !important; }
+.wj-drawer { position: absolute; z-index: 20; top: 100%; right: clamp(18px, 4vw, 54px); display: grid; width: min(340px, calc(100vw - 32px)); gap: 0; border: 1px solid var(--wj-border); padding: 12px 19px; background: var(--wj-surface); box-shadow: 0 16px 30px rgba(67,48,56,.1); animation: wj-arrive .16s both; }
+.wj-drawer > p { margin: 5px 0 8px; color: #766378; font: 11px/1.6 "Space Mono", monospace; letter-spacing: .1em; }
+.wj-drawer > button { display: flex; min-height: 46px; align-items: center; justify-content: space-between; border: 0; border-bottom: 1px solid var(--wj-border); padding: 7px 0; text-align: left; background: transparent; color: #514659; font-size: 14px; }
+.wj-drawer > button:last-child { border-bottom: 0; }
 .wj-profile-link { font-size: 11px; }
 .wj-header-share { border: 0; border-left: 1px solid var(--wj-border); padding: 0 0 0 12px; background: transparent; color: var(--wj-plum); font-size: 14px; }
 .wj-header-cta { min-height: 40px; display: inline-flex; align-items: center; gap: 7px; border: 0; padding: 0 11px; background: #ece0e1; color: #574653; font-size: 14px; font-weight: 600; transition: background .16s; }
@@ -92,6 +100,26 @@
 .wj-breadcrumb button:hover { color: var(--wj-rose); }
 .wj-example-notice { display: flex; align-items: center; gap: 9px; margin: 15px 0 28px; border-left: 2px solid #bd8a98; padding: 8px 12px; background: #f4eaea; color: #6e5c68; font-size: 12px; line-height: 1.55; }
 .wj-example-notice svg { flex: 0 0 auto; }
+
+.wj-quick-shade { width: min(790px, calc(100% - 48px)); margin: 8px auto 16px; border-bottom: 1px solid var(--wj-border); }
+.wj-quick-shade > summary { display: flex; min-height: 48px; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 18px; padding: 5px 2px; color: #514659; cursor: pointer; list-style: none; }
+.wj-quick-shade > summary::-webkit-details-marker { display: none; }
+.wj-quick-shade > summary::after { width: 9px; height: 9px; margin-left: auto; border-right: 1px solid #786b88; border-bottom: 1px solid #786b88; content: ""; transform: rotate(45deg) translateY(-2px); transition: transform .16s; }
+.wj-quick-shade[open] > summary::after { transform: rotate(225deg) translate(-2px, -1px); }
+.wj-quick-shade > summary > span:first-child { font: 500 22px/1.15 "Cormorant Garamond", Georgia, serif; }
+.wj-quick-shade-action { color: #665967; font-size: 14px; }
+.wj-quick-shade-content { padding: 0 0 17px; }
+.wj-quick-shade-content > p { margin: 0 0 13px; color: var(--wj-muted); font-size: 14px; line-height: 1.65; }
+.wj-quick-shade-fields { display: grid; grid-template-columns: 1fr 1.3fr .85fr 1.2fr; align-items: end; gap: 12px; }
+.wj-quick-shade-fields > label { display: grid; min-width: 0; gap: 6px; color: #635862; font-size: 12px; }
+.wj-quick-shade-fields > label > span, .wj-quick-shade-autofill > span { color: #716370; font: 11px/1.4 "Space Mono", monospace; letter-spacing: .03em; }
+.wj-quick-shade-fields select, .wj-quick-shade-fields input { width: 100%; min-width: 0; min-height: 44px; border: 1px solid #cfc0c3; border-radius: 1px; padding: 8px 10px; background: #fffaf6; color: var(--wj-ink); font-size: 14px; }
+.wj-quick-shade-fields select:disabled { color: #716b70; }
+.wj-quick-shade-autofill { display: grid; min-height: 62px; align-content: center; gap: 5px; border-left: 2px solid #c39a9f; padding: 6px 0 6px 11px; }
+.wj-quick-shade-autofill > strong { color: #514659; font-size: 13px; font-weight: 500; }
+.wj-quick-shade-footer { display: flex; align-items: center; justify-content: space-between; gap: 18px; margin-top: 13px; }
+.wj-quick-shade-footer > p { max-width: 490px; color: #716b70; font-size: 12px; line-height: 1.55; }
+.wj-quick-shade-footer > .wj-primary { flex: 0 0 auto; }
 
 /* Homepage, lifted from the approved pigment study rather than a new mood board. */
 .wj-home-hero { position: relative; display: grid; min-height: 650px; grid-template-columns: minmax(0,.92fr) minmax(0,1.08fr); align-items: center; gap: clamp(16px,2.5vw,36px); padding: 32px 0 52px; }
@@ -313,7 +341,9 @@
 .wj-depth-picker { display: grid; grid-template-columns: repeat(5, 1fr); gap: 7px; }
 .wj-depth-picker > button { display: grid; grid-template-columns: 32px 1fr; grid-template-rows: 1fr 1fr; align-items: center; gap: 0 8px; min-height: 49px; border: 1px solid transparent; padding: 6px; text-align: left; background: transparent; }
 .wj-depth-picker > button:hover, .wj-depth-picker > button.is-selected { border-color: #b79da6; background: #f2e8e6; }
-.wj-depth-picker > button > span { display: grid; width: 32px; height: 32px; grid-row: span 2; place-items: center; border: 1px solid rgba(60,40,40,.15); border-radius: 50%; color: white; }
+.wj-depth-picker > button > span { position: relative; isolation: isolate; display: grid; width: 32px; height: 32px; grid-row: span 2; place-items: center; border: 1px solid rgba(60,40,40,.15); border-radius: 50%; color: white; }
+.wj-depth-picker > button > span::before { position: absolute; z-index: -1; inset: -5px; border: 2px solid transparent; border-radius: 50%; background: conic-gradient(from 8deg, #cd876e 0deg, #dfb270 90deg, #819174 180deg, #9581a3 270deg, #cd876e 360deg); background-origin: border-box; background-clip: border-box; mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1px)); content: ""; pointer-events: none; }
+.wj-depth-picker > button > span > svg { position: relative; z-index: 1; }
 .wj-depth-picker > button strong { font-size: 9px; font-weight: 550; }
 .wj-depth-picker > button small { color: #8b7c82; font: 8px "Space Mono", monospace; }
 .wj-unsure-button { display: inline-flex; align-items: center; gap: 8px; margin-top: 13px; border: 1px solid var(--wj-border); padding: 8px 11px; background: transparent; font-size: 10px; }
