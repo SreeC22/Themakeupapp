@@ -1,1 +1,2 @@
 - [Neu product direction](neu-product-direction.md) — finalize the website preview before building; include public education on undertones and color theory.
+- [External repository reviews](external-repository-reviews.md) — preserve website sources in tracked files; ignored checkout Git metadata may disappear across task sessions.

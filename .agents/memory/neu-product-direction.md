@@ -9,6 +9,12 @@ Finalize the website direction before building the real application. The user su
 
 **How to apply:** The approved direction is now authorized for implementation. Do not reinterpret that authorization as permission to publish or to replace the owner's Supabase project.
 
+The static community website port is authorized for a reviewable branch only. Do not merge or deploy it without explicit owner approval.
+
+**Why:** The owner required review before the website changes become public.
+
+**How to apply:** Upload a review branch and open a draft pull request, but leave the published site unchanged until approval.
+
 The website needs an education section explaining undertones and color theory, so it is one place for people.
 
 **Why:** The user explicitly requested education alongside makeup discovery.
