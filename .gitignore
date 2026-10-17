@@ -47,3 +47,5 @@ Thumbs.db
 # Replit
 .cache/
 .local/
+/artifacts/mockup-sandbox/public/neu-downloads/
+/.config/gh/
