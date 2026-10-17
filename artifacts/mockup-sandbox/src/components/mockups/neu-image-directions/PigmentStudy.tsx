@@ -580,19 +580,16 @@ function HomeView({
           </div>
         </div>
         <figure className="neu-home-art">
-          <div className="neu-home-art-plate">
-            <img
-              className="neu-home-art-image"
-              src="/__mockup/images/neu-pigment-study.jpg"
-              alt="Conceptual AI artwork: a sculptural study of dusty rose cream, muted mauve pigment, and warm beige makeup textures on ivory."
-            />
-            <span className="neu-home-art-index">
-              <span>PIGMENT STUDY</span>
-              <b>01 / 03</b>
-            </span>
-          </div>
+          <img
+            className="neu-home-art-image"
+            src="/__mockup/images/neu-pigment-study.jpg"
+            alt="Conceptual AI artwork showing dusty rose cream, muted mauve pigment, and warm beige makeup textures blending into a soft ivory background."
+          />
+          <span className="neu-home-art-index">
+            CONCEPT ART · COLOR STUDY
+          </span>
           <figcaption className="neu-home-art-caption">
-            <div className="neu-home-art-sticker">CONCEPTUAL AI ARTWORK · NOT A MEMBER OR PRODUCT ENDORSEMENT</div>
+            <div className="neu-home-art-sticker">CONCEPT ARTWORK · NOT A MEMBER OR PRODUCT ENDORSEMENT</div>
             <span className="neu-home-art-caption-copy">
               <span>YOUR SHADE STORY</span>
               <strong>A little color. A lot of you.</strong>

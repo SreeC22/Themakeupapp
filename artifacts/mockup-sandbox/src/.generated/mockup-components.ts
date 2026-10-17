@@ -4,9 +4,10 @@ export const modules: ModuleMap = {
   "./components/mockups/neu-community/CommunityFlow.tsx": () => import("../components/mockups/neu-community/CommunityFlow.tsx"),
   "./components/mockups/neu-community/ToneProfileSetup.tsx": () => import("../components/mockups/neu-community/ToneProfileSetup.tsx"),
   "./components/mockups/neu-community/TrustCenter.tsx": () => import("../components/mockups/neu-community/TrustCenter.tsx"),
-  "./components/mockups/neu-image-directions/ColorOnSkin.tsx": () => import("../components/mockups/neu-image-directions/ColorOnSkin.tsx"),
-  "./components/mockups/neu-image-directions/PigmentStudy.tsx": () => import("../components/mockups/neu-image-directions/PigmentStudy.tsx"),
   "./components/mockups/neu-home-options/BeautyDiaryHome.tsx": () => import("../components/mockups/neu-home-options/BeautyDiaryHome.tsx"),
   "./components/mockups/neu-home-options/ColorPlaygroundHome.tsx": () => import("../components/mockups/neu-home-options/ColorPlaygroundHome.tsx"),
-  "./components/mockups/neu-home-options/ColorStudioHome.tsx": () => import("../components/mockups/neu-home-options/ColorStudioHome.tsx")
+  "./components/mockups/neu-home-options/ColorStudioHome.tsx": () => import("../components/mockups/neu-home-options/ColorStudioHome.tsx"),
+  "./components/mockups/neu-image-directions/ColorOnSkin.tsx": () => import("../components/mockups/neu-image-directions/ColorOnSkin.tsx"),
+  "./components/mockups/neu-image-directions/PigmentStudy.tsx": () => import("../components/mockups/neu-image-directions/PigmentStudy.tsx"),
+  "./components/mockups/neu-image-directions/ShadeSession.tsx": () => import("../components/mockups/neu-image-directions/ShadeSession.tsx")
 };

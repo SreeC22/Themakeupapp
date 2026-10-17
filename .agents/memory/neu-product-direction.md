@@ -44,3 +44,9 @@ The user later said the colorful picture does not go with the homepage and that 
 **Why:** The user wants better picture directions without losing the earlier soft palette.
 
 **How to apply:** Keep cream, dusty rose, mauve and plum as the comparison baseline. Explore new picture subjects separately from palette changes; do not treat the colorful still life as locked.
+
+Keep homepage imagery embedded in the page rather than boxed. Keep the image clean, without tone-profile or recommendation overlays.
+
+**Why:** The user disliked boxing the picture and said the “Tan · Olive” overlay was interfering with it.
+
+**How to apply:** Blend image edges into the page and place profile information in its own flow, not over homepage artwork.

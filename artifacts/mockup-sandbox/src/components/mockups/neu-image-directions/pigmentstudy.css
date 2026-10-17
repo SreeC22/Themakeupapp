@@ -4242,3 +4242,305 @@
 .neu-pigment-study .neu-illustrated-blush-lid,
 .neu-pigment-study .neu-illustrated-powder-lid,
 .neu-pigment-study .neu-illustrated-powder-puff { animation: none !important; }
+
+/* Let the pigment sit in the room with the copy, not inside a framed card. */
+.neu-pigment-study .neu-home-hero {
+  min-height: 650px;
+  grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+  gap: clamp(16px, 2.5vw, 36px);
+  padding-top: 32px;
+  padding-bottom: 52px;
+}
+
+.neu-pigment-study .neu-home-copy {
+  position: relative;
+  z-index: 2;
+  padding-left: 22px;
+}
+
+.neu-pigment-study .neu-home-art {
+  position: relative;
+  display: block;
+  width: calc(100% + 60px);
+  height: 570px;
+  min-height: 0;
+  justify-self: end;
+  margin: 0 -36px 0 -28px;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  isolation: isolate;
+}
+
+.neu-pigment-study .neu-home-art::before,
+.neu-pigment-study .neu-home-art::after {
+  display: none;
+}
+
+.neu-pigment-study .neu-home-art-image {
+  position: absolute;
+  z-index: 0;
+  inset: -12px 0 -3px -12px;
+  display: block;
+  width: calc(100% + 12px);
+  height: calc(100% + 15px);
+  object-fit: cover;
+  object-position: 46% center;
+  filter: saturate(.88) contrast(.99);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.14) 8%, rgba(0,0,0,.78) 25%, #000 43%);
+  mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.14) 8%, rgba(0,0,0,.78) 25%, #000 43%);
+}
+
+.neu-pigment-study .neu-home-art-index {
+  position: absolute;
+  z-index: 1;
+  top: 22px;
+  right: 30px;
+  display: inline-flex;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #786b88;
+  font-family: "Space Mono", monospace;
+  font-size: 8px;
+  letter-spacing: .13em;
+}
+
+.neu-pigment-study .neu-home-overlay {
+  position: absolute;
+  z-index: 2;
+  top: 48%;
+  right: 8px;
+  display: grid;
+  width: min(296px, 66%);
+  gap: 0;
+  overflow: hidden;
+  border: 1px solid rgba(216,204,204,.75);
+  border-radius: 4px;
+  background: rgba(255,250,246,.95);
+  box-shadow: 0 18px 50px rgba(57,44,54,.14);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transform: translateY(-35%);
+}
+
+.neu-pigment-study .neu-home-overlay-tone {
+  display: grid;
+  gap: 7px;
+  padding: 16px 17px 14px;
+  border-bottom: 1px solid #ece3e3;
+}
+
+.neu-pigment-study .neu-home-overlay-label,
+.neu-pigment-study .neu-home-overlay-note-head,
+.neu-pigment-study .neu-home-art-sticker {
+  color: #81717c;
+  font-family: "Space Mono", monospace;
+  font-size: 7px;
+  letter-spacing: .075em;
+}
+
+.neu-pigment-study .neu-home-overlay-tone > strong {
+  color: #463b46;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.neu-pigment-study .neu-home-overlay-swatches {
+  display: flex;
+  gap: 7px;
+  margin: 1px 0;
+}
+
+.neu-pigment-study .neu-home-overlay-swatches i {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #f1d6c1;
+  box-shadow: inset 0 0 0 1px rgba(76,57,57,.08);
+}
+
+.neu-pigment-study .neu-home-overlay-swatches i:nth-child(2) { background: #e6c0a2; }
+.neu-pigment-study .neu-home-overlay-swatches i:nth-child(3) { background: #d3a386; }
+.neu-pigment-study .neu-home-overlay-swatches i:nth-child(4) { background: #b88369; }
+.neu-pigment-study .neu-home-overlay-swatches i:nth-child(5) { background: #94684f; }
+.neu-pigment-study .neu-home-overlay-swatches i:nth-child(6) { background: #714b3c; }
+.neu-pigment-study .neu-home-overlay-swatches i:nth-child(7) { background: #513831; }
+
+.neu-pigment-study .neu-home-overlay-tone small {
+  color: #877b82;
+  font-size: 8px;
+  line-height: 1.55;
+}
+
+.neu-pigment-study .neu-home-overlay-note {
+  display: grid;
+  gap: 0;
+  padding: 11px 15px 6px;
+}
+
+.neu-pigment-study .neu-home-overlay-note-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 5px;
+  font-size: 6px;
+}
+
+.neu-pigment-study .neu-home-overlay-note-head b {
+  color: #aa7182;
+  font-size: 6px;
+}
+
+.neu-pigment-study .neu-home-overlay-note > div:not(.neu-home-overlay-note-head) {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border-top: 1px solid #f0e9e7;
+}
+
+.neu-pigment-study .neu-home-product-mark {
+  width: 39px;
+  height: 42px;
+  flex: 0 0 auto;
+  border-radius: 3px;
+  background:
+    radial-gradient(ellipse at 58% 72%, rgba(148,84,98,.62) 0 24%, transparent 27%),
+    linear-gradient(140deg,#f3e5d9,#e4ccd0);
+}
+
+.neu-pigment-study .neu-home-product-mark--cheek {
+  background:
+    radial-gradient(ellipse at 50% 50%, rgba(164,103,116,.53) 0 29%, transparent 32%),
+    linear-gradient(140deg,#f1e8e2,#e7d7dc);
+}
+
+.neu-pigment-study .neu-home-overlay-note > div > span {
+  display: grid;
+  gap: 3px;
+}
+
+.neu-pigment-study .neu-home-overlay-note strong {
+  color: #4b4048;
+  font-size: 8px;
+  font-weight: 600;
+}
+
+.neu-pigment-study .neu-home-overlay-note small {
+  color: #8d8187;
+  font-size: 7px;
+}
+
+.neu-pigment-study .neu-home-art-caption {
+  position: absolute;
+  z-index: 1;
+  bottom: 5px;
+  left: 14px;
+  width: calc(100% - 26px);
+  align-items: flex-end;
+  padding: 0;
+  pointer-events: none;
+}
+
+@media (min-width: 901px) {
+  .neu-pigment-study .neu-home-art {
+    width: calc(100% + 190px);
+    margin-right: -166px;
+  }
+
+  .neu-pigment-study .neu-home-art-image {
+    inset: -18px -2px -6px -12px;
+    width: calc(100% + 14px);
+    height: calc(100% + 24px);
+  }
+
+  .neu-pigment-study .neu-home-art-index {
+    right: 168px;
+  }
+
+  .neu-pigment-study .neu-home-overlay {
+    right: 166px;
+  }
+
+  .neu-pigment-study .neu-home-art-caption {
+    width: calc(100% - 168px);
+  }
+}
+
+.neu-pigment-study .neu-home-art-caption-copy {
+  display: none;
+}
+
+.neu-pigment-study .neu-home-art-sticker {
+  max-width: 240px;
+  font-size: 6px;
+}
+
+@media (max-width: 900px) {
+  .neu-pigment-study .neu-home-hero {
+    min-height: 580px;
+    gap: 12px;
+  }
+
+  .neu-pigment-study .neu-home-art {
+    width: calc(100% + 32px);
+    height: 500px;
+    margin-right: -16px;
+  }
+
+  .neu-pigment-study .neu-home-overlay {
+    right: 3px;
+    width: min(275px, 82%);
+  }
+}
+
+@media (max-width: 700px) {
+  .neu-pigment-study .neu-home-hero {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    padding-top: 35px;
+  }
+
+  .neu-pigment-study .neu-home-copy {
+    padding-left: 4px;
+  }
+
+  .neu-pigment-study .neu-home-art {
+    width: calc(100% + 8px);
+    height: clamp(380px, 110vw, 490px);
+    margin: -24px -4px 0;
+  }
+
+  .neu-pigment-study .neu-home-art-image {
+    inset: 0 -16px 0 -14px;
+    width: calc(100% + 30px);
+    height: 100%;
+    object-position: 44% center;
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, rgba(0,0,0,.16) 9%, rgba(0,0,0,.82) 28%, #000 48%);
+    mask-image: linear-gradient(180deg, transparent 0%, rgba(0,0,0,.16) 9%, rgba(0,0,0,.82) 28%, #000 48%);
+  }
+
+  .neu-pigment-study .neu-home-art-index {
+    top: 12px;
+    right: 12px;
+    font-size: 7px;
+  }
+
+  .neu-pigment-study .neu-home-overlay {
+    top: 47%;
+    right: 4px;
+    width: min(290px, 72%);
+    transform: translateY(-21%);
+  }
+
+  .neu-pigment-study .neu-home-art-caption {
+    bottom: 4px;
+    left: 8px;
+    width: calc(100% - 16px);
+  }
+}
