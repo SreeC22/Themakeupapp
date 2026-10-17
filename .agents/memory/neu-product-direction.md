@@ -37,7 +37,7 @@ The homepage should express makeup as outspoken self-expression: keep the colors
 
 **Why:** The user wants Neu to feel confident and true to itself like makeup brands, rather than quiet because of its soft palette.
 
-**How to apply:** Preserve the chosen warm palette and artwork while making homepage presentation and language expressive and confident.
+**How to apply:** Preserve the latest approved soft palette and imagery while making homepage presentation and language expressive and confident.
 
 The user later said the colorful picture does not go with the homepage and that they liked their color palette from before.
 
@@ -50,3 +50,9 @@ Keep homepage imagery embedded in the page rather than boxed. Keep the image cle
 **Why:** The user disliked boxing the picture and said the “Tan · Olive” overlay was interfering with it.
 
 **How to apply:** Blend image edges into the page and place profile information in its own flow, not over homepage artwork.
+
+The user considers the soft mauve makeup-texture direction finalized and wants cleanup rather than more visual alternatives.
+
+**Why:** After refining the embedded image, the user explicitly said the direction was finalized.
+
+**How to apply:** Refine this direction without unsolicited new variants. Keep navigation minimal, Learn accessible, and remove the rejected “beauty in your own tone” tagline.

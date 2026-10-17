@@ -4544,3 +4544,227 @@
     width: calc(100% - 16px);
   }
 }
+
+/* Final responsive polish for the shared navigation and landing page. */
+.neu-pigment-study { width: 100%; overflow-x: clip; }
+.neu-pigment-study .neu-site-footer {
+  display: grid;
+  grid-template-columns: auto minmax(130px, 1fr) auto auto;
+  align-items: center;
+  gap: 18px;
+  padding: 19px 0 24px;
+}
+.neu-pigment-study .neu-footer-links {
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 2vw, 24px);
+}
+.neu-pigment-study .neu-footer-links .footer-link {
+  padding: 4px 0;
+  color: var(--ink-soft);
+  font-size: 10px;
+  white-space: nowrap;
+}
+.neu-pigment-study .neu-footer-links .footer-link:hover { color: var(--amethyst-deep); }
+.neu-pigment-study .neu-home-learn-invite {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: clamp(15px, 3vw, 32px);
+  margin: 0 auto 60px;
+  padding: clamp(22px, 4vw, 42px);
+  border-block: 1px solid rgba(120, 107, 136, .2);
+  background: linear-gradient(105deg, rgba(238, 232, 237, .82), rgba(255, 250, 245, .36));
+}
+.neu-pigment-study .neu-home-learn-mark {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border: 1px solid rgba(120, 107, 136, .28);
+  border-radius: 50%;
+  color: var(--amethyst-deep);
+}
+.neu-pigment-study .neu-home-learn-invite h2 {
+  max-width: 640px;
+  margin: 7px 0 5px;
+  color: var(--ink);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(24px, 3vw, 35px);
+  font-weight: 500;
+  line-height: 1.08;
+}
+.neu-pigment-study .neu-home-learn-invite p {
+  max-width: 520px;
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 11px;
+  line-height: 1.7;
+}
+.neu-pigment-study .neu-home-learn-invite .neu-text-button { white-space: nowrap; }
+
+@media (max-width: 980px) {
+  .neu-pigment-study .neu-site-header {
+    width: calc(100% - 40px);
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: clamp(14px, 2vw, 26px);
+  }
+  .neu-pigment-study .neu-main-nav { justify-content: center; gap: clamp(12px, 2.2vw, 22px); }
+  .neu-pigment-study .neu-home-hero {
+    min-height: 0;
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+    gap: 24px;
+    align-items: center;
+  }
+  .neu-pigment-study .neu-home-art {
+    width: calc(100% + 26px);
+    height: clamp(330px, 45vw, 460px);
+    min-height: 0;
+    margin-right: -18px;
+  }
+  .neu-pigment-study .neu-home-art-image {
+    inset: 0 -8px 0 -12px;
+    width: calc(100% + 20px);
+    height: 100%;
+  }
+  .neu-pigment-study .neu-home-page,
+  .neu-pigment-study .neu-profile-setup-page,
+  .neu-pigment-study .neu-discover-page,
+  .neu-pigment-study .neu-share-page,
+  .neu-pigment-study .neu-saved-page,
+  .neu-pigment-study .neu-you-page,
+  .neu-pigment-study .neu-learn-page { width: calc(100% - 40px); }
+}
+
+@media (max-width: 900px) and (min-width: 701px) {
+  .neu-pigment-study .neu-home-hero {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+    padding: 42px 0 34px;
+  }
+  .neu-pigment-study .neu-home-copy { max-width: 650px; }
+  .neu-pigment-study .neu-home-copy h1 { max-width: 660px; font-size: clamp(62px, 9vw, 82px); }
+  .neu-pigment-study .neu-home-art {
+    width: calc(100% + 32px);
+    height: clamp(340px, 52vw, 490px);
+    margin: 0 -16px;
+  }
+  .neu-pigment-study .neu-home-art-image { inset: 0 -12px; width: calc(100% + 24px); height: 100%; }
+}
+
+@media (max-width: 700px) {
+  .neu-pigment-study .neu-preview-banner {
+    justify-content: flex-start;
+    min-height: 34px;
+    gap: 6px;
+    overflow: hidden;
+    font-size: 7px;
+  }
+  .neu-pigment-study .neu-preview-banner > span:last-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .neu-pigment-study .neu-site-header { width: calc(100% - 32px); min-height: 64px; gap: 8px; }
+  .neu-pigment-study .neu-main-nav { display: none; }
+  .neu-pigment-study .neu-header-actions { gap: 8px; }
+  .neu-pigment-study .neu-header-join,
+  .neu-pigment-study .neu-account-chip { min-height: 36px; padding: 0 10px; font-size: 9px; }
+  .neu-pigment-study .neu-mobile-nav {
+    position: sticky;
+    top: 0;
+    z-index: 19;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    background: rgba(251, 247, 242, .96);
+    backdrop-filter: blur(16px);
+  }
+  .neu-pigment-study .neu-mobile-nav-item { min-width: 0; min-height: 43px; font-size: 9px; }
+  .neu-pigment-study .neu-home-page,
+  .neu-pigment-study .neu-profile-setup-page,
+  .neu-pigment-study .neu-discover-page,
+  .neu-pigment-study .neu-share-page,
+  .neu-pigment-study .neu-saved-page,
+  .neu-pigment-study .neu-you-page,
+  .neu-pigment-study .neu-learn-page { width: calc(100% - 32px); }
+  .neu-pigment-study .neu-home-hero {
+    min-height: 0;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 4px;
+    padding: 34px 0 30px;
+  }
+  .neu-pigment-study .neu-home-copy { min-width: 0; padding: 0 2px; }
+  .neu-pigment-study .neu-home-copy h1 {
+    max-width: 100%;
+    font-size: clamp(42px, 12.8vw, 64px);
+    line-height: .94;
+    overflow-wrap: anywhere;
+  }
+  .neu-pigment-study .neu-home-lede { max-width: 460px; font-size: 12px; line-height: 1.7; }
+  .neu-pigment-study .neu-home-actions { flex-flow: row wrap; align-items: center; gap: 10px 18px; }
+  .neu-pigment-study .neu-home-actions .neu-primary-button { min-height: 42px; }
+  .neu-pigment-study .neu-home-note { margin-top: 12px; }
+  .neu-pigment-study .neu-home-art {
+    width: calc(100% + 16px);
+    height: clamp(250px, 78vw, 390px);
+    min-height: 0;
+    margin: 12px -8px 0;
+  }
+  .neu-pigment-study .neu-home-art-image {
+    inset: 0 -12px;
+    width: calc(100% + 24px);
+    height: 100%;
+    object-position: center;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, .28) 7%, #000 24%);
+    mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, .28) 7%, #000 24%);
+  }
+  .neu-pigment-study .neu-home-art-index { top: 10px; right: 16px; font-size: 7px; }
+  .neu-pigment-study .neu-home-art-caption { bottom: 0; left: 10px; width: calc(100% - 20px); }
+  .neu-pigment-study .neu-home-art-sticker { font-size: 6px; }
+  .neu-pigment-study .neu-home-learn-invite {
+    grid-template-columns: 38px minmax(0, 1fr);
+    gap: 13px;
+    margin-bottom: 38px;
+    padding: 20px 14px;
+  }
+  .neu-pigment-study .neu-home-learn-mark { width: 36px; height: 36px; }
+  .neu-pigment-study .neu-home-learn-invite h2 { font-size: 26px; }
+  .neu-pigment-study .neu-home-learn-invite p { font-size: 10px; }
+  .neu-pigment-study .neu-home-learn-invite .neu-text-button {
+    grid-column: 2;
+    justify-self: start;
+    padding-left: 0;
+    white-space: normal;
+  }
+  .neu-pigment-study .neu-site-footer {
+    grid-template-columns: auto 1fr;
+    gap: 10px 14px;
+    width: calc(100% - 32px);
+    padding-bottom: 20px;
+  }
+  .neu-pigment-study .neu-site-footer > span:nth-child(2) { width: auto; order: initial; justify-self: end; text-align: right; }
+  .neu-pigment-study .neu-footer-links {
+    grid-column: 1 / -1;
+    justify-content: space-between;
+    gap: 9px;
+    padding: 8px 0 1px;
+    border-top: 1px solid rgba(120, 107, 136, .16);
+  }
+  .neu-pigment-study .neu-footer-links .footer-link { padding: 8px 2px; font-size: 9px; }
+  .neu-pigment-study .neu-footer-note { grid-column: 1 / -1; justify-self: start; }
+}
+
+@media (max-width: 380px) {
+  .neu-pigment-study .neu-site-header { width: calc(100% - 24px); }
+  .neu-pigment-study .neu-brand-mark { width: 27px; height: 27px; }
+  .neu-pigment-study .neu-brand-name { font-size: 25px; }
+  .neu-pigment-study .neu-header-join { gap: 4px; padding: 0 8px; font-size: 8px; }
+  .neu-pigment-study .neu-home-page,
+  .neu-pigment-study .neu-profile-setup-page,
+  .neu-pigment-study .neu-discover-page,
+  .neu-pigment-study .neu-share-page,
+  .neu-pigment-study .neu-saved-page,
+  .neu-pigment-study .neu-you-page,
+  .neu-pigment-study .neu-learn-page { width: calc(100% - 24px); }
+  .neu-pigment-study .neu-mobile-nav-item { font-size: 8px; }
+  .neu-pigment-study .neu-site-footer { width: calc(100% - 24px); }
+}

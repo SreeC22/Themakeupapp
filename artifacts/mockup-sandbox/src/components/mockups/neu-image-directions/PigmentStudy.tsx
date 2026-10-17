@@ -285,8 +285,6 @@ function BrandMark() {
     <div className="neu-brand-lockup" aria-label="Neu beauty community">
       <span className="neu-brand-mark">n</span>
       <span className="neu-brand-name">neu</span>
-      <span className="neu-brand-divider" />
-      <span className="neu-brand-descriptor">beauty, in your own tone</span>
     </div>
   );
 }
@@ -306,7 +304,12 @@ function SiteHeader({
     { id: "home", label: "Home" },
     { id: "feed", label: "Discover" },
     { id: "learn", label: "Learn" },
-    { id: "profile", label: "My profile" },
+  ];
+  const mobileItems: { id: View; label: string }[] = [
+    { id: "home", label: "Home" },
+    { id: "feed", label: "Discover" },
+    { id: "learn", label: "Learn" },
+    { id: "profile", label: "Profile" },
     { id: "saved", label: "Saved" },
   ];
 
@@ -345,7 +348,7 @@ function SiteHeader({
         </div>
       </header>
       <nav className="neu-mobile-nav" aria-label="Mobile navigation">
-        {navItems.map((item) => (
+        {mobileItems.map((item) => (
           <button
             key={item.id}
             className={`neu-mobile-nav-item ${view === item.id ? "is-active" : ""}`}
@@ -365,7 +368,7 @@ function PreviewBanner() {
       <Sparkles size={13} />
       <span>Design preview</span>
       <span className="neu-preview-banner-divider" />
-      <span>Products and community notes are examples, not live member posts.</span>
+      <span>Preview only. Product and community examples are not live posts.</span>
     </div>
   );
 }
@@ -548,15 +551,17 @@ function ProductIllustrationLoop() {
 function HomeView({
   onProfile,
   onBrowse,
+  onLearn,
 }: {
   onProfile: () => void;
   onBrowse: () => void;
+  onLearn: () => void;
 }) {
   return (
     <main className="neu-home-page">
       <section className="neu-home-hero">
         <div className="neu-home-copy">
-          <div className="neu-eyebrow"><span /> Beauty, in your own tone</div>
+          <div className="neu-eyebrow">A community for every shade story</div>
           <h1>
             Makeup is a way
             <br />
@@ -576,7 +581,7 @@ function HomeView({
           </div>
           <div className="neu-home-note">
             <span className="neu-home-note-dot" />
-            Take a look around first. No account needed.
+            Explore first. No account needed.
           </div>
         </div>
         <figure className="neu-home-art">
@@ -634,6 +639,17 @@ function HomeView({
         </p>
         <button className="neu-round-arrow" aria-label="Build your profile" onClick={onProfile}>
           <ArrowRight size={19} />
+        </button>
+      </section>
+      <section className="neu-home-learn-invite">
+        <div className="neu-home-learn-mark"><Palette size={20} strokeWidth={1.6} /></div>
+        <div>
+          <span className="neu-bottom-overline">A little color knowledge</span>
+          <h2>Undertone, depth and color. Start with what feels right.</h2>
+          <p>A friendly guide to the basics, with room to experiment and make them your own.</p>
+        </div>
+        <button className="neu-text-button" onClick={onLearn}>
+          Explore the Learn guide <ArrowRight size={15} />
         </button>
       </section>
     </main>
@@ -1644,11 +1660,17 @@ function ProductInfoModal({ post, onClose }: { post: ProductPost | null; onClose
   );
 }
 
-function Footer() {
+function Footer({ onNavigate }: { onNavigate: (next: View) => void }) {
   return (
     <footer className="neu-site-footer">
       <BrandMark />
       <span>Beauty is personal. Keep it that way.</span>
+      <nav className="neu-footer-links" aria-label="Footer navigation">
+        <button className="footer-link" onClick={() => onNavigate("learn")}>Learn</button>
+        <button className="footer-link" onClick={() => onNavigate("feed")}>Discover</button>
+        <button className="footer-link" onClick={() => onNavigate("profile")}>Profile</button>
+        <button className="footer-link" onClick={() => onNavigate("saved")}>Saved</button>
+      </nav>
       <span className="neu-footer-note">DESIGN PREVIEW · SAMPLE CONTENT</span>
     </footer>
   );
@@ -1719,7 +1741,7 @@ export default function PigmentStudy() {
     <div className="neu-pigment-study">
       <PreviewBanner />
       <SiteHeader view={view} onNavigate={navigate} isMember={isMember} onAccount={() => setAccountOpen(true)} />
-      {view === "home" && <HomeView onProfile={() => navigate("profile")} onBrowse={() => navigate("feed")} />}
+      {view === "home" && <HomeView onProfile={() => navigate("profile")} onBrowse={() => navigate("feed")} onLearn={() => navigate("learn")} />}
       {view === "profile" && <ProfileView profile={profile} onChange={patchProfile} onContinue={() => { setProfileReady(true); navigate("feed"); }} onLearn={() => navigate("learn")} />}
       {view === "learn" && (
         <LearnView
@@ -1745,7 +1767,7 @@ export default function PigmentStudy() {
       {view === "share" && isMember && <ShareView profile={profile} onSubmit={addPost} onCancel={() => navigate("feed")} />}
       {view === "saved" && <SavedView posts={currentPosts} savedIds={savedIds} isMember={isMember} onAccount={() => setAccountOpen(true)} onSave={saveProduct} onDiscover={() => navigate("feed")} onShop={setProductInfo} />}
       {view === "you" && <YouView profile={profile} isMember={isMember} onEditProfile={() => navigate("profile")} onCreateAccount={() => setAccountOpen(true)} />}
-      <Footer />
+      <Footer onNavigate={navigate} />
       <AccountModal
         open={accountOpen}
         onClose={() => { setAccountOpen(false); setPendingSave(null); }}
