@@ -592,7 +592,6 @@ function HomeView({
           />
           <span className="neu-home-art-index">01 / COLOR NOTES</span>
           <figcaption className="neu-home-art-caption">
-            <div className="neu-home-art-sticker">CONCEPT IMAGE</div>
             <span className="neu-home-art-caption-copy">
               <span>MAKEUP, YOUR WAY</span>
               <strong>A little color. A lot of you.</strong>

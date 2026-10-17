@@ -61,4 +61,4 @@ The user considers the soft mauve makeup-texture direction finalized and wants c
 
 **Why:** After refining the embedded image, the user explicitly said the direction was finalized.
 
-**How to apply:** Refine this direction without unsolicited new variants. Keep navigation minimal, Learn accessible, and remove the rejected “beauty in your own tone” tagline.
+**How to apply:** Refine this direction without unsolicited new variants. Keep navigation uncluttered, Learn accessible, imagery embedded, and spacing comfortable without excessive empty space. Remove the rejected “beauty in your own tone” tagline and visible “CONCEPT IMAGE” labels from homepage artwork.

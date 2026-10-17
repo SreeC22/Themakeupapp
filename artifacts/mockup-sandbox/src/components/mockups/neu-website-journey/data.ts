@@ -42,6 +42,7 @@ export type Profile = {
   concerns: string[];
   displayName: string;
   categories: string[];
+  shadeEvidence?: ShadeEvidence | null;
 };
 
 export type ProductExample = {
@@ -58,6 +59,14 @@ export type ProductExample = {
   notes: string;
   routine: string;
   author: string;
+};
+
+export type ShadeEvidence = {
+  brand: string;
+  product: string;
+  formula: string;
+  shade: string;
+  source: "illustrative" | "manual";
 };
 
 export const DEPTHS = [

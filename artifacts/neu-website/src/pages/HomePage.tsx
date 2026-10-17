@@ -20,9 +20,6 @@ export default function HomePage() {
         <figure className="hero-art">
           <img src={pigmentArt} alt="Dusty rose, muted mauve and warm beige makeup textures on a soft ivory surface." />
           <span className="hero-art-index">01 / COLOR NOTES</span>
-          <figcaption className="hero-caption">
-            <small>CONCEPT IMAGE</small>
-          </figcaption>
         </figure>
       </section>
 

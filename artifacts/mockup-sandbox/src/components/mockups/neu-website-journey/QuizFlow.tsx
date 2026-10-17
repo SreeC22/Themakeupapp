@@ -1,14 +1,19 @@
 import { useState } from "react";
 import { ArrowLeft, ArrowRight, Check, CircleHelp, Info, Lightbulb, Sparkles } from "lucide-react";
-import { CATEGORIES, DEFAULT_PROFILE, DEPTHS, type NeuPage, type Profile, type Undertone } from "./data";
+import { CATEGORIES, DEFAULT_PROFILE, DEPTHS, SAMPLE_PRODUCTS, type NeuPage, type Profile, type ShadeEvidence, type Undertone } from "./data";
 import { Eyebrow } from "./Shared";
 
-type Experience = "" | "A good match" | "A little light" | "A little deep" | "Too pink" | "Too yellow" | "None yet";
+type Experience = "" | "A good match" | "A little light" | "A little deep" | "Too pink" | "Too yellow" | "None yet" | "Not sure yet";
 type Answers = {
   experience: Experience;
   brand: string;
+  manualBrand: string;
   product: string;
+  manualProduct: string;
+  formula: string;
+  manualFormula: string;
   shade: string;
+  manualShade: string;
   depth: number | "unsure" | null;
   undertone: Undertone | null;
   olive: "yes" | "no" | "unsure" | null;
@@ -19,9 +24,20 @@ type Answers = {
 };
 
 const INITIAL: Answers = {
-  experience: "", brand: "", product: "", shade: "", depth: null, undertone: null,
+  experience: "", brand: "", manualBrand: "", product: "", manualProduct: "", formula: "", manualFormula: "", shade: "", manualShade: "", depth: null, undertone: null,
   olive: null, skinType: "", finish: "", budget: "", categories: [],
 };
+
+const COMPLEXION_CATEGORIES = new Set(["Foundation", "Skin tint", "Concealer"]);
+const COMPLEXION_PRODUCTS = SAMPLE_PRODUCTS.filter((product) => COMPLEXION_CATEGORIES.has(product.category));
+const ILLUSTRATIVE_FORMULA_OPTIONS = [
+  { value: "illustrative-variant-a", label: "Illustrative formula / variant A" },
+  { value: "illustrative-variant-b", label: "Illustrative formula / variant B" },
+];
+const ILLUSTRATIVE_SHADE_OPTIONS = [
+  { value: "illustrative-shade-a", label: "Shade example A · unverified" },
+  { value: "illustrative-shade-b", label: "Shade example B · unverified" },
+];
 
 const CHOICES: { value: Experience; detail: string }[] = [
   { value: "A good match", detail: "Something you feel at home in" },
@@ -30,6 +46,7 @@ const CHOICES: { value: Experience; detail: string }[] = [
   { value: "Too pink", detail: "The undertone does not feel right" },
   { value: "Too yellow", detail: "The undertone does not feel right" },
   { value: "None yet", detail: "No current match, or still exploring" },
+  { value: "Not sure yet", detail: "A good place to start, too" },
 ];
 
 const STEPS = ["A shade you know", "Skin depth", "Undertone", "Formula", "Makeup you love"];
@@ -54,14 +71,73 @@ export function QuizFlow({
   onCancel: () => void;
   onLearn: () => void;
 }) {
-  const [step, setStep] = useState(0);
-  const [answers, setAnswers] = useState<Answers>(INITIAL);
+  const [step, setStep] = useState(() => {
+    const previewStep = Number(new URLSearchParams(window.location.search).get("step"));
+    return Number.isInteger(previewStep) && previewStep >= 0 && previewStep <= 6 ? previewStep : 0;
+  });
+  const [answers, setAnswers] = useState<Answers>(() => new URLSearchParams(window.location.search).get("sampleEntry") === "1"
+    ? {
+      ...INITIAL,
+      experience: "A good match",
+      brand: "Fenty Beauty",
+      product: "skin-tint-note",
+      formula: ILLUSTRATIVE_FORMULA_OPTIONS[0].value,
+      shade: ILLUSTRATIVE_SHADE_OPTIONS[0].value,
+    }
+    : INITIAL);
   const [error, setError] = useState("");
   const set = <K extends keyof Answers>(key: K, value: Answers[K]) => {
     setAnswers((current) => ({ ...current, [key]: value }));
     setError("");
   };
   const toggleCategory = (value: string) => set("categories", answers.categories.includes(value) ? answers.categories.filter((item) => item !== value) : [...answers.categories, value]);
+  const changeExperience = (value: Experience) => {
+    setAnswers((current) => ({
+      ...current,
+      experience: value,
+      ...(value === "None yet" || value === "Not sure yet"
+        ? { brand: "", manualBrand: "", product: "", manualProduct: "", formula: "", manualFormula: "", shade: "", manualShade: "" }
+        : {}),
+    }));
+    setError("");
+  };
+  const changeBrand = (value: string) => setAnswers((current) => ({
+    ...current, brand: value, manualBrand: "", product: "", manualProduct: "",
+    formula: "", manualFormula: "", shade: "", manualShade: "",
+  }));
+  const changeProduct = (value: string) => setAnswers((current) => ({
+    ...current, product: value, manualProduct: "", formula: "", manualFormula: "", shade: "", manualShade: "",
+  }));
+  const changeFormula = (value: string) => setAnswers((current) => ({
+    ...current, formula: value, manualFormula: "", shade: "", manualShade: "",
+  }));
+  const createShadeEvidence = (): ShadeEvidence | null => {
+    if (!answers.experience || answers.experience === "None yet" || answers.experience === "Not sure yet") return null;
+    const manual = answers.brand === "other" || answers.product === "other" || answers.formula === "other" || answers.shade === "manual";
+    const brand = answers.brand === "other"
+      ? answers.manualBrand.trim() || "Brand not entered"
+      : answers.brand === "unsure" ? "Not sure yet" : answers.brand;
+    const chosenProduct = COMPLEXION_PRODUCTS.find((item) => item.id === answers.product);
+    const product = answers.product === "other"
+      ? answers.manualProduct.trim() || "Product not entered"
+      : answers.product === "unsure" ? "Not sure yet" : chosenProduct?.name ?? "";
+    const formula = answers.formula === "other"
+      ? answers.manualFormula.trim() || "Formula or variant not entered"
+      : answers.formula === "unsure" ? "Not sure yet"
+        : ILLUSTRATIVE_FORMULA_OPTIONS.find((item) => item.value === answers.formula)?.label ?? "";
+    const shade = answers.shade === "manual"
+      ? answers.manualShade.trim() || "Shade name not entered"
+      : answers.shade === "unsure" ? "Not sure yet"
+        : ILLUSTRATIVE_SHADE_OPTIONS.find((item) => item.value === answers.shade)?.label ?? "";
+    if (![brand, product, formula, shade].some(Boolean)) return null;
+    return { brand, product, formula, shade, source: manual ? "manual" : "illustrative" };
+  };
+  const shadeEvidenceSummary = () => {
+    if (answers.experience === "None yet") return "None yet";
+    if (answers.experience === "Not sure yet") return "Not sure yet";
+    const evidence = createShadeEvidence();
+    return evidence ? [evidence.brand, evidence.product, evidence.formula, evidence.shade].filter(Boolean).join(" · ") : "No product notes added";
+  };
   const next = () => {
     if (step === 1 && !answers.experience) return setError("Choose an answer, or choose “None yet.”");
     if (step === 2 && answers.depth === null) return setError("Choose a depth or “I’m not sure yet.”");
@@ -77,6 +153,7 @@ export function QuizFlow({
     olive: answers.olive === "yes" ? true : answers.olive === "no" ? false : null,
     skinType: answers.skinType || null,
     categories: answers.categories,
+    shadeEvidence: createShadeEvidence(),
   });
   const sendResult = () => {
     if (!answers.categories.length) return setError("Return to category selection and choose at least one.");
@@ -122,12 +199,34 @@ export function QuizFlow({
 
           {step === 1 && (
             <>
-              <div className="wj-quiz-choice-grid">{CHOICES.map(({ value, detail }) => <Selectable key={value} title={value} description={detail} selected={answers.experience === value} onClick={() => set("experience", value)} />)}</div>
-              {answers.experience && answers.experience !== "None yet" && <div className="wj-known-shade">
-                <div><Info size={15} /><span>Optional context. These free-text notes are not a verified catalog match.</span></div>
-                <label>Brand<input value={answers.brand} onChange={(event) => set("brand", event.target.value)} placeholder="e.g. a brand you already use" /></label>
-                <label>Product and formula<input value={answers.product} onChange={(event) => set("product", event.target.value)} placeholder="What is it called?" /></label>
-                <label>Shade name or number<input value={answers.shade} onChange={(event) => set("shade", event.target.value)} placeholder="Anything you remember" /></label>
+              <div className="wj-quiz-choice-grid">{CHOICES.map(({ value, detail }) => <Selectable key={value} title={value} description={detail} selected={answers.experience === value} onClick={() => changeExperience(value)} />)}</div>
+              {answers.experience && answers.experience !== "None yet" && answers.experience !== "Not sure yet" && <div className="wj-known-shade">
+                <div className="wj-known-shade-notice"><Info size={15} /><span><strong>Example options, not a verified shade catalog.</strong> Product labels are examples. Formula variants and shade choices below are illustrative and unverified.</span></div>
+                <label><span>Brand</span><select value={answers.brand} onChange={(event) => changeBrand(event.target.value)}>
+                  <option value="">Choose a brand or skip</option>
+                  {[...new Set(COMPLEXION_PRODUCTS.map((product) => product.brand))].map((brand) => <option key={brand} value={brand}>{brand}</option>)}
+                  <option value="other">Other / not listed</option>
+                  <option value="unsure">Not sure yet</option>
+                </select></label>
+                {answers.brand === "other" && <label><span>Brand name (optional)</span><input value={answers.manualBrand} onChange={(event) => set("manualBrand", event.target.value)} placeholder="Enter your brand" /></label>}
+                <label><span>Exact product or line</span><select value={answers.product} disabled={!answers.brand} onChange={(event) => changeProduct(event.target.value)}>
+                  <option value="">{answers.brand ? "Choose a product or skip" : "Choose a brand first"}</option>
+                  {COMPLEXION_PRODUCTS.filter((item) => item.brand === answers.brand).map((item) => <option key={item.id} value={item.id}>{item.name}</option>)}
+                  {!!answers.brand && <><option value="other">Product not listed</option><option value="unsure">Not sure yet</option></>}
+                </select></label>
+                {answers.product === "other" && <label><span>Product name (optional)</span><input value={answers.manualProduct} onChange={(event) => set("manualProduct", event.target.value)} placeholder="Enter the name on your product" /></label>}
+                <label><span>Formula or product variant</span><select value={answers.formula} disabled={!answers.product} onChange={(event) => changeFormula(event.target.value)}>
+                  <option value="">{answers.product ? "Choose an example variant or skip" : "Choose a product first"}</option>
+                  {answers.product && answers.product !== "other" && answers.product !== "unsure" && ILLUSTRATIVE_FORMULA_OPTIONS.map((item) => <option key={item.value} value={item.value}>{item.label} · unverified</option>)}
+                  {!!answers.product && <><option value="other">Formula / variant not listed</option><option value="unsure">Not sure yet</option></>}
+                </select></label>
+                {answers.formula === "other" && <label><span>Formula or variant name (optional)</span><input value={answers.manualFormula} onChange={(event) => set("manualFormula", event.target.value)} placeholder="Enter a label from the product" /></label>}
+                <label><span>Shade name or example</span><select value={answers.shade} disabled={!answers.formula} onChange={(event) => { setAnswers((current) => ({ ...current, shade: event.target.value, manualShade: "" })); setError(""); }}>
+                  <option value="">{answers.formula ? "Choose an example or skip" : "Choose a formula first"}</option>
+                  {answers.formula && answers.formula !== "other" && answers.formula !== "unsure" && ILLUSTRATIVE_SHADE_OPTIONS.map((item) => <option key={item.value} value={item.value}>{item.label}</option>)}
+                  {!!answers.formula && <><option value="manual">I can't find mine · enter it</option><option value="unsure">Not sure yet</option></>}
+                </select></label>
+                {answers.shade === "manual" && <label className="wj-known-shade-manual"><span>Your shade name (unverified)</span><input value={answers.manualShade} onChange={(event) => set("manualShade", event.target.value)} placeholder="Type the name on your product" /></label>}
               </div>}
             </>
           )}
@@ -158,7 +257,7 @@ export function QuizFlow({
         <h1 id="wj-quiz-title">Your starting point, <em>your call.</em></h1>
         <p>Review your answers, then choose where you want to go next.</p>
         <div className="wj-answer-list">
-          <AnswerSummary label="A shade I know" value={answers.experience === "None yet" ? "No product to add, and that is fine" : [answers.brand, answers.product, answers.shade].filter(Boolean).join(" · ") || "Not added"} onEdit={() => changeScreen(1)} />
+          <AnswerSummary label="Shade notes · unverified" value={shadeEvidenceSummary()} onEdit={() => changeScreen(1)} />
           <AnswerSummary label="Skin depth" value={typeof answers.depth === "number" ? `Depth ${answers.depth} · ${DEPTHS[answers.depth - 1].label}` : "Still exploring"} onEdit={() => changeScreen(2)} />
           <AnswerSummary label="Undertone" value={`${answers.undertone || "Still exploring"}${answers.olive === "yes" ? " · olive cast" : ""}`} onEdit={() => changeScreen(3)} />
           <AnswerSummary label="Your preferences" value={[answers.skinType, answers.finish, answers.budget].filter(Boolean).join(" · ") || "Left open"} onEdit={() => changeScreen(4)} />
@@ -189,6 +288,16 @@ export function ResultsPage({ profile, onNavigate }: { profile: Profile; onNavig
         <div><span>UNDERTONE</span><strong>{profile.undertone || "Still exploring"}{profile.olive ? " · olive cast" : ""}</strong></div>
         <div><span>YOUR CATEGORIES</span><strong>{profile.categories.join(", ") || "Explore everything"}</strong></div>
       </div>
+      {profile.shadeEvidence && <section className="wj-shade-evidence" aria-label="Unverified shade notes">
+        <div className="wj-shade-evidence-heading"><Eyebrow>OPTIONAL WEARER EVIDENCE · NOT A MATCH</Eyebrow><h2>A shade you already use.</h2><p>A personal starting clue only. It does not determine depth, undertone or a product match.</p></div>
+        <dl>
+          <div><dt>Brand</dt><dd>{profile.shadeEvidence.brand || "Not added"}</dd></div>
+          <div><dt>Product or line</dt><dd>{profile.shadeEvidence.product || "Not added"}</dd></div>
+          <div><dt>Formula or variant</dt><dd>{profile.shadeEvidence.formula || "Not added"}</dd></div>
+          <div><dt>Shade</dt><dd>{profile.shadeEvidence.shade || "Not added"}</dd></div>
+        </dl>
+        <p className="wj-shade-evidence-source">{profile.shadeEvidence.source === "manual" ? "Manually entered by the wearer, unverified." : "Illustrative option only, unverified and not a real shade record."}</p>
+      </section>}
       <div className="wj-no-match-card"><Sparkles size={20} /><div><strong>No exact shade claims here.</strong><p>The example catalog is not a verified source and community recommendations are not connected. Neu will not invent your matches.</p></div></div>
       <section className="wj-results-next">
         <h2>Your next step can be a little discovery.</h2>
