@@ -556,27 +556,27 @@ function HomeView({
     <main className="neu-home-page">
       <section className="neu-home-hero">
         <div className="neu-home-copy">
-          <div className="neu-eyebrow"><span /> A beauty community for your real-life skin</div>
+          <div className="neu-eyebrow"><span /> Beauty, in your own tone</div>
           <h1>
             Makeup is a way
             <br />
             to <em>be more you.</em>
           </h1>
           <p className="neu-home-lede">
-            Find shades and products through people who share your skin tone and skin type.
-            Try a few ideas first; make an account when you want to save your finds.
+            Find makeup ideas through people with skin like yours. Explore first, then create
+            a free account to save shades and share what you love.
           </p>
           <div className="neu-home-actions">
             <button className="neu-primary-button" onClick={onProfile}>
-              Build my skin profile <ArrowRight size={17} />
+              Find my starting point <ArrowRight size={17} />
             </button>
             <button className="neu-text-button" onClick={onBrowse}>
-              Browse three starter picks <span>↗</span>
+              Browse shade notes <span>↗</span>
             </button>
           </div>
           <div className="neu-home-note">
             <span className="neu-home-note-dot" />
-            No account needed to look around.
+            Take a look around first. No account needed.
           </div>
         </div>
         <figure className="neu-home-art">
@@ -585,13 +585,11 @@ function HomeView({
             src="/__mockup/images/neu-pigment-study.jpg"
             alt="Conceptual AI artwork showing dusty rose cream, muted mauve pigment, and warm beige makeup textures blending into a soft ivory background."
           />
-          <span className="neu-home-art-index">
-            CONCEPT ART · COLOR STUDY
-          </span>
+          <span className="neu-home-art-index">01 / COLOR NOTES</span>
           <figcaption className="neu-home-art-caption">
-            <div className="neu-home-art-sticker">CONCEPT ARTWORK · NOT A MEMBER OR PRODUCT ENDORSEMENT</div>
+            <div className="neu-home-art-sticker">CONCEPT IMAGE</div>
             <span className="neu-home-art-caption-copy">
-              <span>YOUR SHADE STORY</span>
+              <span>MAKEUP, YOUR WAY</span>
               <strong>A little color. A lot of you.</strong>
             </span>
           </figcaption>
@@ -599,27 +597,27 @@ function HomeView({
       </section>
 
       <section className="neu-home-how">
-        <div className="neu-section-kicker">A softer way to find your next favourite</div>
+        <div className="neu-section-kicker">Find your next favourite, your way</div>
         <div className="neu-how-grid">
           <article className="neu-how-step">
             <span className="neu-step-number">01</span>
             <div>
-              <h2>Tell us about your skin.</h2>
-              <p>Choose a tone, undertone and skin type. Your profile is yours to edit.</p>
+              <h2>Start with your skin.</h2>
+              <p>Share your depth, undertone and skin type. Change your profile anytime.</p>
             </div>
           </article>
           <article className="neu-how-step">
             <span className="neu-step-number">02</span>
             <div>
-              <h2>See what feels familiar.</h2>
-              <p>Browse shade notes and everyday routines from people with similar skin.</p>
+              <h2>Find what feels familiar.</h2>
+              <p>Explore shade notes and everyday routines from people like you.</p>
             </div>
           </article>
           <article className="neu-how-step">
             <span className="neu-step-number">03</span>
             <div>
-              <h2>Keep what speaks to you.</h2>
-              <p>Create an account to save finds, then share the products you love.</p>
+              <h2>Make it your own.</h2>
+              <p>Save the shades you love, then add a note for someone else.</p>
             </div>
           </article>
         </div>
@@ -627,12 +625,12 @@ function HomeView({
 
       <section className="neu-home-bottom">
         <div>
-          <span className="neu-bottom-overline">A note from neu</span>
+          <span className="neu-bottom-overline">A little reminder</span>
           <h2>There isn’t one right way to wear it.</h2>
         </div>
         <p>
-          Bare skin, sharp liner, a red lip at noon. Beauty is personal. Neu helps you
-          find the little details that make a look feel like yours.
+          Bare skin, sharp liner, a favorite shade. Start wherever you are, and keep
+          what feels like you.
         </p>
         <button className="neu-round-arrow" aria-label="Build your profile" onClick={onProfile}>
           <ArrowRight size={19} />
