@@ -3,11 +3,11 @@ name: Neu product direction
 description: User's design-first scope and education goals for the makeup website.
 ---
 
-Finalize the full website flow and preview before building the real application.
+Finalize the website direction before building the real application. The user subsequently approved the soft mauve makeup-texture direction and explicitly requested its website build and a commit.
 
 **Why:** The user wants to approve the complete flow first and dislikes the original homepage.
 
-**How to apply:** Keep current iterations in the clickable design preview; do not treat preview approval as authorization to build or publish.
+**How to apply:** The approved direction is now authorized for implementation. Do not reinterpret that authorization as permission to publish or to replace the owner's Supabase project.
 
 The website needs an education section explaining undertones and color theory, so it is one place for people.
 

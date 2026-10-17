@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Neu"
+description = "A browser-first makeup community with the approved cream, mauve and plum design, public undertone and color education, and shared product recommendations."
+version = "1.0.0"
+id = "artifacts/neu-website"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20011
+
+[services.development]
+run = "pnpm --filter @workspace/neu-website run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/neu-website", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/neu-website/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20011"
+BASE_PATH = "/"
