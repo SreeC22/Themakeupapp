@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Explore makeup shade notes and routines in the Neu community." />
+    <meta name="theme-color" content="#fbf7f2" />
+    <title>Neu Community</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23574a67'/%3E%3Ctext x='8' y='24' font-family='serif' font-size='28' fill='%23fbf7f2'%3En%3C/text%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="community.css" />
+    <script src="community-config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="community.js" defer></script>
+  </head>
+  <body class="neu-community">
+    <div class="preview-ribbon" id="setup-notice" role="status">
+      <span class="ribbon-mark" aria-hidden="true">n</span>
+      <strong>Community preview</strong><i aria-hidden="true"></i>
+      <span>Product notes below are labeled examples, not member posts.</span>
+    </div>
+    <header class="site-header">
+      <a class="brand-lockup" href="index.html" aria-label="Neu home">
+        <span class="neu-logo">neu<span class="logo-dot"></span></span>
+        <span class="brand-subtitle">BEAUTY, IN YOUR OWN TONE</span>
+      </a>
+      <nav class="desktop-nav" aria-label="Community navigation">
+        <button class="nav-link nav-link-active" data-view="feed" aria-current="page">Feed</button>
+        <button class="nav-link" data-view="share">Share</button>
+        <button class="nav-link" data-view="saved">Saved</button>
+        <button class="nav-link" data-view="profile">You</button>
+      </nav>
+      <button class="account-button" type="button" data-auth>Sign in</button>
+    </header>
+
+    <main class="main-content">
+      <div class="setup-notice setup-notice--connected" id="connection-notice" role="status" hidden></div>
+      <section class="view-panel active" id="view-feed" aria-labelledby="feed-title">
+        <div class="feed-hero">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="eyebrow-line"></span> MAKEUP, IN YOUR SHADE</p>
+            <h1 id="feed-title">Find what works on <em>skin like yours.</em></h1>
+            <p class="hero-description">Shade notes and everyday routines make more sense when they come from people with skin like yours. Browse at your own pace, then keep the finds that feel right.</p>
+            <div class="hero-actions">
+              <button class="button button-plum" type="button" data-view="share">Share a find <span aria-hidden="true">↗</span></button>
+              <span class="no-photo-note"><span class="small-check" aria-hidden="true">✓</span> No face photos, ever.</span>
+            </div>
+            <div class="hero-tone-row" aria-label="A range of skin depths">
+              <span>ONE SHADE DOESN'T FIT ALL</span>
+              <div class="tone-strip" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <div class="hero-artboard" aria-label="Illustrated makeup still life">
+              <div class="artboard-top"><span>NEU / BEAUTY NOTES</span><span>01 / 04</span></div>
+            <div class="artboard-composition" aria-hidden="true">
+              <div class="hero-swatches"><i></i><i></i><i></i><i></i></div>
+              <div class="hero-product hero-product-tube"><span class="hero-tube-cap"></span><span class="hero-product-name">YOUR SHADE<br />YOUR STORY</span></div>
+              <div class="hero-product hero-product-compact"><span class="compact-center"></span></div>
+              <div class="hero-note-card"><span>THE EVERYDAY EDIT</span><strong>A little colour,<br /><em>a lot of you.</em></strong></div>
+              <span class="artboard-stamp">MADE<br />FOR YOU</span>
+            </div>
+            <div class="artboard-bottom"><span>BEAUTY IS PERSONAL</span><span>NEU COMMUNITY</span></div>
+          </div>
+        </div>
+
+        <section class="feed-section" aria-labelledby="feed-section-title">
+          <div class="section-heading">
+            <div><p class="eyebrow">A GOOD PLACE TO BEGIN</p><h2 id="feed-section-title">Finds for <em>your kind of skin.</em></h2></div>
+            <button class="text-action share-inline" type="button" data-view="share">Share your own find <span aria-hidden="true">↗</span></button>
+          </div>
+          <div class="preview-notice" id="example-notice" role="note">
+            <span class="notice-sparkle" aria-hidden="true">n</span>
+            <span><strong>Example content.</strong> These product cards demonstrate the format. They are not member recommendations, reviews, likes, or social proof.</span>
+          </div>
+          <div class="feed-controls">
+            <label class="search-box"><span aria-hidden="true" class="search-symbol"></span><span class="visually-hidden">Search products and brands</span><input id="search" type="search" placeholder="Search a brand, product or shade" autocomplete="off" /></label>
+            <div class="category-chips" role="group" aria-label="Filter by product category">
+              <button class="filter-chip filter-chip-active" type="button" data-category="all" aria-pressed="true">All finds</button>
+              <button class="filter-chip" type="button" data-category="base" aria-pressed="false">Complexion</button>
+              <button class="filter-chip" type="button" data-category="blush" aria-pressed="false">Cheeks</button>
+              <button class="filter-chip" type="button" data-category="lip" aria-pressed="false">Lips</button>
+              <button class="filter-chip" type="button" data-category="eye" aria-pressed="false">Eyes</button>
+              <button class="filter-chip" type="button" data-category="spf" aria-pressed="false">SPF</button>
+              <button class="filter-chip" type="button" data-category="other" aria-pressed="false">More</button>
+            </div>
+            <label class="tone-filter"><input id="tone-filter" type="checkbox" /><span class="tone-filter-mark" aria-hidden="true">✓</span><span>My tone &amp; nearby</span></label>
+          </div>
+          <p class="tone-hint" id="tone-hint"></p>
+          <div class="recommendation-grid" id="feed-list" aria-live="polite"></div>
+        </section>
+        <section class="learn-teaser" aria-labelledby="learn-title">
+          <div class="learn-teaser-mark" aria-hidden="true">01<br /><span>COLOR</span></div>
+          <div><p class="eyebrow">A NOTE ON UNDERTONE</p><h2 id="learn-title">A guide, not a label.</h2><p>Depth and undertone are different things. Explore color gently, and trust your own side-by-side swatches.</p></div>
+          <a class="text-action" href="index.html#quiz">Explore the tone guide <span aria-hidden="true">↗</span></a>
+        </section>
+        <section class="color-notes" aria-labelledby="color-notes-title">
+          <div class="color-wheel-art" aria-hidden="true"><span></span></div>
+          <div class="color-notes-copy">
+            <p class="eyebrow">THE NEU COLOR NOTEBOOK</p>
+            <h2 id="color-notes-title">Depth and undertone ask <em>different questions.</em></h2>
+            <p><strong>Depth</strong> describes how light or deep a shade family appears. <strong>Undertone</strong> describes a subtle temperature or cast. Warm, cool and neutral can appear at any depth. Olive is a muted green-gold cast that can sit alongside any of them.</p>
+            <div class="color-note-tags"><span>Warm · golden, peach</span><span>Cool · pink, blue</span><span>Neutral · a balance</span><span>Olive · muted green-gold</span></div>
+            <p class="color-theory-note">For color, neighboring hues can feel tonal. Opposite hues can add contrast. Skin depth changes contrast, not permission. There is no single correct palette.</p>
+            <a class="text-action" href="index.html#quiz">Try the tone guide <span aria-hidden="true">↗</span></a>
+          </div>
+        </section>
+      </section>
+
+      <section class="view-panel inner-page" id="view-share" aria-labelledby="share-title" hidden>
+        <div class="inner-page-head"><p class="eyebrow">YOUR RECOMMENDATION</p><h1 id="share-title">Share a find.</h1><p>Add the exact shade and the detail you wish you had known. Keep it honest, helpful, and yours.</p></div>
+        <div class="share-layout">
+          <div class="editor-card">
+            <div class="form-intro"><span class="form-intro-icon" aria-hidden="true">N</span><div><strong>A useful note starts with specifics.</strong><span>Product, shade, and what you noticed in real life.</span></div></div>
+            <div class="signed-out-card" id="share-signed-out">
+              <div><strong>Sign in to share with the community.</strong><p class="field-help">Sharing is available when Neu's member service is connected.</p></div>
+              <button class="button button-plum" type="button" data-auth>Sign in</button>
+            </div>
+            <form class="form-card" id="post-form" hidden>
+              <div class="form-grid">
+                <label>Brand<input name="brand" maxlength="80" required placeholder="For example, M·A·C" /></label>
+                <label>Product<input name="product" maxlength="100" required placeholder="Product name" /></label>
+                <label>Category<select name="category" required><option value="base">Complexion</option><option value="blush">Cheeks</option><option value="lip">Lips</option><option value="eye">Eyes</option><option value="spf">SPF</option><option value="other">Other</option></select></label>
+                <label>Shade<input name="shade" maxlength="80" required placeholder="Exact shade name or number" autocomplete="off" /></label>
+                <label class="form-field-full">Where to buy <span class="optional-label">optional</span><input name="buyUrl" type="url" maxlength="500" placeholder="https://" /></label>
+                <label class="form-field-full">What worked for you?<textarea name="note" rows="4" maxlength="500" required placeholder="How does the shade look in daylight? What do you like about it?"></textarea><span class="field-hint">Up to 500 characters. Text only, no face photos or image uploads.</span></label>
+              </div>
+              <fieldset class="rating-select"><legend>Would you buy it again?</legend><div class="rating-pills"><label><input type="radio" name="rating" value="1" required /><span>1</span></label><label><input type="radio" name="rating" value="2" /><span>2</span></label><label><input type="radio" name="rating" value="3" /><span>3</span></label><label><input type="radio" name="rating" value="4" /><span>4</span></label><label><input type="radio" name="rating" value="5" /><span>5</span></label></div></fieldset>
+              <p class="form-message" id="post-message" role="status" aria-live="polite"></p>
+              <button class="button button-plum button-submit" type="submit">Post recommendation</button>
+              <p class="privacy-line">Posts are public and show your chosen handle and tone. Your email stays private.</p>
+            </form>
+          </div>
+          <aside class="share-aside">
+            <div class="share-aside-art" aria-hidden="true"><span class="aside-orbit"></span><span class="aside-product"></span><span class="aside-compact"></span><span class="aside-swatch"></span></div>
+            <p class="eyebrow">A SMALL DETAIL CAN HELP</p><h2>Your shade note might be <em>someone else's answer.</em></h2><p>Share the things that make a recommendation useful: the shade name, the light you checked it in, and how it felt on your skin.</p>
+            <a class="text-action" href="index.html#quiz">Learn about tone <span aria-hidden="true">↗</span></a>
+          </aside>
+        </div>
+      </section>
+
+      <section class="view-panel inner-page" id="view-saved" aria-labelledby="saved-title" hidden>
+        <div class="inner-page-head"><p class="eyebrow">KEEP FOR LATER</p><h1 id="saved-title">Saved finds.</h1><p>Keep a little edit of the products you want to remember.</p></div>
+        <p class="preview-notice saved-example-note" id="saved-example-notice" role="note" hidden><span class="notice-sparkle" aria-hidden="true">n</span><span><strong>Browser-only example saves.</strong> These stay on this device only and are separate from private member saves.</span></p>
+        <div class="recommendation-grid saved-grid" id="saved-list" aria-live="polite"></div>
+      </section>
+
+      <section class="view-panel inner-page" id="view-profile" aria-labelledby="profile-title" hidden>
+        <div class="inner-page-head"><p class="eyebrow">YOUR CORNER OF NEU</p><h1 id="profile-title">Start with your tone.</h1><p>A close estimate is enough. Your profile is a guide, not a label. Neu does not ask for a face photo.</p></div>
+        <div class="profile-layout">
+          <form class="editor-card profile-form" id="profile-form">
+            <label class="profile-handle-label">Public handle<input name="handle" maxlength="24" pattern="[A-Za-z0-9_]{3,24}" placeholder="3 to 24 letters, numbers, or underscores" autocomplete="nickname" /><span class="field-hint">Choose a handle before you post. Your email is never public.</span></label>
+            <div class="depth-control"><div class="depth-summary"><div class="tone-swatch" id="profile-swatch"></div><div><strong id="depth-name">Medium 4</strong><span class="field-help">A 10-point skin depth guide</span></div></div><label for="depth">Skin depth</label><input id="depth" name="depth" type="range" min="0" max="100" value="50" /><div class="range-ends"><span>Light</span><span>Deep</span></div></div>
+            <fieldset><legend>Undertone</legend><div class="undertone-options"><label><input type="radio" name="undertone" value="warm" /><span>Warm</span></label><label><input type="radio" name="undertone" value="cool" /><span>Cool</span></label><label><input type="radio" name="undertone" value="neutral" checked /><span>Neutral</span></label><label><input type="radio" name="undertone" value="olive" /><span>Olive</span></label></div></fieldset>
+            <p class="form-message" id="profile-message" role="status" aria-live="polite"></p>
+            <button class="button button-plum button-wide" type="submit">Save my tone</button>
+          </form>
+          <aside class="profile-aside">
+            <div class="profile-portrait" aria-hidden="true"><span class="tone-dot tone-dot-lg" id="profile-portrait-tone"></span><span>YOUR TONE<br />YOUR STORY</span></div>
+            <p class="eyebrow">YOUR PROFILE, YOUR CALL</p><h2>Details that help you find a better match.</h2><p>Your tone can stay in this browser. Connect an account to sync your profile and member saves across devices.</p>
+            <div class="account-card" id="account-card"><div><strong id="account-label">Not signed in</strong><p class="field-help" id="account-help">Your tone stays on this browser until you sign in.</p></div><button class="button button-quiet" type="button" data-auth>Sign in</button></div>
+            <a class="text-action profile-learn-link" href="index.html#quiz">Learn about undertone <span aria-hidden="true">↗</span></a>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <nav class="mobile-nav" aria-label="Community navigation">
+      <button class="mobile-nav-item mobile-nav-active" data-view="feed" aria-current="page"><span>Feed</span></button>
+      <button class="mobile-nav-item" data-view="share"><span>Share</span></button>
+      <button class="mobile-nav-item" data-view="saved"><span>Saved</span></button>
+      <button class="mobile-nav-item" data-view="profile"><span>You</span></button>
+    </nav>
+    <footer class="site-footer"><a class="brand-lockup footer-brand" href="index.html"><span class="neu-logo">neu<span class="logo-dot"></span></span></a><span>Beauty is personal. Keep it that way.</span><a class="text-action footer-link" href="index.html#quiz">Explore the tone guide <span aria-hidden="true">↗</span></a></footer>
+
+    <dialog class="auth-dialog" id="auth-dialog" aria-labelledby="auth-title"><form id="auth-form"><button class="dialog-close" type="button" data-close-auth aria-label="Close sign in dialog">×</button><p class="eyebrow">YOUR ACCOUNT</p><h2 id="auth-title">Sign in with email.</h2><p class="dialog-lead">Neu will send you a one-time sign-in link. No password needed.</p><label>Email address<input type="email" name="email" required autocomplete="email" /></label><p class="form-message" id="auth-message" role="status" aria-live="polite"></p><button class="button button-plum button-wide" type="submit">Email me a sign-in link</button><p class="field-hint">Your email is used for sign-in and is not shown on your posts.</p></form></dialog>
+    <dialog class="auth-dialog report-dialog" id="report-dialog" aria-labelledby="report-title"><form id="report-form"><button class="dialog-close" type="button" data-close-report aria-label="Close report dialog">×</button><p class="eyebrow">COMMUNITY SAFETY</p><h2 id="report-title">Report this recommendation.</h2><p class="dialog-lead">Reports go to the Neu review queue. The person who posted it will not see who reported it.</p><input name="postId" type="hidden" /><label>Reason<select name="reason" required><option value="spam">Spam or promotion</option><option value="inaccurate">Incorrect or misleading</option><option value="other">Something else</option></select></label><label>More detail <span class="optional-label">optional</span><textarea name="details" rows="3" maxlength="300"></textarea></label><p class="form-message" id="report-message" role="status" aria-live="polite"></p><button class="button button-plum button-wide" type="submit">Send report</button></form></dialog>
+    <dialog class="product-dialog" id="product-dialog" aria-labelledby="product-dialog-title"><button class="dialog-close" type="button" data-close-product aria-label="Close product details">×</button><p class="eyebrow" id="product-dialog-kicker">PRODUCT NOTE · EXAMPLE</p><div class="dialog-product-brand" id="product-dialog-brand"></div><h2 id="product-dialog-title"></h2><p class="dialog-shade" id="product-dialog-shade"></p><p class="dialog-note" id="product-dialog-note"></p><div class="dialog-routine"><strong>HOW IT FITS IN A ROUTINE</strong><p id="product-dialog-routine"></p></div><p class="field-hint" id="product-dialog-disclaimer">Example content only. No retailer link or member recommendation is attached.</p><button class="button button-quiet button-wide" type="button" data-close-product>Back to discovery</button></dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

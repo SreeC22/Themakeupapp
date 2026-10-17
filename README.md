@@ -30,6 +30,10 @@ The fix is not more reviews. It is reviews from people who share your tone. That
 | Path | What it is |
 |---|---|
 | `index.html` | The live landing page: explains the app, runs the real tone quiz, and captures the waitlist. Fully self-contained (single file, inline CSS/JS, no build step). |
+| `community.html` | Static browser-first community with Feed, Share, Saved, and You views. |
+| `community.css`, `community.js` | Community presentation, local tone profile and clearly separated example saves, plus the Supabase client flow. |
+| `community-config.js` | Browser-safe Supabase URL and anon key configuration. Empty values keep the page in offline preview mode. |
+| `WEB_MVP_SCHEMA.sql`, `WEB_MVP_SETUP.md` | Supabase tables, access policies, and setup steps for a connected community. |
 | `APP_PLAN.md` | The full iOS app plan: React Native (Expo) stack, data model, screens, and milestones to TestFlight. |
 | `Neu Design System/` | Design tokens (light + dark), components, wireframes, brand voice, and the UI kit for the app. |
 | `SCHEMA.sql` | Supabase schema (waitlist plus app tables with RLS), ready to paste once the project exists. |
@@ -49,6 +53,12 @@ The fix is not more reviews. It is reviews from people who share your tone. That
 ## The app (next)
 
 React Native (Expo, TypeScript), iOS first. Supabase backend. See [APP_PLAN.md](APP_PLAN.md) for the data model, screen map, matching logic, and the four milestones from scaffold to TestFlight.
+
+## Static community
+
+Open `community.html` to browse the four-view community flow. With empty values in `community-config.js`, the page explains that it is offline, displays only explicitly labeled example product notes, keeps tone profiles in the current browser, and allows optional example saves on that browser. Example saves are marked as local and are not member saves. Sign-in, live member posts, posting, and account-synced saves do not report success while setup is missing.
+
+To connect the shared community, follow [WEB_MVP_SETUP.md](WEB_MVP_SETUP.md). The browser client uses the public Supabase URL and anon key only. Once configured, the feed and member actions use the existing Supabase data shape and row-level policies. Never put a service-role key in static website files.
 
 ## Status
 
