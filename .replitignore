@@ -5,3 +5,5 @@
 .local
 /artifacts/mockup-sandbox/public/neu-downloads/
 /.config/gh/
+/research/neu-catalog/raw/
+/generated-artifacts/

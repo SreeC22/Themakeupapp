@@ -43,3 +43,6 @@ _Populate as you build — sharp edges, "always run X before Y" rules._
 ## Pointers
 
 - See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details
+- Neu's additive US retailer reference catalog: `research/neu-catalog/README.md` covers source boundaries,
+  verified counts, safe development setup/import commands, queries, CSV exports and future research batches.
+  It is separate from Supabase member products and accounts. Do not replace or migrate community data.

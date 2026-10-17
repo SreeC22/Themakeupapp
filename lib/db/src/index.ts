@@ -3,6 +3,8 @@ import pg from "pg";
 import * as schema from "./schema";
 
 const { Pool } = pg;
+// Calendar dates must remain YYYY-MM-DD, not timezone-dependent Date instances.
+pg.types.setTypeParser(1082, value => value);
 
 if (!process.env.DATABASE_URL) {
   throw new Error(

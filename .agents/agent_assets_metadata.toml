@@ -14,3 +14,17 @@ mtime_ms = 1792277289798
 storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:0417277c-b89f-42fe-9e01-86281ec8ea11/f25039c3-2f0f-471a-88b6-547459fc9754/88f40e8e-8299-419a-8d42-d7dcda11c33b"
 storage_version_token = "1792277297602820"
 content_type = "text/markdown"
+
+[[outputs]]
+id = "nlGvxaYPEiUTIvFwsfyCH"
+uri = "file://generated-artifacts/neu-brand-coverage-2026-10-17.csv"
+type = "table"
+title = "Neu brand and category coverage"
+description = "Research checked October 17, 2026. Includes 37 verified brands, category evidence and unknowns, plus a summary of counts, sources and incomplete coverage."
+logical_id = "21fad08c-ef39-4a96-9b84-35965fe26728"
+content_hash = "sha256:0e04f96f6486bdf66cd1773991fdbe0b8cc1de5f122a5fff416c1b1ab0755ce3"
+size = 304426
+mtime_ms = 1792279372730
+storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:0417277c-b89f-42fe-9e01-86281ec8ea11/21fad08c-ef39-4a96-9b84-35965fe26728/c98407c5-d821-478a-b253-9529b5cca73f"
+storage_version_token = "1792279416471383"
+content_type = "text/csv"

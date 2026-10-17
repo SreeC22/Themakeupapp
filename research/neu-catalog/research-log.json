@@ -1,0 +1,611 @@
+[
+  {
+    "url": "https://www.sephora.com/brand/rare-beauty-by-selena-gomez",
+    "verifiedCategories": [
+      "blush",
+      "brow-gel",
+      "highlighter",
+      "bronzer",
+      "lip-liner",
+      "contour",
+      "brow-pencil",
+      "foundation",
+      "mascara",
+      "lip-gloss",
+      "setting-powder",
+      "eyeshadow",
+      "eyeliner",
+      "concealer",
+      "primer"
+    ],
+    "truncated": false,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  },
+  {
+    "url": "https://www.sephora.com/brand/fenty-beauty-rihanna",
+    "verifiedCategories": [
+      "lip-gloss",
+      "foundation"
+    ],
+    "truncated": false,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  },
+  {
+    "url": "https://www.sephora.com/brand/nars",
+    "verifiedCategories": [
+      "concealer",
+      "foundation",
+      "blush"
+    ],
+    "truncated": false,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  },
+  {
+    "url": "https://www.sephora.com/brand/charlotte-tilbury",
+    "verifiedCategories": [
+      "setting-powder",
+      "blush"
+    ],
+    "truncated": false,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  },
+  {
+    "url": "https://www.sephora.com/brand/makeup-by-mario",
+    "verifiedCategories": [
+      "eyeshadow"
+    ],
+    "truncated": false,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  },
+  {
+    "url": "https://www.sephora.com/brand/haus-labs-by-lady-gaga",
+    "verifiedCategories": [
+      "foundation",
+      "concealer",
+      "lipstick",
+      "lip-liner"
+    ],
+    "truncated": false,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  },
+  {
+    "url": "https://www.sephora.com/brand/saie",
+    "verifiedCategories": [
+      "blush",
+      "highlighter",
+      "bronzer",
+      "moisturizer",
+      "setting-spray",
+      "lip-gloss",
+      "concealer",
+      "lip-liner",
+      "setting-powder",
+      "mascara",
+      "foundation",
+      "skin-tint",
+      "sunscreen"
+    ],
+    "truncated": false,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  },
+  {
+    "url": "https://www.sephora.com/brand/tower-28-beauty",
+    "gap": "URL not matched to a directory entry; no inferred identity"
+  },
+  {
+    "url": "https://www.sephora.com/brand/ilia",
+    "verifiedCategories": [
+      "foundation",
+      "skin-tint",
+      "blush",
+      "highlighter",
+      "eyeliner",
+      "mascara",
+      "eyeshadow"
+    ],
+    "truncated": false,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  },
+  {
+    "url": "https://www.sephora.com/brand/milk-makeup",
+    "verifiedCategories": [
+      "blush",
+      "contour",
+      "primer",
+      "skin-tint",
+      "lip-liner"
+    ],
+    "truncated": false,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  },
+  {
+    "url": "https://www.sephora.com/brand/anastasia-beverly-hills",
+    "verifiedCategories": [
+      "eyeshadow",
+      "lip-balm",
+      "lip-liner"
+    ],
+    "truncated": false,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  },
+  {
+    "url": "https://www.sephora.com/brand/benefit-cosmetics",
+    "verifiedCategories": [
+      "blush",
+      "brow-pencil",
+      "bronzer",
+      "brow-gel",
+      "mascara",
+      "primer",
+      "concealer",
+      "highlighter",
+      "foundation",
+      "setting-spray",
+      "eyeliner",
+      "setting-powder"
+    ],
+    "truncated": false,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  },
+  {
+    "url": "https://www.sephora.com/brand/urban-decay",
+    "verifiedCategories": [
+      "eyeliner",
+      "eyeshadow",
+      "setting-spray",
+      "mascara",
+      "foundation",
+      "lipstick",
+      "lip-liner",
+      "setting-powder",
+      "concealer",
+      "brow-gel",
+      "primer"
+    ],
+    "truncated": false,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  },
+  {
+    "url": "https://www.sephora.com/brand/laura-mercier",
+    "verifiedCategories": [
+      "eyeshadow",
+      "setting-powder",
+      "concealer",
+      "skin-tint",
+      "moisturizer"
+    ],
+    "truncated": false,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  },
+  {
+    "url": "https://www.sephora.com/brand/supergoop",
+    "verifiedCategories": [
+      "sunscreen",
+      "skin-tint"
+    ],
+    "truncated": false,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  },
+  {
+    "url": "https://www.sephora.com/brand/tatcha",
+    "verifiedCategories": [
+      "moisturizer",
+      "sunscreen",
+      "lip-balm",
+      "primer"
+    ],
+    "truncated": false,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  },
+  {
+    "url": "https://www.sephora.com/brand/the-ordinary",
+    "verifiedCategories": [],
+    "truncated": false,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  },
+  {
+    "url": "https://www.sephora.com/brand/clinique",
+    "verifiedCategories": [
+      "lipstick",
+      "mascara",
+      "moisturizer",
+      "eyeliner",
+      "concealer",
+      "foundation",
+      "lip-gloss",
+      "color-corrector",
+      "sunscreen"
+    ],
+    "truncated": false,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  },
+  {
+    "url": "https://www.sephora.com/brand/dior",
+    "verifiedCategories": [
+      "highlighter",
+      "skin-tint",
+      "moisturizer"
+    ],
+    "truncated": false,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  },
+  {
+    "url": "https://www.sephora.com/brand/sephora-collection",
+    "verifiedCategories": [
+      "eyeliner"
+    ],
+    "truncated": false,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  },
+  {
+    "url": "https://www.ulta.com/brand/elf-cosmetics",
+    "verifiedCategories": [
+      "primer",
+      "blush",
+      "concealer",
+      "lip-balm",
+      "setting-spray",
+      "lip-liner",
+      "foundation",
+      "brow-pencil",
+      "skin-tint",
+      "bronzer",
+      "contour",
+      "mascara",
+      "brow-gel",
+      "eyeshadow",
+      "highlighter",
+      "setting-powder"
+    ],
+    "truncated": true,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  },
+  {
+    "url": "https://www.ulta.com/brand/nyx-professional-makeup",
+    "verifiedCategories": [
+      "brow-pencil",
+      "eyeliner",
+      "lip-liner",
+      "lip-gloss",
+      "blush",
+      "lipstick",
+      "bronzer",
+      "concealer",
+      "primer",
+      "lip-balm",
+      "setting-spray",
+      "eyeshadow",
+      "skin-tint",
+      "contour",
+      "color-corrector",
+      "setting-powder",
+      "highlighter"
+    ],
+    "truncated": true,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  },
+  {
+    "url": "https://www.ulta.com/brand/maybelline",
+    "verifiedCategories": [
+      "mascara",
+      "skin-tint",
+      "foundation",
+      "lipstick",
+      "brow-gel",
+      "primer",
+      "setting-powder",
+      "concealer",
+      "lip-liner",
+      "eyeliner",
+      "blush",
+      "lip-gloss",
+      "eyeshadow"
+    ],
+    "truncated": false,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  },
+  {
+    "url": "https://www.ulta.com/brand/loreal",
+    "gap": "URL not matched to a directory entry; no inferred identity"
+  },
+  {
+    "url": "https://www.ulta.com/brand/milani",
+    "verifiedCategories": [
+      "setting-spray",
+      "blush",
+      "mascara",
+      "bronzer",
+      "setting-powder",
+      "foundation",
+      "concealer",
+      "skin-tint",
+      "lipstick",
+      "lip-liner",
+      "primer",
+      "highlighter",
+      "eyeshadow",
+      "lip-balm",
+      "eyeliner",
+      "sunscreen",
+      "lip-gloss"
+    ],
+    "truncated": false,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  },
+  {
+    "url": "https://www.ulta.com/brand/essence",
+    "verifiedCategories": [
+      "mascara",
+      "concealer",
+      "eyeliner",
+      "bronzer",
+      "foundation",
+      "blush",
+      "setting-powder",
+      "eyeshadow",
+      "primer",
+      "brow-gel",
+      "lip-gloss",
+      "lipstick"
+    ],
+    "truncated": false,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  },
+  {
+    "url": "https://www.ulta.com/brand/colourpop",
+    "verifiedCategories": [
+      "eyeshadow",
+      "lip-balm",
+      "brow-pencil",
+      "blush",
+      "lipstick",
+      "mascara",
+      "highlighter",
+      "concealer",
+      "brow-gel",
+      "bronzer",
+      "lip-liner",
+      "lip-gloss",
+      "setting-powder",
+      "setting-spray"
+    ],
+    "truncated": false,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  },
+  {
+    "url": "https://www.ulta.com/brand/morphe",
+    "verifiedCategories": [
+      "setting-spray",
+      "eyeshadow",
+      "lip-liner",
+      "blush",
+      "concealer",
+      "lipstick",
+      "brow-pencil",
+      "contour",
+      "bronzer",
+      "setting-powder",
+      "lip-gloss",
+      "brow-gel"
+    ],
+    "truncated": false,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  },
+  {
+    "url": "https://www.ulta.com/brand/mac",
+    "verifiedCategories": [
+      "foundation",
+      "lipstick",
+      "lip-liner",
+      "eyeliner",
+      "skin-tint",
+      "lip-gloss",
+      "primer",
+      "setting-spray",
+      "concealer",
+      "blush",
+      "eyeshadow",
+      "mascara",
+      "brow-pencil",
+      "color-corrector",
+      "bronzer",
+      "highlighter",
+      "lip-balm"
+    ],
+    "truncated": true,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  },
+  {
+    "url": "https://www.ulta.com/brand/tarte",
+    "verifiedCategories": [
+      "concealer",
+      "mascara",
+      "moisturizer",
+      "sunscreen",
+      "foundation",
+      "contour",
+      "lip-balm",
+      "blush",
+      "lip-liner",
+      "eyeliner",
+      "setting-spray"
+    ],
+    "truncated": true,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  },
+  {
+    "url": "https://www.ulta.com/brand/too-faced",
+    "verifiedCategories": [
+      "mascara",
+      "concealer",
+      "foundation",
+      "bronzer",
+      "blush",
+      "eyeliner",
+      "setting-powder",
+      "lip-liner",
+      "eyeshadow",
+      "primer",
+      "setting-spray",
+      "lip-balm"
+    ],
+    "truncated": false,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  },
+  {
+    "url": "https://www.ulta.com/brand/it-cosmetics",
+    "verifiedCategories": [
+      "moisturizer",
+      "foundation",
+      "concealer",
+      "lip-liner",
+      "lip-balm",
+      "mascara",
+      "eyeshadow",
+      "setting-powder",
+      "brow-pencil",
+      "primer",
+      "blush",
+      "bronzer",
+      "eyeliner",
+      "sunscreen",
+      "setting-spray",
+      "lip-gloss"
+    ],
+    "truncated": false,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  },
+  {
+    "url": "https://www.ulta.com/brand/bareminerals",
+    "verifiedCategories": [
+      "moisturizer",
+      "foundation",
+      "skin-tint",
+      "blush",
+      "concealer",
+      "setting-powder",
+      "bronzer",
+      "primer",
+      "eyeliner",
+      "lip-gloss",
+      "eyeshadow",
+      "mascara",
+      "setting-spray",
+      "sunscreen",
+      "brow-pencil"
+    ],
+    "truncated": false,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  },
+  {
+    "url": "https://www.ulta.com/brand/benefit-cosmetics",
+    "verifiedCategories": [
+      "brow-pencil",
+      "mascara",
+      "brow-gel",
+      "primer",
+      "bronzer",
+      "foundation",
+      "concealer",
+      "eyeliner",
+      "blush",
+      "highlighter",
+      "setting-powder",
+      "setting-spray",
+      "moisturizer"
+    ],
+    "truncated": true,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  },
+  {
+    "url": "https://www.ulta.com/brand/clinique",
+    "verifiedCategories": [
+      "moisturizer",
+      "foundation",
+      "lipstick",
+      "concealer",
+      "mascara",
+      "eyeliner",
+      "lip-liner",
+      "setting-powder",
+      "eyeshadow",
+      "blush",
+      "lip-gloss",
+      "lip-balm"
+    ],
+    "truncated": true,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  },
+  {
+    "url": "https://www.ulta.com/brand/cerave",
+    "verifiedCategories": [
+      "sunscreen",
+      "moisturizer"
+    ],
+    "truncated": false,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  },
+  {
+    "url": "https://www.ulta.com/brand/la-roche-posay",
+    "verifiedCategories": [
+      "moisturizer",
+      "sunscreen",
+      "lip-balm"
+    ],
+    "truncated": false,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  },
+  {
+    "url": "https://www.ulta.com/brand/neutrogena",
+    "verifiedCategories": [
+      "moisturizer",
+      "sunscreen",
+      "lip-balm"
+    ],
+    "truncated": false,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  },
+  {
+    "url": "https://www.ulta.com/brand/olay",
+    "verifiedCategories": [
+      "moisturizer"
+    ],
+    "truncated": false,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  },
+  {
+    "url": "https://www.ulta.com/brand/black-girl-sunscreen",
+    "verifiedCategories": [
+      "sunscreen"
+    ],
+    "truncated": false,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  },
+  {
+    "url": "https://www.sephora.com/brand/tower-28",
+    "verifiedCategories": [
+      "concealer",
+      "foundation",
+      "skin-tint"
+    ],
+    "truncated": false,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  },
+  {
+    "url": "https://www.ulta.com/brand/loreal-paris",
+    "verifiedCategories": [
+      "setting-spray",
+      "mascara",
+      "setting-powder",
+      "foundation",
+      "concealer",
+      "lipstick",
+      "brow-pencil",
+      "eyeliner",
+      "bronzer",
+      "blush"
+    ],
+    "truncated": true,
+    "gap": "Only returned product cards reviewed, not all product pages or pagination"
+  }
+]
