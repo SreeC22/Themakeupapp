@@ -4768,3 +4768,189 @@
   .neu-pigment-study .neu-mobile-nav-item { font-size: 8px; }
   .neu-pigment-study .neu-site-footer { width: calc(100% - 24px); }
 }
+
+/* Readability pass: preserve the palette while giving small text real contrast. */
+.neu-pigment-study .neu-app {
+  --ink-soft: #544b52;
+  --ink-faint: #5f555d;
+  --line: #ddd0d5;
+  --line-strong: #cbbbc3;
+  font-size: 15px;
+}
+
+.neu-pigment-study .neu-app p {
+  color: #544b52;
+}
+
+.neu-pigment-study .neu-app small,
+.neu-pigment-study .neu-home-note,
+.neu-pigment-study .neu-home-art-index,
+.neu-pigment-study .neu-home-art-sticker,
+.neu-pigment-study .neu-footer-note,
+.neu-pigment-study .neu-preview-banner,
+.neu-pigment-study .neu-eyebrow,
+.neu-pigment-study .neu-section-kicker,
+.neu-pigment-study .neu-bottom-overline,
+.neu-pigment-study .neu-category-label,
+.neu-pigment-study .neu-category-count,
+.neu-pigment-study .neu-form-step,
+.neu-pigment-study .neu-section-hint,
+.neu-pigment-study .neu-form-caption,
+.neu-pigment-study .neu-flow-backline,
+.neu-pigment-study .neu-form-note,
+.neu-pigment-study .neu-feed-eyebrow,
+.neu-pigment-study .neu-post-tag,
+.neu-pigment-study .neu-post-meta,
+.neu-pigment-study .neu-profile-privacy,
+.neu-pigment-study .neu-tone-label,
+.neu-pigment-study .neu-undertone-description,
+.neu-pigment-study .neu-home-art-caption-copy > span,
+.neu-pigment-study .neu-learn-kicker,
+.neu-pigment-study .neu-learn-label,
+.neu-pigment-study .neu-product-skin-meta,
+.neu-pigment-study .neu-product-info-brand,
+.neu-pigment-study .neu-product-info-routine > span,
+.neu-pigment-study .neu-empty-label,
+.neu-pigment-study .neu-saved-intro-note {
+  color: #51464f;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.neu-pigment-study .neu-preview-banner {
+  min-height: 38px;
+  background: #eee8ed;
+  color: #443743;
+  font-size: 12px;
+}
+
+.neu-pigment-study .neu-main-nav .nav-link,
+.neu-pigment-study .neu-mobile-nav-item,
+.neu-pigment-study .neu-footer-links .footer-link {
+  color: #443943;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.neu-pigment-study .neu-home-lede,
+.neu-pigment-study .neu-home-how p,
+.neu-pigment-study .neu-home-bottom p,
+.neu-pigment-study .neu-home-learn-invite p,
+.neu-pigment-study .neu-learn-page p,
+.neu-pigment-study .neu-profile-setup-page p,
+.neu-pigment-study .neu-discover-page p,
+.neu-pigment-study .neu-saved-page p,
+.neu-pigment-study .neu-you-page p {
+  color: #51474e;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.neu-pigment-study .neu-home-copy .neu-eyebrow,
+.neu-pigment-study .neu-home-copy .neu-home-note,
+.neu-pigment-study .neu-home-art-index,
+.neu-pigment-study .neu-home-art-sticker,
+.neu-pigment-study .neu-section-kicker,
+.neu-pigment-study .neu-bottom-overline,
+.neu-pigment-study .neu-home-art-caption-copy > span {
+  color: #514659;
+}
+
+.neu-pigment-study .neu-home-how .neu-step-number {
+  color: #443744;
+  border-color: #a99aaa;
+}
+
+.neu-pigment-study .neu-home-copy .neu-text-button,
+.neu-pigment-study .neu-home-learn-invite .neu-text-button,
+.neu-pigment-study .neu-text-button {
+  color: #453642;
+  font-weight: 600;
+}
+
+.neu-pigment-study .neu-site-footer {
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 20px;
+}
+
+.neu-pigment-study .neu-footer-links {
+  justify-content: flex-end;
+  gap: clamp(18px, 2.5vw, 32px);
+}
+
+.neu-pigment-study :is(button, a, input, select, textarea):focus-visible {
+  outline: 3px solid #725b72;
+  outline-offset: 3px;
+}
+
+.neu-pigment-study input::placeholder,
+.neu-pigment-study textarea::placeholder {
+  color: #625860;
+  opacity: 1;
+}
+
+@media (max-width: 700px) {
+  .neu-pigment-study .neu-preview-banner {
+    min-height: 42px;
+    font-size: 11px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2px 6px;
+    padding: 5px 12px;
+  }
+
+  .neu-pigment-study .neu-preview-banner > span:last-child {
+    flex: 1 0 100%;
+    overflow: visible;
+    text-align: center;
+    text-overflow: clip;
+    white-space: normal;
+  }
+
+  .neu-pigment-study .neu-home-lede,
+  .neu-pigment-study .neu-home-how p,
+  .neu-pigment-study .neu-home-bottom p,
+  .neu-pigment-study .neu-home-learn-invite p,
+  .neu-pigment-study .neu-learn-page p,
+  .neu-pigment-study .neu-profile-setup-page p,
+  .neu-pigment-study .neu-discover-page p,
+  .neu-pigment-study .neu-saved-page p,
+  .neu-pigment-study .neu-you-page p {
+    font-size: 15px;
+  }
+
+  .neu-pigment-study .neu-home-copy .neu-eyebrow,
+  .neu-pigment-study .neu-home-copy .neu-home-note,
+  .neu-pigment-study .neu-home-art-index,
+  .neu-pigment-study .neu-home-art-sticker,
+  .neu-pigment-study .neu-section-kicker,
+  .neu-pigment-study .neu-bottom-overline,
+  .neu-pigment-study .neu-home-art-caption-copy > span,
+  .neu-pigment-study small {
+    font-size: 12px;
+  }
+
+  .neu-pigment-study .neu-mobile-nav-item { font-size: 12px; }
+
+  .neu-pigment-study .neu-site-footer {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .neu-pigment-study .neu-footer-links {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .neu-pigment-study *,
+  .neu-pigment-study *::before,
+  .neu-pigment-study *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

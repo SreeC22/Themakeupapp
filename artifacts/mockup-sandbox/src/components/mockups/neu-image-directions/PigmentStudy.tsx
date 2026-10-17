@@ -1664,14 +1664,12 @@ function Footer({ onNavigate }: { onNavigate: (next: View) => void }) {
   return (
     <footer className="neu-site-footer">
       <BrandMark />
-      <span>Beauty is personal. Keep it that way.</span>
       <nav className="neu-footer-links" aria-label="Footer navigation">
-        <button className="footer-link" onClick={() => onNavigate("learn")}>Learn</button>
-        <button className="footer-link" onClick={() => onNavigate("feed")}>Discover</button>
-        <button className="footer-link" onClick={() => onNavigate("profile")}>Profile</button>
-        <button className="footer-link" onClick={() => onNavigate("saved")}>Saved</button>
+        <button className="footer-link" onClick={() => onNavigate("learn")}>Learn about color</button>
+        <button className="footer-link" onClick={() => onNavigate("feed")}>Browse shades</button>
+        <button className="footer-link" onClick={() => onNavigate("profile")}>Skin profile</button>
+        <button className="footer-link" onClick={() => onNavigate("saved")}>Saved picks</button>
       </nav>
-      <span className="neu-footer-note">DESIGN PREVIEW · SAMPLE CONTENT</span>
     </footer>
   );
 }
