@@ -28,3 +28,17 @@ mtime_ms = 1792279372730
 storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:0417277c-b89f-42fe-9e01-86281ec8ea11/21fad08c-ef39-4a96-9b84-35965fe26728/c98407c5-d821-478a-b253-9529b5cca73f"
 storage_version_token = "1792279416471383"
 content_type = "text/csv"
+
+[[outputs]]
+id = "wfOE576yeC2hwMLjAxwTD"
+uri = "file://generated-artifacts/neu-design-flow-review.pdf"
+type = "pdf"
+title = "Neu design and user-flow review"
+description = "Prioritized usability findings, a simplified journey, accessibility gaps, and an honest AI-search content assessment. Includes evidence and suggested acceptance checks."
+logical_id = "7cf192dc-6075-4ddf-aef5-49fd04617960"
+content_hash = "sha256:230617c36679a3767411cfcf520cdbd66f6e36c417e9a6e1c8ad22e653ba04f9"
+size = 99494
+mtime_ms = 1792280685293
+storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:0417277c-b89f-42fe-9e01-86281ec8ea11/7cf192dc-6075-4ddf-aef5-49fd04617960/7cfe7c39-97c1-4c15-a07d-46c8a2fac62f"
+storage_version_token = "1792280708268719"
+content_type = "application/pdf"
