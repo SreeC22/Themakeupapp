@@ -4009,3 +4009,197 @@
     font-size: 17px;
   }
 }
+
+.neu-home-hero {
+  min-height: 620px;
+  gap: clamp(42px, 5.8vw, 82px);
+  padding-top: 48px;
+  padding-bottom: 72px;
+}
+
+.neu-home-copy {
+  max-width: 560px;
+  padding-left: 10px;
+}
+
+.neu-home-copy .neu-eyebrow {
+  color: #895a58;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.neu-home-copy .neu-eyebrow > span:first-child {
+  width: 29px;
+  height: 2px;
+  background: #c56b63;
+}
+
+.neu-home-copy h1 {
+  max-width: 570px;
+  margin: 27px 0 22px;
+  color: #382d33;
+  font-size: clamp(70px, 7.1vw, 94px);
+  letter-spacing: -0.068em;
+  line-height: 0.82;
+}
+
+.neu-home-copy h1 em {
+  position: relative;
+  color: #c05d64;
+  text-decoration-color: #e4bf6e;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 8px;
+}
+
+.neu-home-lede {
+  max-width: 440px;
+  color: #655961;
+  font-size: 14px;
+  line-height: 1.78;
+}
+
+.neu-home-actions {
+  gap: 19px;
+  margin-top: 28px;
+}
+
+.neu-home-copy .neu-primary-button {
+  min-height: 48px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-color: #bd5a56;
+  background: #c7635c;
+  color: #fffaf5 !important;
+}
+
+.neu-home-copy .neu-primary-button:hover {
+  background: #ad514f;
+}
+
+.neu-home-copy .neu-text-button {
+  color: #57454e;
+}
+
+.neu-home-copy .neu-text-button span {
+  color: #c15d63;
+}
+
+.neu-home-note {
+  margin-top: 24px;
+  color: #70646b;
+}
+
+.neu-home-art::before {
+  position: absolute;
+  z-index: 0;
+  inset: 8px -10px -9px 10px;
+  display: block;
+  width: auto;
+  height: auto;
+  border: 1px solid rgba(183, 119, 105, 0.2);
+  border-radius: 0;
+  background: linear-gradient(138deg, #efd3c2 0%, #edc3b3 54%, #f0dfb4 100%);
+  box-shadow: 0 15px 32px rgba(99, 63, 63, 0.07);
+  content: "";
+  transform: rotate(1deg);
+}
+
+.neu-home-art-plate,
+.neu-home-art-caption {
+  position: relative;
+  z-index: 1;
+}
+
+.neu-home-art-sticker {
+  color: #875b58;
+  font-weight: 700;
+}
+
+.neu-home-art-caption-copy strong {
+  color: #40333b;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+}
+
+.neu-home-how .neu-step-number {
+  display: inline-grid;
+  width: 29px;
+  height: 29px;
+  align-content: center;
+  justify-content: center;
+  border: 1px solid rgba(192, 93, 100, 0.38);
+  border-radius: 50%;
+  background: #f7ebe4;
+  color: #a3555d;
+  font-size: 9px;
+}
+
+.neu-home-how .neu-how-step h2 {
+  color: #44343d;
+  font-size: 26px;
+  letter-spacing: -0.025em;
+}
+
+@media (max-width: 700px) {
+  .neu-home-hero {
+    gap: 30px;
+    padding-top: 37px;
+    padding-bottom: 36px;
+  }
+
+  .neu-home-copy {
+    padding-right: 4px;
+    padding-left: 4px;
+  }
+
+  .neu-home-copy .neu-eyebrow {
+    font-size: 7px;
+    letter-spacing: 0.1em;
+  }
+
+  .neu-home-copy h1 {
+    max-width: 100%;
+    margin: 19px 0 15px;
+    font-size: clamp(58px, 12.4vw, 70px);
+    letter-spacing: -0.065em;
+    line-height: 0.86;
+  }
+
+  .neu-home-lede {
+    max-width: 460px;
+    font-size: 12px;
+  }
+
+  .neu-home-actions {
+    gap: 11px;
+    margin-top: 21px;
+  }
+
+  .neu-home-note {
+    margin-top: 16px;
+  }
+
+  .neu-home-art::before {
+    inset: 5px -6px -6px 6px;
+  }
+
+  .neu-home-art-caption-copy strong {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 360px) {
+  .neu-home-copy h1 {
+    font-size: 52px;
+  }
+
+  .neu-home-art-caption {
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .neu-home-art-caption-copy {
+    max-width: 160px;
+  }
+}

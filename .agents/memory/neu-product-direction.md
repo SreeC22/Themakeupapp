@@ -32,3 +32,9 @@ The user likes the Color Studio homepage direction, but does not want the dome-s
 **Why:** The user explicitly confirmed the direction and requested removal of the dome shape.
 
 **How to apply:** Preserve that direction when refining Color Studio; use a rectangular artwork area rather than an arched silhouette.
+
+The homepage should express makeup as outspoken self-expression: keep the colors soft, but get boldness out of that softness.
+
+**Why:** The user wants Neu to feel confident and true to itself like makeup brands, rather than quiet because of its soft palette.
+
+**How to apply:** Preserve the chosen warm palette and artwork while making homepage presentation and language expressive and confident.
