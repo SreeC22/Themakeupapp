@@ -21,11 +21,11 @@ Do not use em dashes anywhere in the Neu website or its previews.
 
 **How to apply:** Use periods, commas, colons, or parentheses instead, and check all Neu preview copy rather than only the selected frame.
 
-Use the user's chosen Color Studio makeup still-life artwork instead of the animated product illustration on the main homepage. Keep illustrated products unbranded.
+Keep makeup imagery unbranded. Do not reintroduce animated product illustrations without a request.
 
 **Why:** After exploring product animations, the user explicitly asked for the shared image instead of the current product illustration.
 
-**How to apply:** Preserve the chosen colorful artwork when refining the main homepage. Do not reintroduce product animation unless requested.
+**How to apply:** The later feedback below supersedes the earlier choice of colorful artwork; the restriction on unwanted product animation still applies.
 
 The user likes the Color Studio homepage direction, but does not want the dome-shaped artwork container.
 
@@ -38,3 +38,9 @@ The homepage should express makeup as outspoken self-expression: keep the colors
 **Why:** The user wants Neu to feel confident and true to itself like makeup brands, rather than quiet because of its soft palette.
 
 **How to apply:** Preserve the chosen warm palette and artwork while making homepage presentation and language expressive and confident.
+
+The user later said the colorful picture does not go with the homepage and that they liked their color palette from before.
+
+**Why:** The user wants better picture directions without losing the earlier soft palette.
+
+**How to apply:** Keep cream, dusty rose, mauve and plum as the comparison baseline. Explore new picture subjects separately from palette changes; do not treat the colorful still life as locked.
