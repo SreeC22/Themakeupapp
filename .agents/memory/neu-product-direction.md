@@ -9,11 +9,11 @@ Finalize the website direction before building the real application. The user su
 
 **How to apply:** The approved direction is now authorized for implementation. Do not reinterpret that authorization as permission to publish or to replace the owner's Supabase project.
 
-The static community website port is authorized for a reviewable branch only. Do not merge or deploy it without explicit owner approval.
+Use review branches by default. The owner explicitly authorized pushing the approved website and repository organization to GitHub main, but not publishing or unrelated future main pushes.
 
-**Why:** The owner required review before the website changes become public.
+**Why:** The owner initially required review, then explicitly asked to push the approved work to main and organize the repository.
 
-**How to apply:** Upload a review branch and open a draft pull request, but leave the published site unchanged until approval.
+**How to apply:** Preserve the existing native app and legacy website when integrating the approved website into main. Leave hosting and database changes for separate approval. Future unrelated work remains review-first.
 
 The website needs an education section explaining undertones and color theory, so it is one place for people.
 

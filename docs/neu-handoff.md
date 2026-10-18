@@ -100,6 +100,10 @@ The output is `artifacts/neu-website/dist/public/`. Use an SPA fallback when ser
 
 ## Git and publishing
 
-A local Git commit is not a GitHub push or a deployment. This delivery does not push, change GitHub permissions or re-test remote authentication. Confirm the intended remote and working credentials separately before pushing.
+A local Git commit is not a GitHub push or a deployment. The owner subsequently authorized pushing the approved website and repository organization to GitHub main.
+
+GitHub has separate history from this Replit workspace. The prepared source port is based on GitHub main, on local branch `sync/neu-website-main`, commit `7e0f32a`, with a linked worktree under `generated-artifacts/neu-github-main`. Verify its Git top-level before operating there. It adds an isolated `website/site` and `website/design-system` workspace with portable Vite configurations, a lockfile, contributor guidance and updated root documentation. Existing native code, root static pages and database scripts are unchanged.
+
+The portable workspace installed successfully; both typechecks and production builds passed. GitHub rejected the push with an invalid username/token error, including one retry after attaching the existing connection. GitHub CLI is not authenticated here. The source port is committed locally, not pushed. Restore write authentication before retrying a normal fast-forward push; do not force-push or merge the unrelated Replit history into GitHub.
 
 Nothing should be published automatically. The owner decides what stays and when the website is ready to share.
