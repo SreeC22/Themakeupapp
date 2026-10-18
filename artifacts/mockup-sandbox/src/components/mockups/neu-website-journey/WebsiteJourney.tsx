@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { X } from "lucide-react";
 import type { NeuPage, ProductExample, Profile } from "./data";
 import { DEFAULT_PROFILE, PAGE_TITLES, SAMPLE_PRODUCTS } from "./data";
 import { PreviewNotice, SiteFooter, SiteHeader } from "./SiteChrome";
@@ -7,6 +8,7 @@ import { LearnPage, ProfilePage } from "./LearnProfilePages";
 import { QuizFlow, ResultsPage } from "./QuizFlow";
 import { AccountLanding, DesignReport, DraftDocumentPage, MfaPage, RecoveryPage, ReportsPage, ReportDialog, SignInPage, SignUpPage, SystemPage } from "./AccountSafetyPages";
 import { DeleteNoteDialog, OwnNotePage, SavedPage, SettingsPage, SharePage, SharePreviewPage, type MemberNote } from "./MemberPages";
+import { createQuizDraftFromPreview, type QuizDraft } from "./_shared/quizDraft";
 import "./websitejourney.css";
 
 const KNOWN_PAGES = new Set<string>(Object.keys(PAGE_TITLES));
@@ -34,6 +36,8 @@ function pageFromUrl(): NeuPage {
 export default function WebsiteJourney() {
   const [page, setPage] = useState<NeuPage>(pageFromUrl);
   const [profile, setProfile] = useState<Profile>(previewProfileFromUrl);
+  const [quizDraft, setQuizDraft] = useState<QuizDraft>(createQuizDraftFromPreview);
+  const [quizReturnAvailable, setQuizReturnAvailable] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState<ProductExample>(SAMPLE_PRODUCTS[0]);
   const [savedIds, setSavedIds] = useState<string[]>([]);
   const [previewMember, setPreviewMember] = useState(false);
@@ -59,6 +63,9 @@ export default function WebsiteJourney() {
   }, []);
 
   const navigate = (destination: NeuPage) => {
+    if (page === "quiz" && destination !== "results") setQuizReturnAvailable(true);
+    if (destination === "quiz" && page === "learn") setQuizReturnAvailable(false);
+    if (destination === "results") setQuizReturnAvailable(false);
     const url = new URL(window.location.href);
     if (destination === "home") url.searchParams.delete("page");
     else url.searchParams.set("page", destination);
@@ -163,10 +170,13 @@ export default function WebsiteJourney() {
       content = <HomePage onNavigate={navigate} />;
       break;
     case "quiz":
-      content = <QuizFlow onComplete={(result) => { setProfile(result); navigate("results"); }} onCancel={() => navigate("home")} onLearn={() => navigate("learn")} />;
+      content = <QuizFlow draft={quizDraft} onDraftChange={setQuizDraft} onComplete={(result) => { setProfile(result); setQuizReturnAvailable(false); navigate("results"); }} onLearn={() => navigate("learn")} />;
       break;
     case "results":
-      content = <ResultsPage profile={profile} onNavigate={navigate} />;
+      content = <ResultsPage profile={profile} draft={quizDraft} onNavigate={(destination) => {
+        if (destination === "quiz") setQuizDraft((current) => ({ ...current, step: "review" }));
+        navigate(destination);
+      }} />;
       break;
     case "discover":
       content = <DiscoverPage profile={profile} savedIds={savedIds} onNavigate={navigate} onOpenProduct={openProduct} onToggleSave={toggleSave} />;
@@ -181,7 +191,7 @@ export default function WebsiteJourney() {
       content = activeNote ? <OwnNotePage note={activeNote} onNavigate={navigate} onEdit={startEditingOwnNote} onRequestDelete={() => setDeletePending(true)} /> : sampleReview();
       break;
     case "learn":
-      content = <LearnPage profile={profile} onNavigate={navigate} onUpdateProfile={updateProfile} />;
+      content = <LearnPage profile={profile} onNavigate={navigate} onUpdateProfile={updateProfile} quizReturnAvailable={quizReturnAvailable} onReturnToQuiz={() => { setQuizReturnAvailable(false); navigate("quiz"); }} />;
       break;
     case "profile":
       content = <ProfilePage profile={profile} onChange={updateProfile} onNavigate={navigate} />;
@@ -239,12 +249,19 @@ export default function WebsiteJourney() {
 
   return (
     <div className="wj-app">
-      <PreviewNotice />
-      <SiteHeader page={page} previewMember={previewMember} onNavigate={navigate} />
+      {page !== "quiz" && <PreviewNotice />}
+      {page === "quiz" ? <QuizHeader onHome={() => navigate("home")} /> : <SiteHeader page={page} previewMember={previewMember} onNavigate={navigate} />}
       {content}
-      <SiteFooter onNavigate={navigate} />
+      {page !== "quiz" && <SiteFooter onNavigate={navigate} />}
       {reportOpen && <ReportDialog context={reportContext} onClose={() => setReportOpen(false)} onSubmit={createLocalReport} />}
       {deletePending && <DeleteNoteDialog onCancel={() => setDeletePending(false)} onConfirm={deleteOwnNote} />}
     </div>
   );
+}
+
+function QuizHeader({ onHome }: { onHome: () => void }) {
+  return <header className="wj-quiz-header">
+    <button type="button" className="wj-quiz-wordmark" aria-label="Neu home, keep quiz draft" onClick={onHome}>Neu</button>
+    <button type="button" className="wj-quiz-close" aria-label="Close quiz and keep draft" onClick={onHome}><X size={17} /></button>
+  </header>;
 }

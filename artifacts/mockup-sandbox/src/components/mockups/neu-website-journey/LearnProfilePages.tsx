@@ -22,10 +22,12 @@ function ColorWheel({ selected, onSelect }: { selected: number; onSelect: (index
   );
 }
 
-export function LearnPage({ profile, onNavigate, onUpdateProfile }: {
+export function LearnPage({ profile, onNavigate, onUpdateProfile, quizReturnAvailable, onReturnToQuiz }: {
   profile: Profile;
   onNavigate: (page: NeuPage) => void;
   onUpdateProfile: (patch: Partial<Profile>) => void;
+  quizReturnAvailable: boolean;
+  onReturnToQuiz: () => void;
 }) {
   const [depth, setDepth] = useState(profile.depth ?? 5);
   const [undertone, setUndertone] = useState<Undertone>(profile.undertone ?? "Still exploring");
@@ -46,6 +48,7 @@ export function LearnPage({ profile, onNavigate, onUpdateProfile }: {
 
   return (
     <main className="wj-content">
+      {quizReturnAvailable && <div className="wj-learn-return-quiz"><div><strong>Your quiz is still right where you left it.</strong><span>Your answers and current question are held in this preview’s memory.</span></div><button type="button" className="wj-primary" onClick={onReturnToQuiz}>Return to my unfinished quiz <ArrowRight size={14} /></button></div>}
       <section className="wj-learn-hero">
         <div><Eyebrow>The Neu color room</Eyebrow><h1>Color is a language.<br /><em>There are no wrong accents.</em></h1><p>A friendly guide to skin depth, undertone, olive cast and color theory. Get curious, try a combination, and keep what feels like you.</p><button className="wj-text-action" type="button" onClick={() => document.getElementById("wj-color-lab")?.scrollIntoView({ behavior: "smooth" })}>Try the color lab <ArrowRight size={14} /></button></div>
         <div className="wj-learn-wheel-art"><div className="wj-wheel-ring wj-wheel-ring--one" /><div className="wj-wheel-ring wj-wheel-ring--two" /><div className="wj-wheel-disc" /><span>DEPTH × TEMPERATURE × YOU</span></div>

@@ -1,0 +1,19 @@
+kind = "design-system"
+previewPath = "/neu-design-system/"
+title = "Neu Design System"
+description = "Neu’s shared cream, mauve and plum tokens and compact accessible quiz components, derived from the approved website and clean mobile reference."
+version = "1.0.0"
+id = "artifacts/neu-design-system"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/neu-design-system/" ]
+localPort = 22276
+
+[services.development]
+run = "pnpm --filter @workspace/neu-design-system run dev"
+
+[services.env]
+PORT = "22276"
+BASE_PATH = "/neu-design-system/"

@@ -1,309 +1,420 @@
-import { useState } from "react";
-import { ArrowLeft, ArrowRight, Check, CircleHelp, Info, Lightbulb, Sparkles } from "lucide-react";
-import { CATEGORIES, DEFAULT_PROFILE, DEPTHS, SAMPLE_PRODUCTS, type NeuPage, type Profile, type ShadeEvidence, type Undertone } from "./data";
+import { useEffect, useId, useMemo, useState, type CSSProperties, type ReactNode } from "react";
+import { ArrowLeft, ArrowRight, Check, ChevronDown, CircleHelp, Info, Plus, Sparkles, X } from "lucide-react";
+import { DEFAULT_PROFILE, SAMPLE_PRODUCTS, type NeuPage, type Profile } from "./data";
 import { Eyebrow } from "./Shared";
+import { DEPTH_GROUPS, QUIZ_SWATCHES, type CurrentProductType, type ProductMatch, type QuizDraft, type QuizProduct, type QuizStep } from "./_shared/quizDraft";
 
-type Experience = "" | "A good match" | "A little light" | "A little deep" | "Too pink" | "Too yellow" | "None yet" | "Not sure yet";
-type Answers = {
-  experience: Experience;
-  brand: string;
-  manualBrand: string;
-  product: string;
-  manualProduct: string;
-  formula: string;
-  manualFormula: string;
-  shade: string;
-  manualShade: string;
-  depth: number | "unsure" | null;
-  undertone: Undertone | null;
-  olive: "yes" | "no" | "unsure" | null;
-  skinType: string;
-  finish: string;
-  budget: string;
-  categories: string[];
+const PRODUCT_TYPES: CurrentProductType[] = ["Foundation", "Concealer", "Skin tint", "BB or CC cream"];
+const BRANDS = ["Maybelline", "L'Oréal", "NYX", "e.l.f.", "Milani", "Revlon", "CoverGirl", "Fenty Beauty", "NARS", "M·A·C", "Rare Beauty", "Huda Beauty", "Estée Lauder", "Clinique"];
+const MATCHES: ProductMatch[] = ["Blends in perfectly", "A little too light", "A little too dark", "Too orange", "Too pink", "Too yellow", "Gray or ashy", "Changes color after application", "Not sure yet"];
+const UNDERTONES = [
+  { value: "Warm", description: "Golden, yellow or peach characteristics", color: "#d8aa78" },
+  { value: "Cool", description: "Pink, rosy or sometimes bluish characteristics", color: "#a67f99" },
+  { value: "Neutral", description: "A balance of warm and cool characteristics", color: "#bda093" },
+  { value: "Still exploring", description: "No need to decide yet", color: "#9a9188" },
+] as const;
+const CLUES = [
+  "My skin looks more golden or peachy",
+  "My skin looks more rosy or pink",
+  "My skin looks fairly balanced",
+  "My skin sometimes looks muted or gray-green",
+  "I'm not sure",
+];
+const VEINS = ["Mostly blue or purple", "Mostly green or teal", "Both blue and green", "I can't see them clearly", "I'm not sure"];
+const CATEGORY_OPTIONS = ["Foundation", "Concealer", "Skin tint", "Blush", "Bronzer", "Contour", "Highlighter", "Lipstick", "Lip liner", "Lip gloss", "Eyeshadow", "Setting powder", "Setting spray", "Primer", "SPF", "Everything"];
+const STEP_LABELS: Record<QuizStep, string> = {
+  welcome: "Welcome", products: "Makeup you use", matches: "Shade experience", depth: "Skin depth",
+  undertone: "Undertone", veins: "Vein clue", clues: "Other clues", olive: "Olive", categories: "Explore", preferences: "Preferences", review: "Your profile", discovery: "Discovery",
 };
+function hasDefiniteUndertone(draft: QuizDraft) {
+  return !!draft.undertone && draft.undertone !== "Still exploring";
+}
+function activeQuizPath(draft: QuizDraft) {
+  const steps: QuizStep[] = ["products"];
+  if (draft.products.length > 0) steps.push("matches");
+  steps.push("depth", "undertone");
+  if (!hasDefiniteUndertone(draft) || draft.step === "veins" || draft.step === "clues") steps.push("veins", "clues");
+  steps.push("olive", "categories", "preferences", "review", "discovery");
+  return steps;
+}
+function nextStep(draft: QuizDraft, current: QuizStep): QuizStep {
+  if (current === "products") return draft.products.length ? "matches" : "depth";
+  if (current === "matches") return "depth";
+  if (current === "undertone") return hasDefiniteUndertone(draft) ? "olive" : "veins";
+  if (current === "veins") return "clues";
+  if (current === "clues") return "olive";
+  const path = activeQuizPath(draft);
+  return path[Math.min(path.indexOf(current) + 1, path.length - 1)] ?? "review";
+}
+function previousStep(draft: QuizDraft, current: QuizStep): QuizStep {
+  if (current === "products") return "welcome";
+  if (current === "matches") return "products";
+  if (current === "depth") return draft.products.length ? "matches" : "products";
+  if (current === "undertone") return "depth";
+  if (current === "veins") return "undertone";
+  if (current === "clues") return "veins";
+  if (current === "olive") return hasDefiniteUndertone(draft) ? "undertone" : "clues";
+  const path = activeQuizPath(draft);
+  return path[Math.max(0, path.indexOf(current) - 1)] ?? "welcome";
+}
+function swatchFor(draft: QuizDraft) { return QUIZ_SWATCHES.find((item) => item.id === draft.shadeId) ?? null; }
 
-const INITIAL: Answers = {
-  experience: "", brand: "", manualBrand: "", product: "", manualProduct: "", formula: "", manualFormula: "", shade: "", manualShade: "", depth: null, undertone: null,
-  olive: null, skinType: "", finish: "", budget: "", categories: [],
-};
-
-const COMPLEXION_CATEGORIES = new Set(["Foundation", "Skin tint", "Concealer"]);
-const COMPLEXION_PRODUCTS = SAMPLE_PRODUCTS.filter((product) => COMPLEXION_CATEGORIES.has(product.category));
-const ILLUSTRATIVE_FORMULA_OPTIONS = [
-  { value: "illustrative-variant-a", label: "Illustrative formula / variant A" },
-  { value: "illustrative-variant-b", label: "Illustrative formula / variant B" },
-];
-const ILLUSTRATIVE_SHADE_OPTIONS = [
-  { value: "illustrative-shade-a", label: "Shade example A · unverified" },
-  { value: "illustrative-shade-b", label: "Shade example B · unverified" },
-];
-
-const CHOICES: { value: Experience; detail: string }[] = [
-  { value: "A good match", detail: "Something you feel at home in" },
-  { value: "A little light", detail: "The depth feels slightly too light" },
-  { value: "A little deep", detail: "The depth feels slightly too deep" },
-  { value: "Too pink", detail: "The undertone does not feel right" },
-  { value: "Too yellow", detail: "The undertone does not feel right" },
-  { value: "None yet", detail: "No current match, or still exploring" },
-  { value: "Not sure yet", detail: "A good place to start, too" },
-];
-
-const STEPS = ["A shade you know", "Skin depth", "Undertone", "Formula", "Makeup you love"];
-
-function Selectable({ title, description, selected, onClick }: {
-  title: string; description?: string; selected: boolean; onClick: () => void;
+function Choice({ title, detail, selected, onClick, className = "" }: {
+  title: string; detail?: string; selected: boolean; onClick: () => void; className?: string;
 }) {
-  return (
-    <button type="button" className={`wj-selectable${selected ? " is-selected" : ""}`} aria-pressed={selected} onClick={onClick}>
-      <span><strong>{title}</strong>{description && <small>{description}</small>}</span>
-      <i aria-hidden="true">{selected && <Check size={14} />}</i>
-    </button>
-  );
+  return <button type="button" className={`wj-selectable${selected ? " is-selected" : ""} ${className}`} aria-pressed={selected} onClick={onClick}>
+    <span><strong>{title}</strong>{detail && <small>{detail}</small>}</span><i aria-hidden="true">{selected && <Check size={14} />}</i>
+  </button>;
+}
+
+function Typeahead({ label, value, placeholder, suggestions, onChange, suggestionTag = "Suggestion" }: {
+  label: string; value: string; placeholder: string; suggestions: string[]; onChange: (value: string) => void; suggestionTag?: string;
+}) {
+  const uid = useId();
+  const labelId = `${uid}-label`;
+  const inputId = `${uid}-input`;
+  const listboxId = `${uid}-listbox`;
+  const [open, setOpen] = useState(false);
+  const [active, setActive] = useState(-1);
+  const matching = useMemo(() => {
+    const query = value.trim().toLowerCase();
+    return query ? suggestions.filter((item) => item.toLowerCase().includes(query) && item.toLowerCase() !== query).slice(0, 6) : [];
+  }, [suggestions, value]);
+  const choose = (option: string) => { onChange(option); setOpen(false); setActive(-1); };
+  const activeId = open && active >= 0 && matching[active] ? `${uid}-option-${active}` : undefined;
+  return <div className="wj-quiz-field">
+    <label id={labelId} htmlFor={inputId}>{label}</label>
+    <div className="wj-typeahead">
+      <input
+        id={inputId}
+        value={value}
+        placeholder={placeholder}
+        autoComplete="off"
+        role="combobox"
+        aria-expanded={open && matching.length > 0}
+        aria-autocomplete="list"
+        aria-labelledby={labelId}
+        aria-controls={open && matching.length > 0 ? listboxId : undefined}
+        aria-activedescendant={activeId}
+        onFocus={() => setOpen(true)}
+        onBlur={() => { setOpen(false); setActive(-1); }}
+        onChange={(event) => { onChange(event.target.value); setOpen(true); setActive(-1); }}
+        onKeyDown={(event) => {
+          if (event.key === "ArrowDown" && matching.length) { event.preventDefault(); setOpen(true); setActive((current) => current < 0 ? 0 : (current + 1) % matching.length); }
+          if (event.key === "ArrowUp" && matching.length) { event.preventDefault(); setOpen(true); setActive((current) => current < 0 ? matching.length - 1 : (current - 1 + matching.length) % matching.length); }
+          if (event.key === "Enter" && open && active >= 0 && matching[active]) { event.preventDefault(); choose(matching[active]); }
+          if (event.key === "Escape") { setOpen(false); setActive(-1); }
+        }}
+      />
+      {open && matching.length > 0 && <div id={listboxId} className="wj-typeahead-options" role="listbox" aria-labelledby={labelId}>{matching.map((option, index) =>
+        <button id={`${uid}-option-${index}`} type="button" role="option" tabIndex={-1} aria-selected={index === active} key={option} onMouseDown={(event) => event.preventDefault()} onClick={() => choose(option)}>{option}<span>{suggestionTag}</span></button>
+      )}</div>}
+    </div>
+  </div>;
+}
+
+function QuizProgress({ draft, step }: { draft: QuizDraft; step: QuizStep }) {
+  const path = activeQuizPath(draft);
+  const activeIndex = Math.max(0, path.indexOf(step));
+  const matchProgress = step === "matches" ? (draft.productMatchIndex + 1) / Math.max(1, draft.products.length) : 1;
+  const progress = step === "discovery" ? 100 : ((activeIndex + matchProgress) / path.length) * 100;
+  const label = step === "matches"
+    ? `STEP ${activeIndex + 1} OF ${path.length}`
+    : `STEP ${activeIndex + 1} OF ${path.length}`;
+  return <div className="wj-quiz-progress">
+    <div className="wj-progress-track"><i style={{ width: `${progress}%` }} /></div>
+    <div className="wj-progress-label"><span>{STEP_LABELS[step].toUpperCase()}</span><span>{label}</span></div>
+  </div>;
+}
+
+function ProductRow({ product, index, onChange, onRemove }: {
+  product: QuizProduct; index: number; onChange: (patch: Partial<QuizProduct>) => void; onRemove: () => void;
+}) {
+  const sampleProductNames = SAMPLE_PRODUCTS.filter((item) => item.brand.toLowerCase() === product.brand.trim().toLowerCase()).map((item) => item.name);
+  const brandSuggestions = BRANDS.filter((brand) => brand.toLowerCase().includes(product.brand.toLowerCase()));
+  return <article className="wj-quiz-product-row">
+    <header><label className="wj-visually-hidden" htmlFor={`wj-product-type-${product.id}`}>Product type for product {index + 1}</label><select id={`wj-product-type-${product.id}`} value={product.type} onChange={(event) => onChange({ type: event.target.value as CurrentProductType, brand: "", brandUnknown: false, product: "", formula: "", shade: "", shadeUnknown: false, match: [] })}>{PRODUCT_TYPES.map((type) => <option key={type}>{type}</option>)}</select><button type="button" onClick={onRemove} aria-label={`Remove product ${index + 1}`}><X size={15} /> Remove</button></header>
+    {!product.brandUnknown ? <><Typeahead label="Brand" value={product.brand} placeholder="Type any brand" suggestions={brandSuggestions} suggestionTag="Brand" onChange={(brand) => onChange({ brand, brandUnknown: false, product: "", formula: "", shade: "", shadeUnknown: false, match: [] })} /><button type="button" className="wj-quiz-inline-skip" onClick={() => onChange({ brandUnknown: true, brand: "", product: "", formula: "", shade: "", shadeUnknown: false, match: [] })}>I’m not sure of the brand</button></> : <button type="button" className="wj-quiz-inline-skip" onClick={() => onChange({ brandUnknown: false })}>Add brand name</button>}
+    {(product.brand.trim() || product.brandUnknown) && <><Typeahead label="Product or line" value={product.product} placeholder="Type product name" suggestions={sampleProductNames} suggestionTag="Illustrative" onChange={(value) => onChange({ product: value, formula: "", shade: "", shadeUnknown: false, match: [] })} />
+      {product.product.trim() && <div className="wj-quiz-product-subgrid">
+        <Typeahead label="Formula or variant" value={product.formula} placeholder="Type if known" suggestions={[]} onChange={(value) => onChange({ formula: value, shade: "", shadeUnknown: false, match: [] })} />
+        <div className="wj-quiz-shade-entry">{!product.shadeUnknown && <Typeahead label="Exact shade" value={product.shade} placeholder="Type if known" suggestions={[]} onChange={(value) => onChange({ shade: value, match: [] })} />}<button type="button" className={`wj-shade-unknown${product.shadeUnknown ? " is-selected" : ""}`} aria-pressed={product.shadeUnknown} onClick={() => onChange({ shadeUnknown: !product.shadeUnknown, shade: "", match: [] })}>I do not know my shade</button></div>
+      </div>}</>}
+  </article>;
 }
 
 export function QuizFlow({
-  onComplete,
-  onCancel,
-  onLearn,
+  draft, onDraftChange, onComplete, onLearn,
 }: {
+  draft: QuizDraft;
+  onDraftChange: (draft: QuizDraft) => void;
   onComplete: (profile: Profile) => void;
-  onCancel: () => void;
   onLearn: () => void;
 }) {
-  const [step, setStep] = useState(() => {
-    const previewStep = Number(new URLSearchParams(window.location.search).get("step"));
-    return Number.isInteger(previewStep) && previewStep >= 0 && previewStep <= 6 ? previewStep : 0;
-  });
-  const [answers, setAnswers] = useState<Answers>(() => new URLSearchParams(window.location.search).get("sampleEntry") === "1"
-    ? {
-      ...INITIAL,
-      experience: "A good match",
-      brand: "Fenty Beauty",
-      product: "skin-tint-note",
-      formula: ILLUSTRATIVE_FORMULA_OPTIONS[0].value,
-      shade: ILLUSTRATIVE_SHADE_OPTIONS[0].value,
-    }
-    : INITIAL);
   const [error, setError] = useState("");
-  const set = <K extends keyof Answers>(key: K, value: Answers[K]) => {
-    setAnswers((current) => ({ ...current, [key]: value }));
+  const [openHelp, setOpenHelp] = useState("");
+  const [showAddOptions, setShowAddOptions] = useState(false);
+  const change = (patch: Partial<QuizDraft>) => { onDraftChange({ ...draft, ...patch }); setError(""); };
+  const setStep = (step: QuizStep) => {
+    change({ step });
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+  };
+  useEffect(() => {
+    document.getElementById("wj-quiz-title")?.focus({ preventScroll: true });
+  }, [draft.step, draft.productMatchIndex]);
+  const addProduct = (type: CurrentProductType) => {
+    const id = `quiz-product-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`;
+    change({ products: [...draft.products, { id, type, brand: "", brandUnknown: false, product: "", formula: "", shade: "", shadeUnknown: false, match: [] }], productMatchIndex: 0, noCurrentMakeup: false, newToMakeup: false, currentMakeupSkipped: false });
+    setShowAddOptions(false);
+  };
+  const patchProduct = (id: string, patch: Partial<QuizProduct>) => change({ products: draft.products.map((product) => product.id === id ? { ...product, ...patch } : product) });
+  const removeProduct = (id: string) => {
+    const products = draft.products.filter((product) => product.id !== id);
+    const removedIndex = draft.products.findIndex((product) => product.id === id);
+    const productMatchIndex = removedIndex < draft.productMatchIndex ? Math.max(0, draft.productMatchIndex - 1) : Math.min(draft.productMatchIndex, Math.max(products.length - 1, 0));
+    change({ products, productMatchIndex, referenceProductId: draft.referenceProductId === id ? null : draft.referenceProductId, step: products.length ? draft.step : draft.step === "matches" ? "products" : draft.step });
+  };
+  const toggleMatch = (product: QuizProduct, value: ProductMatch) => {
+    const standalone = value === "Blends in perfectly" || value === "Not sure yet";
+    let match = product.match.includes(value) ? product.match.filter((item) => item !== value) : standalone
+      ? [value]
+      : [...product.match.filter((item) => item !== "Blends in perfectly" && item !== "Not sure yet"), value];
+    if (!standalone && (value === "A little too light" || value === "A little too dark")) {
+      match = match.filter((item) => item !== (value === "A little too light" ? "A little too dark" : "A little too light"));
+    }
+    patchProduct(product.id, { match });
+  };
+  const toggleChoice = (current: string[], value: string, exclusive = false) => exclusive
+    ? (current.includes(value) ? [] : [value])
+    : current.includes(value) ? current.filter((item) => item !== value) : [...current.filter((item) => item !== "I'm not sure"), value];
+  const advance = () => {
+    if (draft.step === "matches") {
+      if (draft.productMatchIndex < draft.products.length - 1) {
+        change({ productMatchIndex: draft.productMatchIndex + 1 });
+      } else {
+        setStep("depth");
+      }
+      return;
+    }
+    if (draft.step === "products" && draft.products.length === 0 && !draft.noCurrentMakeup && !draft.newToMakeup && !draft.currentMakeupSkipped) return setError("Add a product, choose no current complexion makeup, or choose new to makeup.");
+    if (draft.step === "depth" && !draft.shadeId && !draft.depthUnsure) return setError("Choose a starting shade or leave this open for now.");
+    if (draft.step === "categories" && draft.categories.length === 0) return setError("Choose a category or select Everything.");
     setError("");
+    setStep(nextStep(draft, draft.step));
   };
-  const toggleCategory = (value: string) => set("categories", answers.categories.includes(value) ? answers.categories.filter((item) => item !== value) : [...answers.categories, value]);
-  const changeExperience = (value: Experience) => {
-    setAnswers((current) => ({
-      ...current,
-      experience: value,
-      ...(value === "None yet" || value === "Not sure yet"
-        ? { brand: "", manualBrand: "", product: "", manualProduct: "", formula: "", manualFormula: "", shade: "", manualShade: "" }
-        : {}),
-    }));
-    setError("");
+  const buildProfile = (): Profile => {
+    const selected = swatchFor(draft);
+    return {
+      ...DEFAULT_PROFILE,
+      depth: selected?.profileDepth ?? null,
+      quizShadeId: selected?.id ?? null,
+      undertone: draft.undertone,
+      olive: draft.olive === "yes" ? true : draft.olive === "no" ? false : null,
+      skinType: draft.skinType || null,
+      categories: draft.categories,
+      shadeEvidence: draft.products.length ? {
+        brand: draft.products[0].brand || "Not entered",
+        product: draft.products[0].product || "Not entered",
+        formula: draft.products[0].formula || "Not entered",
+        shade: draft.products[0].shade || "Not entered",
+        source: "manual",
+      } : null,
+    };
   };
-  const changeBrand = (value: string) => setAnswers((current) => ({
-    ...current, brand: value, manualBrand: "", product: "", manualProduct: "",
-    formula: "", manualFormula: "", shade: "", manualShade: "",
-  }));
-  const changeProduct = (value: string) => setAnswers((current) => ({
-    ...current, product: value, manualProduct: "", formula: "", manualFormula: "", shade: "", manualShade: "",
-  }));
-  const changeFormula = (value: string) => setAnswers((current) => ({
-    ...current, formula: value, manualFormula: "", shade: "", manualShade: "",
-  }));
-  const createShadeEvidence = (): ShadeEvidence | null => {
-    if (!answers.experience || answers.experience === "None yet" || answers.experience === "Not sure yet") return null;
-    const manual = answers.brand === "other" || answers.product === "other" || answers.formula === "other" || answers.shade === "manual";
-    const brand = answers.brand === "other"
-      ? answers.manualBrand.trim() || "Brand not entered"
-      : answers.brand === "unsure" ? "Not sure yet" : answers.brand;
-    const chosenProduct = COMPLEXION_PRODUCTS.find((item) => item.id === answers.product);
-    const product = answers.product === "other"
-      ? answers.manualProduct.trim() || "Product not entered"
-      : answers.product === "unsure" ? "Not sure yet" : chosenProduct?.name ?? "";
-    const formula = answers.formula === "other"
-      ? answers.manualFormula.trim() || "Formula or variant not entered"
-      : answers.formula === "unsure" ? "Not sure yet"
-        : ILLUSTRATIVE_FORMULA_OPTIONS.find((item) => item.value === answers.formula)?.label ?? "";
-    const shade = answers.shade === "manual"
-      ? answers.manualShade.trim() || "Shade name not entered"
-      : answers.shade === "unsure" ? "Not sure yet"
-        : ILLUSTRATIVE_SHADE_OPTIONS.find((item) => item.value === answers.shade)?.label ?? "";
-    if (![brand, product, formula, shade].some(Boolean)) return null;
-    return { brand, product, formula, shade, source: manual ? "manual" : "illustrative" };
+  const complete = () => {
+    if (!draft.categories.length) { setError("Choose a category before viewing your discovery preview."); setStep("categories"); return; }
+    onComplete(buildProfile());
   };
-  const shadeEvidenceSummary = () => {
-    if (answers.experience === "None yet") return "None yet";
-    if (answers.experience === "Not sure yet") return "Not sure yet";
-    const evidence = createShadeEvidence();
-    return evidence ? [evidence.brand, evidence.product, evidence.formula, evidence.shade].filter(Boolean).join(" · ") : "No product notes added";
+  const goBack = () => {
+    if (draft.step === "matches" && draft.productMatchIndex > 0) {
+      change({ productMatchIndex: draft.productMatchIndex - 1 });
+      return;
+    }
+    setStep(previousStep(draft, draft.step));
   };
-  const next = () => {
-    if (step === 1 && !answers.experience) return setError("Choose an answer, or choose “None yet.”");
-    if (step === 2 && answers.depth === null) return setError("Choose a depth or “I’m not sure yet.”");
-    if (step === 3 && (!answers.undertone || !answers.olive)) return setError("Choose an undertone and an olive-cast response. Unsure is a valid choice.");
-    if (step === 5 && !answers.categories.length) return setError("Choose at least one product category, or select All makeup.");
-    setError("");
-    setStep((current) => Math.min(6, current + 1));
-  };
-  const createProfile = (): Profile => ({
-    ...DEFAULT_PROFILE,
-    depth: typeof answers.depth === "number" ? answers.depth : null,
-    undertone: answers.undertone,
-    olive: answers.olive === "yes" ? true : answers.olive === "no" ? false : null,
-    skinType: answers.skinType || null,
-    categories: answers.categories,
-    shadeEvidence: createShadeEvidence(),
-  });
-  const sendResult = () => {
-    if (!answers.categories.length) return setError("Return to category selection and choose at least one.");
-    onComplete(createProfile());
-  };
-  const changeScreen = (value: number) => { setError(""); setStep(value); };
+  const selectedSwatch = swatchFor(draft);
+  const selectedMatchProduct = draft.products[Math.min(draft.productMatchIndex, Math.max(draft.products.length - 1, 0))];
+  const displayStep = draft.step === "matches" && !selectedMatchProduct ? "depth" : draft.step;
 
-  return (
-    <main className="wj-quiz-frame" aria-labelledby="wj-quiz-title">
-      {step > 0 && step < 6 ? (
-        <div className="wj-quiz-progress">
-          <div className="wj-progress-track"><i style={{ width: `${(step / 5) * 100}%` }} /></div>
-          <div className="wj-progress-label"><span>YOUR SHADE STORY</span><span>STEP {String(step).padStart(2, "0")} / 05</span></div>
-          <nav aria-label="Quiz progress">{STEPS.map((label, index) => (
-            <button type="button" key={label} className={`${step === index + 1 ? "is-current" : ""} ${step > index + 1 ? "is-done" : ""}`} aria-current={step === index + 1 ? "step" : undefined} onClick={() => step > index + 1 && changeScreen(index + 1)}><i>{step > index + 1 ? <Check size={11} /> : `0${index + 1}`}</i><span>{label}</span></button>
-          ))}</nav>
-        </div>
-      ) : null}
+  return <main className="wj-quiz-frame wj-quiz-complete" aria-labelledby="wj-quiz-title">
+    {displayStep !== "welcome" && <QuizProgress draft={draft} step={displayStep} />}
 
-      {step === 0 && (
-        <section className="wj-quiz-start">
-          <div className="wj-quiz-start-main">
-            <Eyebrow>YOUR MAKEUP, YOUR STARTING POINT</Eyebrow>
-            <h1 id="wj-quiz-title">Find what <em>feels like you.</em></h1>
-            <p>Tell us a little about a shade you know, how your skin looks to you, and the makeup you want to explore. You can be certain, unsure, or a little bit of both.</p>
-            <button type="button" className="wj-primary" onClick={next}>Start my skin profile <ArrowRight size={15} /></button>
-            <span className="wj-quiz-time">A few questions. Skip what you do not know.</span>
-          </div>
-          <aside><span className="wj-quiz-rings" aria-hidden="true" /><Sparkles size={17} /><strong>Not a diagnosis.</strong><p>Just a starting point you can change. No selfie or account needed.</p><button type="button" onClick={onLearn}>Learn what undertone means <ArrowRight size={13} /></button></aside>
-        </section>
-      )}
-
-      {step > 0 && step < 6 && (
-        <section className="wj-quiz-question">
-          <div className="wj-quiz-question-copy">
-            <span className="wj-quiz-kicker">{STEPS[step - 1].toUpperCase()}</span>
-            {step === 1 && <><h1 id="wj-quiz-title">Is there a shade you <em>already know?</em></h1><p>An everyday foundation, skin tint or concealer can offer a useful clue. No perfect match is required.</p></>}
-            {step === 2 && <><h1 id="wj-quiz-title">Where does your skin <em>feel like it sits?</em></h1><p>Depth is how light or deep your complexion reads. It is not a measure of who you are.</p></>}
-            {step === 3 && <><h1 id="wj-quiz-title">What undertone <em>feels closest?</em></h1><p>Warm, cool and neutral are ways to describe a subtle color tendency. No right answer is required.</p></>}
-            {step === 4 && <><h1 id="wj-quiz-title">What feels good <em>on your skin?</em></h1><p>These personal preferences are all optional. Skin type is not a medical label.</p></>}
-            {step === 5 && <><h1 id="wj-quiz-title">What would you love to <em>find?</em></h1><p>Choose all the categories that make you curious. You can change your picks later.</p></>}
-          </div>
-
-          {step === 1 && (
-            <>
-              <div className="wj-quiz-choice-grid">{CHOICES.map(({ value, detail }) => <Selectable key={value} title={value} description={detail} selected={answers.experience === value} onClick={() => changeExperience(value)} />)}</div>
-              {answers.experience && answers.experience !== "None yet" && answers.experience !== "Not sure yet" && <div className="wj-known-shade">
-                <div className="wj-known-shade-notice"><Info size={15} /><span><strong>Example options, not a verified shade catalog.</strong> Product labels are examples. Formula variants and shade choices below are illustrative and unverified.</span></div>
-                <label><span>Brand</span><select value={answers.brand} onChange={(event) => changeBrand(event.target.value)}>
-                  <option value="">Choose a brand or skip</option>
-                  {[...new Set(COMPLEXION_PRODUCTS.map((product) => product.brand))].map((brand) => <option key={brand} value={brand}>{brand}</option>)}
-                  <option value="other">Other / not listed</option>
-                  <option value="unsure">Not sure yet</option>
-                </select></label>
-                {answers.brand === "other" && <label><span>Brand name (optional)</span><input value={answers.manualBrand} onChange={(event) => set("manualBrand", event.target.value)} placeholder="Enter your brand" /></label>}
-                <label><span>Exact product or line</span><select value={answers.product} disabled={!answers.brand} onChange={(event) => changeProduct(event.target.value)}>
-                  <option value="">{answers.brand ? "Choose a product or skip" : "Choose a brand first"}</option>
-                  {COMPLEXION_PRODUCTS.filter((item) => item.brand === answers.brand).map((item) => <option key={item.id} value={item.id}>{item.name}</option>)}
-                  {!!answers.brand && <><option value="other">Product not listed</option><option value="unsure">Not sure yet</option></>}
-                </select></label>
-                {answers.product === "other" && <label><span>Product name (optional)</span><input value={answers.manualProduct} onChange={(event) => set("manualProduct", event.target.value)} placeholder="Enter the name on your product" /></label>}
-                <label><span>Formula or product variant</span><select value={answers.formula} disabled={!answers.product} onChange={(event) => changeFormula(event.target.value)}>
-                  <option value="">{answers.product ? "Choose an example variant or skip" : "Choose a product first"}</option>
-                  {answers.product && answers.product !== "other" && answers.product !== "unsure" && ILLUSTRATIVE_FORMULA_OPTIONS.map((item) => <option key={item.value} value={item.value}>{item.label} · unverified</option>)}
-                  {!!answers.product && <><option value="other">Formula / variant not listed</option><option value="unsure">Not sure yet</option></>}
-                </select></label>
-                {answers.formula === "other" && <label><span>Formula or variant name (optional)</span><input value={answers.manualFormula} onChange={(event) => set("manualFormula", event.target.value)} placeholder="Enter a label from the product" /></label>}
-                <label><span>Shade name or example</span><select value={answers.shade} disabled={!answers.formula} onChange={(event) => { setAnswers((current) => ({ ...current, shade: event.target.value, manualShade: "" })); setError(""); }}>
-                  <option value="">{answers.formula ? "Choose an example or skip" : "Choose a formula first"}</option>
-                  {answers.formula && answers.formula !== "other" && answers.formula !== "unsure" && ILLUSTRATIVE_SHADE_OPTIONS.map((item) => <option key={item.value} value={item.value}>{item.label}</option>)}
-                  {!!answers.formula && <><option value="manual">I can't find mine · enter it</option><option value="unsure">Not sure yet</option></>}
-                </select></label>
-                {answers.shade === "manual" && <label className="wj-known-shade-manual"><span>Your shade name (unverified)</span><input value={answers.manualShade} onChange={(event) => set("manualShade", event.target.value)} placeholder="Type the name on your product" /></label>}
-              </div>}
-            </>
-          )}
-
-          {step === 2 && <><div className="wj-depth-picker" role="group" aria-label="Choose a skin depth">{DEPTHS.map((item) => <button type="button" aria-pressed={answers.depth === item.number} key={item.number} className={answers.depth === item.number ? "is-selected" : ""} onClick={() => set("depth", item.number)}><span style={{ backgroundColor: item.color }}>{answers.depth === item.number && <Check size={15} />}</span><strong>{item.label}</strong><small>{String(item.number).padStart(2, "0")}</small></button>)}</div><button className={`wj-unsure-button${answers.depth === "unsure" ? " is-selected" : ""}`} type="button" aria-pressed={answers.depth === "unsure"} onClick={() => set("depth", "unsure")}><CircleHelp size={16} /> I'm not sure yet</button><p className="wj-quiz-footnote"><Info size={14} /> Screen color and daylight both vary. You can change this whenever you like.</p></>}
-
-          {step === 3 && <><div className="wj-undertone-picker" role="group" aria-label="Choose your undertone">{(["Warm", "Cool", "Neutral", "Still exploring"] as Undertone[]).map((value, index) => <Selectable key={value} title={value} description={["Golden, peach or yellow", "Rosy, pink or blue", "A balance of tendencies", "No need to decide"][index]} selected={answers.undertone === value} onClick={() => set("undertone", value)} />)}</div><div className="wj-olive-field"><div><strong>Do you notice an olive cast?</strong><p>Olive can sit alongside warm, cool or neutral.</p></div><div role="group" aria-label="Olive cast">{(["yes", "no", "unsure"] as const).map((value) => <button key={value} className={answers.olive === value ? "is-selected" : ""} type="button" aria-pressed={answers.olive === value} onClick={() => set("olive", value)}>{value === "yes" ? "Yes" : value === "no" ? "No" : "Not sure"}</button>)}</div></div><p className="wj-quiz-footnote"><Lightbulb size={14} /> Veins, jewelry and sun response are weak clues, not reliable tests.</p></>}
-
-          {step === 4 && <div className="wj-preference-fields">{[
-            { name: "skinType", legend: "Skin type", options: ["Dry", "Oily", "Combination", "Normal", "Sensitive", "Not sure"] },
-            { name: "finish", legend: "Finish", options: ["Natural", "Soft matte", "Dewy", "No preference"] },
-            { name: "budget", legend: "Price range", options: ["Drugstore", "Mid-range", "Prestige", "Any price"] },
-          ].map((group) => <fieldset key={group.name}><legend>{group.legend} <span>OPTIONAL</span></legend><div>{group.options.map((value) => <button key={value} className={answers[group.name as "skinType" | "finish" | "budget"] === value ? "is-selected" : ""} type="button" aria-pressed={answers[group.name as "skinType" | "finish" | "budget"] === value} onClick={() => set(group.name as "skinType" | "finish" | "budget", answers[group.name as "skinType" | "finish" | "budget"] === value ? "" : value)}>{value}</button>)}</div></fieldset>)}<p className="wj-quiz-footnote">Skip all of these to keep your profile open-ended.</p></div>}
-
-          {step === 5 && <><div className="wj-category-picker"><fieldset><legend>MAKEUP I WANT TO EXPLORE</legend>{CATEGORIES.filter((item) => item !== "All makeup").map((category) => <button key={category} className={answers.categories.includes(category) ? "is-selected" : ""} type="button" aria-pressed={answers.categories.includes(category)} onClick={() => toggleCategory(category)}>{category}{answers.categories.includes(category) && <Check size={13} />}</button>)}</fieldset><button type="button" className={answers.categories.includes("All makeup") ? "wj-category-all is-selected" : "wj-category-all"} aria-pressed={answers.categories.includes("All makeup")} onClick={() => set("categories", answers.categories.includes("All makeup") ? [] : ["All makeup"])}>All makeup</button></div></>}
-
-          {error && <p className="wj-form-error" role="alert">{error}</p>}
-          <div className="wj-quiz-navigation">
-            <button type="button" className="wj-text-action" onClick={() => step === 1 ? changeScreen(0) : changeScreen(step - 1)}><ArrowLeft size={15} /> Back</button>
-            {step === 4 && <button className="wj-text-action" type="button" onClick={() => setStep(5)}>Skip preferences <ArrowRight size={14} /></button>}
-            <button type="button" className="wj-primary" onClick={() => step === 5 ? next() : next()}>{step === 5 ? "Review my starting point" : "Continue"} <ArrowRight size={15} /></button>
-          </div>
-        </section>
-      )}
-
-      {step === 6 && <section className="wj-quiz-review">
-        <Eyebrow>A PROFILE YOU CAN CHANGE</Eyebrow>
-        <h1 id="wj-quiz-title">Your starting point, <em>your call.</em></h1>
-        <p>Review your answers, then choose where you want to go next.</p>
-        <div className="wj-answer-list">
-          <AnswerSummary label="Shade notes · unverified" value={shadeEvidenceSummary()} onEdit={() => changeScreen(1)} />
-          <AnswerSummary label="Skin depth" value={typeof answers.depth === "number" ? `Depth ${answers.depth} · ${DEPTHS[answers.depth - 1].label}` : "Still exploring"} onEdit={() => changeScreen(2)} />
-          <AnswerSummary label="Undertone" value={`${answers.undertone || "Still exploring"}${answers.olive === "yes" ? " · olive cast" : ""}`} onEdit={() => changeScreen(3)} />
-          <AnswerSummary label="Your preferences" value={[answers.skinType, answers.finish, answers.budget].filter(Boolean).join(" · ") || "Left open"} onEdit={() => changeScreen(4)} />
-          <AnswerSummary label="Your categories" value={answers.categories.join(", ") || "Not chosen"} onEdit={() => changeScreen(5)} />
-        </div>
-        <div className="wj-privacy-callout"><Info size={16} /><p>This prototype does not save or send your answers. A real product would keep an anonymous draft only with clear notice and let you delete it.</p></div>
-        {error && <p className="wj-form-error" role="alert">{error}</p>}
-        <div className="wj-quiz-navigation"><button className="wj-text-action" type="button" onClick={() => changeScreen(5)}><ArrowLeft size={15} />Edit answers</button><button className="wj-primary" type="button" onClick={sendResult}>See my starting point <ArrowRight size={15} /></button></div>
-      </section>}
-
-      {step > 0 && <button className="wj-quiz-exit" type="button" onClick={onCancel}>Leave this preview</button>}
-    </main>
-  );
-}
-
-function AnswerSummary({ label, value, onEdit }: { label: string; value: string; onEdit: () => void }) {
-  return <div className="wj-answer-row"><span>{label}</span><strong>{value}</strong><button type="button" onClick={onEdit}>Edit</button></div>;
-}
-
-export function ResultsPage({ profile, onNavigate }: { profile: Profile; onNavigate: (page: NeuPage) => void }) {
-  const depth = profile.depth === null ? null : DEPTHS[profile.depth - 1];
-  return (
-    <main className="wj-content wj-narrow-content">
-      <Eyebrow>A first step, not a final answer</Eyebrow>
-      <div className="wj-results-heading"><h1>Your shade story <em>starts here.</em></h1><p>A few clues create a place to begin. Your skin and style do not need a score to deserve discovery.</p></div>
-      <div className="wj-results-profile">
-        <div><span>SKIN DEPTH</span><strong>{depth ? `Depth ${profile.depth} · ${depth.label}` : "Still exploring"}</strong></div>
-        <div><span>UNDERTONE</span><strong>{profile.undertone || "Still exploring"}{profile.olive ? " · olive cast" : ""}</strong></div>
-        <div><span>YOUR CATEGORIES</span><strong>{profile.categories.join(", ") || "Explore everything"}</strong></div>
+    {displayStep === "welcome" && <section className="wj-quiz-start">
+      <div className="wj-quiz-start-main">
+        <h1 id="wj-quiz-title" tabIndex={-1}>Let’s get to know <em>your skin.</em></h1>
+        <p>A few small questions about your skin, makeup and what you’d like to explore.</p>
+        <button type="button" className="wj-primary" onClick={() => setStep("products")}>Find my match <ArrowRight size={15} /></button>
+        <HelpDisclosure title="About this preview" open={openHelp === "welcome"} onClick={() => setOpenHelp(openHelp === "welcome" ? "" : "welcome")}>
+          <span>No camera or account needed. Answers stay in this session and may clear on refresh. Screen colors are approximate; product examples are illustrative and unverified.</span>
+          <button type="button" className="wj-inline-learn" onClick={onLearn}>Open the color guide <ArrowRight size={14} /></button>
+        </HelpDisclosure>
       </div>
-      {profile.shadeEvidence && <section className="wj-shade-evidence" aria-label="Unverified shade notes">
-        <div className="wj-shade-evidence-heading"><Eyebrow>OPTIONAL WEARER EVIDENCE · NOT A MATCH</Eyebrow><h2>A shade you already use.</h2><p>A personal starting clue only. It does not determine depth, undertone or a product match.</p></div>
-        <dl>
-          <div><dt>Brand</dt><dd>{profile.shadeEvidence.brand || "Not added"}</dd></div>
-          <div><dt>Product or line</dt><dd>{profile.shadeEvidence.product || "Not added"}</dd></div>
-          <div><dt>Formula or variant</dt><dd>{profile.shadeEvidence.formula || "Not added"}</dd></div>
-          <div><dt>Shade</dt><dd>{profile.shadeEvidence.shade || "Not added"}</dd></div>
-        </dl>
-        <p className="wj-shade-evidence-source">{profile.shadeEvidence.source === "manual" ? "Manually entered by the wearer, unverified." : "Illustrative option only, unverified and not a real shade record."}</p>
-      </section>}
-      <div className="wj-no-match-card"><Sparkles size={20} /><div><strong>No exact shade claims here.</strong><p>The example catalog is not a verified source and community recommendations are not connected. Neu will not invent your matches.</p></div></div>
-      <section className="wj-results-next">
-        <h2>Your next step can be a little discovery.</h2>
-        <p>Browse an explicitly illustrative product list, read the public color guide or adjust what you chose.</p>
-        <div><button type="button" className="wj-primary" onClick={() => onNavigate("discover")}>Browse product examples <ArrowRight size={15} /></button><button type="button" className="wj-secondary" onClick={() => onNavigate("learn")}>Learn about color <ArrowRight size={15} /></button><button type="button" className="wj-text-action" onClick={() => onNavigate("profile")}>Edit my profile</button></div>
-      </section>
-    </main>
-  );
+    </section>}
+
+    {displayStep === "products" && <section className="wj-quiz-question">
+      <Question kicker="CURRENT MAKEUP" title={<>What complexion makeup do you <em>currently use?</em></>} copy={draft.products.length ? "Add a product you know, or continue with the notes you have." : "Choose one to add its details, or tell us where you’re starting."} />
+      {draft.products.length === 0 && <div className="wj-quiz-current-options">
+        {PRODUCT_TYPES.map((type) => <button type="button" key={type} onClick={() => addProduct(type)}>{type}</button>)}
+        <button type="button" aria-pressed={draft.noCurrentMakeup} className={draft.noCurrentMakeup ? "is-selected" : ""} onClick={() => change({ noCurrentMakeup: !draft.noCurrentMakeup, newToMakeup: false, currentMakeupSkipped: false, products: [], referenceProductId: null, productMatchIndex: 0 })}>No current makeup</button>
+        <button type="button" aria-pressed={draft.newToMakeup} className={draft.newToMakeup ? "is-selected" : ""} onClick={() => change({ newToMakeup: !draft.newToMakeup, noCurrentMakeup: false, currentMakeupSkipped: false, products: [], referenceProductId: null, productMatchIndex: 0 })}>I’m new to makeup</button>
+      </div>}
+      {draft.products.map((product, index) => <ProductRow key={product.id} product={product} index={index} onChange={(patch) => patchProduct(product.id, patch)} onRemove={() => removeProduct(product.id)} />)}
+      {draft.products.length > 0 && <div className="wj-quiz-product-actions"><button type="button" className="wj-secondary" onClick={() => setShowAddOptions(!showAddOptions)}><Plus size={15} /> Add another product</button><button type="button" className="wj-quiz-inline-skip" onClick={() => change({ noCurrentMakeup: true, newToMakeup: false, currentMakeupSkipped: false, products: [], referenceProductId: null, productMatchIndex: 0 })}>I don’t use complexion makeup instead</button><button type="button" className="wj-quiz-inline-skip" onClick={() => change({ newToMakeup: true, noCurrentMakeup: false, currentMakeupSkipped: false, products: [], referenceProductId: null, productMatchIndex: 0 })}>I’m new to makeup instead</button></div>}
+      {showAddOptions && draft.products.length > 0 && <div className="wj-quiz-current-options wj-quiz-current-options--add" aria-label="Choose another product type">{PRODUCT_TYPES.map((type) => <button type="button" key={type} onClick={() => addProduct(type)}>{type}</button>)}</div>}
+      {draft.noCurrentMakeup && draft.products.length === 0 && <p className="wj-quiz-answer-note">No current complexion makeup</p>}
+      {draft.newToMakeup && draft.products.length === 0 && <p className="wj-quiz-answer-note">New to makeup</p>}
+      {error && <p role="alert" className="wj-form-error">{error}</p>}
+      <Navigation onBack={goBack} onContinue={advance} continueLabel="Continue" secondary={<button type="button" className="wj-text-action" onClick={() => change({ currentMakeupSkipped: !draft.products.length && !draft.noCurrentMakeup && !draft.newToMakeup, productMatchIndex: 0, step: draft.products.length ? "matches" : "depth" })}>Skip this question <ArrowRight size={14} /></button>} />
+    </section>}
+
+    {displayStep === "matches" && <section className="wj-quiz-question">
+      <Question kicker="MAKEUP EXPERIENCE" title={<>How does your shade <em>look on you?</em></>} copy="Choose what feels most typical. You can select more than one observation." />
+      {selectedMatchProduct && <article className="wj-quiz-match-product">
+        <div><span>PRODUCT {draft.productMatchIndex + 1} OF {draft.products.length}</span><strong>{selectedMatchProduct.brand || selectedMatchProduct.type}{selectedMatchProduct.product ? ` · ${selectedMatchProduct.product}` : ""}</strong></div>
+        <div className="wj-quiz-match-options">{MATCHES.map((value) => <button type="button" key={value} aria-pressed={selectedMatchProduct.match.includes(value)} className={selectedMatchProduct.match.includes(value) ? "is-selected" : ""} onClick={() => toggleMatch(selectedMatchProduct, value)}>{value}{selectedMatchProduct.match.includes(value) && <Check size={13} />}</button>)}</div>
+      </article>}
+      <div className="wj-quiz-match-actions"><button type="button" className="wj-quiz-inline-skip" onClick={() => setStep("products")}>Edit products</button><span>Perfect / unsure are exclusive; light / dark conflict.</span></div>
+      <Navigation onBack={goBack} onContinue={advance} continueLabel={draft.productMatchIndex < draft.products.length - 1 ? "Next product" : "Continue"} secondary={<button type="button" className="wj-text-action" onClick={advance}>Skip this product <ArrowRight size={14} /></button>} />
+    </section>}
+
+    {displayStep === "depth" && <section className="wj-quiz-question">
+      <Question kicker="SKIN DEPTH" title={<>Which shade looks closest to <em>your skin?</em></>} copy="Choose a starting point from any depth." />
+      {draft.products.length > 0 && <label className="wj-quiz-reference"><span>Optional product reference</span><select value={draft.referenceProductId ?? ""} onChange={(event) => change({ referenceProductId: event.target.value || null })}><option value="">None</option>{draft.products.map((product, index) => <option key={product.id} value={product.id}>{product.brand || product.type}{product.shade ? ` · ${product.shade}` : ` · product ${index + 1}`}</option>)}</select></label>}
+      <div className="wj-quiz-depth-groups">{DEPTH_GROUPS.map((group, groupIndex) => <div key={group} className="wj-quiz-depth-row" role="group" aria-label={`${group} skin shades`}><span className="wj-depth-group-label">{group}</span><div className="wj-quiz-swatch-grid">{QUIZ_SWATCHES.slice(groupIndex * 5, groupIndex * 5 + 5).map((shade) =>
+        <button type="button" key={shade.id} aria-label={`${shade.label}, swatch ${shade.number} of 40`} aria-pressed={draft.shadeId === shade.id} title={shade.label} className={draft.shadeId === shade.id ? "is-selected" : ""} style={{ "--swatch": shade.color } as CSSProperties} onClick={() => change({ shadeId: shade.id, depthUnsure: false })}><i />{draft.shadeId === shade.id && <Check size={13} aria-hidden="true" />}</button>
+      )}</div></div>)}</div>
+      <div className="wj-depth-selected-preview" aria-live="polite">{selectedSwatch ? <><span className="wj-depth-preview-swatch" style={{ background: selectedSwatch.color }} /><strong>{selectedSwatch.label}</strong><small>{selectedSwatch.number} of 40</small></> : <><span className="wj-depth-preview-empty" /><strong>{draft.depthUnsure ? "Still exploring" : "No shade selected"}</strong></>}</div>
+      <button type="button" className={`wj-unsure-button${draft.depthUnsure ? " is-selected" : ""}`} aria-pressed={draft.depthUnsure} onClick={() => change({ depthUnsure: !draft.depthUnsure, shadeId: null })}><CircleHelp size={16} /> I’m not sure yet</button>
+      {error && <p role="alert" className="wj-form-error">{error}</p>}
+      <Navigation onBack={goBack} onContinue={advance} continueLabel="Continue" />
+    </section>}
+
+    {displayStep === "undertone" && <section className="wj-quiz-question">
+      <Question kicker="UNDERTONE" title={<>What feels closest to your <em>undertone?</em></>} copy="Depth and undertone are different. This is only your impression." />
+      <div className="wj-undertone-education">{UNDERTONES.slice(0, 3).map((item) => <article key={item.value}><i style={{ background: item.color }} /><strong>{item.value}</strong></article>)}</div>
+      <p className="wj-olive-explainer">Olive can appear with warm, cool or neutral undertones, at any depth.</p>
+      <div className="wj-undertone-picker" role="group" aria-label="Undertone impression">{UNDERTONES.map((item) => <Choice key={item.value} title={item.value} selected={draft.undertone === item.value} onClick={() => change({ undertone: draft.undertone === item.value ? null : item.value })} />)}</div>
+      <Navigation onBack={goBack} onContinue={advance} continueLabel="Continue" secondary={<button type="button" className="wj-text-action" onClick={advance}>Skip for now <ArrowRight size={14} /></button>} />
+    </section>}
+
+    {displayStep === "veins" && <section className="wj-quiz-question">
+      <Question kicker="WRIST VEINS" title={<>What color do your wrist veins <em>look?</em></>} copy="An optional clue, not a test." />
+      <HelpDisclosure title="How to check your wrist veins" open={openHelp === "veins"} onClick={() => setOpenHelp(openHelp === "veins" ? "" : "veins")}>
+        In indirect daylight, look at the lines on your inner wrist or forearm. Their color is not a reliable standalone undertone test.
+      </HelpDisclosure>
+      <div className="wj-vein-illustration" aria-label="Illustrative vein colors across varied skin depths">{["#f3dfcf", "#d4ad91", "#aa8063", "#775541", "#493329"].map((tone, index) => <i key={tone} aria-label={`Illustrative skin depth ${index + 1}`} style={{ background: tone }}><b className={index % 2 ? "wj-vein-line wj-vein-line--teal" : "wj-vein-line"} /><b className="wj-vein-line wj-vein-line--blue" /></i>)}</div>
+      <div className="wj-quiz-choice-grid">{VEINS.map((value) => <Choice key={value} title={value} selected={draft.veinClue === value} onClick={() => change({ veinClue: draft.veinClue === value ? null : value })} />)}</div>
+      <p className="wj-quiz-footnote">Blue or purple is sometimes linked to cool, green to warm and mixed to neutral. Veins cannot determine undertone.</p>
+      <Navigation onBack={goBack} onContinue={advance} continueLabel="Continue" secondary={<button type="button" className="wj-text-action" onClick={advance}>Skip this clue <ArrowRight size={14} /></button>} />
+    </section>}
+
+    {displayStep === "clues" && <section className="wj-quiz-question">
+      <Question kicker="OTHER CLUES" title={<>What have you noticed about <em>your skin?</em></>} copy="Choose anything that feels familiar." />
+      <div className="wj-quiz-choice-grid">{CLUES.map((value) => <Choice key={value} title={value} selected={draft.clues.includes(value)} onClick={() => change({ clues: toggleChoice(draft.clues, value, value === "I'm not sure") })} />)}</div>
+      <Navigation onBack={goBack} onContinue={advance} continueLabel="Continue" secondary={<button type="button" className="wj-text-action" onClick={advance}>Skip for now <ArrowRight size={14} /></button>} />
+    </section>}
+
+    {displayStep === "olive" && <section className="wj-quiz-question">
+      <Question kicker="OLIVE" title={<>Does your skin ever look slightly <em>green-gray?</em></>} copy="An optional observation at any skin depth." />
+      <div className="wj-olive-depth-note">{QUIZ_SWATCHES.filter((item) => [2, 12, 22, 32, 38].includes(item.number)).map((shade) => <i key={shade.id} style={{ background: shade.color }} aria-label={`Illustrative depth ${shade.number}`} />)}</div>
+      <div className="wj-quiz-choice-grid wj-quiz-choice-grid--compact">{(["yes", "maybe", "no", "unsure"] as const).map((value) => <Choice key={value} title={value === "yes" ? "Yes, I’ve noticed this" : value === "maybe" ? "Possibly" : value === "no" ? "No" : "I’m not sure"} selected={draft.olive === value} onClick={() => change({ olive: draft.olive === value ? null : value })} />)}</div>
+      <HelpDisclosure title="What does olive mean?" open={openHelp === "olive"} onClick={() => setOpenHelp(openHelp === "olive" ? "" : "olive")}>Olive describes a muted green or gray-green quality. Warm olive, neutral olive and cool olive are all possible. This quiz does not assign it from your depth or vein answer.</HelpDisclosure>
+      <Navigation onBack={goBack} onContinue={advance} continueLabel="Continue" secondary={<button type="button" className="wj-text-action" onClick={advance}>Skip for now <ArrowRight size={14} /></button>} />
+    </section>}
+
+    {displayStep === "categories" && <section className="wj-quiz-question">
+      <Question kicker="DISCOVER" title={<>What would you love to <em>discover?</em></>} copy="Choose any categories that interest you." />
+      <div className="wj-quiz-category-grid">{CATEGORY_OPTIONS.map((category) => <button type="button" key={category} aria-pressed={draft.categories.includes(category)} className={draft.categories.includes(category) ? "is-selected" : ""} onClick={() => change({ categories: category === "Everything" ? (draft.categories.includes("Everything") ? [] : ["Everything"]) : draft.categories.includes(category) ? draft.categories.filter((item) => item !== category && item !== "Everything") : [...draft.categories.filter((item) => item !== "Everything"), category] })}>{category}{draft.categories.includes(category) && <Check size={14} />}</button>)}</div>
+      {error && <p role="alert" className="wj-form-error">{error}</p>}
+      <Navigation onBack={goBack} onContinue={advance} continueLabel="Continue" secondary={<button type="button" className="wj-text-action" onClick={() => change({ categories: ["Everything"] })}>Choose everything</button>} />
+    </section>}
+
+    {displayStep === "preferences" && <section className="wj-quiz-question">
+      <Question kicker="PREFERENCES" title={<>What do you like in <em>makeup?</em></>} copy="Optional. Leave any answer open." />
+      <div className="wj-preference-fields">{[
+        { key: "budget" as const, legend: "Budget", options: ["Drugstore", "Mid-range", "Luxury", "No preference"] },
+        { key: "finish" as const, legend: "Finish", options: ["Natural", "Dewy", "Matte", "Satin", "No preference"] },
+        { key: "skinType" as const, legend: "Skin type", options: ["Dry", "Oily", "Combination", "Normal", "Not sure"] },
+      ].map((group) => <fieldset key={group.key}><legend>{group.legend}<span>OPTIONAL</span></legend><div>{group.options.map((item) => <button key={item} type="button" aria-pressed={draft[group.key] === item} className={draft[group.key] === item ? "is-selected" : ""} onClick={() => change({ [group.key]: draft[group.key] === item ? "" : item })}>{item}</button>)}</div></fieldset>)}</div>
+      <Navigation onBack={goBack} onContinue={advance} continueLabel="Review my profile" secondary={<button type="button" className="wj-text-action" onClick={advance}>Skip preferences <ArrowRight size={14} /></button>} />
+    </section>}
+
+    {displayStep === "review" && <ProfileReview draft={draft} setStep={setStep} complete={() => setStep("discovery")} onBack={goBack} />}
+
+    {displayStep === "discovery" && <DiscoveryPreview draft={draft} onEdit={() => setStep("review")} onBack={goBack} onComplete={() => onComplete(buildProfile())} />}
+
+  </main>;
+}
+
+function Question({ kicker, title, copy }: { kicker: string; title: ReactNode; copy: string }) {
+  return <div className="wj-quiz-question-copy"><span className="wj-quiz-kicker">{kicker}</span><h1 id="wj-quiz-title" tabIndex={-1}>{title}</h1><p>{copy}</p></div>;
+}
+function HelpDisclosure({ title, open, onClick, children }: { title: string; open: boolean; onClick: () => void; children: ReactNode }) {
+  return <div className="wj-quiz-help"><button type="button" aria-expanded={open} onClick={onClick}><CircleHelp size={16} />{title}<ChevronDown size={15} /></button>{open && <div className="wj-quiz-help-copy">{children}</div>}</div>;
+}
+function Navigation({ onBack, onContinue, continueLabel, secondary }: { onBack: () => void; onContinue: () => void; continueLabel: string; secondary?: ReactNode }) {
+  return <div className="wj-quiz-navigation"><button type="button" className="wj-text-action" onClick={onBack}><ArrowLeft size={15} /> Back</button>{secondary}<button type="button" className="wj-primary" onClick={onContinue}>{continueLabel} <ArrowRight size={15} /></button></div>;
+}
+function ProfileReview({ draft, setStep, complete, onBack }: { draft: QuizDraft; setStep: (step: QuizStep) => void; complete: () => void; onBack: () => void }) {
+  const [showReasoning, setShowReasoning] = useState(false);
+  const shade = swatchFor(draft);
+  const olive = draft.olive === "yes" ? "Yes, noticed an olive cast" : draft.olive === "maybe" ? "Possibly" : draft.olive === "no" ? "No" : "Still exploring";
+  const matchText = draft.products.map((item) => `${item.brand || item.type}${item.product ? ` · ${item.product}` : ""}: ${item.match.join(", ") || "No match notes"}`).join(" · ");
+  const referenceProduct = draft.products.find((item) => item.id === draft.referenceProductId);
+  return <section className="wj-quiz-review">
+    <h1 id="wj-quiz-title" tabIndex={-1}>Your starting <em>point.</em></h1>
+    <p>Your answers, in your words. Nothing is inferred.</p>
+    <div className="wj-quiz-profile-preview">
+      <div className="wj-quiz-profile-tone"><span>SKIN DEPTH</span><i style={{ background: shade?.color ?? "#ddd0c7" }} /><strong>{shade ? shade.label : "Still exploring"}</strong><small>{shade ? `Selected swatch ${shade.number} of 40 · ${shade.id}` : "No depth selected"}</small></div>
+        <div className="wj-quiz-profile-info"><ProfileSummary label="Undertone" value={draft.undertone ?? "Still exploring"} step="undertone" setStep={setStep} />
+        <ProfileSummary label="Olive" value={olive} step="olive" setStep={setStep} />
+        <ProfileSummary label="Current makeup" value={draft.products.length ? matchText : draft.newToMakeup ? "New to makeup" : draft.noCurrentMakeup ? "No current complexion makeup" : draft.currentMakeupSkipped ? "Skipped" : "No product notes added"} step={draft.products.length ? "matches" : "products"} setStep={setStep} />
+        <ProfileSummary label="Depth reference" value={referenceProduct ? `${referenceProduct.brand || referenceProduct.type}${referenceProduct.shadeUnknown ? " · shade unknown" : referenceProduct.shade ? ` · ${referenceProduct.shade}` : ""}` : "No product reference"} step="depth" setStep={setStep} />
+        <ProfileSummary label="Other clues" value={draft.clues.join(", ") || "Still exploring"} step="clues" setStep={setStep} />
+        <ProfileSummary label="Veins" value={draft.veinClue ?? "Skipped or still exploring"} step="veins" setStep={setStep} />
+        <ProfileSummary label="Explore" value={draft.categories.length ? draft.categories.join(", ") : "No category selected"} step="categories" setStep={setStep} />
+        <ProfileSummary label="Preferences" value={[draft.budget, draft.finish, draft.skinType].filter(Boolean).join(" · ") || "Left open"} step="preferences" setStep={setStep} />
+      </div>
+    </div>
+    <HelpDisclosure title="What brought us here" open={showReasoning} onClick={() => setShowReasoning(!showReasoning)}>
+      {[
+      shade ? `You chose ${shade.label} as a starting depth.` : "You left skin depth open.",
+      draft.undertone ? `You described your undertone impression as ${draft.undertone.toLowerCase()}.` : "You are still exploring undertone.",
+      draft.veinClue ? `Your optional vein observation was “${draft.veinClue}”, which is shown as a clue only.` : "No vein clue was used.",
+      draft.clues.length ? `You also noted: ${draft.clues.join("; ")}.` : "No additional color clues were selected.",
+    ].concat(draft.products.some((product) => product.match.length) ? [`Your product observations were ${draft.products.filter((product) => product.match.length).map((product) => product.match.join(" and ")).join("; ")}.`] : []).join(" ")} No scoring, diagnosis or recommendation algorithm is used.
+    </HelpDisclosure>
+    <div className="wj-quiz-navigation"><button className="wj-text-action" type="button" onClick={onBack}><ArrowLeft size={15} /> Back</button><button className="wj-primary" type="button" onClick={complete}>Continue <ArrowRight size={15} /></button></div>
+  </section>;
+}
+function ProfileSummary({ label, value, step, setStep }: { label: string; value: string; step: QuizStep; setStep: (step: QuizStep) => void }) {
+  return <div className="wj-answer-row"><span>{label}</span><strong>{value}</strong><button type="button" onClick={() => setStep(step)}>Edit</button></div>;
+}
+function DiscoveryPreview({ draft, onEdit, onBack, onComplete }: { draft: QuizDraft; onEdit: () => void; onBack: () => void; onComplete: () => void }) {
+  const filtered = SAMPLE_PRODUCTS.filter((item) => draft.categories.includes("Everything") || draft.categories.includes(item.category) || !draft.categories.length);
+  const examples = (filtered.length ? filtered : SAMPLE_PRODUCTS).slice(0, 3);
+  return <section className="wj-quiz-discovery">
+    <Eyebrow>ILLUSTRATIVE DISCOVERY PREVIEW</Eyebrow><h1 id="wj-quiz-title" tabIndex={-1}>A few things <em>to explore.</em></h1>
+    <p>Illustrative examples, not verified shade listings, recommendations or matches.</p>
+    <div className="wj-quiz-sample-products">{examples.map((item) => <article key={item.id}>
+      <span>{item.category.toUpperCase()} · EXAMPLE</span><h2>{item.brand}</h2><strong>{item.name}</strong>
+      <dl><div><dt>Catalog details</dt><dd>Not verified</dd></div></dl>
+    </article>)}</div>
+    <div className="wj-quiz-navigation"><button className="wj-text-action" type="button" onClick={onBack}><ArrowLeft size={15} /> Back to your profile</button><button className="wj-secondary" type="button" onClick={onEdit}>Edit my answers</button><button className="wj-primary" type="button" onClick={onComplete}>View my starting point <ArrowRight size={15} /></button></div>
+  </section>;
+}
+
+export function ResultsPage({ profile, draft, onNavigate }: { profile: Profile; draft: QuizDraft; onNavigate: (page: NeuPage) => void }) {
+  const depth = swatchFor(draft);
+  const selected = draft.undertone;
+  const undertone = selected && selected !== "Still exploring" ? `Possibly ${selected.toLowerCase()}` : "Still exploring";
+  return <main className="wj-content wj-narrow-content wj-quiz-results-complete" data-profile-depth={profile.depth ?? "unset"}>
+    <Eyebrow>A FIRST STEP, NOT A FINAL ANSWER</Eyebrow><div className="wj-results-heading"><h1>Your shade story <em>starts here.</em></h1><p>A transparent summary of your own answers. No inferred profile, score or algorithmic match.</p></div>
+    <div className="wj-results-profile"><div><span>SKIN DEPTH</span><strong>{depth ? `${depth.label} · swatch ${depth.number} of 40` : "Still exploring"}</strong>{depth && <i className="wj-results-selected-swatch" style={{ background: depth.color }} />}</div><div><span>UNDERTONE IMPRESSION</span><strong>{undertone}</strong></div><div><span>CATEGORIES TO EXPLORE</span><strong>{draft.categories.join(", ") || "Everything"}</strong></div><div><span>CURRENT MAKEUP</span><strong>{draft.products.length ? `${draft.products.length} product ${draft.products.length === 1 ? "note" : "notes"}` : draft.newToMakeup ? "New to makeup" : draft.noCurrentMakeup ? "No current complexion makeup" : draft.currentMakeupSkipped ? "Skipped" : "Not noted"}</strong></div></div>
+    {draft.products.length > 0 && <section className="wj-shade-evidence"><div className="wj-shade-evidence-heading"><Eyebrow>YOUR CURRENT MAKEUP NOTES · UNVERIFIED</Eyebrow><h2>What you already use.</h2><p>These are your typed product details and match observations, not verified catalog records.</p></div>{draft.products.map((item) => <dl key={item.id}><div><dt>Product type</dt><dd>{item.type}</dd></div><div><dt>Brand / product</dt><dd>{[item.brand, item.product].filter(Boolean).join(" · ") || "Not entered"}</dd></div><div><dt>Formula / shade</dt><dd>{[item.formula, item.shadeUnknown ? "I do not know my shade" : item.shade].filter(Boolean).join(" · ") || "Not entered"}</dd></div><div><dt>Your observation</dt><dd>{item.match.join(", ") || "No match notes"}</dd></div></dl>)}</section>}
+    <section className="wj-what-brought"><Eyebrow>WHAT BROUGHT US HERE</Eyebrow><h2>Only the clues you shared.</h2><p>{depth ? `You selected ${depth.label}, swatch ${depth.number} of 40. ` : "You left depth open. "}{selected ? `You described your undertone impression as ${selected.toLowerCase()}. ` : "You did not choose an undertone. "}{draft.veinClue ? `You noted “${draft.veinClue}” as an optional vein clue, not proof. ` : ""}{draft.clues.length ? `You also selected ${draft.clues.join(", ")}. ` : ""}{draft.olive === "yes" ? "You said you have noticed an olive cast. " : draft.olive === "maybe" ? "You are possibly noticing an olive cast. " : "No olive characteristic was inferred."}{draft.products.some((product) => product.match.length) ? ` Your product observations were ${draft.products.filter((product) => product.match.length).map((product) => product.match.join(" and ")).join("; ")}.` : ""}</p><small>Depth was not used to infer undertone. Veins were not treated as a diagnosis.</small></section>
+    <div className="wj-no-match-card"><Sparkles size={20} /><div><strong>No exact shade claims here.</strong><p>Catalog formulas and shades are unverified. No recommendation engine or real community recommendations are connected.</p></div></div>
+    <section className="wj-results-next"><h2>Your next step can be a little discovery.</h2><p>Browse illustrative product examples or revisit your profile notes.</p><div><button type="button" className="wj-primary" onClick={() => onNavigate("discover")}>Browse product examples <ArrowRight size={15} /></button><button type="button" className="wj-secondary" onClick={() => onNavigate("learn")}>Learn about color <ArrowRight size={15} /></button><button type="button" className="wj-text-action" onClick={() => onNavigate("quiz")}>Edit my quiz answers</button><button type="button" className="wj-text-action" onClick={() => onNavigate("profile")}>Edit my profile</button></div></section>
+  </main>;
 }

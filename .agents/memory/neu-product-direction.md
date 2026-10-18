@@ -62,3 +62,15 @@ The user considers the soft mauve makeup-texture direction finalized and wants c
 **Why:** After refining the embedded image, the user explicitly said the direction was finalized.
 
 **How to apply:** Refine this direction without unsolicited new variants. Keep navigation uncluttered, Learn accessible, imagery embedded, and spacing comfortable without excessive empty space. Remove the rejected “beauty in your own tone” tagline and visible “CONCEPT IMAGE” labels from homepage artwork.
+
+Let users type a brand and autocomplete it rather than making them choose from a fixed dropdown menu.
+
+**Why:** The user explicitly corrected the brand-entry interaction.
+
+**How to apply:** Preserve type-to-search brand entry when refining the quiz. Do not replace it with a fixed select menu.
+
+Quiz screens should be compact, centered consultation steps, not long marketing sections with repeated explanatory panels, repeated questions or multiple result summaries.
+
+**Why:** The user said the preview was “way off,” supplied a clean quiz reference, and later emphasized that there were too many repetitions and the experience still felt off.
+
+**How to apply:** Keep one short question, concise help, compact choices and simple Back/Continue controls. Avoid excessive space and lengthy stacking on mobile while retaining readable text and accessible targets.

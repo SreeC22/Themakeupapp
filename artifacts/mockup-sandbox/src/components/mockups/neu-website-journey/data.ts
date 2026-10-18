@@ -36,6 +36,8 @@ export type Undertone = "Warm" | "Cool" | "Neutral" | "Still exploring";
 
 export type Profile = {
   depth: number | null;
+  /** Exact quiz palette identity, separate from the shared 1..10 profile depth contract. */
+  quizShadeId?: string | null;
   undertone: Undertone | null;
   olive: boolean | null;
   skinType: string | null;
