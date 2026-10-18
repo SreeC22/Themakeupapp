@@ -1,0 +1,14 @@
+{
+  "name": "neu-web-workspace",
+  "packageManager": "pnpm@10.26.1",
+  "private": true,
+  "engines": { "node": ">=22.12.0" },
+  "scripts": {
+    "dev": "pnpm --filter @workspace/neu-website dev",
+    "design-system": "pnpm --filter @workspace/neu-design-system dev",
+    "typecheck": "pnpm -r typecheck",
+    "build": "pnpm typecheck && pnpm --filter @workspace/neu-design-system build && pnpm --filter @workspace/neu-website build",
+    "preview": "pnpm --filter @workspace/neu-website serve"
+  },
+  "devDependencies": { "typescript": "~5.9.3" }
+}

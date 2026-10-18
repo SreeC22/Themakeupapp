@@ -1,5 +1,11 @@
 # CLAUDE.md
 
+## Current website scope
+
+The owner is focusing on the browser-first website in `website/`. Read `website/AGENTS.md` and `website/README.md` first when working there. Its approved cream, mauve and plum palette and four-section quiz supersede the older landing-page visual and quiz rules below for that directory only.
+
+Preserve the Expo app and root static pages. Native parity checks still compare the app with the legacy root `index.html`. A source push is not publishing approval; real React community features remain unfinished.
+
 Context for Claude Code sessions in this repo. Read TEAM.md (roles), BRAIN.md (org chart, agent charters, the loop), HANDOFF.md (top entry, where the last session stopped), APP_PLAN.md (app spec), README.md (product).
 
 ## What this isdi

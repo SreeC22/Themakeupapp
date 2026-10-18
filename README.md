@@ -1,5 +1,26 @@
 # Neu
 
+## Start here: current website
+
+Development is website-first. The approved React website and shared Neu design system live in [`website/`](website/README.md).
+
+| Area | Status |
+| --- | --- |
+| [`website/site/`](website/site/) | Active browser-first frontend with the compact quiz and mobile makeup-texture homepage. |
+| [`website/design-system/`](website/design-system/) | Current website tokens and reusable Neu controls. |
+| [`app/`](app/README.md) | Preserved Expo mobile app. Not migrated or removed. |
+| Root HTML, CSS and JS | Earlier static website and community implementation, kept for compatibility and native quiz parity. |
+| `Neu Design System/` | Earlier native/static design reference, preserved. |
+| Root SQL and setup documents | Existing Supabase work, not automatically connected to the new React frontend. |
+
+Run the new website with `cd website && pnpm install --frozen-lockfile && pnpm dev`. See its README for builds, routes and release limits. This push does not change hosting or deploy the React website.
+
+The current React release is a frontend preview. Real community accounts, posts and persistent saves still need implementation and permission testing.
+
+## Earlier product and static-site reference
+
+The sections below describe the earlier app and root static pages, not the current React website's release status.
+
 Makeup recommendations from people with your skin tone.
 
 The beauty industry writes advice as if every face is the same shade. This app flips that: your skin tone is the organizing principle. You tell us your tone once, and everything you see (products, reviews, recommendations) comes from people who actually match you.

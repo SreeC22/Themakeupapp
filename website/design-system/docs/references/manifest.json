@@ -1,0 +1,20 @@
+{
+  "sources": [
+    {
+      "type": "owner-upload",
+      "path": "quiz-mobile-reference.png",
+      "purpose": "Compact visual hierarchy, spacing, type and control styling.",
+      "scope": "Visual reference only. The owner subsequently approved four question sections and one combined outcome instead of the pictured twelve-screen sequence."
+    },
+    {
+      "type": "workspace-source",
+      "path": "artifacts/neu-website/src",
+      "purpose": "Approved homepage palette, typography, imagery and website implementation."
+    },
+    {
+      "type": "workspace-source",
+      "path": "artifacts/mockup-sandbox/src/components/mockups/neu-website-journey",
+      "purpose": "Source-backed typed autocomplete, choice, swatch and navigation interactions."
+    }
+  ]
+}

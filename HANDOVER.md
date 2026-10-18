@@ -1,5 +1,17 @@
 # HANDOVER
 
+## Current website handoff
+
+The owner approved the shorter four-section quiz, one combined starting point, typed brand entry, an embedded mobile hero image, and the cream, mauve and plum Neu website design system.
+
+The active website is now organized under `website/`. Start with `website/README.md` and `website/VERIFICATION.md`. The website and design-system packages share a standalone pnpm workspace, with portable build configuration and no Replit-only dependencies.
+
+The existing Expo app, root static pages, older design references and Supabase scripts are preserved unchanged. Do not move the root `index.html` without updating and verifying the native parity harness.
+
+The owner authorized pushing this source organization to GitHub main. That is not approval to deploy, change hosting or migrate the database. Real React community accounts, shared posts and cross-device persistence remain unfinished.
+
+## Historical app handoff
+
 Start-here note for the next session. Full spec lives in CLAUDE.md, TEAM.md, APP_PLAN.md. This file is the pick-up point.
 
 ## State (2026-08-01)

@@ -1,0 +1,4 @@
+.quiz-return { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; max-width: 1180px; margin: 20px auto; padding: 16px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--blush-paper); }
+.quiz-return p { margin: 0; font-size: 14px; }
+.quiz-guide-note { max-width: 480px; margin: 8px auto; padding: 0 20px; font-size: 14px; color: hsl(var(--muted-foreground)); text-align: center; }
+@media (max-width: 600px) { .quiz-return { margin: 16px; } }

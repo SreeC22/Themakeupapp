@@ -1,0 +1,6 @@
+packages:
+  - site
+  - design-system
+
+minimumReleaseAge: 1440
+autoInstallPeers: false
