@@ -55,13 +55,13 @@ Keep homepage imagery embedded in the page rather than boxed. Keep the image cle
 
 **Why:** The user disliked boxing the picture and said the “Tan · Olive” overlay was interfering with it.
 
-**How to apply:** Blend image edges into the page and place profile information in its own flow, not over homepage artwork.
+**How to apply:** Blend image edges into the page and place profile information in its own flow, not over homepage artwork. On mobile, keep the artwork full-width in the document flow, not a narrow detached picture below the copy.
 
 The user considers the soft mauve makeup-texture direction finalized and wants cleanup rather than more visual alternatives.
 
-**Why:** After refining the embedded image, the user explicitly said the direction was finalized.
+**Why:** After refining the embedded image, the user said the direction was finalized, then explicitly requested consistency throughout and a Neu design system.
 
-**How to apply:** Refine this direction without unsolicited new variants. Keep navigation uncluttered, Learn accessible, imagery embedded, and spacing comfortable without excessive empty space. Remove the rejected “beauty in your own tone” tagline and visible “CONCEPT IMAGE” labels from homepage artwork.
+**How to apply:** Refine this direction without unsolicited new variants. Use the shared Neu design system rather than independent page palettes. Keep navigation uncluttered, Learn accessible, imagery embedded, and spacing comfortable without excessive empty space. Remove the rejected “beauty in your own tone” tagline and visible “CONCEPT IMAGE” labels from homepage artwork.
 
 Let users type a brand and autocomplete it rather than making them choose from a fixed dropdown menu.
 
@@ -74,3 +74,9 @@ Quiz screens should be compact, centered consultation steps, not long marketing 
 **Why:** The user said the preview was “way off,” supplied a clean quiz reference, and later emphasized that there were too many repetitions and the experience still felt off.
 
 **How to apply:** Keep one short question, concise help, compact choices and simple Back/Continue controls. Avoid excessive space and lengthy stacking on mobile while retaining readable text and accessible targets.
+
+The owner approved four short quiz sections followed by one combined starting-point page, replacing the longer quiz brief.
+
+**Why:** The owner said there were too many repetitions and approved the shorter flow after an explicit critique.
+
+**How to apply:** Keep current makeup and fit notes together; depth; optional undertone with olive asked independently on the same screen; interests with expandable preferences; then one editable summary with clearly illustrative examples. Do not reintroduce mandatory vein tests, extra questions for uncertainty, or separate review, discovery-preview and results endings.

@@ -10,16 +10,15 @@ export default function HomePage() {
         <div className="hero-copy">
           <span className="eyebrow">A community for every shade story</span>
           <h1>Makeup is a way<br />to <em>be more you.</em></h1>
-          <p className="hero-lede">Find makeup ideas through people with skin like yours. Explore first, then keep a personal starting point right here on your device.</p>
+          <p className="hero-lede">Explore makeup ideas, product examples and color theory. Build a starting point, or browse your own way.</p>
           <div className="hero-actions">
-            <Link className="primary" href="/profile">Find my starting point <ArrowRight size={17} /></Link>
+            <Link className="primary" href="/quiz">Build a starting point <ArrowRight size={17} /></Link>
             <Link className="text-button" href="/discover">Browse shade notes <span aria-hidden="true">↗</span></Link>
           </div>
           <div className="hero-note"><i />Explore first. No account needed.</div>
         </div>
         <figure className="hero-art">
-          <img src={pigmentArt} alt="Dusty rose, muted mauve and warm beige makeup textures on a soft ivory surface." />
-          <span className="hero-art-index">01 / COLOR NOTES</span>
+          <img src={pigmentArt} width={1024} height={1024} fetchPriority="high" decoding="async" alt="Dusty rose, muted mauve and warm beige makeup textures on a soft ivory surface." />
         </figure>
       </section>
 
@@ -35,7 +34,7 @@ export default function HomePage() {
       <section className="home-bottom">
         <div><span className="mono">A LITTLE REMINDER</span><h2>There is not one right way to wear it.</h2></div>
         <p>Bare skin, sharp liner, a favorite shade. Start wherever you are, and keep what feels like you.</p>
-        <Link className="round-link" href="/profile" aria-label="Build your profile"><ArrowRight size={19} /></Link>
+        <Link className="round-link" href="/quiz" aria-label="Build a starting point"><ArrowRight size={19} /></Link>
       </section>
 
       <section className="learn-invite">

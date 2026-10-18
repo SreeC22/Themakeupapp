@@ -1,48 +1,36 @@
-# Migrating web UI to Neu Design System
+# Migrating web UI to Neu
 
-Read `artifacts/neu-design-system/docs/AGENTS.md` and
-`artifacts/neu-design-system/docs/consuming-web.md` first. Use this guide
-when a web app, including a fresh scaffold, already has local theme or component
-copies.
+Read `AGENTS.md` and `consuming-web.md` first.
 
-## Replace the local theme
+## Theme
 
-Replace the app's Tailwind/theme setup with the package import from the web
-consumption guide.
+Import `@workspace/neu-design-system/styles.css` instead of a separate Tailwind
+theme. Remove duplicate color, font, spacing and radius definitions. Existing
+app-specific names may alias package variables, but must not redefine their values.
+Keep product layouts and product data in the application.
 
-- Remove the app's own `@import "tailwindcss"`, plugin imports, and generated
-  `:root` / `.dark` token definitions.
-- Keep app-specific CSS that is not a theme or package-provided primitive.
-- Keep Tailwind v3 directives and configure its package component source as
-  described in the web consumption guide.
+## Components
 
-## Rewrite imports
+The supported public families live at `components/neu/`:
 
-Rewrite every local import for a module this package provides:
+- `button`: primary, secondary and text actions.
+- `typeahead`: text entry with keyboard suggestions and manual input.
+- `choice`: labeled pressed/unpressed choices.
+- `tone-swatch`: accessible labeled color selection.
+- `navigation`: Back, optional secondary action and one primary action.
 
-- `@/components/ui/<name>` →
-  `@workspace/neu-design-system/components/ui/<name>`
-- `@/lib/utils` (`cn`) → `@workspace/neu-design-system/lib/utils`
-- `@/hooks/use-toast` → `@workspace/neu-design-system/hooks/use-toast`
+Check each API before replacing a local module. These are not drop-in shadcn
+modules. Do not rewrite imports to nonexistent `components/ui/` families.
+Input and ScrollArea are internal preview-browser support controls.
 
-Judge component ownership by the imported module, not by the file doing the
-import. App-specific components may remain local, but they must import shared
-primitives from this package.
+Replace a local implementation only after its required states are represented
+in the package and all callers are updated. Delete superseded copies, not
+unrelated product components. Do not remove an existing data store while
+changing the visual system.
 
-## Delete superseded files
+## Verification
 
-- Delete package-provided files from the app's `src/components/ui/`; remove the
-  directory if it becomes empty.
-- Delete local `src/lib/utils.ts` when it only provided `cn`.
-- Delete local `src/hooks/use-toast.ts` after every caller uses the package hook.
-- Remove dependencies used only by the deleted local component library when the
-  design-system package already supplies them transitively.
-
-## Verify migration
-
-Grep for `@/components/ui/`, `@/lib/utils`, and `@/hooks/use-toast`. Every
-remaining match must refer to an app-specific module or export the package does
-not provide. Run typecheck and the dev server after deleting local copies.
-
-Migration is complete when no package-provided component, `cn`, toast hook, or
-theme token block remains local.
+Render one packaged primitive, typecheck and run the consumer before broader
+migration. Afterward, check keyboard selection, selected/disabled states,
+focus, small-screen layout and the relevant product journey. Native components
+are not part of this React web pilot.

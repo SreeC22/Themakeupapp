@@ -21,7 +21,7 @@ export function SiteHeader() {
             <Link key={item.href} className={`nav-link ${location === item.href ? "is-active" : ""}`} href={item.href}>{item.label}</Link>
           ))}
         </nav>
-        <Link className="header-profile" href="/profile">Your skin profile <ArrowRight size={14} /></Link>
+        <Link className="header-profile" href="/quiz">Your starting point <ArrowRight size={14} /></Link>
       </header>
       <nav className="mobile-nav" aria-label="Mobile navigation">
         {primaryLinks.map((item) => (

@@ -22,7 +22,7 @@ export function HomePage({ onNavigate }: { onNavigate: (page: NeuPage) => void }
           <h1>Makeup is a way<br />to <em>be more you.</em></h1>
           <p>Explore product notes, color theory and ideas from a range of skin tones. Find your own starting point, then keep what feels like you.</p>
           <div className="wj-home-actions">
-            <button type="button" className="wj-primary" onClick={() => onNavigate("quiz")}>Find my skin match <ArrowRight size={16} /></button>
+            <button type="button" className="wj-primary" onClick={() => onNavigate("quiz")}>Build a starting point <ArrowRight size={16} /></button>
             <button type="button" className="wj-text-action" onClick={() => onNavigate("discover")}>Browse product examples <ArrowRight size={14} /></button>
           </div>
           <p className="wj-home-guest"><i />Explore Learn and Discover without an account.</p>
@@ -30,6 +30,10 @@ export function HomePage({ onNavigate }: { onNavigate: (page: NeuPage) => void }
         <figure className="wj-hero-art">
           <img
             src="/__mockup/images/neu-pigment-study.jpg"
+            width={1024}
+            height={1024}
+            fetchPriority="high"
+            decoding="async"
             alt="Loose makeup textures in dusty rose, soft mauve and warm neutral shades on an ivory surface."
           />
         </figure>
@@ -107,7 +111,7 @@ export function DiscoverPage({
           <Eyebrow>A more personal starting point</Eyebrow>
           <h1>Find your shade <em>in good company.</em></h1>
           <p>Discover product experiences from different skin depths, undertones and styles. Your browsing does not need an account.</p>
-          <button type="button" className="wj-text-action" onClick={() => onNavigate("quiz")}>Build an optional skin starting point <ArrowRight size={15} /></button>
+          <button type="button" className="wj-text-action" onClick={() => onNavigate("quiz")}>Build a starting point <ArrowRight size={15} /></button>
         </div>
         <div className="wj-example-callout"><span>ABOUT THESE RESULTS</span><strong>Examples, not live community posts.</strong><p>Brand and product names are real. Example shade labels, profile details and experiences are unverified design data.</p></div>
       </section>

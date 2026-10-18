@@ -5,7 +5,7 @@ import { DEFAULT_PROFILE, PAGE_TITLES, SAMPLE_PRODUCTS } from "./data";
 import { PreviewNotice, SiteFooter, SiteHeader } from "./SiteChrome";
 import { HomePage, DiscoverPage, ProductPage, ReviewPage, ShadePage } from "./DiscoveryPages";
 import { LearnPage, ProfilePage } from "./LearnProfilePages";
-import { QuizFlow, ResultsPage } from "./QuizFlow";
+import { QuizFlow } from "./QuizFlow";
 import { AccountLanding, DesignReport, DraftDocumentPage, MfaPage, RecoveryPage, ReportsPage, ReportDialog, SignInPage, SignUpPage, SystemPage } from "./AccountSafetyPages";
 import { DeleteNoteDialog, OwnNotePage, SavedPage, SettingsPage, SharePage, SharePreviewPage, type MemberNote } from "./MemberPages";
 import { createQuizDraftFromPreview, type QuizDraft } from "./_shared/quizDraft";
@@ -30,6 +30,7 @@ function previewProfileFromUrl(): Profile {
 
 function pageFromUrl(): NeuPage {
   const value = new URLSearchParams(window.location.search).get("page") || "home";
+  if (value === "results") return "quiz";
   return KNOWN_PAGES.has(value) ? value as NeuPage : "not-found";
 }
 
@@ -63,11 +64,12 @@ export default function WebsiteJourney() {
   }, []);
 
   const navigate = (destination: NeuPage) => {
-    if (page === "quiz" && destination !== "results") setQuizReturnAvailable(true);
+    if (page === "quiz") setQuizReturnAvailable(destination === "learn");
     if (destination === "quiz" && page === "learn") setQuizReturnAvailable(false);
-    if (destination === "results") setQuizReturnAvailable(false);
+    if (page === "learn" && destination !== "quiz") setQuizReturnAvailable(false);
     const url = new URL(window.location.href);
     if (destination === "home") url.searchParams.delete("page");
+    else if (destination === "quiz") url.searchParams.delete("quizStep");
     else url.searchParams.set("page", destination);
     window.history.pushState({ page: destination }, "", `${url.pathname}${url.search}${url.hash}`);
     setPage(destination);
@@ -170,13 +172,7 @@ export default function WebsiteJourney() {
       content = <HomePage onNavigate={navigate} />;
       break;
     case "quiz":
-      content = <QuizFlow draft={quizDraft} onDraftChange={setQuizDraft} onComplete={(result) => { setProfile(result); setQuizReturnAvailable(false); navigate("results"); }} onLearn={() => navigate("learn")} />;
-      break;
-    case "results":
-      content = <ResultsPage profile={profile} draft={quizDraft} onNavigate={(destination) => {
-        if (destination === "quiz") setQuizDraft((current) => ({ ...current, step: "review" }));
-        navigate(destination);
-      }} />;
+      content = <QuizFlow draft={quizDraft} onDraftChange={setQuizDraft} onComplete={(result) => { setProfile(result); setQuizReturnAvailable(false); navigate("discover"); }} onLearn={() => navigate("learn")} />;
       break;
     case "discover":
       content = <DiscoverPage profile={profile} savedIds={savedIds} onNavigate={navigate} onOpenProduct={openProduct} onToggleSave={toggleSave} />;

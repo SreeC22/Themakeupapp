@@ -58,7 +58,7 @@ export function SiteHeader({
         <div className="wj-header-actions">
           <button className="wj-profile-link" type="button" onClick={() => go("profile")}><UserRound size={15} /> Profile</button>
           <button className="wj-header-share" type="button" onClick={() => go("share")}>Share a find</button>
-          <button className="wj-header-cta" type="button" onClick={() => go("quiz")}>Find a match <ArrowRight size={13} /></button>
+          <button className="wj-header-cta" type="button" onClick={() => go("quiz")}>Build a starting point <ArrowRight size={13} /></button>
           <button className="wj-signin-link" type="button" onClick={() => go(previewMember ? "settings" : "account")}>
             {previewMember ? "Preview session" : "Sign in"}
             <ArrowRight size={14} />
@@ -74,13 +74,13 @@ export function SiteHeader({
             {item.id === "discover" ? <Search size={14} /> : item.id === "learn" ? <BookOpen size={14} /> : <Sparkles size={14} />}{item.label}
           </button>
         ))}
-        <button type="button" className={page === "quiz" ? "is-active" : ""} onClick={() => go("quiz")}><Compass size={14} />Find your match</button>
+        <button type="button" className={page === "quiz" ? "is-active" : ""} onClick={() => go("quiz")}><Compass size={14} />Build a starting point</button>
         <button type="button" onClick={() => go("share")}><ArrowRight size={14} />Share a find</button>
       </div>
       {menuOpen && (
         <nav className="wj-drawer" aria-label="More Neu pages">
           <p>EXPLORE NEU</p>
-          <button type="button" onClick={() => go("quiz")}>Find your skin match <ArrowRight size={15} /></button>
+          <button type="button" onClick={() => go("quiz")}>Build a starting point <ArrowRight size={15} /></button>
           <button type="button" onClick={() => go("saved")}>Saved finds <ArrowRight size={15} /></button>
           <button type="button" onClick={() => go("share")}>Share a product <ArrowRight size={15} /></button>
           <button type="button" onClick={() => go("profile")}>Skin profile <ArrowRight size={15} /></button>
@@ -93,7 +93,7 @@ export function SiteHeader({
 
 const FOOTER_LINKS: { id: NeuPage; label: string }[] = [
   { id: "discover", label: "Browse examples" },
-  { id: "quiz", label: "Find your match" },
+  { id: "quiz", label: "Build a starting point" },
   { id: "saved", label: "Saved" },
   { id: "share", label: "Share a find" },
 ];

@@ -1,8 +1,7 @@
 import type { Undertone } from "../data";
 
 export const QUIZ_STEPS = [
-  "welcome", "products", "matches", "depth", "undertone", "veins",
-  "clues", "olive", "categories", "preferences", "review", "discovery",
+  "products", "depth", "undertone", "categories", "review",
 ] as const;
 
 export type QuizStep = typeof QUIZ_STEPS[number];
@@ -45,7 +44,7 @@ export type QuizDraft = {
 };
 
 export const INITIAL_QUIZ_DRAFT: QuizDraft = {
-  step: "welcome",
+  step: "products",
   products: [],
   productMatchIndex: 0,
   noCurrentMakeup: false,
@@ -100,8 +99,9 @@ export const QUIZ_SWATCHES = Array.from({ length: 40 }, (_, index) => {
 export function createQuizDraftFromPreview(): QuizDraft {
   const params = new URLSearchParams(window.location.search);
   const fixtureStep = params.get("quizStep");
-  const fixtureSteps: QuizStep[] = ["welcome", "products", "matches", "depth", "undertone", "veins", "clues", "olive", "categories", "preferences", "review", "discovery"];
-  const withSample = params.get("sampleEntry") === "1" || fixtureStep === "matches";
+  const fixtureSteps: QuizStep[] = ["products", "depth", "undertone", "categories", "review"];
+  const fixtureStepForResult = fixtureStep === "discovery" || params.get("page") === "results" ? "review" : fixtureStep;
+  const withSample = params.get("sampleEntry") === "1";
   const seeded: QuizDraft = withSample ? {
     ...INITIAL_QUIZ_DRAFT,
     products: [{
@@ -116,7 +116,7 @@ export function createQuizDraftFromPreview(): QuizDraft {
       match: ["Blends in perfectly"],
     }],
   } : INITIAL_QUIZ_DRAFT;
-  return fixtureSteps.includes(fixtureStep as QuizStep)
-    ? { ...seeded, step: fixtureStep as QuizStep }
+  return fixtureSteps.includes(fixtureStepForResult as QuizStep)
+    ? { ...seeded, step: fixtureStepForResult as QuizStep }
     : seeded;
 }

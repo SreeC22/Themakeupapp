@@ -13,7 +13,7 @@ function isCloseMatch(profile: Profile, product: (typeof PRODUCT_EXAMPLES)[numbe
     && Math.abs(profile.depth - product.depth) <= 1;
 }
 
-export default function DiscoverPage({ profile }: { profile: Profile }) {
+export default function DiscoverPage({ profile, profileReady = false }: { profile: Profile; profileReady?: boolean }) {
   const [category, setCategory] = useState<SelectedCategory>("All products");
   const [query, setQuery] = useState("");
   const [matchesOnly, setMatchesOnly] = useState(false);
@@ -21,10 +21,10 @@ export default function DiscoverPage({ profile }: { profile: Profile }) {
     const normalized = query.trim().toLowerCase();
     return PRODUCT_EXAMPLES.filter((post) =>
       (category === "All products" || post.category === category)
-      && (!matchesOnly || isCloseMatch(profile, post))
+      && (!matchesOnly || !profileReady || isCloseMatch(profile, post))
       && (!normalized || `${post.brand} ${post.product} ${post.category} ${post.shade}`.toLowerCase().includes(normalized)),
     );
-  }, [category, matchesOnly, profile, query]);
+  }, [category, matchesOnly, profile, profileReady, query]);
 
   return (
     <main className="content">
@@ -52,7 +52,7 @@ export default function DiscoverPage({ profile }: { profile: Profile }) {
         <div className="results-head"><div><span className="section-kicker">ILLUSTRATIVE EXAMPLES</span><h2 id="results-title">{matchesOnly ? "Close to your profile" : "A little inspiration to start"}</h2>
           <p>These editorial samples are not live member recommendations.</p></div>
           <div className="results-controls"><label className="search-field"><Search size={15} /><input type="search" aria-label="Search example products" placeholder="Search examples" value={query} onChange={(event) => setQuery(event.target.value)} /></label>
-            <button type="button" className={`match-chip ${matchesOnly ? "is-selected" : ""}`} aria-pressed={matchesOnly} onClick={() => setMatchesOnly((current) => !current)}><Sparkles size={13} /> {matchesOnly ? "Similar profiles" : "Show similar profiles"}</button>
+            {profileReady && <button type="button" className={`match-chip ${matchesOnly ? "is-selected" : ""}`} aria-pressed={matchesOnly} onClick={() => setMatchesOnly((current) => !current)}><Sparkles size={13} /> {matchesOnly ? "Showing profile examples" : "Compare profile examples"}</button>}
           </div></div>
         <div className="product-grid">
           {posts.map((post) => (

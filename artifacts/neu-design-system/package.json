@@ -6,15 +6,14 @@
   "exports": {
     ".": "./src/generated/tokens.tsx",
     "./tokens": "./src/generated/tokens.tsx",
+    "./guide": "./src/preview/neu-foundations.tsx",
     "./styles.css": "./src/index.css",
     "./components/*": "./src/components/*.tsx",
-    "./lib/*": "./src/lib/*.tsx",
-    "./hooks/*": "./src/hooks/*.tsx"
+    "./lib/*": "./src/lib/*.tsx"
   },
   "imports": {
     "#components/*": "./src/components/*.tsx",
-    "#lib/*": "./src/lib/*.tsx",
-    "#hooks/*": "./src/hooks/*.tsx"
+    "#lib/*": "./src/lib/*.tsx"
   },
   "scripts": {
     "tokens": "node scripts/build-tokens.mjs",

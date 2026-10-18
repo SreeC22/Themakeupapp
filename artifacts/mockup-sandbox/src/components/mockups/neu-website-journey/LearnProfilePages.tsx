@@ -83,7 +83,7 @@ export function LearnPage({ profile, onNavigate, onUpdateProfile, quizReturnAvai
         </div>
       </section>
 
-      <section className="wj-learn-bottom"><div><Eyebrow>Take your notes with you</Eyebrow><h2>Keep exploring on your own terms.</h2><p>Try your color choices in the match quiz, or browse product examples first.</p></div><div><button className="wj-primary" type="button" onClick={() => onNavigate("quiz")}>Find my skin match <ArrowRight size={14} /></button><button className="wj-text-action" type="button" onClick={() => onNavigate("discover")}>Explore examples <ArrowRight size={14} /></button></div></section>
+      <section className="wj-learn-bottom"><div><Eyebrow>Take your notes with you</Eyebrow><h2>Keep exploring on your own terms.</h2><p>Build a personal starting point or browse illustrative product examples first.</p></div><div><button className="wj-primary" type="button" onClick={() => onNavigate("quiz")}>Build a starting point <ArrowRight size={14} /></button><button className="wj-text-action" type="button" onClick={() => onNavigate("discover")}>Explore examples <ArrowRight size={14} /></button></div></section>
     </main>
   );
 }

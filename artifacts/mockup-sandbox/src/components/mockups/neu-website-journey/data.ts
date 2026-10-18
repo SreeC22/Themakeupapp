@@ -1,6 +1,6 @@
 export const PAGE_TITLES = {
   home: "Home",
-  quiz: "Find my skin match",
+  quiz: "Build a starting point",
   results: "Your starting point",
   discover: "Discover",
   product: "Product",

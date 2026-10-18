@@ -23,6 +23,7 @@ Do not bring back:
 ## Source of truth
 
 - `artifacts/neu-website/`: runnable website source.
+- `artifacts/neu-design-system/`: shared tokens and the five-family Neu component pilot. The website consumes this workspace package directly.
 - `artifacts/mockup-sandbox/`: retained visual references and alternative explorations, not the production frontend.
 - `artifacts/api-server/`: existing API service, not a replacement for Supabase.
 
@@ -36,7 +37,31 @@ The homepage, public education, guest exploration and local profile interactions
 
 Do not invite people to create real shared posts or claim that accounts, cloud saves, moderation or database permissions are verified. These remain part of the unfinished Supabase work.
 
-## Supabase setup still required
+## Current website journey and storage
+
+The owner approved a shorter flow instead of the original long questionnaire:
+
+1. Current makeup, optional. Brand and product fields support typed suggestions and manual entry. Product fit observations expand within each product.
+2. Forty illustrative depth swatches, or an unsure answer.
+3. Optional undertone and independent olive characteristics on the same screen.
+4. Makeup interests, with optional preferences in an expandable section.
+5. One editable starting-point page with clearly labeled illustrative examples.
+
+The final action goes directly to `/discover`. There is no second results page or account gate. `/profile` aliases `/quiz` rather than exposing a second, conflicting profile editor.
+
+Quiz answers are held in the current page session. Back, closing the quiz, navigating to Learn and returning preserve the draft. Refreshing clears it, as stated on the first question. The pre-existing coarse local profile store remains for backward compatibility with educational controls; it is not a cloud account or the new forty-swatch quiz store. Unknown quiz depth and undertone are never silently converted into a personal match. Profile-example comparison is shown only when the visitor supplies depth and a definite undertone.
+
+The mobile hero uses the existing makeup textures at full width in normal document flow, blending its edges into the page background. It has no card, frame, profile overlay or fixed-height empty image container.
+
+## Shared design system
+
+`artifacts/neu-design-system/tokens.json` is the color, font, spacing and radius source. Run the package's `tokens` script to regenerate CSS and portable tokens. Do not edit generated outputs directly.
+
+The initial Neu component pilot exports Button, Typeahead, Choice, ToneSwatch and Navigation from `@workspace/neu-design-system/components/neu/*`. The actual quiz uses these primitives rather than maintaining another copy. `/design-guide` uses the same package's live overview and foundations.
+
+The full design-system preview is its own artifact. Its dark palette is derived reference material, not an approved dark website release. Source evidence and the owner-provided compact reference are retained in that artifact's docs.
+
+## Supabase connection work
 
 The owner chose to administer the existing Supabase project without sharing admin access. A previous read-only connection check accepted the URL and publishable key, but the community tables were not available through the API. This may reflect missing tables or the exposed schema/cache configuration.
 
@@ -75,6 +100,6 @@ The output is `artifacts/neu-website/dist/public/`. Use an SPA fallback when ser
 
 ## Git and publishing
 
-A local Git commit is not a GitHub push or a deployment. The only configured remote at handoff time was the platform's backup remote, not a GitHub repository. Reconnect the intended repository before pushing.
+A local Git commit is not a GitHub push or a deployment. This delivery does not push, change GitHub permissions or re-test remote authentication. Confirm the intended remote and working credentials separately before pushing.
 
 Nothing should be published automatically. The owner decides what stays and when the website is ready to share.
