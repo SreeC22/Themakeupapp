@@ -9,6 +9,215 @@ import * as zod from 'zod';
 
 
 /**
+ * @summary Reviewed US product lines and source-backed shade observations, never live stock
+ */
+export const GetNeuCatalogResponse = zod.object({
+  "brands": zod.array(zod.object({
+  "id": zod.string(),
+  "name": zod.string(),
+  "tier": zod.enum(['Drugstore', 'Mid-range', 'Luxury']),
+  "candidate": zod.boolean()
+})),
+  "products": zod.array(zod.object({
+  "id": zod.string(),
+  "brandId": zod.string(),
+  "name": zod.string(),
+  "category": zod.enum(['Foundation', 'Concealer', 'Blush', 'Lips']),
+  "sourceUrl": zod.string(),
+  "checkedOn": zod.string(),
+  "rangeStatus": zod.enum(['enumerated', 'partial', 'needs_review']),
+  "declaredShadeCount": zod.number().int().nullable(),
+  "verifiedShadeCount": zod.number().int(),
+  "notes": zod.array(zod.string()),
+  "claims": zod.array(zod.object({
+  "field": zod.string(),
+  "value": zod.string(),
+  "basis": zod.enum(['verified', 'estimate', 'user_report']),
+  "sourceUrl": zod.string(),
+  "checkedOn": zod.string(),
+  "rawText": zod.string()
+}))
+})),
+  "shades": zod.array(zod.object({
+  "id": zod.string(),
+  "productId": zod.string(),
+  "name": zod.string(),
+  "description": zod.string(),
+  "status": zod.enum(['verified', 'needs_review']),
+  "claims": zod.array(zod.object({
+  "field": zod.string(),
+  "value": zod.string(),
+  "basis": zod.enum(['verified', 'estimate', 'user_report']),
+  "sourceUrl": zod.string(),
+  "checkedOn": zod.string(),
+  "rawText": zod.string()
+}))
+})),
+  "coverage": zod.object({
+  "selectedBrands": zod.number().int(),
+  "verifiedBrands": zod.number().int(),
+  "verifiedProducts": zod.number().int(),
+  "verifiedShades": zod.number().int(),
+  "enumeratedRanges": zod.number().int(),
+  "targetProducts": zod.string(),
+  "targetShades": zod.string(),
+  "checkedOn": zod.string(),
+  "gaps": zod.array(zod.string())
+})
+})
+
+
+/**
+ * @summary Explainable descriptor-based candidates; submitted traits are not stored
+ */
+export const recommendNeuShadesBodyBudgetMax = 100;
+
+export const recommendNeuShadesBodyReferencesItemShadeIdMax = 200;
+
+export const recommendNeuShadesBodyReferencesItemFitItemMax = 100;
+
+export const recommendNeuShadesBodyReferencesItemFitMax = 10;
+
+export const recommendNeuShadesBodyReferencesItemOxidationMax = 200;
+
+export const recommendNeuShadesBodyReferencesMax = 50;
+
+export const recommendNeuShadesBodyPreferencesFoundationCoverageMax = 100;
+
+export const recommendNeuShadesBodyPreferencesFoundationFinishMax = 100;
+
+export const recommendNeuShadesBodyPreferencesFoundationFormulaMax = 100;
+
+export const recommendNeuShadesBodyPreferencesFoundationIntentMax = 100;
+
+export const recommendNeuShadesBodyPreferencesFoundationPigmentationMax = 100;
+
+export const recommendNeuShadesBodyPreferencesFoundationOpacityMax = 100;
+
+export const recommendNeuShadesBodyPreferencesFoundationColorFamiliesItemMax = 100;
+
+export const recommendNeuShadesBodyPreferencesFoundationColorFamiliesMax = 10;
+
+export const recommendNeuShadesBodyPreferencesConcealerCoverageMax = 100;
+
+export const recommendNeuShadesBodyPreferencesConcealerFinishMax = 100;
+
+export const recommendNeuShadesBodyPreferencesConcealerFormulaMax = 100;
+
+export const recommendNeuShadesBodyPreferencesConcealerIntentMax = 100;
+
+export const recommendNeuShadesBodyPreferencesConcealerPigmentationMax = 100;
+
+export const recommendNeuShadesBodyPreferencesConcealerOpacityMax = 100;
+
+export const recommendNeuShadesBodyPreferencesConcealerColorFamiliesItemMax = 100;
+
+export const recommendNeuShadesBodyPreferencesConcealerColorFamiliesMax = 10;
+
+export const recommendNeuShadesBodyPreferencesBlushCoverageMax = 100;
+
+export const recommendNeuShadesBodyPreferencesBlushFinishMax = 100;
+
+export const recommendNeuShadesBodyPreferencesBlushFormulaMax = 100;
+
+export const recommendNeuShadesBodyPreferencesBlushIntentMax = 100;
+
+export const recommendNeuShadesBodyPreferencesBlushPigmentationMax = 100;
+
+export const recommendNeuShadesBodyPreferencesBlushOpacityMax = 100;
+
+export const recommendNeuShadesBodyPreferencesBlushColorFamiliesItemMax = 100;
+
+export const recommendNeuShadesBodyPreferencesBlushColorFamiliesMax = 10;
+
+export const recommendNeuShadesBodyPreferencesLipsCoverageMax = 100;
+
+export const recommendNeuShadesBodyPreferencesLipsFinishMax = 100;
+
+export const recommendNeuShadesBodyPreferencesLipsFormulaMax = 100;
+
+export const recommendNeuShadesBodyPreferencesLipsIntentMax = 100;
+
+export const recommendNeuShadesBodyPreferencesLipsPigmentationMax = 100;
+
+export const recommendNeuShadesBodyPreferencesLipsOpacityMax = 100;
+
+export const recommendNeuShadesBodyPreferencesLipsColorFamiliesItemMax = 100;
+
+export const recommendNeuShadesBodyPreferencesLipsColorFamiliesMax = 10;
+
+
+
+export const RecommendNeuShadesBody = zod.object({
+  "depth": zod.union([zod.literal('Very fair'),zod.literal('Fair'),zod.literal('Light'),zod.literal('Light-medium'),zod.literal('Medium'),zod.literal('Tan'),zod.literal('Deep'),zod.literal('Very deep'),zod.literal(null)]).nullish(),
+  "undertone": zod.union([zod.literal('Warm'),zod.literal('Cool'),zod.literal('Neutral'),zod.literal('Olive'),zod.literal('Still exploring'),zod.literal(null)]).nullish(),
+  "oliveSubtype": zod.enum(['', 'Warm-olive', 'Cool-olive', 'Neutral-olive', 'Not sure']).optional(),
+  "saturation": zod.enum(['', 'Muted', 'Balanced', 'Bright / saturated', 'Not sure']).optional(),
+  "skinType": zod.enum(['', 'Oily', 'Dry', 'Combination', 'Normal', 'Sensitive']).optional(),
+  "budget": zod.string().max(recommendNeuShadesBodyBudgetMax).optional(),
+  "references": zod.array(zod.object({
+  "shadeId": zod.string().max(recommendNeuShadesBodyReferencesItemShadeIdMax),
+  "fit": zod.array(zod.string().max(recommendNeuShadesBodyReferencesItemFitItemMax)).max(recommendNeuShadesBodyReferencesItemFitMax),
+  "oxidation": zod.string().max(recommendNeuShadesBodyReferencesItemOxidationMax).optional()
+})).max(recommendNeuShadesBodyReferencesMax).optional(),
+  "preferences": zod.object({
+  "Foundation": zod.object({
+  "coverage": zod.string().max(recommendNeuShadesBodyPreferencesFoundationCoverageMax).optional(),
+  "finish": zod.string().max(recommendNeuShadesBodyPreferencesFoundationFinishMax).optional(),
+  "formula": zod.string().max(recommendNeuShadesBodyPreferencesFoundationFormulaMax).optional(),
+  "intent": zod.string().max(recommendNeuShadesBodyPreferencesFoundationIntentMax).optional(),
+  "pigmentation": zod.string().max(recommendNeuShadesBodyPreferencesFoundationPigmentationMax).optional(),
+  "opacity": zod.string().max(recommendNeuShadesBodyPreferencesFoundationOpacityMax).optional(),
+  "colorFamilies": zod.array(zod.string().max(recommendNeuShadesBodyPreferencesFoundationColorFamiliesItemMax)).max(recommendNeuShadesBodyPreferencesFoundationColorFamiliesMax).optional()
+}).optional(),
+  "Concealer": zod.object({
+  "coverage": zod.string().max(recommendNeuShadesBodyPreferencesConcealerCoverageMax).optional(),
+  "finish": zod.string().max(recommendNeuShadesBodyPreferencesConcealerFinishMax).optional(),
+  "formula": zod.string().max(recommendNeuShadesBodyPreferencesConcealerFormulaMax).optional(),
+  "intent": zod.string().max(recommendNeuShadesBodyPreferencesConcealerIntentMax).optional(),
+  "pigmentation": zod.string().max(recommendNeuShadesBodyPreferencesConcealerPigmentationMax).optional(),
+  "opacity": zod.string().max(recommendNeuShadesBodyPreferencesConcealerOpacityMax).optional(),
+  "colorFamilies": zod.array(zod.string().max(recommendNeuShadesBodyPreferencesConcealerColorFamiliesItemMax)).max(recommendNeuShadesBodyPreferencesConcealerColorFamiliesMax).optional()
+}).optional(),
+  "Blush": zod.object({
+  "coverage": zod.string().max(recommendNeuShadesBodyPreferencesBlushCoverageMax).optional(),
+  "finish": zod.string().max(recommendNeuShadesBodyPreferencesBlushFinishMax).optional(),
+  "formula": zod.string().max(recommendNeuShadesBodyPreferencesBlushFormulaMax).optional(),
+  "intent": zod.string().max(recommendNeuShadesBodyPreferencesBlushIntentMax).optional(),
+  "pigmentation": zod.string().max(recommendNeuShadesBodyPreferencesBlushPigmentationMax).optional(),
+  "opacity": zod.string().max(recommendNeuShadesBodyPreferencesBlushOpacityMax).optional(),
+  "colorFamilies": zod.array(zod.string().max(recommendNeuShadesBodyPreferencesBlushColorFamiliesItemMax)).max(recommendNeuShadesBodyPreferencesBlushColorFamiliesMax).optional()
+}).optional(),
+  "Lips": zod.object({
+  "coverage": zod.string().max(recommendNeuShadesBodyPreferencesLipsCoverageMax).optional(),
+  "finish": zod.string().max(recommendNeuShadesBodyPreferencesLipsFinishMax).optional(),
+  "formula": zod.string().max(recommendNeuShadesBodyPreferencesLipsFormulaMax).optional(),
+  "intent": zod.string().max(recommendNeuShadesBodyPreferencesLipsIntentMax).optional(),
+  "pigmentation": zod.string().max(recommendNeuShadesBodyPreferencesLipsPigmentationMax).optional(),
+  "opacity": zod.string().max(recommendNeuShadesBodyPreferencesLipsOpacityMax).optional(),
+  "colorFamilies": zod.array(zod.string().max(recommendNeuShadesBodyPreferencesLipsColorFamiliesItemMax)).max(recommendNeuShadesBodyPreferencesLipsColorFamiliesMax).optional()
+}).optional()
+}).optional()
+})
+
+export const RecommendNeuShadesResponse = zod.object({
+  "version": zod.string(),
+  "candidates": zod.array(zod.object({
+  "shadeId": zod.string(),
+  "productId": zod.string(),
+  "category": zod.enum(['Foundation', 'Concealer', 'Blush', 'Lips']),
+  "label": zod.enum(['Descriptor-aligned candidate', 'Limited-evidence suggestion', 'Color exploration']),
+  "reasons": zod.array(zod.string()),
+  "limitations": zod.array(zod.string()),
+  "sourceUrl": zod.string(),
+  "checkedOn": zod.string()
+})),
+  "notes": zod.array(zod.string()),
+  "excludedCount": zod.number().int()
+})
+
+
+/**
  * @summary Search canonical brands, with unreviewed candidates available through scope=discovered
  */
 export const listCatalogBrandsQueryQMax = 100;

@@ -9,10 +9,12 @@ import { Comparison } from "@/features/mvp/Comparison";
 import { LAUNCH_CATEGORIES, RESEARCH_PRODUCTS, type LaunchCategory } from "@/features/mvp/catalog";
 import { filterResearchProducts, validBudget, type BrowseFilters } from "@/features/mvp/browse";
 import { usePreview } from "@/features/mvp/use-preview";
+import { NeuDiscovery } from "@/features/mvp/NeuDiscovery";
+import { Preferences } from "@/features/mvp/Preferences";
 
 const BRANDS = [...new Set(RESEARCH_PRODUCTS.map((product) => product.brandName))].sort();
 export default function ResultsPage() {
-  const { state } = usePreview();
+  const { state, updateQuiz } = usePreview();
   const searchParams = useSearch();
   const [category, setCategory] = useState<LaunchCategory | "">(() => {
     const requested = new URLSearchParams(searchParams).get("category");
@@ -33,11 +35,13 @@ export default function ResultsPage() {
   const resetFilters = () => { setCategory(""); setSearch(""); setBrand(""); setBudget(""); setFinish(""); setCoverage(""); setIncludeUnknown(true); setSort("alphabetical"); setRetailer(""); setSkinType(""); setEvidence("historical-listing"); };
   const comparedProducts = RESEARCH_PRODUCTS.filter((product) => comparisonIds.includes(product.id));
   return <main className="content mvp-page">
-    <Heading eyebrow="YOUR ANSWERS + RESEARCH" title="A starting point, not a verdict.">Edit your profile and explore Foundation, Concealer, Blush and Lips in one place. No match ranking or invented certainty.</Heading>
+    <Heading eyebrow="YOUR ANSWERS + EVIDENCE" title="A starting point, not a verdict.">Explore Foundation, Concealer, Blush and Lips your way. Keep the colors that feel like you, with reasons and limitations you can read.</Heading>
     <ProfileSummary compact />
+    <NeuDiscovery />
+    <Disclosure title="Other optional personal preferences"><Preferences draft={state.quiz} onChange={(patch) => updateQuiz({ ...state.quiz, ...patch })} /></Disclosure>
     <aside className="mvp-notice">
-      <h2>No verified shade match yet</h2>
-      <p>We do not have enough evidence to identify an exact shade in your range. The 16 listings below were observed in historical retailer research, not selected for your complexion. Shade details, formulas, current prices and stock have not been verified.</p>
+      <h2>Separate historical research</h2>
+      <p>The {RESEARCH_PRODUCTS.length} listings below were observed in earlier retailer research, not selected for your complexion. They are not the reviewed shade candidates above. Shade details, formulas, current prices and stock in this historical library have not been verified.</p>
       <p>Your olive, muted, deep-skin and lip-pigmentation answers remain part of your own profile. They do not silently become product claims. Blush and lips are color exploration, not foundation shade matches.</p>
     </aside>
     <section className="mvp-panel" aria-labelledby="research-filters-heading">

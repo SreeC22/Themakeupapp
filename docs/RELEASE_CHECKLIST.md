@@ -2,6 +2,10 @@
 
 ## Current gate
 
+Stage 1 was accepted by the owner. Stage 2 now includes two-path onboarding, a representative normalized catalog and initial explainable recommendations. Its scope is `STAGE_2_REQUIREMENTS.md`; observed implementation/coverage is `STAGE_2_IMPLEMENTATION.md` and actual verification is `STAGE_2_QA.md`. Stop for review at this gate. Full catalog targets are progressive. Public community remains outside MVP until 500+ registered users and phase approval. Do not push or deploy.
+
+### Historical Stage 0/1 checklist
+
 - Stage 0 baseline audit and reuse plan are recorded.
 - Stage 1 must be demonstrated through the existing website preview.
 - Record actual unit/type/build/browser outcomes in `QA_TEST_PLAN.md`.

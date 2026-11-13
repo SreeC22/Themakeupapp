@@ -1,4 +1,5 @@
 import { useEffect, type ReactNode } from "react";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Redirect, Route, Switch, useLocation, useSearch, Router as WouterRouter } from "wouter";
 import { ErrorBoundary } from "@/components/error-boundary";
 import { PageMeta, SiteFooter, SiteHeader } from "@/components/SiteShell";
@@ -6,6 +7,7 @@ import HomePage from "@/pages/HomePage";
 import DesignGuidePage from "@/pages/DesignGuidePage";
 import ResultsPage from "@/pages/ResultsPage";
 import ProductDetailPage from "@/pages/ProductDetailPage";
+import CatalogShadePage from "@/pages/CatalogShadePage";
 import CommunityPage from "@/pages/CommunityPage";
 import ReviewDraftPage from "@/pages/ReviewDraftPage";
 import SavedProductsPage from "@/pages/SavedProductsPage";
@@ -16,6 +18,8 @@ import { QuizPage } from "@/features/quiz/QuizPage";
 import { PreviewProvider, usePreview } from "@/features/mvp/use-preview";
 import { StorageNotice } from "@/features/mvp/StorageNotice";
 import { LearnRoute } from "@/features/mvp/LearnRoute";
+
+const queryClient = new QueryClient({ defaultOptions: { queries: { staleTime: 5 * 60 * 1000, retry: 1, refetchOnWindowFocus: false } } });
 
 function RouteBoundary({ children }: { children: ReactNode }) {
   const [location] = useLocation();
@@ -35,18 +39,19 @@ function Website() {
     <StorageNotice />
     <RouteBoundary>
       <Switch>
-        <Route path="/"><PageMeta title="Makeup, your way" description="Makeup self-expression across complexion depths. Build an optional local starting point and explore honest historical product research." /><HomePage /></Route>
+        <Route path="/"><PageMeta title="Makeup, your way" description="Makeup self-expression across complexion depths. Start with a reference shade or the manual palette and explore source-backed candidates with honest evidence limits." /><HomePage /></Route>
         <Route path="/quiz">
-          <PageMeta title="Build your local starting point" description="Four short optional sections: complexion depth, coloring, shopping interests and prior experience. No photos or account needed." />
+          <PageMeta title="Find your match, your way" description="Start with a shade you know or the manual palette, then optional skin type. Both build one editable local profile. No photos or account needed." />
           <QuizPage draft={state.quiz} onChange={updateQuiz} guideNote={new URLSearchParams(search).get("guideDepth") === "changed" ? "The guide explores broad ranges. Choose a swatch yourself here, or stay unsure." : ""}
             onHome={() => navigate("/")} onLearn={() => navigate("/learn?returnTo=quiz")} onComplete={() => navigate("/results")} />
         </Route>
-        <Route path="/results"><PageMeta title="Your starting point & product research" description="Edit your local profile and browse four categories of historical listings. No exact shade matches, current stock claims or match scores." /><ResultsPage /></Route>
+        <Route path="/results"><PageMeta title="Makeup discovery & evidence" description="Explore four categories with saved contextual preferences, source-backed candidate reasons and honest evidence limits. No exact cross-brand matches or match scores." /><ResultsPage /></Route>
+        <Route path="/catalog/shades/:shadeId">{(params) => <CatalogShadePage shadeId={params.shadeId} />}</Route>
         <Route path="/products/:slug">{(params) => <ProductDetailPage slug={params.slug} />}</Route>
-        <Route path="/community"><PageMeta title="Community evidence & local drafts" description="Explore the genuine empty member evidence view and your own private local drafts. No invented reviews or public posting." /><CommunityPage /></Route>
+        <Route path="/community"><PageMeta title="Private local drafts" description="A compatibility address for your earlier private drafts. Public community is outside the MVP and requires 500+ registered users plus explicit phase approval." /><CommunityPage /></Route>
         <Route path="/review/new"><PageMeta title="Write a private local review draft" description="Keep structured self-reported product observations as a local draft only. Nothing is submitted, approved or public." /><ReviewDraftPage key={search} /></Route>
-        <Route path="/saved"><PageMeta title="Your locally saved products" description="Your actual saved product identifiers in this browser. Remove them or revisit the historical source evidence." /><SavedProductsPage /></Route>
-        <Route path="/profile"><PageMeta title="Your local profile & privacy" description="Edit answers, choose a private-by-default local preference, export this preview's data or confirm a local reset. No account service connected." /><LocalProfilePage /></Route>
+        <Route path="/saved"><PageMeta title="Your locally saved products" description="Your actual saved catalog shades and historical product identifiers in this browser. Remove them or revisit their separately labeled source evidence." /><SavedProductsPage /></Route>
+        <Route path="/profile"><PageMeta title="Your local profile & privacy" description="Edit complexion traits and multiple reference shades, manage private drafts, export your local data or confirm a local reset. No account gate or public profile." /><LocalProfilePage /></Route>
         <Route path="/admin"><PageMeta title="Protected editorial tools unavailable" description="Administrator tools require verified authorization and are unavailable in this local preview. No public moderation powers." /><AdminUnavailablePage /></Route>
         <Route path="/learn"><PageMeta title="Learn about color" description="A public guide to depth, undertone, olive cast and playful color theory. Guide examples never become known profile traits automatically." /><LearnRoute /></Route>
         <Route path="/design-guide"><PageMeta title="Design guide" description="Neu's approved palette, typography and source-backed design-system controls." /><DesignGuidePage /></Route>
@@ -61,7 +66,7 @@ function Website() {
 }
 
 function App() {
-  return <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}><PreviewProvider><Website /></PreviewProvider></WouterRouter>;
+  return <QueryClientProvider client={queryClient}><WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}><PreviewProvider><Website /></PreviewProvider></WouterRouter></QueryClientProvider>;
 }
 
 export default App;

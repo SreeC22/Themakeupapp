@@ -11,6 +11,18 @@ export type ProductMatch =
   | "Too orange" | "Too pink" | "Too yellow" | "Gray or ashy"
   | "Changes color after application" | "Not sure yet";
 
+export type OnboardingScreen = "start" | "reference" | "depth" | "coloring" | "skin";
+export type CategoryPreference = {
+  coverage?: string;
+  finish?: string;
+  formula?: string;
+  intent?: string;
+  pigmentation?: string;
+  opacity?: string;
+  colorFamilies?: string[];
+};
+export type CategoryPreferences = Partial<Record<"Foundation" | "Concealer" | "Blush" | "Lips", CategoryPreference>>;
+
 export type QuizProduct = {
   id: string;
   type: CurrentProductType;
@@ -21,6 +33,9 @@ export type QuizProduct = {
   shade: string;
   shadeUnknown: boolean;
   match: ProductMatch[];
+  catalogProductId?: string;
+  catalogShadeId?: string;
+  oxidation?: string;
 };
 
 export type QuizDraft = {
@@ -52,6 +67,9 @@ export type QuizDraft = {
   sensitivityPreference?: string;
   applicationStyle?: string;
   surfaceRedness?: string;
+  onboardingPath?: "known" | "manual";
+  onboardingScreen?: OnboardingScreen;
+  categoryPreferences?: CategoryPreferences;
 };
 
 export const INITIAL_QUIZ_DRAFT: QuizDraft = {

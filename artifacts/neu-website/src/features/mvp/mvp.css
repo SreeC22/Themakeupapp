@@ -1,5 +1,15 @@
 /* Stage 1 domain layouts. All new surfaces use the shared Neu token scale. */
 .mvp-page { --wj-line: hsl(var(--border)); --wj-focus: hsl(var(--ring)); }
+/* Legacy shared pattern names alias the exported Neu tokens, never new values. */
+.neu-app { --chart1: var(--chart-1); --chart4: var(--chart-4); }
+.mvp-page section[id^="discover-"] { scroll-margin-top: calc(var(--spacing) * 36); }
+.mvp-page ul:not(.mvp-draft-list), .neu-quiz ul { @apply list-disc pl-5; }
+.mvp-page .mvp-product, .mvp-page .mvp-notice, .mvp-page .mvp-facts { overflow-wrap: anywhere; }
+.neu-quiz .wj-quiz-question { animation: neu-question-enter 180ms ease-out; }
+@keyframes neu-question-enter {
+  from { opacity: 0; transform: translateY(calc(var(--spacing) * 2)); }
+  to { opacity: 1; transform: translateY(0); }
+}
 .mvp-heading { @apply mb-8 max-w-3xl; }
 .mvp-heading h1 { @apply mt-4 mb-4 font-serif text-5xl text-primary; }
 .mvp-heading > p { @apply text-base text-muted-foreground; }
@@ -87,6 +97,8 @@
   .learn-panel .toggle-row { @apply grid-cols-2; }
 }
 @media (max-width: 767px) {
+  .mvp-page .wj-quiz-depth-row { @apply grid-cols-1 gap-1; }
+  .mvp-page .wj-quiz-depth-groups { @apply gap-2; }
   .mvp-heading h1 { @apply text-4xl; }
   .mvp-summary .wj-text-action { @apply justify-self-start; }
   .hero, .learn-hero, .guide-hero, .how-grid, .home-bottom, .learn-invite,

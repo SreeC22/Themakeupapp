@@ -1,4 +1,4 @@
-import { ArrowRight, Bookmark, CloudOff, Info, Share2 } from "lucide-react";
+import { ArrowRight, Bookmark, Info, Share2 } from "lucide-react";
 import { Link } from "wouter";
 
 export function SavedPage() {

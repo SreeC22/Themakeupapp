@@ -9,7 +9,7 @@ export function StorageNotice() {
     <p role="status">{status === "corrupt" ? "Stored Neu data could not be read. It has not been overwritten. Changes work in memory only. Export this session or confirm a reset in Profile."
       : status === "unsupported" ? "Stored Neu data uses a different version. It has been preserved. This session is memory-only until you explicitly reset in Profile."
       : status === "unavailable" ? "Browser storage is unavailable. Your changes work in memory only and may be lost on reload. Export them from Profile."
-      : "Local preview. Answers, saves and drafts stay in this browser only. Nothing is submitted or synced."}</p>
+      : "Saved in this browser. Selected traits are processed by Neu for suggestions, not stored on the server. No public posting or account sync."}</p>
     {status === "unavailable" && <Button variant="text" onClick={retryStorage}>Retry storage</Button>}
     {failed && <Link href="/profile" className="mvp-link">Storage settings</Link>}
   </aside>;

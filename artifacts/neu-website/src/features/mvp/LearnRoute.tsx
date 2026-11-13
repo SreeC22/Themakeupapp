@@ -27,7 +27,7 @@ export function LearnRoute() {
         ...draft,
         ...(patch.undertone ? { undertone: patch.undertone === "Not sure" ? "Still exploring" : patch.undertone } : {}),
         ...(patch.oliveCast !== undefined ? { olive: patch.oliveCast ? "yes" : "no", ...(!patch.oliveCast ? { oliveSubtype: "", ...(draft.undertone === "Olive" && !patch.undertone ? { undertone: "Still exploring" as const } : {}) } : {}) } : {}),
-        ...(changedDepth ? { shadeId: null, depthUnsure: true, step: "depth" } : {}),
+        ...(changedDepth ? { shadeId: null, depthUnsure: true, step: "depth", onboardingPath: "manual", onboardingScreen: "depth" } : {}),
       });
       navigate(changedDepth ? "/quiz?guideDepth=changed" : returnPath);
     }} />

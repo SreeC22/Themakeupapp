@@ -11,6 +11,36 @@ tags:
   - name: health
     description: Health operations
 paths:
+  /neu/catalog:
+    get:
+      operationId: getNeuCatalog
+      tags: [neu]
+      summary: Reviewed US product lines and source-backed shade observations, never live stock
+      responses:
+        "200":
+          description: Current curated development catalog with evidence and coverage
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/NeuCatalog" }
+        "503": { $ref: "#/components/responses/CatalogUnavailable" }
+  /neu/recommendations:
+    post:
+      operationId: recommendNeuShades
+      tags: [neu]
+      summary: Explainable descriptor-based candidates; submitted traits are not stored
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/NeuProfileInput" }
+      responses:
+        "200":
+          description: Evidence-bounded suggestions across all four categories, without fit percentages
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/NeuRecommendations" }
+        "400": { $ref: "#/components/responses/CatalogBadRequest" }
+        "503": { $ref: "#/components/responses/CatalogUnavailable" }
   /catalog/brands:
     get:
       operationId: listCatalogBrands
@@ -182,6 +212,124 @@ components:
         application/json:
           schema: { $ref: "#/components/schemas/CatalogError" }
   schemas:
+    NeuClaim:
+      type: object
+      required: [field, value, basis, sourceUrl, checkedOn, rawText]
+      properties:
+        field: { type: string }
+        value: { type: string }
+        basis: { type: string, enum: [verified, estimate, user_report] }
+        sourceUrl: { type: string }
+        checkedOn: { type: string }
+        rawText: { type: string }
+    NeuBrand:
+      type: object
+      required: [id, name, tier, candidate]
+      properties:
+        id: { type: string }
+        name: { type: string }
+        tier: { type: string, enum: [Drugstore, Mid-range, Luxury] }
+        candidate: { type: boolean }
+    NeuProduct:
+      type: object
+      required: [id, brandId, name, category, sourceUrl, checkedOn, rangeStatus, declaredShadeCount, verifiedShadeCount, notes, claims]
+      properties:
+        id: { type: string }
+        brandId: { type: string }
+        name: { type: string }
+        category: { type: string, enum: [Foundation, Concealer, Blush, Lips] }
+        sourceUrl: { type: string }
+        checkedOn: { type: string }
+        rangeStatus: { type: string, enum: [enumerated, partial, needs_review] }
+        declaredShadeCount: { type: [integer, "null"] }
+        verifiedShadeCount: { type: integer }
+        notes: { type: array, items: { type: string } }
+        claims: { type: array, items: { $ref: "#/components/schemas/NeuClaim" } }
+    NeuShade:
+      type: object
+      required: [id, productId, name, description, status, claims]
+      properties:
+        id: { type: string }
+        productId: { type: string }
+        name: { type: string }
+        description: { type: string }
+        status: { type: string, enum: [verified, needs_review] }
+        claims: { type: array, items: { $ref: "#/components/schemas/NeuClaim" } }
+    NeuCoverage:
+      type: object
+      required: [selectedBrands, verifiedBrands, verifiedProducts, verifiedShades, enumeratedRanges, targetProducts, targetShades, checkedOn, gaps]
+      properties:
+        selectedBrands: { type: integer }
+        verifiedBrands: { type: integer }
+        verifiedProducts: { type: integer }
+        verifiedShades: { type: integer }
+        enumeratedRanges: { type: integer }
+        targetProducts: { type: string }
+        targetShades: { type: string }
+        checkedOn: { type: string }
+        gaps: { type: array, items: { type: string } }
+    NeuCatalog:
+      type: object
+      required: [brands, products, shades, coverage]
+      properties:
+        brands: { type: array, items: { $ref: "#/components/schemas/NeuBrand" } }
+        products: { type: array, items: { $ref: "#/components/schemas/NeuProduct" } }
+        shades: { type: array, items: { $ref: "#/components/schemas/NeuShade" } }
+        coverage: { $ref: "#/components/schemas/NeuCoverage" }
+    NeuReferenceInput:
+      type: object
+      required: [shadeId, fit]
+      properties:
+        shadeId: { type: string, maxLength: 200 }
+        fit: { type: array, maxItems: 10, items: { type: string, maxLength: 100 } }
+        oxidation: { type: string, maxLength: 200 }
+    NeuCategoryPreference:
+      type: object
+      properties:
+        coverage: { type: string, maxLength: 100 }
+        finish: { type: string, maxLength: 100 }
+        formula: { type: string, maxLength: 100 }
+        intent: { type: string, maxLength: 100 }
+        pigmentation: { type: string, maxLength: 100 }
+        opacity: { type: string, maxLength: 100 }
+        colorFamilies: { type: array, maxItems: 10, items: { type: string, maxLength: 100 } }
+    NeuProfileInput:
+      type: object
+      properties:
+        depth: { type: [string, "null"], enum: ["Very fair", Fair, Light, Light-medium, Medium, Tan, Deep, "Very deep", null] }
+        undertone: { type: [string, "null"], enum: [Warm, Cool, Neutral, Olive, "Still exploring", null] }
+        oliveSubtype: { type: string, enum: ["", Warm-olive, Cool-olive, Neutral-olive, "Not sure"] }
+        saturation: { type: string, enum: ["", Muted, Balanced, "Bright / saturated", "Not sure"] }
+        skinType: { type: string, enum: ["", Oily, Dry, Combination, Normal, Sensitive] }
+        budget: { type: string, maxLength: 100 }
+        references: { type: array, maxItems: 50, items: { $ref: "#/components/schemas/NeuReferenceInput" } }
+        preferences:
+          type: object
+          properties:
+            Foundation: { $ref: "#/components/schemas/NeuCategoryPreference" }
+            Concealer: { $ref: "#/components/schemas/NeuCategoryPreference" }
+            Blush: { $ref: "#/components/schemas/NeuCategoryPreference" }
+            Lips: { $ref: "#/components/schemas/NeuCategoryPreference" }
+    NeuCandidate:
+      type: object
+      required: [shadeId, productId, category, label, reasons, limitations, sourceUrl, checkedOn]
+      properties:
+        shadeId: { type: string }
+        productId: { type: string }
+        category: { type: string, enum: [Foundation, Concealer, Blush, Lips] }
+        label: { type: string, enum: ["Descriptor-aligned candidate", "Limited-evidence suggestion", "Color exploration"] }
+        reasons: { type: array, items: { type: string } }
+        limitations: { type: array, items: { type: string } }
+        sourceUrl: { type: string }
+        checkedOn: { type: string }
+    NeuRecommendations:
+      type: object
+      required: [version, candidates, notes, excludedCount]
+      properties:
+        version: { type: string }
+        candidates: { type: array, items: { $ref: "#/components/schemas/NeuCandidate" } }
+        notes: { type: array, items: { type: string } }
+        excludedCount: { type: integer }
     CatalogError:
       type: object
       required: [error]

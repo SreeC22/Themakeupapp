@@ -1,5 +1,9 @@
 # Neu website handoff
 
+## Current Stage 2 handoff
+
+The owner approved Stage 1 based on its report. The newer requirements add two short onboarding paths, contextual category preferences, a normalized development catalog and initial explainable matching. Use `STAGE_2_REQUIREMENTS.md`, `STAGE_2_IMPLEMENTATION.md` and `STAGE_2_QA.md` as the current stage handoff; the sections below retain prior-phase context. The existing design system, historical IDs, forty swatches, browser storage keys and private draft data remain preserved. Public community is deferred until 500+ registered users and owner approval. No push/deploy is authorized.
+
 ## Approved direction
 
 This build carries the approved makeup-texture homepage into a standalone website package. The visual reference remains on the canvas. The website also contains a browsable design guide at `/design-guide`.

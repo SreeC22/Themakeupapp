@@ -8,6 +8,10 @@
     "catalog:import": "tsx ./src/catalog-import.ts",
     "catalog:setup": "tsx ./src/catalog-setup.ts",
     "catalog:test": "tsx --test ./src/catalog-test.ts",
+    "neu:seed": "tsx ./src/neu-seed.ts",
+    "neu:test": "node --experimental-strip-types --test ../lib/db/tests/neu-*.test.mjs",
+    "neu:db:test": "tsx --test ./src/neu-db-test.ts",
+    "neu:api:test": "node --test ./src/neu-api-test.mjs",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {

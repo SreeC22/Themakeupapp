@@ -1,5 +1,7 @@
 # Stage 1 catalog provenance
 
+This section describes the retained historical research library, not the newer verified shade subset. Current Stage 2 sources, the 25-brand progressive target, observed coverage and completeness gaps are documented in [Stage 2 implementation](STAGE_2_IMPLEMENTATION.md). Historical IDs remain unchanged and must not silently become verified matches.
+
 The preview projects sixteen existing historical records, four per launch category, from `research/neu-catalog/initial.json`. The source observations were checked on 2026-10-17.
 
 The projection retains recorded brand, product name, category, source URL, product URL, date and original evidence note. It does not reverify current retailer destinations or availability. Previous research specifically warns that returned items and URL slugs can disagree; Stage 2 must recheck both product identity and current destinations.

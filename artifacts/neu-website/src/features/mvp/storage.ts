@@ -51,6 +51,20 @@ function optionalChoice(value: unknown, options: string[]): boolean {
 }
 const PRODUCT_MATCHES = ["Blends in perfectly", "A little too light", "A little too dark", "Too orange", "Too pink", "Too yellow", "Gray or ashy", "Changes color after application", "Not sure yet"];
 
+function boundedOptional(value: unknown, max: number) {
+  return value === undefined || (typeof value === "string" && value.length <= max);
+}
+
+function validateCategoryPreferences(value: unknown) {
+  if (value === undefined) return true;
+  if (!record(value) || Object.keys(value).some((key) => !["Foundation", "Concealer", "Blush", "Lips"].includes(key))) return false;
+  const fields = ["coverage", "finish", "formula", "intent", "pigmentation", "opacity"];
+  return Object.values(value).every((preference) => record(preference)
+    && Object.keys(preference).every((key) => fields.includes(key) || key === "colorFamilies")
+    && fields.every((key) => boundedOptional(preference[key], 100))
+    && (preference.colorFamilies === undefined || (strings(preference.colorFamilies, 10) && preference.colorFamilies.every((item) => item.length <= 100))));
+}
+
 /** Strict validation: unreadable records are never silently replaced with defaults. */
 export function validateQuizDraft(value: unknown): value is QuizDraft {
   if (!record(value)) return false;
@@ -68,7 +82,9 @@ export function validateQuizDraft(value: unknown): value is QuizDraft {
     record(product) && ["id", "brand", "product", "formula", "shade"].every((key) => text(product[key]))
     && ["Foundation", "Concealer", "Skin tint", "BB or CC cream"].includes(String(product.type))
     && typeof product.brandUnknown === "boolean" && typeof product.shadeUnknown === "boolean"
-    && strings(product.match) && product.match.every((item) => PRODUCT_MATCHES.includes(item)))) return false;
+    && strings(product.match) && product.match.every((item) => PRODUCT_MATCHES.includes(item))
+    && boundedOptional(product.catalogProductId, 200) && boundedOptional(product.catalogShadeId, 200)
+    && boundedOptional(product.oxidation, 200))) return false;
   if (!optionalChoice(value.oliveSubtype, ["", "Warm-olive", "Cool-olive", "Neutral-olive", "Not sure"])) return false;
   if (!optionalChoice(value.saturation, ["", "Muted", "Balanced", "Bright / saturated", "Not sure"])) return false;
   if (!optionalChoice(value.coverage, ["", "Sheer", "Medium", "Full", "No preference"])) return false;
@@ -80,6 +96,9 @@ export function validateQuizDraft(value: unknown): value is QuizDraft {
   if (!optionalChoice(value.sensitivityPreference, ["", "I consider my skin sensitive", "No preference", "Not sure"])) return false;
   if (!optionalChoice(value.applicationStyle, ["", "Fingers", "Brush", "Sponge", "Flexible", "Not sure"])) return false;
   if (!optionalChoice(value.surfaceRedness, ["", "I notice surface redness", "I do not notice it", "Not sure"])) return false;
+  if (!optionalChoice(value.onboardingPath, ["known", "manual"])) return false;
+  if (!optionalChoice(value.onboardingScreen, ["start", "reference", "depth", "coloring", "skin"])) return false;
+  if (!validateCategoryPreferences(value.categoryPreferences)) return false;
   return true;
 }
 

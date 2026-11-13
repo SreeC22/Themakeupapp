@@ -1,0 +1,4864 @@
+{
+  "brands": [
+    {
+      "id": "elf-cosmetics",
+      "name": "e.l.f. Cosmetics",
+      "tier": "Drugstore",
+      "candidate": true
+    },
+    {
+      "id": "maybelline",
+      "name": "Maybelline",
+      "tier": "Drugstore",
+      "candidate": true
+    },
+    {
+      "id": "loreal",
+      "name": "L’Oréal Paris",
+      "tier": "Drugstore",
+      "candidate": true
+    },
+    {
+      "id": "nyx-professional-makeup",
+      "name": "NYX Professional Makeup",
+      "tier": "Drugstore",
+      "candidate": true
+    },
+    {
+      "id": "milani",
+      "name": "Milani",
+      "tier": "Drugstore",
+      "candidate": true
+    },
+    {
+      "id": "colourpop",
+      "name": "ColourPop",
+      "tier": "Drugstore",
+      "candidate": true
+    },
+    {
+      "id": "wet-n-wild",
+      "name": "wet n wild",
+      "tier": "Drugstore",
+      "candidate": true
+    },
+    {
+      "id": "revlon",
+      "name": "Revlon",
+      "tier": "Drugstore",
+      "candidate": true
+    },
+    {
+      "id": "covergirl",
+      "name": "CoverGirl",
+      "tier": "Drugstore",
+      "candidate": true
+    },
+    {
+      "id": "rare-beauty",
+      "name": "Rare Beauty",
+      "tier": "Mid-range",
+      "candidate": true
+    },
+    {
+      "id": "fenty-beauty",
+      "name": "Fenty Beauty",
+      "tier": "Mid-range",
+      "candidate": true
+    },
+    {
+      "id": "nars",
+      "name": "NARS",
+      "tier": "Mid-range",
+      "candidate": true
+    },
+    {
+      "id": "mac",
+      "name": "MAC Cosmetics",
+      "tier": "Mid-range",
+      "candidate": true
+    },
+    {
+      "id": "tarte",
+      "name": "Tarte",
+      "tier": "Mid-range",
+      "candidate": true
+    },
+    {
+      "id": "huda-beauty",
+      "name": "Huda Beauty",
+      "tier": "Mid-range",
+      "candidate": true
+    },
+    {
+      "id": "too-faced",
+      "name": "Too Faced",
+      "tier": "Mid-range",
+      "candidate": true
+    },
+    {
+      "id": "juvia-s-place",
+      "name": "Juvia’s Place",
+      "tier": "Mid-range",
+      "candidate": true
+    },
+    {
+      "id": "estee-lauder",
+      "name": "Estée Lauder",
+      "tier": "Luxury",
+      "candidate": true
+    },
+    {
+      "id": "lancome",
+      "name": "Lancôme",
+      "tier": "Luxury",
+      "candidate": true
+    },
+    {
+      "id": "dior",
+      "name": "Dior",
+      "tier": "Luxury",
+      "candidate": true
+    },
+    {
+      "id": "armani-beauty",
+      "name": "Armani Beauty",
+      "tier": "Luxury",
+      "candidate": true
+    },
+    {
+      "id": "charlotte-tilbury",
+      "name": "Charlotte Tilbury",
+      "tier": "Luxury",
+      "candidate": true
+    },
+    {
+      "id": "haus-labs",
+      "name": "Haus Labs",
+      "tier": "Luxury",
+      "candidate": true
+    },
+    {
+      "id": "pat-mcgrath-labs",
+      "name": "Pat McGrath Labs",
+      "tier": "Luxury",
+      "candidate": true
+    },
+    {
+      "id": "danessa-myricks-beauty",
+      "name": "Danessa Myricks Beauty",
+      "tier": "Luxury",
+      "candidate": true
+    }
+  ],
+  "products": [
+    {
+      "id": "elf-soft-glam-satin",
+      "brandId": "elf-cosmetics",
+      "name": "Soft Glam Satin Foundation",
+      "category": "Foundation",
+      "sourceUrl": "https://www.elfcosmetics.com/soft-glam-satin-foundation/300303.html",
+      "checkedOn": "2026-11-13",
+      "rangeStatus": "enumerated",
+      "declaredShadeCount": 36,
+      "verifiedShadeCount": 36,
+      "notes": [
+        "All 36 selector names observed. Depth/undertone are not inferred from shade names; additional descriptive evidence is needed."
+      ],
+      "claims": [
+        {
+          "field": "coverage",
+          "value": "Medium",
+          "basis": "verified",
+          "rawText": "medium buildable coverage",
+          "sourceUrl": "https://www.elfcosmetics.com/soft-glam-satin-foundation/300303.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "finish",
+          "value": "Satin",
+          "basis": "verified",
+          "rawText": "a satin finish",
+          "sourceUrl": "https://www.elfcosmetics.com/soft-glam-satin-foundation/300303.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "skin_types",
+          "value": "Dry|Oily|Combination",
+          "basis": "verified",
+          "rawText": "Great for: Dry, oily and combination skin",
+          "sourceUrl": "https://www.elfcosmetics.com/soft-glam-satin-foundation/300303.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "formula",
+          "value": "Liquid",
+          "basis": "verified",
+          "rawText": "hydrating liquid foundation",
+          "sourceUrl": "https://www.elfcosmetics.com/soft-glam-satin-foundation/300303.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "elf-hydrating-camo",
+      "brandId": "elf-cosmetics",
+      "name": "Hydrating Camo Concealer",
+      "category": "Concealer",
+      "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+      "checkedOn": "2026-11-13",
+      "rangeStatus": "enumerated",
+      "declaredShadeCount": 25,
+      "verifiedShadeCount": 25,
+      "notes": [
+        "US selector names and descriptions observed; pink/yellow/golden words are not automatically converted into cool/warm."
+      ],
+      "claims": [
+        {
+          "field": "coverage",
+          "value": "Full",
+          "basis": "verified",
+          "rawText": "Full coverage concealer",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "finish",
+          "value": "Satin",
+          "basis": "verified",
+          "rawText": "a satin finish",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "skin_types",
+          "value": "Oily|Dry|Combination",
+          "basis": "verified",
+          "rawText": "Great for: Oily, Dry, and Combination Skin",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "formula",
+          "value": "Liquid",
+          "basis": "verified",
+          "rawText": "liquid concealer",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex",
+      "brandId": "fenty-beauty",
+      "name": "Pro Filt'r Fluid Flex Natural Matte Longwear Foundation",
+      "category": "Foundation",
+      "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+      "checkedOn": "2026-11-13",
+      "rangeStatus": "partial",
+      "declaredShadeCount": 50,
+      "verifiedShadeCount": 49,
+      "notes": [
+        "466 versus 466W is inconsistent within the selector; that identity remains under review. Only explicit descriptor words are normalized; this is not an old Pro Filtr shade equivalence."
+      ],
+      "claims": [
+        {
+          "field": "coverage",
+          "value": "Medium",
+          "basis": "verified",
+          "rawText": "medium, buildable coverage",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "natural matte finish",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "skin_types",
+          "value": "Oily|Dry|Combination|Normal",
+          "basis": "verified",
+          "rawText": "For all skin types",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "rare-soft-pinch-liquid",
+      "brandId": "rare-beauty",
+      "name": "Soft Pinch Liquid Blush",
+      "category": "Blush",
+      "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+      "checkedOn": "2026-11-13",
+      "rangeStatus": "enumerated",
+      "declaredShadeCount": 16,
+      "verifiedShadeCount": 16,
+      "notes": [
+        "All 16 selector variants and color descriptions observed; blush is aesthetic color exploration, not foundation matching."
+      ],
+      "claims": [
+        {
+          "field": "formula",
+          "value": "Liquid",
+          "basis": "verified",
+          "rawText": "liquid formula",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "coverage",
+          "value": "Buildable",
+          "basis": "verified",
+          "rawText": "blends and builds effortlessly",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior",
+      "brandId": "dior",
+      "name": "Rouge Dior",
+      "category": "Lips",
+      "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+      "checkedOn": "2026-11-13",
+      "rangeStatus": "enumerated",
+      "declaredShadeCount": 71,
+      "verifiedShadeCount": 71,
+      "notes": [
+        "All 71 selector finish variants observed. Same shade code in different finishes is a different variant. No color family or undertone is inferred from its name."
+      ],
+      "claims": [
+        {
+          "field": "formula",
+          "value": "Lipstick",
+          "basis": "verified",
+          "rawText": "Rouge Dior lipstick",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    }
+  ],
+  "shades": [
+    {
+      "id": "elf-soft-glam-satin--10-fair-cool",
+      "productId": "elf-soft-glam-satin",
+      "name": "10 Fair Cool",
+      "description": "Identity observed in the official US selector. Descriptive shade traits not separately verified.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-soft-glam-satin--11-fair-neutral",
+      "productId": "elf-soft-glam-satin",
+      "name": "11 Fair Neutral",
+      "description": "Identity observed in the official US selector. Descriptive shade traits not separately verified.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-soft-glam-satin--12-fair-warm",
+      "productId": "elf-soft-glam-satin",
+      "name": "12 Fair Warm",
+      "description": "Identity observed in the official US selector. Descriptive shade traits not separately verified.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-soft-glam-satin--13-fair-neutral",
+      "productId": "elf-soft-glam-satin",
+      "name": "13 Fair Neutral",
+      "description": "Identity observed in the official US selector. Descriptive shade traits not separately verified.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-soft-glam-satin--14-fair-cool",
+      "productId": "elf-soft-glam-satin",
+      "name": "14 Fair Cool",
+      "description": "Identity observed in the official US selector. Descriptive shade traits not separately verified.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-soft-glam-satin--15-fair-warm",
+      "productId": "elf-soft-glam-satin",
+      "name": "15 Fair Warm",
+      "description": "Identity observed in the official US selector. Descriptive shade traits not separately verified.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-soft-glam-satin--20-light-cool",
+      "productId": "elf-soft-glam-satin",
+      "name": "20 Light Cool",
+      "description": "Identity observed in the official US selector. Descriptive shade traits not separately verified.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-soft-glam-satin--21-light-neutral",
+      "productId": "elf-soft-glam-satin",
+      "name": "21 Light Neutral",
+      "description": "Identity observed in the official US selector. Descriptive shade traits not separately verified.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-soft-glam-satin--22-light-warm",
+      "productId": "elf-soft-glam-satin",
+      "name": "22 Light Warm",
+      "description": "Identity observed in the official US selector. Descriptive shade traits not separately verified.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-soft-glam-satin--23-light-cool",
+      "productId": "elf-soft-glam-satin",
+      "name": "23 Light Cool",
+      "description": "Identity observed in the official US selector. Descriptive shade traits not separately verified.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-soft-glam-satin--24-light-warm",
+      "productId": "elf-soft-glam-satin",
+      "name": "24 Light Warm",
+      "description": "Identity observed in the official US selector. Descriptive shade traits not separately verified.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-soft-glam-satin--25-light-neutral",
+      "productId": "elf-soft-glam-satin",
+      "name": "25 Light Neutral",
+      "description": "Identity observed in the official US selector. Descriptive shade traits not separately verified.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-soft-glam-satin--30-medium-warm",
+      "productId": "elf-soft-glam-satin",
+      "name": "30 Medium Warm",
+      "description": "Identity observed in the official US selector. Descriptive shade traits not separately verified.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-soft-glam-satin--31-medium-neutral",
+      "productId": "elf-soft-glam-satin",
+      "name": "31 Medium Neutral",
+      "description": "Identity observed in the official US selector. Descriptive shade traits not separately verified.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-soft-glam-satin--32-medium-neutral",
+      "productId": "elf-soft-glam-satin",
+      "name": "32 Medium Neutral",
+      "description": "Identity observed in the official US selector. Descriptive shade traits not separately verified.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-soft-glam-satin--33-medium-warm",
+      "productId": "elf-soft-glam-satin",
+      "name": "33 Medium Warm",
+      "description": "Identity observed in the official US selector. Descriptive shade traits not separately verified.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-soft-glam-satin--34-medium-cool",
+      "productId": "elf-soft-glam-satin",
+      "name": "34 Medium Cool",
+      "description": "Identity observed in the official US selector. Descriptive shade traits not separately verified.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-soft-glam-satin--35-medium-cool",
+      "productId": "elf-soft-glam-satin",
+      "name": "35 Medium Cool",
+      "description": "Identity observed in the official US selector. Descriptive shade traits not separately verified.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-soft-glam-satin--40-tan-warm",
+      "productId": "elf-soft-glam-satin",
+      "name": "40 Tan Warm",
+      "description": "Identity observed in the official US selector. Descriptive shade traits not separately verified.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-soft-glam-satin--41-tan-neutral",
+      "productId": "elf-soft-glam-satin",
+      "name": "41 Tan Neutral",
+      "description": "Identity observed in the official US selector. Descriptive shade traits not separately verified.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-soft-glam-satin--42-tan-neutral",
+      "productId": "elf-soft-glam-satin",
+      "name": "42 Tan Neutral",
+      "description": "Identity observed in the official US selector. Descriptive shade traits not separately verified.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-soft-glam-satin--43-tan-cool",
+      "productId": "elf-soft-glam-satin",
+      "name": "43 Tan Cool",
+      "description": "Identity observed in the official US selector. Descriptive shade traits not separately verified.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-soft-glam-satin--44-tan-cool",
+      "productId": "elf-soft-glam-satin",
+      "name": "44 Tan Cool",
+      "description": "Identity observed in the official US selector. Descriptive shade traits not separately verified.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-soft-glam-satin--45-tan-warm",
+      "productId": "elf-soft-glam-satin",
+      "name": "45 Tan Warm",
+      "description": "Identity observed in the official US selector. Descriptive shade traits not separately verified.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-soft-glam-satin--50-deep-warm",
+      "productId": "elf-soft-glam-satin",
+      "name": "50 Deep Warm",
+      "description": "Identity observed in the official US selector. Descriptive shade traits not separately verified.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-soft-glam-satin--51-deep-cool",
+      "productId": "elf-soft-glam-satin",
+      "name": "51 Deep Cool",
+      "description": "Identity observed in the official US selector. Descriptive shade traits not separately verified.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-soft-glam-satin--52-deep-cool",
+      "productId": "elf-soft-glam-satin",
+      "name": "52 Deep Cool",
+      "description": "Identity observed in the official US selector. Descriptive shade traits not separately verified.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-soft-glam-satin--53-deep-neutral",
+      "productId": "elf-soft-glam-satin",
+      "name": "53 Deep Neutral",
+      "description": "Identity observed in the official US selector. Descriptive shade traits not separately verified.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-soft-glam-satin--54-deep-neutral",
+      "productId": "elf-soft-glam-satin",
+      "name": "54 Deep Neutral",
+      "description": "Identity observed in the official US selector. Descriptive shade traits not separately verified.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-soft-glam-satin--55-deep-warm",
+      "productId": "elf-soft-glam-satin",
+      "name": "55 Deep Warm",
+      "description": "Identity observed in the official US selector. Descriptive shade traits not separately verified.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-soft-glam-satin--60-rich-cool",
+      "productId": "elf-soft-glam-satin",
+      "name": "60 Rich Cool",
+      "description": "Identity observed in the official US selector. Descriptive shade traits not separately verified.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-soft-glam-satin--61-rich-cool",
+      "productId": "elf-soft-glam-satin",
+      "name": "61 Rich Cool",
+      "description": "Identity observed in the official US selector. Descriptive shade traits not separately verified.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-soft-glam-satin--62-rich-warm",
+      "productId": "elf-soft-glam-satin",
+      "name": "62 Rich Warm",
+      "description": "Identity observed in the official US selector. Descriptive shade traits not separately verified.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-soft-glam-satin--63-rich-warm",
+      "productId": "elf-soft-glam-satin",
+      "name": "63 Rich Warm",
+      "description": "Identity observed in the official US selector. Descriptive shade traits not separately verified.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-soft-glam-satin--64-rich-neutral",
+      "productId": "elf-soft-glam-satin",
+      "name": "64 Rich Neutral",
+      "description": "Identity observed in the official US selector. Descriptive shade traits not separately verified.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-soft-glam-satin--65-rich-neutral",
+      "productId": "elf-soft-glam-satin",
+      "name": "65 Rich Neutral",
+      "description": "Identity observed in the official US selector. Descriptive shade traits not separately verified.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-hydrating-camo--fair-rose",
+      "productId": "elf-hydrating-camo",
+      "name": "Fair Rose",
+      "description": "fair with pink undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "fair",
+          "basis": "verified",
+          "rawText": "fair with pink undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "elf-hydrating-camo--fair-warm",
+      "productId": "elf-hydrating-camo",
+      "name": "Fair Warm",
+      "description": "fair with yellow undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "fair",
+          "basis": "verified",
+          "rawText": "fair with yellow undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "elf-hydrating-camo--fair-beige",
+      "productId": "elf-hydrating-camo",
+      "name": "Fair Beige",
+      "description": "fair with neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "fair",
+          "basis": "verified",
+          "rawText": "fair with neutral undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "fair with neutral undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "fair with neutral undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "elf-hydrating-camo--light-ivory",
+      "productId": "elf-hydrating-camo",
+      "name": "Light Ivory",
+      "description": "light with neutral warm undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "light",
+          "basis": "verified",
+          "rawText": "light with neutral warm undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "light with neutral warm undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "light with neutral warm undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "elf-hydrating-camo--light-sand",
+      "productId": "elf-hydrating-camo",
+      "name": "Light Sand",
+      "description": "light with neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "light",
+          "basis": "verified",
+          "rawText": "light with neutral undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "light with neutral undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "light with neutral undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "elf-hydrating-camo--light-peach",
+      "productId": "elf-hydrating-camo",
+      "name": "Light Peach",
+      "description": "light with rosy peach undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "light",
+          "basis": "verified",
+          "rawText": "light with rosy peach undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "elf-hydrating-camo--light-beige",
+      "productId": "elf-hydrating-camo",
+      "name": "Light Beige",
+      "description": "light with golden beige undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "light",
+          "basis": "verified",
+          "rawText": "light with golden beige undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "elf-hydrating-camo--medium-peach",
+      "productId": "elf-hydrating-camo",
+      "name": "Medium Peach",
+      "description": "medium with peach undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "medium",
+          "basis": "verified",
+          "rawText": "medium with peach undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "elf-hydrating-camo--medium-sand",
+      "productId": "elf-hydrating-camo",
+      "name": "Medium Sand",
+      "description": "medium with neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "medium",
+          "basis": "verified",
+          "rawText": "medium with neutral undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "medium with neutral undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "medium with neutral undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "elf-hydrating-camo--medium-beige",
+      "productId": "elf-hydrating-camo",
+      "name": "Medium Beige",
+      "description": "medium with golden beige undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "medium",
+          "basis": "verified",
+          "rawText": "medium with golden beige undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "elf-hydrating-camo--medium-neutral",
+      "productId": "elf-hydrating-camo",
+      "name": "Medium Neutral",
+      "description": "medium tan with warm undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "medium-tan",
+          "basis": "verified",
+          "rawText": "medium tan with warm undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "medium tan with warm undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "medium tan with warm undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "elf-hydrating-camo--medium-warm",
+      "productId": "elf-hydrating-camo",
+      "name": "Medium Warm",
+      "description": "medium tan with golden undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "medium-tan",
+          "basis": "verified",
+          "rawText": "medium tan with golden undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "elf-hydrating-camo--medium-golden",
+      "productId": "elf-hydrating-camo",
+      "name": "Medium Golden",
+      "description": "medium tan with golden beige undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "medium-tan",
+          "basis": "verified",
+          "rawText": "medium tan with golden beige undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "elf-hydrating-camo--tan-sand",
+      "productId": "elf-hydrating-camo",
+      "name": "Tan Sand",
+      "description": "tan with olive undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "tan",
+          "basis": "verified",
+          "rawText": "tan with olive undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Olive",
+          "basis": "verified",
+          "rawText": "tan with olive undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "elf-hydrating-camo--tan-walnut",
+      "productId": "elf-hydrating-camo",
+      "name": "Tan Walnut",
+      "description": "tan with cool neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "tan",
+          "basis": "verified",
+          "rawText": "tan with cool neutral undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "tan with cool neutral undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Cool",
+          "basis": "verified",
+          "rawText": "tan with cool neutral undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "elf-hydrating-camo--tan-latte",
+      "productId": "elf-hydrating-camo",
+      "name": "Tan Latte",
+      "description": "tan with warm-neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "tan",
+          "basis": "verified",
+          "rawText": "tan with warm-neutral undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "tan with warm-neutral undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "tan with warm-neutral undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "elf-hydrating-camo--tan-neutral",
+      "productId": "elf-hydrating-camo",
+      "name": "Tan Neutral",
+      "description": "tan with neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "tan",
+          "basis": "verified",
+          "rawText": "tan with neutral undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "tan with neutral undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "tan with neutral undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "elf-hydrating-camo--deep-olive",
+      "productId": "elf-hydrating-camo",
+      "name": "Deep Olive",
+      "description": "deep with golden olive undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "deep",
+          "basis": "verified",
+          "rawText": "deep with golden olive undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Olive",
+          "basis": "verified",
+          "rawText": "deep with golden olive undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "elf-hydrating-camo--deep-chestnut",
+      "productId": "elf-hydrating-camo",
+      "name": "Deep Chestnut",
+      "description": "deep with rich golden undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "deep",
+          "basis": "verified",
+          "rawText": "deep with rich golden undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "elf-hydrating-camo--deep-caramel",
+      "productId": "elf-hydrating-camo",
+      "name": "Deep Caramel",
+      "description": "deep with soy cool undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "deep",
+          "basis": "verified",
+          "rawText": "deep with soy cool undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Cool",
+          "basis": "verified",
+          "rawText": "deep with soy cool undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Cool",
+          "basis": "verified",
+          "rawText": "deep with soy cool undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "elf-hydrating-camo--deep-cinnamon",
+      "productId": "elf-hydrating-camo",
+      "name": "Deep Cinnamon",
+      "description": "deep with rosy cool undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "deep",
+          "basis": "verified",
+          "rawText": "deep with rosy cool undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Cool",
+          "basis": "verified",
+          "rawText": "deep with rosy cool undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Cool",
+          "basis": "verified",
+          "rawText": "deep with rosy cool undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "elf-hydrating-camo--rich-chocolate",
+      "productId": "elf-hydrating-camo",
+      "name": "Rich Chocolate",
+      "description": "rich with warm undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "rich",
+          "basis": "verified",
+          "rawText": "rich with warm undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "rich with warm undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "rich with warm undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "elf-hydrating-camo--rich-cocoa",
+      "productId": "elf-hydrating-camo",
+      "name": "Rich Cocoa",
+      "description": "rich with neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "rich",
+          "basis": "verified",
+          "rawText": "rich with neutral undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "rich with neutral undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "rich with neutral undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "elf-hydrating-camo--rich-walnut",
+      "productId": "elf-hydrating-camo",
+      "name": "Rich Walnut",
+      "description": "rich with neutral-warm undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "rich",
+          "basis": "verified",
+          "rawText": "rich with neutral-warm undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "rich with neutral-warm undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "rich with neutral-warm undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "elf-hydrating-camo--rich-ebony",
+      "productId": "elf-hydrating-camo",
+      "name": "Rich Ebony",
+      "description": "rich with cool-neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "rich",
+          "basis": "verified",
+          "rawText": "rich with cool-neutral undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "rich with cool-neutral undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Cool",
+          "basis": "verified",
+          "rawText": "rich with cool-neutral undertones",
+          "sourceUrl": "https://www.elfcosmetics.com/hydrating-camo-concealer/300166.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--106n",
+      "productId": "fenty-fluid-flex",
+      "name": "106N",
+      "description": "for fair skin tones with neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "fair",
+          "basis": "verified",
+          "rawText": "for fair skin tones with neutral undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for fair skin tones with neutral undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for fair skin tones with neutral undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--116c",
+      "productId": "fenty-fluid-flex",
+      "name": "116C",
+      "description": "for light skin tones with cool rosy undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "light",
+          "basis": "verified",
+          "rawText": "for light skin tones with cool rosy undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Cool",
+          "basis": "verified",
+          "rawText": "for light skin tones with cool rosy undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Cool",
+          "basis": "verified",
+          "rawText": "for light skin tones with cool rosy undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--126n",
+      "productId": "fenty-fluid-flex",
+      "name": "126N",
+      "description": "for light skin tones with neutral peach undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "light",
+          "basis": "verified",
+          "rawText": "for light skin tones with neutral peach undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for light skin tones with neutral peach undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for light skin tones with neutral peach undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--136n",
+      "productId": "fenty-fluid-flex",
+      "name": "136N",
+      "description": "for light skin tones with neutral warm undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "light",
+          "basis": "verified",
+          "rawText": "for light skin tones with neutral warm undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for light skin tones with neutral warm undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "for light skin tones with neutral warm undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--146n",
+      "productId": "fenty-fluid-flex",
+      "name": "146N",
+      "description": "for light skin tones with neutral cool undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "light",
+          "basis": "verified",
+          "rawText": "for light skin tones with neutral cool undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for light skin tones with neutral cool undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Cool",
+          "basis": "verified",
+          "rawText": "for light skin tones with neutral cool undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--156c",
+      "productId": "fenty-fluid-flex",
+      "name": "156C",
+      "description": "for light skin tones with cool undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "light",
+          "basis": "verified",
+          "rawText": "for light skin tones with cool undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Cool",
+          "basis": "verified",
+          "rawText": "for light skin tones with cool undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Cool",
+          "basis": "verified",
+          "rawText": "for light skin tones with cool undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--166n",
+      "productId": "fenty-fluid-flex",
+      "name": "166N",
+      "description": "for light skin tones with with neutral warm undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "light",
+          "basis": "verified",
+          "rawText": "for light skin tones with with neutral warm undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for light skin tones with with neutral warm undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "for light skin tones with with neutral warm undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--176c",
+      "productId": "fenty-fluid-flex",
+      "name": "176C",
+      "description": "for light skin tones with cool rosy undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "light",
+          "basis": "verified",
+          "rawText": "for light skin tones with cool rosy undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Cool",
+          "basis": "verified",
+          "rawText": "for light skin tones with cool rosy undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Cool",
+          "basis": "verified",
+          "rawText": "for light skin tones with cool rosy undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--186n",
+      "productId": "fenty-fluid-flex",
+      "name": "186N",
+      "description": "for light skin tones with neutral olive undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "light",
+          "basis": "verified",
+          "rawText": "for light skin tones with neutral olive undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Olive",
+          "basis": "verified",
+          "rawText": "for light skin tones with neutral olive undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for light skin tones with neutral olive undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--196n",
+      "productId": "fenty-fluid-flex",
+      "name": "196N",
+      "description": "for light skin tones with neutral peach undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "light",
+          "basis": "verified",
+          "rawText": "for light skin tones with neutral peach undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for light skin tones with neutral peach undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for light skin tones with neutral peach undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--206w",
+      "productId": "fenty-fluid-flex",
+      "name": "206W",
+      "description": "for light-medium skin tones with warm olive",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "light-medium",
+          "basis": "verified",
+          "rawText": "for light-medium skin tones with warm olive",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Olive",
+          "basis": "verified",
+          "rawText": "for light-medium skin tones with warm olive",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "for light-medium skin tones with warm olive",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--216n",
+      "productId": "fenty-fluid-flex",
+      "name": "216N",
+      "description": "for light-medium skin tones with neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "light-medium",
+          "basis": "verified",
+          "rawText": "for light-medium skin tones with neutral undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for light-medium skin tones with neutral undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for light-medium skin tones with neutral undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--226w",
+      "productId": "fenty-fluid-flex",
+      "name": "226W",
+      "description": "for light-medium skin tones with warm olive",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "light-medium",
+          "basis": "verified",
+          "rawText": "for light-medium skin tones with warm olive",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Olive",
+          "basis": "verified",
+          "rawText": "for light-medium skin tones with warm olive",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "for light-medium skin tones with warm olive",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--236n",
+      "productId": "fenty-fluid-flex",
+      "name": "236N",
+      "description": "for light-medium skin tones with neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "light-medium",
+          "basis": "verified",
+          "rawText": "for light-medium skin tones with neutral undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for light-medium skin tones with neutral undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for light-medium skin tones with neutral undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--246n",
+      "productId": "fenty-fluid-flex",
+      "name": "246N",
+      "description": "for light-medium skin tones with neutral warm",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "light-medium",
+          "basis": "verified",
+          "rawText": "for light-medium skin tones with neutral warm",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for light-medium skin tones with neutral warm",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "for light-medium skin tones with neutral warm",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--256w",
+      "productId": "fenty-fluid-flex",
+      "name": "256W",
+      "description": "for light-medium skin tones with warm undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "light-medium",
+          "basis": "verified",
+          "rawText": "for light-medium skin tones with warm undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "for light-medium skin tones with warm undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "for light-medium skin tones with warm undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--266c",
+      "productId": "fenty-fluid-flex",
+      "name": "266C",
+      "description": "for light-medium skin tones with cool rosy undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "light-medium",
+          "basis": "verified",
+          "rawText": "for light-medium skin tones with cool rosy undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Cool",
+          "basis": "verified",
+          "rawText": "for light-medium skin tones with cool rosy undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Cool",
+          "basis": "verified",
+          "rawText": "for light-medium skin tones with cool rosy undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--276n",
+      "productId": "fenty-fluid-flex",
+      "name": "276N",
+      "description": "for light-medium skin tones with neutral warm",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "light-medium",
+          "basis": "verified",
+          "rawText": "for light-medium skin tones with neutral warm",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for light-medium skin tones with neutral warm",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "for light-medium skin tones with neutral warm",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--286w",
+      "productId": "fenty-fluid-flex",
+      "name": "286W",
+      "description": "for light-medium skin tones with warm golden",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "light-medium",
+          "basis": "verified",
+          "rawText": "for light-medium skin tones with warm golden",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "for light-medium skin tones with warm golden",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "for light-medium skin tones with warm golden",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--296n",
+      "productId": "fenty-fluid-flex",
+      "name": "296N",
+      "description": "for light-medium skin tones with neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "light-medium",
+          "basis": "verified",
+          "rawText": "for light-medium skin tones with neutral undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for light-medium skin tones with neutral undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for light-medium skin tones with neutral undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--306n",
+      "productId": "fenty-fluid-flex",
+      "name": "306N",
+      "description": "for medium skin tones with neutral olive undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "medium",
+          "basis": "verified",
+          "rawText": "for medium skin tones with neutral olive undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Olive",
+          "basis": "verified",
+          "rawText": "for medium skin tones with neutral olive undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for medium skin tones with neutral olive undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--316n",
+      "productId": "fenty-fluid-flex",
+      "name": "316N",
+      "description": "for medium skin tones with neutral peach undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "medium",
+          "basis": "verified",
+          "rawText": "for medium skin tones with neutral peach undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for medium skin tones with neutral peach undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for medium skin tones with neutral peach undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--326n",
+      "productId": "fenty-fluid-flex",
+      "name": "326N",
+      "description": "for medium skin tones with neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "medium",
+          "basis": "verified",
+          "rawText": "for medium skin tones with neutral undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for medium skin tones with neutral undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for medium skin tones with neutral undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--336n",
+      "productId": "fenty-fluid-flex",
+      "name": "336N",
+      "description": "for medium skin tones with neutral peach undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "medium",
+          "basis": "verified",
+          "rawText": "for medium skin tones with neutral peach undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for medium skin tones with neutral peach undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for medium skin tones with neutral peach undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--346n",
+      "productId": "fenty-fluid-flex",
+      "name": "346N",
+      "description": "for medium skin tones with neutral golden undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "medium",
+          "basis": "verified",
+          "rawText": "for medium skin tones with neutral golden undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for medium skin tones with neutral golden undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for medium skin tones with neutral golden undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--356w",
+      "productId": "fenty-fluid-flex",
+      "name": "356W",
+      "description": "for medium skin tones with warm undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "medium",
+          "basis": "verified",
+          "rawText": "for medium skin tones with warm undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "for medium skin tones with warm undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "for medium skin tones with warm undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--366n",
+      "productId": "fenty-fluid-flex",
+      "name": "366N",
+      "description": "for medium skin tones with neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "medium",
+          "basis": "verified",
+          "rawText": "for medium skin tones with neutral undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for medium skin tones with neutral undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for medium skin tones with neutral undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--376n",
+      "productId": "fenty-fluid-flex",
+      "name": "376N",
+      "description": "for medium skin tones with neutral olive undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "medium",
+          "basis": "verified",
+          "rawText": "for medium skin tones with neutral olive undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Olive",
+          "basis": "verified",
+          "rawText": "for medium skin tones with neutral olive undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for medium skin tones with neutral olive undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--386w",
+      "productId": "fenty-fluid-flex",
+      "name": "386W",
+      "description": "for medium skin tones with warm undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "medium",
+          "basis": "verified",
+          "rawText": "for medium skin tones with warm undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "for medium skin tones with warm undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "for medium skin tones with warm undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--396n",
+      "productId": "fenty-fluid-flex",
+      "name": "396N",
+      "description": "for medium skin tones with neutral olive undertone",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "medium",
+          "basis": "verified",
+          "rawText": "for medium skin tones with neutral olive undertone",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Olive",
+          "basis": "verified",
+          "rawText": "for medium skin tones with neutral olive undertone",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for medium skin tones with neutral olive undertone",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--406n",
+      "productId": "fenty-fluid-flex",
+      "name": "406N",
+      "description": "for medium-deep skin tones with neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "medium-deep",
+          "basis": "verified",
+          "rawText": "for medium-deep skin tones with neutral undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for medium-deep skin tones with neutral undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for medium-deep skin tones with neutral undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--416w",
+      "productId": "fenty-fluid-flex",
+      "name": "416W",
+      "description": "for medium-deep skin tones with warm olive",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "medium-deep",
+          "basis": "verified",
+          "rawText": "for medium-deep skin tones with warm olive",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Olive",
+          "basis": "verified",
+          "rawText": "for medium-deep skin tones with warm olive",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "for medium-deep skin tones with warm olive",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--426w",
+      "productId": "fenty-fluid-flex",
+      "name": "426W",
+      "description": "for medium-deep skin tones with warm undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "medium-deep",
+          "basis": "verified",
+          "rawText": "for medium-deep skin tones with warm undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "for medium-deep skin tones with warm undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "for medium-deep skin tones with warm undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--436n",
+      "productId": "fenty-fluid-flex",
+      "name": "436N",
+      "description": "for medium-deep skin tones with neutral warm",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "medium-deep",
+          "basis": "verified",
+          "rawText": "for medium-deep skin tones with neutral warm",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for medium-deep skin tones with neutral warm",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "for medium-deep skin tones with neutral warm",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--446n",
+      "productId": "fenty-fluid-flex",
+      "name": "446N",
+      "description": "for medium-deep skin tones with neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "medium-deep",
+          "basis": "verified",
+          "rawText": "for medium-deep skin tones with neutral undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for medium-deep skin tones with neutral undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for medium-deep skin tones with neutral undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--456w",
+      "productId": "fenty-fluid-flex",
+      "name": "456W",
+      "description": "for medium-deep skin tones with warm golden",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "medium-deep",
+          "basis": "verified",
+          "rawText": "for medium-deep skin tones with warm golden",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "for medium-deep skin tones with warm golden",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "for medium-deep skin tones with warm golden",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--466",
+      "productId": "fenty-fluid-flex",
+      "name": "466",
+      "description": "for medium-deep skin tones with warm undertones",
+      "status": "needs_review",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "medium-deep",
+          "basis": "verified",
+          "rawText": "for medium-deep skin tones with warm undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "for medium-deep skin tones with warm undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "for medium-deep skin tones with warm undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--476n",
+      "productId": "fenty-fluid-flex",
+      "name": "476N",
+      "description": "for medium-deep skin tones with neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "medium-deep",
+          "basis": "verified",
+          "rawText": "for medium-deep skin tones with neutral undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for medium-deep skin tones with neutral undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for medium-deep skin tones with neutral undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--486w",
+      "productId": "fenty-fluid-flex",
+      "name": "486W",
+      "description": "for medium-deep skin tones with warm bronze",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "medium-deep",
+          "basis": "verified",
+          "rawText": "for medium-deep skin tones with warm bronze",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "for medium-deep skin tones with warm bronze",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "for medium-deep skin tones with warm bronze",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--496w",
+      "productId": "fenty-fluid-flex",
+      "name": "496W",
+      "description": "for medium-deep skin tones with warm golden undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "medium-deep",
+          "basis": "verified",
+          "rawText": "for medium-deep skin tones with warm golden undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "for medium-deep skin tones with warm golden undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "for medium-deep skin tones with warm golden undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--506w",
+      "productId": "fenty-fluid-flex",
+      "name": "506W",
+      "description": "for deep skin tones with warm undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "deep",
+          "basis": "verified",
+          "rawText": "for deep skin tones with warm undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "for deep skin tones with warm undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "for deep skin tones with warm undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--516w",
+      "productId": "fenty-fluid-flex",
+      "name": "516W",
+      "description": "for deep skin tones with warm bronze undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "deep",
+          "basis": "verified",
+          "rawText": "for deep skin tones with warm bronze undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "for deep skin tones with warm bronze undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "for deep skin tones with warm bronze undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--526n",
+      "productId": "fenty-fluid-flex",
+      "name": "526N",
+      "description": "for deep skin tones with neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "deep",
+          "basis": "verified",
+          "rawText": "for deep skin tones with neutral undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for deep skin tones with neutral undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for deep skin tones with neutral undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--536w",
+      "productId": "fenty-fluid-flex",
+      "name": "536W",
+      "description": "for deep skin tones with warm golden undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "deep",
+          "basis": "verified",
+          "rawText": "for deep skin tones with warm golden undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "for deep skin tones with warm golden undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "for deep skin tones with warm golden undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--546n",
+      "productId": "fenty-fluid-flex",
+      "name": "546N",
+      "description": "for deep skin tones with neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "deep",
+          "basis": "verified",
+          "rawText": "for deep skin tones with neutral undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for deep skin tones with neutral undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for deep skin tones with neutral undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--556n",
+      "productId": "fenty-fluid-flex",
+      "name": "556N",
+      "description": "for rich deep skin tones with neutral golden undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "rich-deep",
+          "basis": "verified",
+          "rawText": "for rich deep skin tones with neutral golden undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for rich deep skin tones with neutral golden undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for rich deep skin tones with neutral golden undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--566n",
+      "productId": "fenty-fluid-flex",
+      "name": "566N",
+      "description": "for rich deep skin tones with neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "rich-deep",
+          "basis": "verified",
+          "rawText": "for rich deep skin tones with neutral undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for rich deep skin tones with neutral undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for rich deep skin tones with neutral undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--576w",
+      "productId": "fenty-fluid-flex",
+      "name": "576W",
+      "description": "for rich deep skin tones with warm undertone",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "rich-deep",
+          "basis": "verified",
+          "rawText": "for rich deep skin tones with warm undertone",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "for rich deep skin tones with warm undertone",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "for rich deep skin tones with warm undertone",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--586w",
+      "productId": "fenty-fluid-flex",
+      "name": "586W",
+      "description": "for rich deep skin tones with warm bronze undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "rich-deep",
+          "basis": "verified",
+          "rawText": "for rich deep skin tones with warm bronze undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "for rich deep skin tones with warm bronze undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "for rich deep skin tones with warm bronze undertones",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "fenty-fluid-flex--596n",
+      "productId": "fenty-fluid-flex",
+      "name": "596N",
+      "description": "for rich deep skin tones with neutral undertone",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "rich-deep",
+          "basis": "verified",
+          "rawText": "for rich deep skin tones with neutral undertone",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for rich deep skin tones with neutral undertone",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "temperature",
+          "value": "Neutral",
+          "basis": "verified",
+          "rawText": "for rich deep skin tones with neutral undertone",
+          "sourceUrl": "https://fentybeauty.com/products/pro-filtr-fluid-flex-natural-matte-longwear-foundation-386w",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "rare-soft-pinch-liquid--bliss",
+      "productId": "rare-soft-pinch-liquid",
+      "name": "Bliss",
+      "description": "nude pink (matte)",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "nude pink (matte)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "color_family",
+          "value": "Nude",
+          "basis": "verified",
+          "rawText": "nude pink (matte)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "color_family",
+          "value": "Pink",
+          "basis": "verified",
+          "rawText": "nude pink (matte)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "rare-soft-pinch-liquid--love",
+      "productId": "rare-soft-pinch-liquid",
+      "name": "Love",
+      "description": "terracotta (matte)",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "terracotta (matte)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "color_family",
+          "value": "Terracotta",
+          "basis": "verified",
+          "rawText": "terracotta (matte)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "rare-soft-pinch-liquid--grace",
+      "productId": "rare-soft-pinch-liquid",
+      "name": "Grace",
+      "description": "bright rose mauve (matte)",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "bright rose mauve (matte)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "color_family",
+          "value": "Rose",
+          "basis": "verified",
+          "rawText": "bright rose mauve (matte)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "color_family",
+          "value": "Mauve",
+          "basis": "verified",
+          "rawText": "bright rose mauve (matte)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "saturation",
+          "value": "Bright / saturated",
+          "basis": "verified",
+          "rawText": "bright rose mauve (matte)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "rare-soft-pinch-liquid--faith",
+      "productId": "rare-soft-pinch-liquid",
+      "name": "Faith",
+      "description": "deep berry (matte)",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "deep berry (matte)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "color_family",
+          "value": "Berry",
+          "basis": "verified",
+          "rawText": "deep berry (matte)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "rare-soft-pinch-liquid--joy",
+      "productId": "rare-soft-pinch-liquid",
+      "name": "Joy",
+      "description": "muted peach (dewy)",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Dewy",
+          "basis": "verified",
+          "rawText": "muted peach (dewy)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "color_family",
+          "value": "Peach",
+          "basis": "verified",
+          "rawText": "muted peach (dewy)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "saturation",
+          "value": "Muted",
+          "basis": "verified",
+          "rawText": "muted peach (dewy)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "rare-soft-pinch-liquid--happy",
+      "productId": "rare-soft-pinch-liquid",
+      "name": "Happy",
+      "description": "cool pink (dewy)",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Dewy",
+          "basis": "verified",
+          "rawText": "cool pink (dewy)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "color_family",
+          "value": "Pink",
+          "basis": "verified",
+          "rawText": "cool pink (dewy)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "color_temperature",
+          "value": "Cool",
+          "basis": "verified",
+          "rawText": "cool pink (dewy)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "rare-soft-pinch-liquid--lucky",
+      "productId": "rare-soft-pinch-liquid",
+      "name": "Lucky",
+      "description": "hot pink (dewy)",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Dewy",
+          "basis": "verified",
+          "rawText": "hot pink (dewy)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "color_family",
+          "value": "Pink",
+          "basis": "verified",
+          "rawText": "hot pink (dewy)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "saturation",
+          "value": "Bright / saturated",
+          "basis": "verified",
+          "rawText": "hot pink (dewy)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "rare-soft-pinch-liquid--grateful",
+      "productId": "rare-soft-pinch-liquid",
+      "name": "Grateful",
+      "description": "true red (dewy)",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Dewy",
+          "basis": "verified",
+          "rawText": "true red (dewy)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "color_family",
+          "value": "Red",
+          "basis": "verified",
+          "rawText": "true red (dewy)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "rare-soft-pinch-liquid--hope",
+      "productId": "rare-soft-pinch-liquid",
+      "name": "Hope",
+      "description": "nude mauve (dewy)",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Dewy",
+          "basis": "verified",
+          "rawText": "nude mauve (dewy)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "color_family",
+          "value": "Nude",
+          "basis": "verified",
+          "rawText": "nude mauve (dewy)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "color_family",
+          "value": "Mauve",
+          "basis": "verified",
+          "rawText": "nude mauve (dewy)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "rare-soft-pinch-liquid--encourage",
+      "productId": "rare-soft-pinch-liquid",
+      "name": "Encourage",
+      "description": "soft neutral pink (dewy)",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Dewy",
+          "basis": "verified",
+          "rawText": "soft neutral pink (dewy)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "color_family",
+          "value": "Pink",
+          "basis": "verified",
+          "rawText": "soft neutral pink (dewy)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "rare-soft-pinch-liquid--believe",
+      "productId": "rare-soft-pinch-liquid",
+      "name": "Believe",
+      "description": "true mauve (dewy)",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Dewy",
+          "basis": "verified",
+          "rawText": "true mauve (dewy)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "color_family",
+          "value": "Mauve",
+          "basis": "verified",
+          "rawText": "true mauve (dewy)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "rare-soft-pinch-liquid--worth",
+      "productId": "rare-soft-pinch-liquid",
+      "name": "Worth",
+      "description": "true rose (dewy)",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Dewy",
+          "basis": "verified",
+          "rawText": "true rose (dewy)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "color_family",
+          "value": "Rose",
+          "basis": "verified",
+          "rawText": "true rose (dewy)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "rare-soft-pinch-liquid--virtue",
+      "productId": "rare-soft-pinch-liquid",
+      "name": "Virtue",
+      "description": "beige peach (dewy)",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Dewy",
+          "basis": "verified",
+          "rawText": "beige peach (dewy)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "color_family",
+          "value": "Peach",
+          "basis": "verified",
+          "rawText": "beige peach (dewy)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "rare-soft-pinch-liquid--adore",
+      "productId": "rare-soft-pinch-liquid",
+      "name": "Adore",
+      "description": "bright pink (dewy)",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Dewy",
+          "basis": "verified",
+          "rawText": "bright pink (dewy)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "color_family",
+          "value": "Pink",
+          "basis": "verified",
+          "rawText": "bright pink (dewy)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "saturation",
+          "value": "Bright / saturated",
+          "basis": "verified",
+          "rawText": "bright pink (dewy)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "rare-soft-pinch-liquid--spirited",
+      "productId": "rare-soft-pinch-liquid",
+      "name": "Spirited",
+      "description": "mid-tone violet (dewy)",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Dewy",
+          "basis": "verified",
+          "rawText": "mid-tone violet (dewy)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "color_family",
+          "value": "Violet",
+          "basis": "verified",
+          "rawText": "mid-tone violet (dewy)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "rare-soft-pinch-liquid--resilience",
+      "productId": "rare-soft-pinch-liquid",
+      "name": "Resilience",
+      "description": "warm chestnut (dewy)",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Dewy",
+          "basis": "verified",
+          "rawText": "warm chestnut (dewy)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "color_family",
+          "value": "Chestnut",
+          "basis": "verified",
+          "rawText": "warm chestnut (dewy)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "color_temperature",
+          "value": "Warm",
+          "basis": "verified",
+          "rawText": "warm chestnut (dewy)",
+          "sourceUrl": "https://www.rarebeauty.com/products/soft-pinch-liquid-blush",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--722-dreamy-dahlia-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "722 Dreamy Dahlia velvet finish",
+      "description": "722 Dreamy Dahlia velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "722 Dreamy Dahlia velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--720-icone-veil-finish",
+      "productId": "dior-rouge-dior",
+      "name": "720 Icone veil finish",
+      "description": "720 Icone veil finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Veil",
+          "basis": "verified",
+          "rawText": "720 Icone veil finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "opacity",
+          "value": "Sheer",
+          "basis": "verified",
+          "rawText": "Veil is the most sheer and lightweight of the three",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--777-fahrenheit-veil-finish",
+      "productId": "dior-rouge-dior",
+      "name": "777 Fahrenheit veil finish",
+      "description": "777 Fahrenheit veil finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Veil",
+          "basis": "verified",
+          "rawText": "777 Fahrenheit veil finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "opacity",
+          "value": "Sheer",
+          "basis": "verified",
+          "rawText": "Veil is the most sheer and lightweight of the three",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--626-mousseline-veil-finish",
+      "productId": "dior-rouge-dior",
+      "name": "626 Mousseline veil finish",
+      "description": "626 Mousseline veil finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Veil",
+          "basis": "verified",
+          "rawText": "626 Mousseline veil finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "opacity",
+          "value": "Sheer",
+          "basis": "verified",
+          "rawText": "Veil is the most sheer and lightweight of the three",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--688-voile-de-rose-veil-finish",
+      "productId": "dior-rouge-dior",
+      "name": "688 Voile de Rose veil finish",
+      "description": "688 Voile de Rose veil finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Veil",
+          "basis": "verified",
+          "rawText": "688 Voile de Rose veil finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "opacity",
+          "value": "Sheer",
+          "basis": "verified",
+          "rawText": "Veil is the most sheer and lightweight of the three",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--860-bagatelle-veil-finish",
+      "productId": "dior-rouge-dior",
+      "name": "860 Bagatelle veil finish",
+      "description": "860 Bagatelle veil finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Veil",
+          "basis": "verified",
+          "rawText": "860 Bagatelle veil finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "opacity",
+          "value": "Sheer",
+          "basis": "verified",
+          "rawText": "Veil is the most sheer and lightweight of the three",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--080-red-smile-satiny-finish",
+      "productId": "dior-rouge-dior",
+      "name": "080 Red Smile satiny finish",
+      "description": "080 Red Smile satiny finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Satin",
+          "basis": "verified",
+          "rawText": "080 Red Smile satiny finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "opacity",
+          "value": "High coverage",
+          "basis": "verified",
+          "rawText": "The satin finish enhances lips with a high-coverage luminous finish.",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--100-nude-look-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "100 Nude Look velvet finish",
+      "description": "100 Nude Look velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "100 Nude Look velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--100-nude-look-satiny-finish",
+      "productId": "dior-rouge-dior",
+      "name": "100 Nude Look satiny finish",
+      "description": "100 Nude Look satiny finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Satin",
+          "basis": "verified",
+          "rawText": "100 Nude Look satiny finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "opacity",
+          "value": "High coverage",
+          "basis": "verified",
+          "rawText": "The satin finish enhances lips with a high-coverage luminous finish.",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--200-nude-touch-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "200 Nude Touch velvet finish",
+      "description": "200 Nude Touch velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "200 Nude Touch velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--200-nude-touch-satin-finish",
+      "productId": "dior-rouge-dior",
+      "name": "200 Nude Touch satin finish",
+      "description": "200 Nude Touch satin finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Satin",
+          "basis": "verified",
+          "rawText": "200 Nude Touch satin finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "opacity",
+          "value": "High coverage",
+          "basis": "verified",
+          "rawText": "The satin finish enhances lips with a high-coverage luminous finish.",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--217-corolle-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "217 Corolle velvet finish",
+      "description": "217 Corolle velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "217 Corolle velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--218-rose-rose-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "218 Rose Rose velvet finish",
+      "description": "218 Rose Rose velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "218 Rose Rose velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--219-rose-montaigne-satiny-finish",
+      "productId": "dior-rouge-dior",
+      "name": "219 Rose Montaigne satiny finish",
+      "description": "219 Rose Montaigne satiny finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Satin",
+          "basis": "verified",
+          "rawText": "219 Rose Montaigne satiny finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "opacity",
+          "value": "High coverage",
+          "basis": "verified",
+          "rawText": "The satin finish enhances lips with a high-coverage luminous finish.",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--220-beige-couture-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "220 Beige Couture velvet finish",
+      "description": "220 Beige Couture velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "220 Beige Couture velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--221-frou-frou-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "221 Frou-frou velvet finish",
+      "description": "221 Frou-frou velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "221 Frou-frou velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--228-mythique-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "228 Mythique velvet finish",
+      "description": "228 Mythique velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "228 Mythique velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--240-j-adore-satiny-finish",
+      "productId": "dior-rouge-dior",
+      "name": "240 J'adore satiny finish",
+      "description": "240 J'adore satiny finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Satin",
+          "basis": "verified",
+          "rawText": "240 J'adore satiny finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "opacity",
+          "value": "High coverage",
+          "basis": "verified",
+          "rawText": "The satin finish enhances lips with a high-coverage luminous finish.",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--277-osee-satiny-finish",
+      "productId": "dior-rouge-dior",
+      "name": "277 Osée satiny finish",
+      "description": "277 Osée satiny finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Satin",
+          "basis": "verified",
+          "rawText": "277 Osée satiny finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "opacity",
+          "value": "High coverage",
+          "basis": "verified",
+          "rawText": "The satin finish enhances lips with a high-coverage luminous finish.",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--028-actrice-satiny-finish",
+      "productId": "dior-rouge-dior",
+      "name": "028 Actrice satiny finish",
+      "description": "028 Actrice satiny finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Satin",
+          "basis": "verified",
+          "rawText": "028 Actrice satiny finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "opacity",
+          "value": "High coverage",
+          "basis": "verified",
+          "rawText": "The satin finish enhances lips with a high-coverage luminous finish.",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--300-nude-style-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "300 Nude Style velvet finish",
+      "description": "300 Nude Style velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "300 Nude Style velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--314-grand-bal-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "314 Grand Bal velvet finish",
+      "description": "314 Grand Bal velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "314 Grand Bal velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--320-virtuose-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "320 Virtuose velvet finish",
+      "description": "320 Virtuose velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "320 Virtuose velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--360-souffle-de-rose-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "360 Souffle de Rose velvet finish",
+      "description": "360 Souffle de Rose velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "360 Souffle de Rose velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--365-new-world-satiny-finish",
+      "productId": "dior-rouge-dior",
+      "name": "365 New World satiny finish",
+      "description": "365 New World satiny finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Satin",
+          "basis": "verified",
+          "rawText": "365 New World satiny finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "opacity",
+          "value": "High coverage",
+          "basis": "verified",
+          "rawText": "The satin finish enhances lips with a high-coverage luminous finish.",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--400-nude-line-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "400 Nude Line velvet finish",
+      "description": "400 Nude Line velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "400 Nude Line velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--413-destiny-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "413 Destiny velvet finish",
+      "description": "413 Destiny velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "413 Destiny velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--429-rose-blues-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "429 Rose Blues velvet finish",
+      "description": "429 Rose Blues velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "429 Rose Blues velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--434-promenade-satiny-finish",
+      "productId": "dior-rouge-dior",
+      "name": "434 Promenade satiny finish",
+      "description": "434 Promenade satiny finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Satin",
+          "basis": "verified",
+          "rawText": "434 Promenade satiny finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "opacity",
+          "value": "High coverage",
+          "basis": "verified",
+          "rawText": "The satin finish enhances lips with a high-coverage luminous finish.",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--453-adoree-satiny-finish",
+      "productId": "dior-rouge-dior",
+      "name": "453 Adorée satiny finish",
+      "description": "453 Adorée satiny finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Satin",
+          "basis": "verified",
+          "rawText": "453 Adorée satiny finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "opacity",
+          "value": "High coverage",
+          "basis": "verified",
+          "rawText": "The satin finish enhances lips with a high-coverage luminous finish.",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--458-paris-satiny-finish",
+      "productId": "dior-rouge-dior",
+      "name": "458 Paris satiny finish",
+      "description": "458 Paris satiny finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Satin",
+          "basis": "verified",
+          "rawText": "458 Paris satiny finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "opacity",
+          "value": "High coverage",
+          "basis": "verified",
+          "rawText": "The satin finish enhances lips with a high-coverage luminous finish.",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--500-nude-soul-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "500 Nude Soul velvet finish",
+      "description": "500 Nude Soul velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "500 Nude Soul velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--505-sensual-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "505 Sensual velvet finish",
+      "description": "505 Sensual velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "505 Sensual velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--520-feel-good-satiny-finish",
+      "productId": "dior-rouge-dior",
+      "name": "520 Feel Good satiny finish",
+      "description": "520 Feel Good satiny finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Satin",
+          "basis": "verified",
+          "rawText": "520 Feel Good satiny finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "opacity",
+          "value": "High coverage",
+          "basis": "verified",
+          "rawText": "The satin finish enhances lips with a high-coverage luminous finish.",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--525-cherie-satiny-finish",
+      "productId": "dior-rouge-dior",
+      "name": "525 Chérie satiny finish",
+      "description": "525 Chérie satiny finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Satin",
+          "basis": "verified",
+          "rawText": "525 Chérie satiny finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "opacity",
+          "value": "High coverage",
+          "basis": "verified",
+          "rawText": "The satin finish enhances lips with a high-coverage luminous finish.",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--539-terra-bella-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "539 Terra Bella velvet finish",
+      "description": "539 Terra Bella velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "539 Terra Bella velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--556-aimee-satiny-finish",
+      "productId": "dior-rouge-dior",
+      "name": "556 Aimée satiny finish",
+      "description": "556 Aimée satiny finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Satin",
+          "basis": "verified",
+          "rawText": "556 Aimée satiny finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "opacity",
+          "value": "High coverage",
+          "basis": "verified",
+          "rawText": "The satin finish enhances lips with a high-coverage luminous finish.",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--558-grace-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "558 Grace velvet finish",
+      "description": "558 Grace velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "558 Grace velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--581-virevolte-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "581 Virevolte velvet finish",
+      "description": "581 Virevolte velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "581 Virevolte velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--624-verone-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "624 Vérone velvet finish",
+      "description": "624 Vérone velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "624 Vérone velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--625-mitzah-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "625 Mitzah velvet finish",
+      "description": "625 Mitzah velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "625 Mitzah velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--644-sydney-satiny-finish",
+      "productId": "dior-rouge-dior",
+      "name": "644 Sydney satiny finish",
+      "description": "644 Sydney satiny finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Satin",
+          "basis": "verified",
+          "rawText": "644 Sydney satiny finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "opacity",
+          "value": "High coverage",
+          "basis": "verified",
+          "rawText": "The satin finish enhances lips with a high-coverage luminous finish.",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--666-rouge-en-diable-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "666 Rouge en Diable velvet finish",
+      "description": "666 Rouge en Diable velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "666 Rouge en Diable velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--678-culte-satiny-finish",
+      "productId": "dior-rouge-dior",
+      "name": "678 Culte satiny finish",
+      "description": "678 Culte satiny finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Satin",
+          "basis": "verified",
+          "rawText": "678 Culte satiny finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "opacity",
+          "value": "High coverage",
+          "basis": "verified",
+          "rawText": "The satin finish enhances lips with a high-coverage luminous finish.",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--683-rendez-vous-satiny-finish",
+      "productId": "dior-rouge-dior",
+      "name": "683 Rendez-vous satiny finish",
+      "description": "683 Rendez-vous satiny finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Satin",
+          "basis": "verified",
+          "rawText": "683 Rendez-vous satiny finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "opacity",
+          "value": "High coverage",
+          "basis": "verified",
+          "rawText": "The satin finish enhances lips with a high-coverage luminous finish.",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--720-icone-satiny-finish",
+      "productId": "dior-rouge-dior",
+      "name": "720 Icone satiny finish",
+      "description": "720 Icone satiny finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Satin",
+          "basis": "verified",
+          "rawText": "720 Icone satiny finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "opacity",
+          "value": "High coverage",
+          "basis": "verified",
+          "rawText": "The satin finish enhances lips with a high-coverage luminous finish.",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--720-icone-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "720 Icone velvet finish",
+      "description": "720 Icone velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "720 Icone velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--724-tendresse-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "724 Tendresse velvet finish",
+      "description": "724 Tendresse velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "724 Tendresse velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--737-mystere-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "737 Mystère velvet finish",
+      "description": "737 Mystère velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "737 Mystère velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--743-rouge-zinnia-satiny-finish",
+      "productId": "dior-rouge-dior",
+      "name": "743 Rouge Zinnia satiny finish",
+      "description": "743 Rouge Zinnia satiny finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Satin",
+          "basis": "verified",
+          "rawText": "743 Rouge Zinnia satiny finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "opacity",
+          "value": "High coverage",
+          "basis": "verified",
+          "rawText": "The satin finish enhances lips with a high-coverage luminous finish.",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--755-rouge-saga-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "755 Rouge Saga velvet finish",
+      "description": "755 Rouge Saga velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "755 Rouge Saga velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--760-favorite-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "760 Favorite velvet finish",
+      "description": "760 Favorite velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "760 Favorite velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--764-rouge-gipsy-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "764 Rouge Gipsy velvet finish",
+      "description": "764 Rouge Gipsy velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "764 Rouge Gipsy velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--766-rose-harpers-satiny-finish",
+      "productId": "dior-rouge-dior",
+      "name": "766 Rose Harpers satiny finish",
+      "description": "766 Rose Harpers satiny finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Satin",
+          "basis": "verified",
+          "rawText": "766 Rose Harpers satiny finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "opacity",
+          "value": "High coverage",
+          "basis": "verified",
+          "rawText": "The satin finish enhances lips with a high-coverage luminous finish.",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--771-radiant-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "771 Radiant velvet finish",
+      "description": "771 Radiant velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "771 Radiant velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--772-classic-rosewood-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "772 Classic Rosewood velvet finish",
+      "description": "772 Classic Rosewood velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "772 Classic Rosewood velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--777-fahrenheit-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "777 Fahrenheit velvet finish",
+      "description": "777 Fahrenheit velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "777 Fahrenheit velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--784-rouge-rose-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "784 Rouge Rose velvet finish",
+      "description": "784 Rouge Rose velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "784 Rouge Rose velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--814-rouge-atelier-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "814 Rouge Atelier velvet finish",
+      "description": "814 Rouge Atelier velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "814 Rouge Atelier velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--818-be-loved-satiny-finish",
+      "productId": "dior-rouge-dior",
+      "name": "818 Be Loved satiny finish",
+      "description": "818 Be Loved satiny finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Satin",
+          "basis": "verified",
+          "rawText": "818 Be Loved satiny finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "opacity",
+          "value": "High coverage",
+          "basis": "verified",
+          "rawText": "The satin finish enhances lips with a high-coverage luminous finish.",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--824-saint-germain-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "824 Saint Germain velvet finish",
+      "description": "824 Saint Germain velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "824 Saint Germain velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--840-rayonnante-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "840 Rayonnante velvet finish",
+      "description": "840 Rayonnante velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "840 Rayonnante velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--844-trafalgar-satiny-finish",
+      "productId": "dior-rouge-dior",
+      "name": "844 Trafalgar satiny finish",
+      "description": "844 Trafalgar satiny finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Satin",
+          "basis": "verified",
+          "rawText": "844 Trafalgar satiny finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "opacity",
+          "value": "High coverage",
+          "basis": "verified",
+          "rawText": "The satin finish enhances lips with a high-coverage luminous finish.",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--846-concorde-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "846 Concorde velvet finish",
+      "description": "846 Concorde velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "846 Concorde velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--849-rouge-cinema-satin-finish",
+      "productId": "dior-rouge-dior",
+      "name": "849 Rouge Cinema satin finish",
+      "description": "849 Rouge Cinema satin finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Satin",
+          "basis": "verified",
+          "rawText": "849 Rouge Cinema satin finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "opacity",
+          "value": "High coverage",
+          "basis": "verified",
+          "rawText": "The satin finish enhances lips with a high-coverage luminous finish.",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--854-rouge-shanghai-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "854 Rouge Shanghai velvet finish",
+      "description": "854 Rouge Shanghai velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "854 Rouge Shanghai velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--866-together-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "866 Together velvet finish",
+      "description": "866 Together velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "866 Together velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--888-strong-red-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "888 Strong Red velvet finish",
+      "description": "888 Strong Red velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "888 Strong Red velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--964-ambitious-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "964 Ambitious velvet finish",
+      "description": "964 Ambitious velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "964 Ambitious velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--999-satiny-finish",
+      "productId": "dior-rouge-dior",
+      "name": "999 satiny finish",
+      "description": "999 satiny finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Satin",
+          "basis": "verified",
+          "rawText": "999 satiny finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        },
+        {
+          "field": "opacity",
+          "value": "High coverage",
+          "basis": "verified",
+          "rawText": "The satin finish enhances lips with a high-coverage luminous finish.",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "dior-rouge-dior--999-velvet-finish",
+      "productId": "dior-rouge-dior",
+      "name": "999 velvet finish",
+      "description": "999 velvet finish",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "rawText": "999 velvet finish",
+          "sourceUrl": "https://www.dior.com/en_us/beauty/products/rouge-dior-Y0356009.html",
+          "checkedOn": "2026-11-13"
+        }
+      ]
+    }
+  ]
+}

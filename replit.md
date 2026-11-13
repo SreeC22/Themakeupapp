@@ -5,6 +5,9 @@ Browser-first makeup discovery, public color education and an evidence-aware web
 ## Run & Operate
 
 - `pnpm --filter @workspace/neu-website test` — preview state, evidence and browsing regression tests
+- `pnpm --filter @workspace/scripts run neu:test` — pure source-evidence/matching safeguards
+- `pnpm --filter @workspace/scripts run neu:db:test` — normalized development catalog integrity
+- `pnpm --filter @workspace/scripts run neu:api:test` — actual API checks through the shared proxy
 - `pnpm --filter @workspace/neu-website typecheck` — website typecheck
 - `PORT=5173 BASE_PATH=/ pnpm --filter @workspace/neu-website build` — standalone website build
 - `pnpm --filter @workspace/api-server run dev` — run the existing API service
@@ -33,6 +36,7 @@ Browser-first makeup discovery, public color education and an evidence-aware web
 - `docs/NEU_WEB_MVP_SPEC.md`: preserved owner-provided web MVP specification.
 - `docs/MVP_ARCHITECTURE.md`, `docs/DECISIONS.md`: reuse plan and current stage decisions.
 - `docs/QA_TEST_PLAN.md`: actual checks, results and gaps.
+- `docs/STAGE_2_REQUIREMENTS.md`, `docs/STAGE_2_IMPLEMENTATION.md`, `docs/STAGE_2_QA.md`: newer scope, coverage and current verification.
 - `docs/neu-handoff.md`: source locations, storage and GitHub handoff.
 
 ## Architecture decisions
@@ -41,7 +45,7 @@ See `docs/DECISIONS.md`. The GitHub native/static repository and this Replit wor
 
 ## Product
 
-The Stage 1 preview has a local anonymous profile, source-linked product exploration, comparison, local saves and private review drafts. Real member features and verified shade matching are not connected. Stage and release boundaries are documented in `docs/RELEASE_CHECKLIST.md`.
+Stage 2 extends the accepted Stage 1 with known-shade/manual onboarding, one editable local profile, saved category preferences, a normalized catalog and source-explained candidates. Descriptor alignment is not an independently verified exact shade match. Real member accounts/public community remain unavailable; community requires 500+ registrations and owner approval. Selected traits are processed transiently by the API, not stored as server profiles. Existing owner Supabase and production data remain untouched. Stop for stage review; no remote push or deploy without approval.
 
 ## Gotchas
 

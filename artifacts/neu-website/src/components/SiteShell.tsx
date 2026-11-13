@@ -5,7 +5,6 @@ import { Link, useLocation } from "wouter";
 const primaryLinks = [
   { href: "/", label: "Home" },
   { href: "/results", label: "Explore" },
-  { href: "/community", label: "Community" },
   { href: "/learn", label: "Learn" },
   { href: "/saved", label: "Saved" },
 ];
@@ -47,7 +46,6 @@ export function SiteFooter() {
         <Link className="footer-link" href="/profile">Skin profile</Link>
         <Link className="footer-link" href="/saved">Saved</Link>
         <Link className="footer-link" href="/review/new">Local review draft</Link>
-        <Link className="footer-link" href="/community">Community</Link>
         <Link className="footer-link" href="/design-guide">Design guide</Link>
       </nav>
     </footer>

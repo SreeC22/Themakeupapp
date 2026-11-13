@@ -6,11 +6,15 @@
  * OpenAPI spec version: 0.1.0
  */
 import {
+  useMutation,
   useQuery
 } from '@tanstack/react-query';
 import type {
+  MutationFunction,
   QueryFunction,
   QueryKey,
+  UseMutationOptions,
+  UseMutationResult,
   UseQueryOptions,
   UseQueryResult
 } from '@tanstack/react-query';
@@ -27,11 +31,14 @@ import type {
   GetCatalogCountsParams,
   GetCatalogTaxonomy200,
   HealthStatus,
-  ListCatalogBrandsParams
+  ListCatalogBrandsParams,
+  NeuCatalog,
+  NeuProfileInput,
+  NeuRecommendations
 } from './api.schemas';
 
 import { customFetch } from '../custom-fetch';
-import type { ErrorType } from '../custom-fetch';
+import type { ErrorType , BodyType } from '../custom-fetch';
 
 type AwaitedInput<T> = PromiseLike<T> | T;
 
@@ -56,6 +63,171 @@ const withQueryKey = <T extends object, K>(query: T, queryKey: K): T & { queryKe
   }
   return result;
 };
+
+export const getGetNeuCatalogUrl = () => {
+
+
+
+
+  return `/api/neu/catalog`
+}
+
+/**
+ * @summary Reviewed US product lines and source-backed shade observations, never live stock
+ */
+export const getNeuCatalog = async ( options?: Parameters<typeof customFetch>[1]): Promise<NeuCatalog> => {
+
+  return customFetch<NeuCatalog>(getGetNeuCatalogUrl(),
+  {
+    ...options,
+    method: 'GET'
+
+
+  }
+);}
+
+
+
+
+
+export const getGetNeuCatalogQueryKey = () => {
+    return [
+    `/api/neu/catalog`
+    ] as const;
+    }
+
+
+export const getGetNeuCatalogQueryOptions = <TData = Awaited<ReturnType<typeof getNeuCatalog>>, TError = ErrorType<CatalogUnavailableResponse>>( options?: { query?:UseQueryOptions<Awaited<ReturnType<typeof getNeuCatalog>>, TError, TData>, request?: SecondParameter<typeof customFetch>}
+) => {
+
+const {query: queryOptions, request: requestOptions} = options ?? {};
+
+  const queryKey =  queryOptions?.queryKey ?? getGetNeuCatalogQueryKey();
+
+
+
+    const queryFn: QueryFunction<Awaited<ReturnType<typeof getNeuCatalog>>> = ({ signal }) => getNeuCatalog({ signal, ...requestOptions });
+
+
+
+
+
+   return  { queryKey, queryFn, ...queryOptions} as UseQueryOptions<Awaited<ReturnType<typeof getNeuCatalog>>, TError, TData> & { queryKey: QueryKey }
+}
+
+export type GetNeuCatalogQueryResult = NonNullable<Awaited<ReturnType<typeof getNeuCatalog>>>
+export type GetNeuCatalogQueryError = ErrorType<CatalogUnavailableResponse>
+
+
+/**
+ * @summary Reviewed US product lines and source-backed shade observations, never live stock
+ */
+
+export function useGetNeuCatalog<TData = Awaited<ReturnType<typeof getNeuCatalog>>, TError = ErrorType<CatalogUnavailableResponse>>(
+  options?: { query?:UseQueryOptions<Awaited<ReturnType<typeof getNeuCatalog>>, TError, TData>, request?: SecondParameter<typeof customFetch>}
+
+ ):  UseQueryResult<TData, TError> & { queryKey: QueryKey } {
+
+  const queryOptions = getGetNeuCatalogQueryOptions(options)
+
+  const query = useQuery(queryOptions) as  UseQueryResult<TData, TError> & { queryKey: QueryKey };
+
+  return withQueryKey(query, queryOptions.queryKey);
+}
+
+
+
+
+
+
+
+export const getRecommendNeuShadesUrl = () => {
+
+
+
+
+  return `/api/neu/recommendations`
+}
+
+/**
+ * @summary Explainable descriptor-based candidates; submitted traits are not stored
+ */
+export const recommendNeuShades = async (neuProfileInput: NeuProfileInput, options?: Parameters<typeof customFetch>[1]): Promise<NeuRecommendations> => {
+
+    const getHeaders = (h?: NonNullable<RequestInit['headers']>): Record<string, string | readonly string[]> => {
+    if (!h) return {};
+    if (h instanceof Headers) return Object.fromEntries(h.entries());
+    if (Symbol.iterator in h) {
+      return Object.fromEntries(
+        Array.from(h as Iterable<Iterable<string>>, (entry) => Array.from(entry) as [string, string]),
+      );
+    }
+    const headers: Record<string, string | readonly string[]> = {};
+    for (const [name, value] of Object.entries<string | readonly string[] | undefined>(h)) {
+      if (value !== undefined) headers[name] = value;
+    }
+    return headers;
+  };
+return customFetch<NeuRecommendations>(getRecommendNeuShadesUrl(),
+  {
+    ...options,
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', ...getHeaders(options?.headers) },
+    body: JSON.stringify(neuProfileInput)
+  }
+);}
+
+
+
+
+
+export const getRecommendNeuShadesMutationKey = () => ['recommendNeuShades'] as const;
+
+export const getRecommendNeuShadesMutationOptions = <TError = ErrorType<CatalogBadRequestResponse | CatalogUnavailableResponse>,
+    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof recommendNeuShades>>, TError,RecommendNeuShadesMutationVariables, TContext>, request?: SecondParameter<typeof customFetch>}
+): UseMutationOptions<Awaited<ReturnType<typeof recommendNeuShades>>, TError,RecommendNeuShadesMutationVariables, TContext> => {
+
+const mutationKey = getRecommendNeuShadesMutationKey();
+const {mutation: mutationOptions, request: requestOptions} = options ?
+      options.mutation && 'mutationKey' in options.mutation && options.mutation.mutationKey ?
+      options
+      : {...options, mutation: {...options.mutation, mutationKey}}
+      : {mutation: { mutationKey, }, request: undefined};
+
+
+
+
+      const mutationFn: MutationFunction<Awaited<ReturnType<typeof recommendNeuShades>>, RecommendNeuShadesMutationVariables> = (props) => {
+          const {data} = props ?? {};
+
+          return  recommendNeuShades(data,requestOptions)
+        }
+
+
+
+
+
+
+  return  { mutationFn, ...mutationOptions }}
+
+    export type RecommendNeuShadesMutationResult = NonNullable<Awaited<ReturnType<typeof recommendNeuShades>>>
+    export type RecommendNeuShadesMutationBody = BodyType<NeuProfileInput>
+    export type RecommendNeuShadesMutationError = ErrorType<CatalogBadRequestResponse | CatalogUnavailableResponse>
+    export type RecommendNeuShadesMutationVariables = {data: BodyType<NeuProfileInput>}
+
+    /**
+ * @summary Explainable descriptor-based candidates; submitted traits are not stored
+ */
+export const useRecommendNeuShades = <TError = ErrorType<CatalogBadRequestResponse | CatalogUnavailableResponse>,
+    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof recommendNeuShades>>, TError,RecommendNeuShadesMutationVariables, TContext>, request?: SecondParameter<typeof customFetch>}
+ ): UseMutationResult<
+        Awaited<ReturnType<typeof recommendNeuShades>>,
+        TError,
+        RecommendNeuShadesMutationVariables,
+        TContext
+      > => {
+      return useMutation(getRecommendNeuShadesMutationOptions(options));
+    }
 
 export const getListCatalogBrandsUrl = (params?: ListCatalogBrandsParams,) => {
   const normalizedParams = new URLSearchParams();
@@ -134,6 +306,13 @@ export function useListCatalogBrands<TData = Awaited<ReturnType<typeof listCatal
 
   return withQueryKey(query, queryOptions.queryKey);
 }
+
+
+
+
+
+
+
 export const getGetCatalogBrandUrl = (brandId: string,) => {
 
 

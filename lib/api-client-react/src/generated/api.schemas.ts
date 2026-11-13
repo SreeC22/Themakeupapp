@@ -5,6 +5,266 @@
  * API specification
  * OpenAPI spec version: 0.1.0
  */
+export type NeuClaimBasis = typeof NeuClaimBasis[keyof typeof NeuClaimBasis];
+
+
+export const NeuClaimBasis = {
+  verified: 'verified',
+  estimate: 'estimate',
+  user_report: 'user_report',
+} as const;
+
+export interface NeuClaim {
+  field: string;
+  value: string;
+  basis: NeuClaimBasis;
+  sourceUrl: string;
+  checkedOn: string;
+  rawText: string;
+}
+
+export type NeuBrandTier = typeof NeuBrandTier[keyof typeof NeuBrandTier];
+
+
+export const NeuBrandTier = {
+  Drugstore: 'Drugstore',
+  'Mid-range': 'Mid-range',
+  Luxury: 'Luxury',
+} as const;
+
+export interface NeuBrand {
+  id: string;
+  name: string;
+  tier: NeuBrandTier;
+  candidate: boolean;
+}
+
+export type NeuProductCategory = typeof NeuProductCategory[keyof typeof NeuProductCategory];
+
+
+export const NeuProductCategory = {
+  Foundation: 'Foundation',
+  Concealer: 'Concealer',
+  Blush: 'Blush',
+  Lips: 'Lips',
+} as const;
+
+export type NeuProductRangeStatus = typeof NeuProductRangeStatus[keyof typeof NeuProductRangeStatus];
+
+
+export const NeuProductRangeStatus = {
+  enumerated: 'enumerated',
+  partial: 'partial',
+  needs_review: 'needs_review',
+} as const;
+
+export interface NeuProduct {
+  id: string;
+  brandId: string;
+  name: string;
+  category: NeuProductCategory;
+  sourceUrl: string;
+  checkedOn: string;
+  rangeStatus: NeuProductRangeStatus;
+  /** @nullable */
+  declaredShadeCount: number | null;
+  verifiedShadeCount: number;
+  notes: string[];
+  claims: NeuClaim[];
+}
+
+export type NeuShadeStatus = typeof NeuShadeStatus[keyof typeof NeuShadeStatus];
+
+
+export const NeuShadeStatus = {
+  verified: 'verified',
+  needs_review: 'needs_review',
+} as const;
+
+export interface NeuShade {
+  id: string;
+  productId: string;
+  name: string;
+  description: string;
+  status: NeuShadeStatus;
+  claims: NeuClaim[];
+}
+
+export interface NeuCoverage {
+  selectedBrands: number;
+  verifiedBrands: number;
+  verifiedProducts: number;
+  verifiedShades: number;
+  enumeratedRanges: number;
+  targetProducts: string;
+  targetShades: string;
+  checkedOn: string;
+  gaps: string[];
+}
+
+export interface NeuCatalog {
+  brands: NeuBrand[];
+  products: NeuProduct[];
+  shades: NeuShade[];
+  coverage: NeuCoverage;
+}
+
+export interface NeuReferenceInput {
+  /** @maxLength 200 */
+  shadeId: string;
+  /**
+     * @maxItems 10
+     * @items.maxLength 100
+     */
+  fit: string[];
+  /** @maxLength 200 */
+  oxidation?: string;
+}
+
+export interface NeuCategoryPreference {
+  /** @maxLength 100 */
+  coverage?: string;
+  /** @maxLength 100 */
+  finish?: string;
+  /** @maxLength 100 */
+  formula?: string;
+  /** @maxLength 100 */
+  intent?: string;
+  /** @maxLength 100 */
+  pigmentation?: string;
+  /** @maxLength 100 */
+  opacity?: string;
+  /**
+     * @maxItems 10
+     * @items.maxLength 100
+     */
+  colorFamilies?: string[];
+}
+
+/**
+ * @nullable
+ */
+export type NeuProfileInputDepth = typeof NeuProfileInputDepth[keyof typeof NeuProfileInputDepth] | null;
+
+
+export const NeuProfileInputDepth = {
+  Very_fair: 'Very fair',
+  Fair: 'Fair',
+  Light: 'Light',
+  'Light-medium': 'Light-medium',
+  Medium: 'Medium',
+  Tan: 'Tan',
+  Deep: 'Deep',
+  Very_deep: 'Very deep',
+} as const;
+
+/**
+ * @nullable
+ */
+export type NeuProfileInputUndertone = typeof NeuProfileInputUndertone[keyof typeof NeuProfileInputUndertone] | null;
+
+
+export const NeuProfileInputUndertone = {
+  Warm: 'Warm',
+  Cool: 'Cool',
+  Neutral: 'Neutral',
+  Olive: 'Olive',
+  Still_exploring: 'Still exploring',
+} as const;
+
+export type NeuProfileInputOliveSubtype = typeof NeuProfileInputOliveSubtype[keyof typeof NeuProfileInputOliveSubtype];
+
+
+export const NeuProfileInputOliveSubtype = {
+  '': '',
+  'Warm-olive': 'Warm-olive',
+  'Cool-olive': 'Cool-olive',
+  'Neutral-olive': 'Neutral-olive',
+  Not_sure: 'Not sure',
+} as const;
+
+export type NeuProfileInputSaturation = typeof NeuProfileInputSaturation[keyof typeof NeuProfileInputSaturation];
+
+
+export const NeuProfileInputSaturation = {
+  '': '',
+  Muted: 'Muted',
+  Balanced: 'Balanced',
+  'Bright_/_saturated': 'Bright / saturated',
+  Not_sure: 'Not sure',
+} as const;
+
+export type NeuProfileInputSkinType = typeof NeuProfileInputSkinType[keyof typeof NeuProfileInputSkinType];
+
+
+export const NeuProfileInputSkinType = {
+  '': '',
+  Oily: 'Oily',
+  Dry: 'Dry',
+  Combination: 'Combination',
+  Normal: 'Normal',
+  Sensitive: 'Sensitive',
+} as const;
+
+export type NeuProfileInputPreferences = {
+  Foundation?: NeuCategoryPreference;
+  Concealer?: NeuCategoryPreference;
+  Blush?: NeuCategoryPreference;
+  Lips?: NeuCategoryPreference;
+};
+
+export interface NeuProfileInput {
+  /** @nullable */
+  depth?: NeuProfileInputDepth;
+  /** @nullable */
+  undertone?: NeuProfileInputUndertone;
+  oliveSubtype?: NeuProfileInputOliveSubtype;
+  saturation?: NeuProfileInputSaturation;
+  skinType?: NeuProfileInputSkinType;
+  /** @maxLength 100 */
+  budget?: string;
+  /** @maxItems 50 */
+  references?: NeuReferenceInput[];
+  preferences?: NeuProfileInputPreferences;
+}
+
+export type NeuCandidateCategory = typeof NeuCandidateCategory[keyof typeof NeuCandidateCategory];
+
+
+export const NeuCandidateCategory = {
+  Foundation: 'Foundation',
+  Concealer: 'Concealer',
+  Blush: 'Blush',
+  Lips: 'Lips',
+} as const;
+
+export type NeuCandidateLabel = typeof NeuCandidateLabel[keyof typeof NeuCandidateLabel];
+
+
+export const NeuCandidateLabel = {
+  'Descriptor-aligned_candidate': 'Descriptor-aligned candidate',
+  'Limited-evidence_suggestion': 'Limited-evidence suggestion',
+  Color_exploration: 'Color exploration',
+} as const;
+
+export interface NeuCandidate {
+  shadeId: string;
+  productId: string;
+  category: NeuCandidateCategory;
+  label: NeuCandidateLabel;
+  reasons: string[];
+  limitations: string[];
+  sourceUrl: string;
+  checkedOn: string;
+}
+
+export interface NeuRecommendations {
+  version: string;
+  candidates: NeuCandidate[];
+  notes: string[];
+  excludedCount: number;
+}
+
 export interface CatalogError {
   error: string;
 }

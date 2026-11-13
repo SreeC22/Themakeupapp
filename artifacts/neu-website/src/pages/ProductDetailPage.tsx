@@ -25,6 +25,6 @@ export default function ProductDetailPage({ slug }: { slug: string }) {
         <Button variant="secondary" aria-pressed={saved} onClick={() => toggleSave(product.id)}>{saved ? "Saved locally · remove" : "Save locally"}</Button>
       </section>
     </div>
-    <EmptyState title="No genuine community reviews for this product" action={<Link className="mvp-link" href={`/review/new?product=${encodeURIComponent(product.id)}`}>Write a private local draft</Link>}><p>Zero published experiences are connected. No ratings, wearer stories or purchase verification have been invented. A local draft is not submitted or public.</p></EmptyState>
+    <EmptyState title="Private notes, not public reviews" action={<Link className="mvp-link" href={`/review/new?product=${encodeURIComponent(product.id)}`}>Write a private local draft</Link>}><p>Public community is outside the MVP. No ratings, wearer stories or purchase verification have been invented. A local draft is not submitted or public.</p></EmptyState>
   </main>;
 }

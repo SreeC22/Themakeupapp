@@ -10,7 +10,7 @@ export function EvidenceFacts({ product }: { product: ResearchProduct }) {
     <div><dt>Exact shades & suitability</dt><dd>Unverified</dd></div>
     <div><dt>Price / finish / coverage</dt><dd>Unknown / unknown / unknown</dd></div>
     <div><dt>Availability & formula</dt><dd>Not verified</dd></div>
-    <div><dt>Genuine community reviews</dt><dd>0</dd></div>
+    <div><dt>Public reviews</dt><dd>Outside the MVP</dd></div>
   </dl>;
 }
 export function ProductCard({ product, compare, onCompare, comparisonFull = false }: {
