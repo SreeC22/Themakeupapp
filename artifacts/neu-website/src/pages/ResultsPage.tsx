@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { Button } from "@workspace/neu-design-system/components/neu/button";
 import { Typeahead } from "@workspace/neu-design-system/components/neu/typeahead";
-import { useSearch } from "wouter";
+import { Link, useSearch } from "wouter";
 import { Heading, Disclosure, EmptyState, Options, toggleItem } from "@/features/mvp/Controls";
 import { ProfileSummary } from "@/features/mvp/ProfileSummary";
 import { ProductCard } from "@/features/mvp/ProductCard";
@@ -36,6 +36,7 @@ export default function ResultsPage() {
   const comparedProducts = RESEARCH_PRODUCTS.filter((product) => comparisonIds.includes(product.id));
   return <main className="content mvp-page">
     <Heading eyebrow="YOUR ANSWERS + EVIDENCE" title="A starting point, not a verdict.">Explore Foundation, Concealer, Blush and Lips your way. Keep the colors that feel like you, with reasons and limitations you can read.</Heading>
+    <div className="mvp-actions"><Link className="mvp-link" href="/looks" data-testid="link-results-look-builder">Build a personalized Neu Look</Link><Link className="mvp-link" href="/looks/saved">Saved looks & drafts</Link><Link className="mvp-link" href="/saved">Saved individual products</Link></div>
     <ProfileSummary compact />
     <NeuDiscovery />
     <Disclosure title="Other optional personal preferences"><Preferences draft={state.quiz} onChange={(patch) => updateQuiz({ ...state.quiz, ...patch })} /></Disclosure>

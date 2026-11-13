@@ -6,9 +6,12 @@ after(async () => { await pool.end(); });
 test("development normalized catalog joins selected canonical brands, products, sources and variants", async () => {
   const data = await loadNeuCatalog();
   assert.equal(data.coverage.selectedBrands, 25);
-  assert.equal(data.coverage.verifiedProducts, 5);
-  assert.equal(data.coverage.verifiedShades, 197);
-  assert.equal(data.coverage.enumeratedRanges, 4);
+  assert.ok(data.coverage.verifiedProducts >= 5);
+  assert.ok(data.coverage.verifiedShades >= 197);
+  assert.ok(data.coverage.enumeratedRanges >= 4);
+  assert.equal(data.coverage.verifiedProducts, data.products.length);
+  assert.equal(data.coverage.verifiedShades, data.shades.filter(s => s.status === "verified").length);
+  assert.equal(data.coverage.enumeratedRanges, data.products.filter(p => p.rangeStatus === "enumerated" && p.verifiedShadeCount === p.declaredShadeCount).length);
   for (const p of data.products) {
     assert.ok(data.brands.some(b => b.id === p.brandId && !b.candidate));
     assert.equal(p.verifiedShadeCount, data.shades.filter(s => s.productId === p.id && s.status === "verified").length);

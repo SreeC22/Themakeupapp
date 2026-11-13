@@ -22,7 +22,7 @@ export function recommend(catalog: Catalog, input: ProfileInput, asOf = new Date
   const notes = new Set<string>([
     "Manufacturer descriptors are not calibrated color measurements. These are candidates to compare, never guaranteed exact matches.",
     "Verified observations, estimates and self-reported experiences are separate. Only fresh verified assertions drive these rules.",
-    "Prices and current stock have not been verified. Check the linked US source before purchase.",
+    "Prices are unknown unless a specific dated verified price claim is shown. Current stock is not verified. Check the linked US source before purchase.",
   ]);
   const products = new Map(catalog.products.map(p => [p.id, p]));
   const shades = new Map(catalog.shades.map(s => [s.id, s]));

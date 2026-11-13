@@ -38,11 +38,11 @@ export async function loadNeuCatalog(): Promise<Catalog> {
         checkedOn: products.map(p => p.checkedOn).sort()[0],
         gaps: [
           "Counts describe source-observed identities, not current stock or laboratory-verified shade matches.",
-          `${brands.length - new Set(lines.map(p => p.brandId)).size} selected brands have no reviewed product lines yet. Targets are progressive, not a Stage 2 completion claim.`,
+          `${brands.length - new Set(lines.map(p => p.brandId)).size} selected brands have no reviewed product lines yet. Full catalog targets are progressive, not a completed-catalog claim.`,
           "Fenty Fluid Flex: 466/466W identity conflict remains unresolved; this range is partial.",
           "e.l.f. Soft Glam: all 36 identities enumerated, but shade depth/undertone are not inferred from names.",
           "Rich, rich-deep and medium-deep descriptors have no calibrated equivalence to Neu's palette.",
-          "No calibrated color measurements, foundation saturation data, cool-olive complexion descriptors, verified prices or live availability.",
+          "No calibrated color measurements, foundation saturation data, cool-olive complexion descriptors or live availability. Prices remain unknown except for individually source-verified variant claims.",
           "Lip color families and outcomes on two-toned lips remain unverified; finish/coverage claims alone do not prove a result.",
           "Enumerated ranges mean the reviewed US selector reconciled on the observation date, not that every variant remains sold or in stock.",
         ],

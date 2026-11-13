@@ -13,6 +13,7 @@ export default function SavedProductsPage() {
   const catalog = useNeuCatalog();
   const saved = state.savedIds.map((id) => ({ id, product: getResearchProduct(id) }));
   return <main className="content mvp-page"><Heading eyebrow="YOUR LOCAL LIST" title="Keep what interests you.">These are your actual saved product IDs in this browser, not cloud saves or recommendations. They remain after reload when browser storage is available.</Heading>
+    <div className="mvp-actions"><Link className="mvp-link" href="/looks/saved">Saved complete looks & drafts</Link><Link className="mvp-link" href="/looks">Build a Neu Look</Link></div>
     {saved.length ? <><p role="status">{saved.length} locally saved {saved.length === 1 ? "item" : "items"}</p><div className="mvp-grid">{saved.map(({ id, product }) => {
       if (product) return <ProductCard key={id} product={product} />;
       const shadeId = savedCatalogShadeId(id);

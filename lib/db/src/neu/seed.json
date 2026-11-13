@@ -343,6 +343,151 @@
           "checkedOn": "2026-11-13"
         }
       ]
+    },
+    {
+      "id": "elf-camo-liquid-blush",
+      "brandId": "elf-cosmetics",
+      "name": "Camo Liquid Blush",
+      "category": "Blush",
+      "sourceUrl": "https://www.elfcosmetics.com/us/products/camo-liquid-blush",
+      "checkedOn": "2026-11-13",
+      "rangeStatus": "enumerated",
+      "declaredShadeCount": 12,
+      "verifiedShadeCount": 12,
+      "notes": [
+        "Reviewed US selector identity count; this does not establish current stock, calibrated complexion fit or price for every variant."
+      ],
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Dewy",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/camo-liquid-blush",
+          "checkedOn": "2026-11-13",
+          "rawText": "Lightweight formula with a soft, dewy finish"
+        },
+        {
+          "field": "formula",
+          "value": "Liquid",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/camo-liquid-blush",
+          "checkedOn": "2026-11-13",
+          "rawText": "Long-lasting liquid formula delivers high-pigment color"
+        },
+        {
+          "field": "skin_types",
+          "value": "Dry|Oily|Combination",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/camo-liquid-blush",
+          "checkedOn": "2026-11-13",
+          "rawText": "Great for: Dry, oily and combination skin"
+        }
+      ]
+    },
+    {
+      "id": "elf-o-face-satin",
+      "brandId": "elf-cosmetics",
+      "name": "O FACE Satin Lipstick",
+      "category": "Lips",
+      "sourceUrl": "https://www.elfcosmetics.com/us/products/o-face-satin-lipstick",
+      "checkedOn": "2026-11-13",
+      "rangeStatus": "enumerated",
+      "declaredShadeCount": 20,
+      "verifiedShadeCount": 20,
+      "notes": [
+        "Reviewed US selector identity count; this does not establish current stock, calibrated complexion fit or price for every variant."
+      ],
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Satin",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/o-face-satin-lipstick",
+          "checkedOn": "2026-11-13",
+          "rawText": "A satin-finish lipstick"
+        },
+        {
+          "field": "formula",
+          "value": "Lipstick",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/o-face-satin-lipstick",
+          "checkedOn": "2026-11-13",
+          "rawText": "O FACE Satin Lipstick"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even",
+      "brandId": "fenty-beauty",
+      "name": "We're Even Hydrating Longwear Concealer",
+      "category": "Concealer",
+      "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+      "checkedOn": "2026-11-13",
+      "rangeStatus": "enumerated",
+      "declaredShadeCount": 50,
+      "verifiedShadeCount": 50,
+      "notes": [
+        "Reviewed US selector identity count; this does not establish current stock, calibrated complexion fit or price for every variant."
+      ],
+      "claims": [
+        {
+          "field": "coverage",
+          "value": "Medium",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "Buildable medium coverage with a natural, second-skin finish"
+        },
+        {
+          "field": "finish",
+          "value": "Natural",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "Buildable medium coverage with a natural, second-skin finish"
+        },
+        {
+          "field": "skin_types",
+          "value": "Dry|Oily|Combination|Normal",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "For all skin types."
+        }
+      ]
+    },
+    {
+      "id": "rare-kind-words",
+      "brandId": "rare-beauty",
+      "name": "Kind Words Matte Lipstick",
+      "category": "Lips",
+      "sourceUrl": "https://www.rarebeauty.com/products/kind-words-matte-lipstick",
+      "checkedOn": "2026-11-13",
+      "rangeStatus": "enumerated",
+      "declaredShadeCount": 11,
+      "verifiedShadeCount": 11,
+      "notes": [
+        "Reviewed US selector identity count; this does not establish current stock, calibrated complexion fit or price for every variant.",
+        "The page prices/describes selected shade Fun; other shades have identity only, not inferred color families. No stock claim is imported."
+      ],
+      "claims": [
+        {
+          "field": "finish",
+          "value": "Matte",
+          "basis": "verified",
+          "sourceUrl": "https://www.rarebeauty.com/products/kind-words-matte-lipstick",
+          "checkedOn": "2026-11-13",
+          "rawText": "A buttery, pigment-rich, soft matte lipstick"
+        },
+        {
+          "field": "formula",
+          "value": "Lipstick",
+          "basis": "verified",
+          "sourceUrl": "https://www.rarebeauty.com/products/kind-words-matte-lipstick",
+          "checkedOn": "2026-11-13",
+          "rawText": "Kind Words Matte Lipstick"
+        }
+      ]
     }
   ],
   "shades": [
@@ -4859,6 +5004,1644 @@
           "checkedOn": "2026-11-13"
         }
       ]
+    },
+    {
+      "id": "elf-camo-liquid-blush--berry-well",
+      "productId": "elf-camo-liquid-blush",
+      "name": "Berry Well",
+      "description": "Cool Berry",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Berry",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/camo-liquid-blush",
+          "checkedOn": "2026-11-13",
+          "rawText": "Berry Well - Cool Berry"
+        },
+        {
+          "field": "price_usd",
+          "value": "8",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/camo-liquid-blush",
+          "checkedOn": "2026-11-13",
+          "rawText": "Berry Well - Cool Berry; One-time Purchase $8; structured priceCurrency USD. Price only observed for this selected variant; excludes tax/shipping."
+        }
+      ]
+    },
+    {
+      "id": "elf-camo-liquid-blush--bold-faced-lilac",
+      "productId": "elf-camo-liquid-blush",
+      "name": "Bold-Faced Lilac",
+      "description": "Lavendar lilac",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-camo-liquid-blush--bronze-bombshell",
+      "productId": "elf-camo-liquid-blush",
+      "name": "Bronze Bombshell",
+      "description": "Warm Terracotta",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-camo-liquid-blush--cheeky-lychee",
+      "productId": "elf-camo-liquid-blush",
+      "name": "Cheeky Lychee",
+      "description": "Neutral Pink",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Pink",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/camo-liquid-blush",
+          "checkedOn": "2026-11-13",
+          "rawText": "Cheeky Lychee - Neutral Pink"
+        }
+      ]
+    },
+    {
+      "id": "elf-camo-liquid-blush--comin-in-hot-pink",
+      "productId": "elf-camo-liquid-blush",
+      "name": "Comin’ In Hot Pink",
+      "description": "Bright Pink",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Pink",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/camo-liquid-blush",
+          "checkedOn": "2026-11-13",
+          "rawText": "Comin’ In Hot Pink - Bright Pink"
+        }
+      ]
+    },
+    {
+      "id": "elf-camo-liquid-blush--copper-etiquette",
+      "productId": "elf-camo-liquid-blush",
+      "name": "Copper Etiquette",
+      "description": "Rosy Copper",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-camo-liquid-blush--coral-crush",
+      "productId": "elf-camo-liquid-blush",
+      "name": "Coral Crush",
+      "description": "Bright Coral",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Coral",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/camo-liquid-blush",
+          "checkedOn": "2026-11-13",
+          "rawText": "Coral Crush - Bright Coral"
+        }
+      ]
+    },
+    {
+      "id": "elf-camo-liquid-blush--dusty-rose",
+      "productId": "elf-camo-liquid-blush",
+      "name": "Dusty Rosé",
+      "description": "Warm Pink",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Pink",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/camo-liquid-blush",
+          "checkedOn": "2026-11-13",
+          "rawText": "Dusty Rosé - Warm Pink"
+        }
+      ]
+    },
+    {
+      "id": "elf-camo-liquid-blush--gorg-orange",
+      "productId": "elf-camo-liquid-blush",
+      "name": "Gorg Orange",
+      "description": "Warm Orange/ Red",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Red",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/camo-liquid-blush",
+          "checkedOn": "2026-11-13",
+          "rawText": "Gorg Orange - Warm Orange/ Red"
+        },
+        {
+          "field": "color_family",
+          "value": "Orange",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/camo-liquid-blush",
+          "checkedOn": "2026-11-13",
+          "rawText": "Gorg Orange - Warm Orange/ Red"
+        }
+      ]
+    },
+    {
+      "id": "elf-camo-liquid-blush--peach-perfect",
+      "productId": "elf-camo-liquid-blush",
+      "name": "Peach Perfect",
+      "description": "Peachy Pink",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Pink",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/camo-liquid-blush",
+          "checkedOn": "2026-11-13",
+          "rawText": "Peach Perfect - Peachy Pink"
+        },
+        {
+          "field": "color_family",
+          "value": "Peach",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/camo-liquid-blush",
+          "checkedOn": "2026-11-13",
+          "rawText": "Peach Perfect - Peachy Pink"
+        }
+      ]
+    },
+    {
+      "id": "elf-camo-liquid-blush--pinky-promise",
+      "productId": "elf-camo-liquid-blush",
+      "name": "Pinky Promise",
+      "description": "Cool Pink",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Pink",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/camo-liquid-blush",
+          "checkedOn": "2026-11-13",
+          "rawText": "Pinky Promise - Cool Pink"
+        }
+      ]
+    },
+    {
+      "id": "elf-camo-liquid-blush--suave-mauve",
+      "productId": "elf-camo-liquid-blush",
+      "name": "Suave Mauve",
+      "description": "Mauve",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Mauve",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/camo-liquid-blush",
+          "checkedOn": "2026-11-13",
+          "rawText": "Suave Mauve - Mauve"
+        }
+      ]
+    },
+    {
+      "id": "elf-o-face-satin--standing-ovation",
+      "productId": "elf-o-face-satin",
+      "name": "Standing Ovation",
+      "description": "Peachy Yellow-Brown",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Brown",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/o-face-satin-lipstick",
+          "checkedOn": "2026-11-13",
+          "rawText": "Standing Ovation - Peachy Yellow-Brown"
+        },
+        {
+          "field": "color_family",
+          "value": "Peach",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/o-face-satin-lipstick",
+          "checkedOn": "2026-11-13",
+          "rawText": "Standing Ovation - Peachy Yellow-Brown"
+        },
+        {
+          "field": "price_usd",
+          "value": "10",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/o-face-satin-lipstick",
+          "checkedOn": "2026-11-13",
+          "rawText": "Standing Ovation - Peachy Yellow-Brown; One-time Purchase $10; structured priceCurrency USD. Price only observed for this selected variant; excludes tax/shipping."
+        }
+      ]
+    },
+    {
+      "id": "elf-o-face-satin--dirty-talk",
+      "productId": "elf-o-face-satin",
+      "name": "Dirty Talk",
+      "description": "Beige Pink",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Pink",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/o-face-satin-lipstick",
+          "checkedOn": "2026-11-13",
+          "rawText": "Dirty Talk - Beige Pink"
+        }
+      ]
+    },
+    {
+      "id": "elf-o-face-satin--drive",
+      "productId": "elf-o-face-satin",
+      "name": "Drive",
+      "description": "Rose Brown",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Brown",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/o-face-satin-lipstick",
+          "checkedOn": "2026-11-13",
+          "rawText": "Drive - Rose Brown"
+        },
+        {
+          "field": "color_family",
+          "value": "Rose",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/o-face-satin-lipstick",
+          "checkedOn": "2026-11-13",
+          "rawText": "Drive - Rose Brown"
+        }
+      ]
+    },
+    {
+      "id": "elf-o-face-satin--effortless",
+      "productId": "elf-o-face-satin",
+      "name": "Effortless",
+      "description": "Dusty Mauve",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Mauve",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/o-face-satin-lipstick",
+          "checkedOn": "2026-11-13",
+          "rawText": "Effortless - Dusty Mauve"
+        },
+        {
+          "field": "saturation",
+          "value": "Muted",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/o-face-satin-lipstick",
+          "checkedOn": "2026-11-13",
+          "rawText": "Effortless - Dusty Mauve"
+        }
+      ]
+    },
+    {
+      "id": "elf-o-face-satin--no-regrets",
+      "productId": "elf-o-face-satin",
+      "name": "No Regrets",
+      "description": "Blue Red",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Red",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/o-face-satin-lipstick",
+          "checkedOn": "2026-11-13",
+          "rawText": "No Regrets - Blue Red"
+        }
+      ]
+    },
+    {
+      "id": "elf-o-face-satin--vocal",
+      "productId": "elf-o-face-satin",
+      "name": "Vocal",
+      "description": "Terracotta Rose",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Rose",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/o-face-satin-lipstick",
+          "checkedOn": "2026-11-13",
+          "rawText": "Vocal - Terracotta Rose"
+        }
+      ]
+    },
+    {
+      "id": "elf-o-face-satin--shameless",
+      "productId": "elf-o-face-satin",
+      "name": "Shameless",
+      "description": "Pink Plum",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Pink",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/o-face-satin-lipstick",
+          "checkedOn": "2026-11-13",
+          "rawText": "Shameless - Pink Plum"
+        },
+        {
+          "field": "color_family",
+          "value": "Plum",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/o-face-satin-lipstick",
+          "checkedOn": "2026-11-13",
+          "rawText": "Shameless - Pink Plum"
+        }
+      ]
+    },
+    {
+      "id": "elf-o-face-satin--hustle",
+      "productId": "elf-o-face-satin",
+      "name": "Hustle",
+      "description": "Golden Brown",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Brown",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/o-face-satin-lipstick",
+          "checkedOn": "2026-11-13",
+          "rawText": "Hustle - Golden Brown"
+        }
+      ]
+    },
+    {
+      "id": "elf-o-face-satin--no-doubt",
+      "productId": "elf-o-face-satin",
+      "name": "No Doubt",
+      "description": "Pink Brown",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Pink",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/o-face-satin-lipstick",
+          "checkedOn": "2026-11-13",
+          "rawText": "No Doubt - Pink Brown"
+        },
+        {
+          "field": "color_family",
+          "value": "Brown",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/o-face-satin-lipstick",
+          "checkedOn": "2026-11-13",
+          "rawText": "No Doubt - Pink Brown"
+        }
+      ]
+    },
+    {
+      "id": "elf-o-face-satin--own-it",
+      "productId": "elf-o-face-satin",
+      "name": "Own It",
+      "description": "Cool Red",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Red",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/o-face-satin-lipstick",
+          "checkedOn": "2026-11-13",
+          "rawText": "Own It - Cool Red"
+        }
+      ]
+    },
+    {
+      "id": "elf-o-face-satin--pleased",
+      "productId": "elf-o-face-satin",
+      "name": "Pleased",
+      "description": "Muted Rosy - Tinted Pink",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Pink",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/o-face-satin-lipstick",
+          "checkedOn": "2026-11-13",
+          "rawText": "Pleased - Muted Rosy - Tinted Pink"
+        },
+        {
+          "field": "saturation",
+          "value": "Muted",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/o-face-satin-lipstick",
+          "checkedOn": "2026-11-13",
+          "rawText": "Pleased - Muted Rosy - Tinted Pink"
+        }
+      ]
+    },
+    {
+      "id": "elf-o-face-satin--feeling-myself",
+      "productId": "elf-o-face-satin",
+      "name": "Feeling Myself",
+      "description": "Warm Light Coral",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Coral",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/o-face-satin-lipstick",
+          "checkedOn": "2026-11-13",
+          "rawText": "Feeling Myself - Warm Light Coral"
+        }
+      ]
+    },
+    {
+      "id": "elf-o-face-satin--loud-af",
+      "productId": "elf-o-face-satin",
+      "name": "Loud AF",
+      "description": "Bright Fuchsia",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-o-face-satin--me-myself-and-i",
+      "productId": "elf-o-face-satin",
+      "name": "Me, Myself and I",
+      "description": "Intense Orange Brown",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Brown",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/o-face-satin-lipstick",
+          "checkedOn": "2026-11-13",
+          "rawText": "Me, Myself and I - Intense Orange Brown"
+        },
+        {
+          "field": "color_family",
+          "value": "Orange",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/o-face-satin-lipstick",
+          "checkedOn": "2026-11-13",
+          "rawText": "Me, Myself and I - Intense Orange Brown"
+        }
+      ]
+    },
+    {
+      "id": "elf-o-face-satin--smolder",
+      "productId": "elf-o-face-satin",
+      "name": "Smolder",
+      "description": "Plum",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Plum",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/o-face-satin-lipstick",
+          "checkedOn": "2026-11-13",
+          "rawText": "Smolder - Plum"
+        }
+      ]
+    },
+    {
+      "id": "elf-o-face-satin--do-not-disturb",
+      "productId": "elf-o-face-satin",
+      "name": "Do Not Disturb",
+      "description": "Mahogany",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-o-face-satin--limitless",
+      "productId": "elf-o-face-satin",
+      "name": "Limitless",
+      "description": "Medium Caramel Brown",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Brown",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/o-face-satin-lipstick",
+          "checkedOn": "2026-11-13",
+          "rawText": "Limitless - Medium Caramel Brown"
+        }
+      ]
+    },
+    {
+      "id": "elf-o-face-satin--untamed",
+      "productId": "elf-o-face-satin",
+      "name": "Untamed",
+      "description": "Deep Maroon-Purple",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Purple",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/o-face-satin-lipstick",
+          "checkedOn": "2026-11-13",
+          "rawText": "Untamed - Deep Maroon-Purple"
+        }
+      ]
+    },
+    {
+      "id": "elf-o-face-satin--spicy",
+      "productId": "elf-o-face-satin",
+      "name": "Spicy",
+      "description": "Burnt Deep Red",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Red",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/o-face-satin-lipstick",
+          "checkedOn": "2026-11-13",
+          "rawText": "Spicy - Burnt Deep Red"
+        }
+      ]
+    },
+    {
+      "id": "elf-o-face-satin--all-night",
+      "productId": "elf-o-face-satin",
+      "name": "All Night",
+      "description": "Black",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Black",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/us/products/o-face-satin-lipstick",
+          "checkedOn": "2026-11-13",
+          "rawText": "All Night - Black"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--300n",
+      "productId": "fenty-were-even",
+      "name": "300N",
+      "description": "neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "300N neutral undertones"
+        },
+        {
+          "field": "depth",
+          "value": "medium",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "Selected product: We're Even Hydrating Longwear Concealer — 300N. Manufacturer before/after image describes medium skin; Medium shade grid. Brand descriptors are not calibrated color measurements."
+        },
+        {
+          "field": "price_usd",
+          "value": "34",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "300N regular/sale price $34.00; structured priceCurrency USD. Only this selected variant was priced; tax/shipping excluded."
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--100c",
+      "productId": "fenty-were-even",
+      "name": "100C",
+      "description": "cool pink undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Cool",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "100C cool pink undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--110w",
+      "productId": "fenty-were-even",
+      "name": "110W",
+      "description": "warm undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "110W warm undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--120n",
+      "productId": "fenty-were-even",
+      "name": "120N",
+      "description": "neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "120N neutral undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--125c",
+      "productId": "fenty-were-even",
+      "name": "125C",
+      "description": "cool neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "125C cool neutral undertones"
+        },
+        {
+          "field": "temperature",
+          "value": "Cool",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "125C cool neutral undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--130w",
+      "productId": "fenty-were-even",
+      "name": "130W",
+      "description": "warm golden undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "130W warm golden undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--140n",
+      "productId": "fenty-were-even",
+      "name": "140N",
+      "description": "neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "140N neutral undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--150n",
+      "productId": "fenty-were-even",
+      "name": "150N",
+      "description": "neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "150N neutral undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--160w",
+      "productId": "fenty-were-even",
+      "name": "160W",
+      "description": "warm peach undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "160W warm peach undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--170c",
+      "productId": "fenty-were-even",
+      "name": "170C",
+      "description": "cool pink undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Cool",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "170C cool pink undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--175w",
+      "productId": "fenty-were-even",
+      "name": "175W",
+      "description": "warm olive undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Olive",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "175W warm olive undertones"
+        },
+        {
+          "field": "temperature",
+          "value": "Warm",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "175W warm olive undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--185c",
+      "productId": "fenty-were-even",
+      "name": "185C",
+      "description": "cool undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Cool",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "185C cool undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--190w",
+      "productId": "fenty-were-even",
+      "name": "190W",
+      "description": "warm undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "190W warm undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--200c",
+      "productId": "fenty-were-even",
+      "name": "200C",
+      "description": "cool pink undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Cool",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "200C cool pink undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--210w",
+      "productId": "fenty-were-even",
+      "name": "210W",
+      "description": "warm golden undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "210W warm golden undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--220w",
+      "productId": "fenty-were-even",
+      "name": "220W",
+      "description": "warm neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "220W warm neutral undertones"
+        },
+        {
+          "field": "temperature",
+          "value": "Warm",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "220W warm neutral undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--225n",
+      "productId": "fenty-were-even",
+      "name": "225N",
+      "description": "neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "225N neutral undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--230w",
+      "productId": "fenty-were-even",
+      "name": "230W",
+      "description": "warm golden undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "230W warm golden undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--235w",
+      "productId": "fenty-were-even",
+      "name": "235W",
+      "description": "warm undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "235W warm undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--240n",
+      "productId": "fenty-were-even",
+      "name": "240N",
+      "description": "neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "240N neutral undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--250w",
+      "productId": "fenty-were-even",
+      "name": "250W",
+      "description": "warm peach undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "250W warm peach undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--260n",
+      "productId": "fenty-were-even",
+      "name": "260N",
+      "description": "neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "260N neutral undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--265w",
+      "productId": "fenty-were-even",
+      "name": "265W",
+      "description": "warm undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "265W warm undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--280c",
+      "productId": "fenty-were-even",
+      "name": "280C",
+      "description": "cool neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "280C cool neutral undertones"
+        },
+        {
+          "field": "temperature",
+          "value": "Cool",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "280C cool neutral undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--290w",
+      "productId": "fenty-were-even",
+      "name": "290W",
+      "description": "warm golden undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "290W warm golden undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--295w",
+      "productId": "fenty-were-even",
+      "name": "295W",
+      "description": "warm olive undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Olive",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "295W warm olive undertones"
+        },
+        {
+          "field": "temperature",
+          "value": "Warm",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "295W warm olive undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--310w",
+      "productId": "fenty-were-even",
+      "name": "310W",
+      "description": "warm neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "310W warm neutral undertones"
+        },
+        {
+          "field": "temperature",
+          "value": "Warm",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "310W warm neutral undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--315w",
+      "productId": "fenty-were-even",
+      "name": "315W",
+      "description": "warm peach undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "315W warm peach undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--330w",
+      "productId": "fenty-were-even",
+      "name": "330W",
+      "description": "warm golden undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "330W warm golden undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--335w",
+      "productId": "fenty-were-even",
+      "name": "335W",
+      "description": "warm peach undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "335W warm peach undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--345c",
+      "productId": "fenty-were-even",
+      "name": "345C",
+      "description": "cool pink undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Cool",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "345C cool pink undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--350c",
+      "productId": "fenty-were-even",
+      "name": "350C",
+      "description": "cool neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "350C cool neutral undertones"
+        },
+        {
+          "field": "temperature",
+          "value": "Cool",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "350C cool neutral undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--360w",
+      "productId": "fenty-were-even",
+      "name": "360W",
+      "description": "warm undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "360W warm undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--370n",
+      "productId": "fenty-were-even",
+      "name": "370N",
+      "description": "neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "370N neutral undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--385w",
+      "productId": "fenty-were-even",
+      "name": "385W",
+      "description": "warm neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "385W warm neutral undertones"
+        },
+        {
+          "field": "temperature",
+          "value": "Warm",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "385W warm neutral undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--390c",
+      "productId": "fenty-were-even",
+      "name": "390C",
+      "description": "cool undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Cool",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "390C cool undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--400n",
+      "productId": "fenty-were-even",
+      "name": "400N",
+      "description": "neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "400N neutral undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--410w",
+      "productId": "fenty-were-even",
+      "name": "410W",
+      "description": "warm golden undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "410W warm golden undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--420w",
+      "productId": "fenty-were-even",
+      "name": "420W",
+      "description": "warm undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "420W warm undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--425w",
+      "productId": "fenty-were-even",
+      "name": "425W",
+      "description": "warm golden undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "425W warm golden undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--430w",
+      "productId": "fenty-were-even",
+      "name": "430W",
+      "description": "warm golden undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "430W warm golden undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--440w",
+      "productId": "fenty-were-even",
+      "name": "440W",
+      "description": "warm golden undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "440W warm golden undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--445n",
+      "productId": "fenty-were-even",
+      "name": "445N",
+      "description": "neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "445N neutral undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--450n",
+      "productId": "fenty-were-even",
+      "name": "450N",
+      "description": "neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "450N neutral undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--470w",
+      "productId": "fenty-were-even",
+      "name": "470W",
+      "description": "warm olive undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Olive",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "470W warm olive undertones"
+        },
+        {
+          "field": "temperature",
+          "value": "Warm",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "470W warm olive undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--480n",
+      "productId": "fenty-were-even",
+      "name": "480N",
+      "description": "neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "480N neutral undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--485c",
+      "productId": "fenty-were-even",
+      "name": "485C",
+      "description": "cool neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "485C cool neutral undertones"
+        },
+        {
+          "field": "temperature",
+          "value": "Cool",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "485C cool neutral undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--490n",
+      "productId": "fenty-were-even",
+      "name": "490N",
+      "description": "neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "490N neutral undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--495c",
+      "productId": "fenty-were-even",
+      "name": "495C",
+      "description": "cool undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Cool",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "495C cool undertones"
+        }
+      ]
+    },
+    {
+      "id": "fenty-were-even--498n",
+      "productId": "fenty-were-even",
+      "name": "498N",
+      "description": "neutral undertones",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "sourceUrl": "https://fentybeauty.com/products/we-re-even-hydrating-longwear-concealer-300n",
+          "checkedOn": "2026-11-13",
+          "rawText": "498N neutral undertones"
+        }
+      ]
+    },
+    {
+      "id": "rare-kind-words--talented",
+      "productId": "rare-kind-words",
+      "name": "Talented",
+      "description": "No variant color descriptor captured.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "rare-kind-words--creative",
+      "productId": "rare-kind-words",
+      "name": "Creative",
+      "description": "No variant color descriptor captured.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "rare-kind-words--fun",
+      "productId": "rare-kind-words",
+      "name": "Fun",
+      "description": "neutral mauve",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Mauve",
+          "basis": "verified",
+          "sourceUrl": "https://www.rarebeauty.com/products/kind-words-matte-lipstick",
+          "checkedOn": "2026-11-13",
+          "rawText": "ShadeFun: neutral mauve"
+        },
+        {
+          "field": "price_usd",
+          "value": "20",
+          "basis": "verified",
+          "sourceUrl": "https://www.rarebeauty.com/products/kind-words-matte-lipstick",
+          "checkedOn": "2026-11-13",
+          "rawText": "Selected ShadeFun neutral mauve; Add To Bag $20; active Shopify currency USD. Only this selected variant was priced; tax/shipping excluded."
+        }
+      ]
+    },
+    {
+      "id": "rare-kind-words--wise",
+      "productId": "rare-kind-words",
+      "name": "Wise",
+      "description": "No variant color descriptor captured.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "rare-kind-words--bold",
+      "productId": "rare-kind-words",
+      "name": "Bold",
+      "description": "No variant color descriptor captured.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "rare-kind-words--gifted",
+      "productId": "rare-kind-words",
+      "name": "Gifted",
+      "description": "No variant color descriptor captured.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "rare-kind-words--strong",
+      "productId": "rare-kind-words",
+      "name": "Strong",
+      "description": "No variant color descriptor captured.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "rare-kind-words--devoted",
+      "productId": "rare-kind-words",
+      "name": "Devoted",
+      "description": "No variant color descriptor captured.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "rare-kind-words--lively",
+      "productId": "rare-kind-words",
+      "name": "Lively",
+      "description": "No variant color descriptor captured.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "rare-kind-words--worthy",
+      "productId": "rare-kind-words",
+      "name": "Worthy",
+      "description": "No variant color descriptor captured.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "rare-kind-words--humble",
+      "productId": "rare-kind-words",
+      "name": "Humble",
+      "description": "No variant color descriptor captured.",
+      "status": "verified",
+      "claims": []
     }
   ]
 }

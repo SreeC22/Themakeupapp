@@ -1,4 +1,5 @@
 import { INITIAL_QUIZ_DRAFT, QUIZ_SWATCHES, QUIZ_STEPS, type QuizDraft } from "../quiz/_shared/quizDraft.ts";
+import { LOOKS_KEY } from "../looks/storage.ts";
 
 export const PREVIEW_STORAGE_KEY = "neu.local-preview.v1";
 export const LEGACY_PROFILE_KEY = "neu.guest-profile.v1";
@@ -160,8 +161,9 @@ export function serializePreviewState(state: PreviewState): string {
 /** Explicitly user-confirmed deletion of this preview only. Legacy state is preserved. */
 export function deletePreviewState(storage: StorageLike | null): boolean {
   if (!storage) return false;
-  try {
-    storage.removeItem(PREVIEW_STORAGE_KEY);
-    return true;
-  } catch { return false; }
+  let deleted = true;
+  for (const key of [PREVIEW_STORAGE_KEY, LOOKS_KEY]) {
+    try { storage.removeItem(key); } catch { deleted = false; }
+  }
+  return deleted;
 }

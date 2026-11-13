@@ -1,19 +1,24 @@
 import { ArrowRight, Palette } from "lucide-react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
+import { Button } from "@workspace/neu-design-system/components/neu/button";
+import { usePreview } from "@/features/mvp/use-preview";
 import { LAUNCH_CATEGORIES } from "@/features/mvp/catalog";
 
 const pigmentArt = `${import.meta.env.BASE_URL}images/neu-pigment-study.jpg`;
 
 export default function HomePage() {
+  const [, navigate] = useLocation();
+  const { state } = usePreview();
+  const hasProfile = !!state.quiz.onboardingPath || !!state.quiz.shadeId || state.quiz.depthUnsure || state.quiz.products.length > 0;
   return (
     <main className="content">
       <section className="hero">
         <div className="hero-copy">
           <span className="eyebrow">Room for every shade story</span>
           <h1>Makeup is a way<br />to <em>be more you.</em></h1>
-          <p className="hero-lede">Makeup self-expression across complexion depths, with room for olive, muted and deep skin, and pigmented or two-toned lips. Build a starting point, or explore your own way.</p>
+          <p className="hero-lede">Your beauty profile. Your mood. Your budget. Build a personal makeup look, make it your own and reuse what you have, with room for every complexion depth and color story.</p>
           <div className="hero-actions">
-            <Link className="primary" href="/quiz">Build a starting point <ArrowRight size={17} /></Link>
+            <Button onClick={() => navigate(hasProfile ? "/looks" : "/quiz")} data-testid="button-home-build-look">{hasProfile ? "Build your Neu Look" : "Start your beauty profile"} <ArrowRight size={17} /></Button>
             <Link className="text-button" href="/results">Explore product research <span aria-hidden="true">↗</span></Link>
           </div>
           <div className="hero-note"><i />Explore first. No account needed.</div>
@@ -24,11 +29,11 @@ export default function HomePage() {
       </section>
 
       <section aria-labelledby="how-title">
-        <h2 id="how-title" className="section-kicker">Find your next favourite, your way</h2>
+        <h2 id="how-title" className="section-kicker">Your profile. Your look. Your way.</h2>
         <div className="how-grid">
-          <article className="how-step"><span className="step-num">01</span><div><h2>Start your way.</h2><p>Use a foundation or concealer shade you know, or explore the manual palette. Unsure is always welcome.</p></div></article>
-          <article className="how-step"><span className="step-num">02</span><div><h2>Read the evidence.</h2><p>Explore source-backed descriptors with dates and honest limits. No invented shade equivalents or match scores.</p></div></article>
-          <article className="how-step"><span className="step-num">03</span><div><h2>Make it your own.</h2><p>Save category preferences, edit your references and keep what feels like you. No account gate.</p></div></article>
+          <article className="how-step"><span className="step-num">01</span><div><h2>Start with you.</h2><p>Build your beauty profile with a shade you know or the manual palette. Unsure is always welcome.</p></div></article>
+          <article className="how-step"><span className="step-num">02</span><div><h2>Choose your direction.</h2><p>Everyday, Soft Glam, Party Glam or Work & College. Set a budget and generate a personal starting set with honest evidence limits.</p></div></article>
+          <article className="how-step"><span className="step-num">03</span><div><h2>Make it your own.</h2><p>Customize one slot at a time, reuse your own products, then save your look locally or visit the real product sources to shop.</p></div></article>
         </div>
       </section>
 
@@ -43,7 +48,7 @@ export default function HomePage() {
       <section className="home-bottom">
         <div><span className="mono">A LITTLE REMINDER</span><h2>There is not one right way to wear it.</h2></div>
         <p>Bare skin, sharp liner, a favorite shade. Start wherever you are, and keep what feels like you.</p>
-        <Link className="round-link" href="/quiz" aria-label="Build a starting point"><ArrowRight size={19} /></Link>
+        <Link className="round-link" href="/looks" aria-label="Build your Neu Look"><ArrowRight size={19} /></Link>
       </section>
 
       <section className="learn-invite">

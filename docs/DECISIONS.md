@@ -1,3 +1,7 @@
+# Confirmed look-first direction
+
+The owner confirmed that Neu is a personalized makeup look builder, not primarily a foundation shade-matching tool. Stage 2 was accepted based on the implementation report. Stage 3 adds Your Neu Look while preserving its safeguards; see `STAGE_3_REQUIREMENTS.md`. The authorized exit is a tested preview and review, not a remote push/deployment. Public community remains outside scope.
+
 # Neu MVP decisions
 
 ## Preserve working systems

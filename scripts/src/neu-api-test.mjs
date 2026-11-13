@@ -6,8 +6,9 @@ test("proxy API returns normalized catalog and honest snapshot coverage", async 
   const response = await fetch(`${base}/catalog`, { signal: AbortSignal.timeout(15000) });
   assert.equal(response.status, 200);
   const data = await response.json();
-  assert.equal(data.coverage.verifiedShades, 197);
-  assert.equal(data.coverage.enumeratedRanges, 4);
+  assert.ok(data.coverage.verifiedShades >= 197);
+  assert.ok(data.coverage.enumeratedRanges >= 4);
+  assert.equal(data.coverage.verifiedShades, data.shades.filter(s => s.status === "verified").length);
   assert.equal(data.shades.filter(s => s.status === "needs_review").length, 1);
   assert.ok(data.products.every(p => p.sourceUrl.startsWith("https://") && !("price" in p)));
   assert.ok(data.products.find(p => p.id === "fenty-fluid-flex").claims.every(c => c.field !== "formula"));

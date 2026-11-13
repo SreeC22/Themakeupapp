@@ -1,6 +1,7 @@
-import { createContext, useContext, useRef, useState, type ReactNode } from "react";
+import { createContext, useContext, useEffect, useRef, useState, type ReactNode } from "react";
 import type { QuizDraft } from "../quiz/_shared/quizDraft";
-import { createInitialPreviewState, deletePreviewState, persistPreviewState, readPreviewState, type LocalReview, type PreviewState, type StorageLike, type StorageStatus } from "./storage";
+import { PREVIEW_STORAGE_KEY, createInitialPreviewState, deletePreviewState, persistPreviewState, readPreviewState, type LocalReview, type PreviewState, type StorageLike, type StorageStatus } from "./storage";
+import { LOOKS_CHANGED } from "../looks/use-looks";
 
 function browserStorage(): StorageLike | null {
   try { return window.localStorage; } catch { return null; }
@@ -12,6 +13,17 @@ function usePreviewResource() {
   const [status, setStatus] = useState<StorageStatus>(initial.status);
   const stateRef = useRef(state);
   const locked = useRef(initial.status === "corrupt" || initial.status === "unsupported");
+  useEffect(() => {
+    const refreshProfile = (event: StorageEvent) => {
+      if (event.key !== PREVIEW_STORAGE_KEY && event.key !== null) return;
+      const latest = readPreviewState(browserStorage());
+      locked.current = latest.status === "corrupt" || latest.status === "unsupported";
+      setStatus(latest.status);
+      if (latest.writable) { stateRef.current = latest.state; setState(latest.state); }
+    };
+    window.addEventListener("storage", refreshProfile);
+    return () => window.removeEventListener("storage", refreshProfile);
+  }, []);
   const commit = (next: PreviewState) => {
     stateRef.current = next;
     setState(next);
@@ -37,6 +49,7 @@ function usePreviewResource() {
     },
     reset: () => {
       const deleted = deletePreviewState(browserStorage());
+      window.dispatchEvent(new Event(LOOKS_CHANGED));
       const next = createInitialPreviewState();
       stateRef.current = next;
       setState(next);

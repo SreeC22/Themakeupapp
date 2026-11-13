@@ -21,11 +21,11 @@ The launch quiz is camera-free and usable anonymously. Selfies, photo storage an
 
 **How to apply:** Use local-only preview paths with clear labels until backend behavior is actually implemented and verified. Do not treat a local draft or moderation simulation as real publication.
 
-Work advances through owner-reviewed stages. The owner accepted Stage 1 based on the report and placed normalized catalog storage, initial explainable matching and two-path onboarding together in Stage 2. Stop after showing the Stage 2 preview, actual tests, verified coverage and gaps.
+Neu is a personalized makeup look builder, not primarily a foundation shade-matching tool. The primary journey is Beauty Profile → Choose a Look → Set Budget → Generate Personalized Makeup Set → Customize → Save or Shop.
 
-**Why:** The owner's newer roadmap and onboarding instructions supersede the original separation of catalog and ranking stages.
+**Why:** The owner explicitly confirmed Neu's core product direction before authorizing Your Neu Look.
 
-**How to apply:** Use a feature branch, preserve native/static parity and waitlist wiring, and do not deploy, change production integrations or spend money without separate approval.
+**How to apply:** Treat matching as supporting infrastructure, keep individual browsing available, and use the saved profile/evidence to build four-slot looks. Preserve prior work and private feedback. Work in owner-reviewed stages; show actual tests, coverage and gaps and stop for review. Do not push, deploy, change production integrations or spend money without separate approval.
 
 The eventual US-market catalog target is 25 selected brands, 100–150 product lines and approximately 2,000–4,000 shades/color variants. Each selected line should eventually contain its complete current US range where reliably verified. These are progressive targets, not Stage 2 exit requirements.
 

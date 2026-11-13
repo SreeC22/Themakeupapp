@@ -1,5 +1,9 @@
 # Neu website handoff
 
+## Current Your Neu Look handoff
+
+The owner accepted Stage 2 based on its report and confirmed the look-first core product. Stage 3 extends it without replacing the existing website, design system or catalog. The primary journey and review gate are documented in `STAGE_3_REQUIREMENTS.md`; implementation/coverage and actual checks are in `STAGE_3_IMPLEMENTATION.md` / `STAGE_3_QA.md`. `/looks` and `/looks/saved` add local planning/editing/owned reuse; `/results` remains individual discovery. Community stays out. Stop for review; no push or deploy.
+
 ## Current Stage 2 handoff
 
 The owner approved Stage 1 based on its report. The newer requirements add two short onboarding paths, contextual category preferences, a normalized development catalog and initial explainable matching. Use `STAGE_2_REQUIREMENTS.md`, `STAGE_2_IMPLEMENTATION.md` and `STAGE_2_QA.md` as the current stage handoff; the sections below retain prior-phase context. The existing design system, historical IDs, forty swatches, browser storage keys and private draft data remain preserved. Public community is deferred until 500+ registered users and owner approval. No push/deploy is authorized.

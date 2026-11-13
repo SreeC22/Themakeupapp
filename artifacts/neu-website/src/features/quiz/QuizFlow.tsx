@@ -22,7 +22,7 @@ export function QuizFlow({ draft, onDraftChange, onComplete, onLearn }: {
   useEffect(() => { document.getElementById("wj-quiz-title")?.focus({ preventScroll: true }); }, [screen]);
   const reference = draft.products[0];
   const next = () => screen === "skin" ? onComplete() : go(screens[index + 1] ?? "skin");
-  const nav = <Navigation onBack={() => go(screens[index - 1] ?? "start")} onContinue={next} continueLabel={screen === "skin" ? "Explore makeup" : "Continue"} />;
+  const nav = <Navigation onBack={() => go(screens[index - 1] ?? "start")} onContinue={next} continueLabel={screen === "skin" ? "Choose your look" : "Continue"} />;
   return <div className="wj-quiz-frame wj-quiz-complete">
     <div className="wj-quiz-progress">
       <div className="wj-progress-track" role="progressbar" aria-valuemin={0} aria-valuemax={screens.length} aria-valuenow={index + 1} aria-label={`Step ${index + 1} of ${screens.length}`}><i style={{ transform: `scaleX(${(index + 1) / screens.length})`, width: "100%", transformOrigin: "left" }} /></div>
@@ -30,7 +30,7 @@ export function QuizFlow({ draft, onDraftChange, onComplete, onLearn }: {
     </div>
     <section className="wj-quiz-question" key={screen}>
       {screen === "start" && <>
-        <Question title={<>Let's find <em>your match.</em></>} copy="How would you like to start?" />
+        <Question title={<>Your beauty profile, <em>your way.</em></>} copy="A starting point for your personal makeup look. How would you like to begin?" />
         <div className="mvp-stack">
           <Choice title="I already know my shade" selected={draft.onboardingPath === "known"} onClick={() => {
             change({ onboardingPath: "known", onboardingScreen: "reference", step: "products", products: draft.products.length ? draft.products : [newReference()] });
@@ -38,7 +38,7 @@ export function QuizFlow({ draft, onDraftChange, onComplete, onLearn }: {
           <Choice title="Help me find my shade" selected={draft.onboardingPath === "manual"} onClick={() => change({ onboardingPath: "manual", onboardingScreen: "depth", step: "depth" })} />
         </div>
         <p className="mvp-muted">Start with a foundation or concealer you use, or explore our manual palette. Both build the same editable profile. No photos, account or purchase needed.</p>
-        <Button variant="text" onClick={onComplete}>Explore without a profile</Button>
+        <Button variant="text" onClick={onComplete}>Build a look without a profile</Button>
       </>}
       {screen === "reference" && <>
         <Question title={<>A shade <em>you know.</em></>} copy="Find the exact product and shade, then tell us how it fits. Missing entries can stay self-reported." />

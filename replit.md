@@ -45,6 +45,8 @@ See `docs/DECISIONS.md`. The GitHub native/static repository and this Replit wor
 
 ## Product
 
+Neu's confirmed primary product is a personalized makeup look builder: Beauty Profile → Choose a Look → Budget → Personalized Set → Customize → Save or Shop. Stage 3 routes are `/looks` and `/looks/saved`; individual discovery remains `/results`. New local looks/owned inventory use `neu.looks.v1`, separate from existing keys. See `docs/STAGE_3_REQUIREMENTS.md`, `docs/STAGE_3_IMPLEMENTATION.md` and `docs/STAGE_3_QA.md`. Do not present incomplete/unpriced drafts as verified four-item budget matches.
+
 Stage 2 extends the accepted Stage 1 with known-shade/manual onboarding, one editable local profile, saved category preferences, a normalized catalog and source-explained candidates. Descriptor alignment is not an independently verified exact shade match. Real member accounts/public community remain unavailable; community requires 500+ registrations and owner approval. Selected traits are processed transiently by the API, not stored as server profiles. Existing owner Supabase and production data remain untouched. Stop for stage review; no remote push or deploy without approval.
 
 ## Gotchas

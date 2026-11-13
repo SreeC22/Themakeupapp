@@ -27,6 +27,12 @@ Retain the current stable forty-swatch identifiers and approximate-color disclai
 
 The Stage 1 product projection contains only source-backed names, categories and URLs from existing research. Record its source observation date. Unknown prices/finish/coverage/shades stay null. Sorting is browsing, not a disguised match algorithm. No calibrated scores, stock assertions or paid placements.
 
+## Current roadmap: look-first product direction
+
+The owner accepted Stage 2 based on its implementation report and authorized **Stage 3: Your Neu Look**. Neu's primary product is now explicitly a personalized makeup look builder: Beauty Profile → Choose a Look → Budget → Personalized Set → Customize → Save or Shop. Foundation matching is supporting infrastructure, not the main product destination.
+
+See [Stage 3 requirements](STAGE_3_REQUIREMENTS.md) for scope and stage checkpoints. Preserve Stage 1/2; no public community, remote push or production deployment. The older roadmap below is historical where it differs.
+
 ## Revised roadmap after Stage 1 approval
 
 The owner accepted the Stage 1 report and authorized Stage 2, including explainable recommendations previously listed under Stage 3. The subsequent onboarding brief also belongs in Stage 2. See [Stage 2 requirements](STAGE_2_REQUIREMENTS.md). The uploaded original specification remains unchanged as historical source material; these newer instructions take precedence where they differ.

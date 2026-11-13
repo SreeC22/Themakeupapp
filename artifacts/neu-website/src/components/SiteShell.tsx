@@ -3,10 +3,10 @@ import { useEffect } from "react";
 import { Link, useLocation } from "wouter";
 
 const primaryLinks = [
-  { href: "/", label: "Home" },
-  { href: "/results", label: "Explore" },
+  { href: "/looks", label: "Your Neu Look" },
+  { href: "/results", label: "Products" },
+  { href: "/looks/saved", label: "Saved looks" },
   { href: "/learn", label: "Learn" },
-  { href: "/saved", label: "Saved" },
 ];
 
 export function SiteHeader() {
@@ -41,10 +41,12 @@ export function SiteFooter() {
         <span className="brand-mark">n</span><span className="brand-word">neu</span>
       </Link>
       <nav className="footer-links" aria-label="Footer navigation">
+        <Link className="footer-link" href="/looks">Build a Neu Look</Link>
+        <Link className="footer-link" href="/looks/saved">Saved looks & drafts</Link>
         <Link className="footer-link" href="/learn">Learn about color</Link>
         <Link className="footer-link" href="/results">Product research</Link>
-        <Link className="footer-link" href="/profile">Skin profile</Link>
-        <Link className="footer-link" href="/saved">Saved</Link>
+        <Link className="footer-link" href="/profile">Beauty profile</Link>
+        <Link className="footer-link" href="/saved">Saved products</Link>
         <Link className="footer-link" href="/review/new">Local review draft</Link>
         <Link className="footer-link" href="/design-guide">Design guide</Link>
       </nav>
