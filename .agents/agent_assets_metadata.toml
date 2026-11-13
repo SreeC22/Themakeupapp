@@ -56,3 +56,31 @@ mtime_ms = 1794535941210
 storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:0417277c-b89f-42fe-9e01-86281ec8ea11/6a98270f-1a4d-4b31-aca8-3fe07de305e6/83b0f951-69e7-4391-a5b5-f3a16a391102"
 storage_version_token = "1794536098937661"
 content_type = "text/markdown"
+
+[[outputs]]
+id = "RsNf6vDlBxlBLkjBeAtl5"
+uri = "file://docs/STAGE_2_QA.md"
+type = "text"
+title = "Neu Stage 2 test results"
+description = "Actual automated and browser outcomes, integration fixes, coverage and limitations."
+logical_id = "f507dd29-6344-4fca-be43-db2027f9e4ff"
+content_hash = "sha256:64ab6b85f45798c89f2a7910745afd9312508448b14c0196a364fd7e657c80dc"
+size = 7428
+mtime_ms = 1794539017851
+storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:0417277c-b89f-42fe-9e01-86281ec8ea11/f507dd29-6344-4fca-be43-db2027f9e4ff/43172470-f4ac-469c-9d4b-7ec660abce79"
+storage_version_token = "1794539084117865"
+content_type = "text/markdown"
+
+[[outputs]]
+id = "xN0FYAG0IpuhlVSwqkOD7"
+uri = "file://docs/STAGE_2_IMPLEMENTATION.md"
+type = "text"
+title = "Neu Stage 2 implementation and coverage"
+description = "What is working, official product sources, progressive catalog targets and remaining evidence gaps."
+logical_id = "dc37aad0-3120-45a4-b578-0370aa44fc19"
+content_hash = "sha256:e7d38ffe1ca10ec53487074dae4ccab5e1abcefc9126c5edeb8d243321a9c705"
+size = 10162
+mtime_ms = 1794538132939
+storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:0417277c-b89f-42fe-9e01-86281ec8ea11/dc37aad0-3120-45a4-b578-0370aa44fc19/7bbcc310-c27f-4c01-9957-3af9c9e17d78"
+storage_version_token = "1794539084606525"
+content_type = "text/markdown"
