@@ -2,10 +2,12 @@ import type { NeuCatalog, NeuRecommendations, NeuProfileInput } from "@workspace
 
 export const LOOK_CATEGORIES = ["Foundation", "Concealer", "Blush", "Lips"] as const;
 export type LookCategory = typeof LOOK_CATEGORIES[number];
+export const OWNED_CATEGORIES = [...LOOK_CATEGORIES, "Eyes", "Multi-use", "Setting"] as const;
+export type OwnedCategory = typeof OWNED_CATEGORIES[number];
 export const OCCASIONS = ["Everyday", "Soft Glam", "Party Glam", "Work & College"] as const;
 export type Occasion = typeof OCCASIONS[number];
 export type LookBudget = { tier: "Any" | "Drugstore" | "Mid-range" | "Luxury"; limitUSD?: number };
-export type OwnedProduct = { id: string; category: LookCategory; brand: string; product: string; shade: string; shadeId?: string };
+export type OwnedProduct = { id: string; category: OwnedCategory; brand: string; product: string; shade: string; shadeId?: string };
 export type LookChoice = { kind: "catalog"; shadeId: string } | { kind: "owned"; ownedId: string };
 export type LookSelections = Partial<Record<LookCategory, LookChoice | null>>;
 export type SavedLook = { id: string; name: string; occasion: Occasion; budget: LookBudget; selections: LookSelections; updatedAt: string };

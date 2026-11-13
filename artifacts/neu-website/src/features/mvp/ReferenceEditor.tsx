@@ -6,6 +6,7 @@ import type { QuizDraft, QuizProduct } from "../quiz/_shared/quizDraft";
 import { Disclosure, EmptyState, Options } from "./Controls";
 import { editReference, FIT_OPTIONS, newReference, oldProductMatch, OXIDATION_OPTIONS, resolveReference } from "./neu-profile";
 import { useNeuCatalog } from "./use-neu";
+import { mismatchObservations } from "../wardrobe/model";
 
 export function CatalogLoading() {
   return <div className="mvp-stack" role="status" aria-label="Loading reviewed catalog" data-testid="status-catalog-loading">
@@ -19,6 +20,7 @@ export function ReferenceFields({ reference, onChange }: { reference: QuizProduc
   const resolved = resolveReference(catalog, reference);
   const change = (patch: Partial<QuizProduct>) => onChange(editReference(reference, patch, catalog));
   const shade = catalog?.shades.find((item) => item.id === reference.catalogShadeId && item.productId === reference.catalogProductId);
+  const observations = mismatchObservations(reference.match.map(value => value === "A little too light" ? "Too light" : value === "A little too dark" ? "Too dark" : value), reference.oxidation);
   return <div className="mvp-stack">
     <Options label="Reference product type" options={["Foundation", "Concealer"]} value={reference.type} onChange={(type) => change({ type: type as QuizProduct["type"] })} />
     {!["Foundation", "Concealer"].includes(reference.type) && <p className="mvp-muted">Your earlier {reference.type.toLowerCase()} note is preserved as self-reported. Choose foundation or concealer to search the reviewed catalog.</p>}
@@ -38,15 +40,15 @@ export function ReferenceFields({ reference, onChange }: { reference: QuizProduc
         : "Self-reported reference. Brand, product or exact shade is missing from the reviewed catalog. Keep typing your own entry; it will not become a catalog fact or a precise cross-brand match."}
     </p>}
     {catalog && resolved.brand && resolved.products.length === 0 && <p className="mvp-muted">This brand is in the selected directory, but no reviewed {reference.type.toLowerCase()} line is available here yet.</p>}
-    <fieldset className="mvp-fieldset"><legend>How does it fit?</legend>
-      <p className="mvp-muted">Choose any issues you notice. Perfect match and unsure stand alone.</p>
-      <div className="mvp-options">{FIT_OPTIONS.map((option) => <Choice key={option.value} title={option.label} selected={reference.match.includes(option.value) || (option.value === "Too orange" && reference.match.includes("Too yellow"))} onClick={() => {
-        const matches = option.value === "Too orange" && (reference.match.includes("Too yellow") || reference.match.includes("Too orange"))
-          ? reference.match.filter((item) => item !== "Too yellow" && item !== "Too orange") : oldProductMatch(reference.match, option.value);
-        change({ match: matches });
-      }} />)}</div>
-      {reference.match.length > 0 && <p className="mvp-muted" role="status">Recorded observation: {reference.match.map((value) => value === "Blends in perfectly" ? "Perfect match" : value).join(", ")}</p>}
-    </fieldset>
+    <div>
+      <p className="mvp-muted">Record depth and color separately. Perfect match and unsure stand alone. No corrected shade or automatic offset is inferred.</p>
+      {[
+        { label: "Depth fit", values: ["A little too light", "A little too dark"] },
+        { label: "Color / undertone fit", values: ["Too yellow", "Too orange", "Too pink", "Gray or ashy"] },
+        { label: "Overall observation", values: ["Blends in perfectly", "Not sure yet"] },
+      ].map(group => <fieldset className="mvp-fieldset" key={group.label}><legend>{group.label}</legend><div className="mvp-options">{FIT_OPTIONS.filter(option => group.values.includes(option.value)).map(option => <Choice key={option.value} title={option.label} selected={reference.match.includes(option.value)} onClick={() => change({ match: oldProductMatch(reference.match, option.value) })} />)}</div></fieldset>)}
+      {reference.match.length > 0 && <p className="mvp-muted" role="status">Depth: {observations.depth.join(", ") || "Not reported"}. Color: {observations.color.join(", ") || "Not reported"}. {observations.other.join(", ")}{observations.oxidation ? ` Oxidation: ${observations.oxidation}.` : ""}</p>}
+    </div>
     <Disclosure title="Oxidation and other personal notes (optional)">
       <Options label="Color change after application" options={OXIDATION_OPTIONS} value={reference.oxidation ?? ""} onChange={(oxidation) => change({ oxidation: reference.oxidation === oxidation ? "" : oxidation })} hint="Your wear observation, not a manufacturer claim." />
       <Typeahead label="Formula or variant note" value={reference.formula} placeholder="If known" suggestions={[]} onChange={(formula) => change({ formula: formula.slice(0, 200) })} />

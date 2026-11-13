@@ -3,11 +3,11 @@ name: Neu web MVP scope
 description: Owner-adopted product scope and approval boundaries from the web MVP specification.
 ---
 
-Launch is website-first for US shoppers. Shopping categories are only foundation, concealer, blush and lips, with deliberate support across complexion depths, olive/muted undertones and pigmented or two-toned lips.
+Launch is website-first for US shoppers. The original four-category restriction was superseded when the owner added eye palettes, labeled multi-use makeup, broader lip types and routine finishers. Skincare remains preparation guidance, not a shopping catalog.
 
-**Why:** The owner supplied the web MVP specification and explicitly instructed us to follow it while preserving the existing Neu design system and functionality.
+**Why:** The owner explicitly expanded the makeup wardrobe scope while keeping Neu a makeup-shopping platform.
 
-**How to apply:** Preserve existing work. Do not pad the launch with skincare, eye makeup or other functioning shopping categories. Keep prior makeup history distinct from shopping-category scope.
+**How to apply:** Do not resurrect the old four-category limit when extending adaptive routines. Preserve earlier work and keep manufacturer-labeled uses distinct from unsupported cross-application.
 
 Product facts, exact shades, imagery rights, prices, stock and community evidence must be source-backed and honestly bounded. No fabricated products/reviews/users, uncalibrated fit percentages, paid rankings or unsupported safety promises. Pantone references require proper licensing; do not copy its proprietary swatch library or claim certification.
 
@@ -21,13 +21,13 @@ The launch quiz is camera-free and usable anonymously. Selfies, photo storage an
 
 **How to apply:** Use local-only preview paths with clear labels until backend behavior is actually implemented and verified. Do not treat a local draft or moderation simulation as real publication.
 
-Neu is a personalized makeup look builder, not primarily a foundation shade-matching tool. The primary journey is Beauty Profile → Choose a Look → Set Budget → Generate Personalized Makeup Set → Customize → Save or Shop.
+Neu should help users explore makeup creatively while making thoughtful purchasing decisions.
 
-**Why:** The owner explicitly confirmed Neu's core product direction before authorizing Your Neu Look.
+**Why:** The owner explicitly revised Stage 3 to prioritize thoughtful ownership and creative reuse over foundation matching or new bundles.
 
-**How to apply:** Treat matching as supporting infrastructure, keep individual browsing available, and use the saved profile/evidence to build four-slot looks. Preserve prior work and private feedback. Work in owner-reviewed stages; show actual tests, coverage and gaps and stop for review. Do not push, deploy, change production integrations or spend money without separate approval.
+**How to apply:** Prefer making an existing collection more useful over proposing more similar purchases. Follow the current journey, safety and approval instructions in `replit.md`.
 
-The eventual US-market catalog target is 25 selected brands, 100–150 product lines and approximately 2,000–4,000 shades/color variants. Each selected line should eventually contain its complete current US range where reliably verified. These are progressive targets, not Stage 2 exit requirements.
+The eventual US-market catalog target is 26 selected brands including Makeup by Mario, 100–150 product lines and approximately 2,000–4,000 shades/color variants. Each selected line should eventually contain its complete current US range where reliably verified. These are progressive targets, not a reason to delay the reusable collection experience.
 
 **Why:** The owner explicitly defined these targets and asked for representative verified coverage across drugstore, mid-range and luxury before completing the full catalog.
 

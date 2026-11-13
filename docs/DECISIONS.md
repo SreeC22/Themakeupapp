@@ -1,4 +1,8 @@
-# Confirmed look-first direction
+# Confirmed collection-first direction
+
+The revised Stage 3 direction is **Maximalism with caution**, promising **More looks. Fewer unnecessary products.** Your Neu Edit is central; routines reuse it instead of generating separate shopping lists. Makeup by Mario is selected brand 26. Manufacturer-labeled application areas and separate research observations preserve safety and data integrity. See `STAGE_3_WARDROBE.md`. Public community stays deferred until 500+ registered users AND owner approval. Earlier decisions below are historical where superseded.
+
+## Earlier look-first direction
 
 The owner confirmed that Neu is a personalized makeup look builder, not primarily a foundation shade-matching tool. Stage 2 was accepted based on the implementation report. Stage 3 adds Your Neu Look while preserving its safeguards; see `STAGE_3_REQUIREMENTS.md`. The authorized exit is a tested preview and review, not a remote push/deployment. Public community remains outside scope.
 

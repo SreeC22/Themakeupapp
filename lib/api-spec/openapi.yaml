@@ -11,6 +11,18 @@ tags:
   - name: health
     description: Health operations
 paths:
+  /neu/research:
+    get:
+      operationId: getNeuResearch
+      tags: [neu]
+      summary: Curated public-source observations, not public reviews or popularity claims
+      responses:
+        "200":
+          description: Dated research candidates with explicit evidence limitations
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/NeuResearch" }
+        "503": { $ref: "#/components/responses/CatalogUnavailable" }
   /neu/catalog:
     get:
       operationId: getNeuCatalog
@@ -237,7 +249,13 @@ components:
         id: { type: string }
         brandId: { type: string }
         name: { type: string }
-        category: { type: string, enum: [Foundation, Concealer, Blush, Lips] }
+        category: { type: string, enum: [Foundation, Concealer, Blush, Lips, Eyes, Multi-use, Setting] }
+        applicationAreas: { type: array, items: { type: string } }
+        routineRoles: { type: array, items: { type: string } }
+        lipSubcategories: { type: array, items: { type: string } }
+        versatility: { type: array, items: { type: string } }
+        benefits: { type: array, items: { type: string } }
+        combinationRoles: { type: array, items: { type: string } }
         sourceUrl: { type: string }
         checkedOn: { type: string }
         rangeStatus: { type: string, enum: [enumerated, partial, needs_review] }
@@ -245,6 +263,30 @@ components:
         verifiedShadeCount: { type: integer }
         notes: { type: array, items: { type: string } }
         claims: { type: array, items: { $ref: "#/components/schemas/NeuClaim" } }
+    NeuResearch:
+      type: object
+      required: [entries, notes]
+      properties:
+        entries: { type: array, items: { $ref: "#/components/schemas/NeuResearchEntry" } }
+        notes: { type: array, items: { type: string } }
+    NeuResearchEntry:
+      type: object
+      required: [id, productName, shade, sourceUrl, observedOn, platform, reportedCharacteristics, positive, negative, routines, disclosure, strength, independentGroup, status]
+      properties:
+        id: { type: string }
+        productName: { type: string }
+        shade: { type: string }
+        sourceUrl: { type: string }
+        observedOn: { type: string }
+        platform: { type: string }
+        reportedCharacteristics: { type: array, items: { type: string } }
+        positive: { type: array, items: { type: string } }
+        negative: { type: array, items: { type: string } }
+        routines: { type: array, items: { type: string } }
+        disclosure: { type: string }
+        strength: { type: string }
+        independentGroup: { type: [string, "null"] }
+        status: { type: string, enum: [research_candidate, supported_favorite] }
     NeuShade:
       type: object
       required: [id, productId, name, description, status, claims]

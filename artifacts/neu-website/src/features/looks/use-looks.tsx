@@ -2,6 +2,7 @@ import { createContext, useContext, useEffect, useRef, useState, type ReactNode 
 import { LOOKS_KEY, readLooks, writeLooks, type LooksData, type LooksRead } from "./storage";
 import { downloadJson } from "./helpers";
 import { createWorkingDraftCache } from "./working-draft";
+import { createWardrobeDraftCache } from "../wardrobe/working-draft";
 
 export const LOOKS_CHANGED = "neu-looks-changed";
 const unavailableStorage = {
@@ -15,6 +16,8 @@ function storage() {
 
 function useLooksResource() {
   const [workingDrafts] = useState(createWorkingDraftCache);
+  const [wardrobeDrafts] = useState(createWardrobeDraftCache);
+  const [draftEpoch, setDraftEpoch] = useState(0);
   const [snapshot, setSnapshot] = useState<LooksRead>(() => readLooks(storage()));
   const snapshotRef = useRef(snapshot);
   snapshotRef.current = snapshot;
@@ -26,16 +29,18 @@ function useLooksResource() {
       if (event.key !== LOOKS_KEY && event.key !== null) return;
       changedRef.current = true;
       setChanged(true);
-      setMessage("Looks or owned products changed in another tab. Your unsaved draft is kept. Reload the local library before saving.");
+      setMessage("Your Neu Edit, routines, looks or owned products changed in another tab. Your unsaved draft is kept. Reload the local library before saving.");
     };
     const reset = () => {
       workingDrafts.clear();
+      wardrobeDrafts.clear();
+      setDraftEpoch(epoch => epoch + 1);
       const next = readLooks(storage());
       snapshotRef.current = next;
       setSnapshot(next);
       setChanged(false);
       changedRef.current = false;
-      setMessage("Local looks and owned products were reset.");
+      setMessage("Your local Neu Edit, routines, looks and owned products were reset.");
     };
     window.addEventListener("storage", change);
     window.addEventListener(LOOKS_CHANGED, reset);
@@ -43,7 +48,7 @@ function useLooksResource() {
       window.removeEventListener("storage", change);
       window.removeEventListener(LOOKS_CHANGED, reset);
     };
-  }, [workingDrafts]);
+  }, [workingDrafts, wardrobeDrafts]);
   const reload = () => {
     const next = readLooks(storage());
     snapshotRef.current = next;
@@ -91,7 +96,7 @@ function useLooksResource() {
     } catch { setMessage("Export could not start. Nothing was changed."); }
   };
   return {
-    snapshot, changed, message, commit, reload, exportRaw, workingDrafts,
+    snapshot, changed, message, commit, reload, exportRaw, workingDrafts, wardrobeDrafts, draftEpoch,
     currentRevision: () => snapshotRef.current.data.revision,
     startNewLook: () => workingDrafts.startNew(crypto.randomUUID(), snapshotRef.current.data.revision),
   };

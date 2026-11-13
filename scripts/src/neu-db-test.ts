@@ -5,7 +5,7 @@ import { loadNeuCatalog } from "@workspace/db/neu";
 after(async () => { await pool.end(); });
 test("development normalized catalog joins selected canonical brands, products, sources and variants", async () => {
   const data = await loadNeuCatalog();
-  assert.equal(data.coverage.selectedBrands, 25);
+  assert.ok(data.coverage.selectedBrands >= 26);
   assert.ok(data.coverage.verifiedProducts >= 5);
   assert.ok(data.coverage.verifiedShades >= 197);
   assert.ok(data.coverage.enumeratedRanges >= 4);

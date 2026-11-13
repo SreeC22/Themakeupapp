@@ -1,5 +1,6 @@
 import { db, neuSelectedBrands, neuProductLines, neuShades, neuSources, neuMatchingEvidence } from "../index";
 import type { Catalog, Claim, Product, Shade } from "./types.ts";
+import { verifiedValues } from "./matching.ts";
 
 export async function loadNeuCatalog(): Promise<Catalog> {
   // A single transaction gives readers a coherent snapshot during curator imports.
@@ -19,9 +20,13 @@ export async function loadNeuCatalog(): Promise<Catalog> {
       });
     const products: Product[] = lines.map(p => {
       const source = sourceMap.get(p.sourceId)!;
+      const activeClaims = claims(p.id, null, p.sourceId);
+      const metadata = (field: string) => verifiedValues(activeClaims, field, new Date().toISOString().slice(0, 10));
       return { id: p.id, brandId: p.brandId, name: p.name, category: p.category as Product["category"],
         sourceUrl: source.url, checkedOn: source.observedOn, rangeStatus: p.rangeStatus as Product["rangeStatus"],
-        declaredShadeCount: p.declaredShadeCount, notes: p.notes, claims: claims(p.id, null, p.sourceId),
+        declaredShadeCount: p.declaredShadeCount, notes: p.notes, claims: activeClaims,
+        applicationAreas: metadata("application_area"), routineRoles: metadata("routine_role"), lipSubcategories: metadata("lip_subcategory"),
+        versatility: metadata("versatility"), benefits: metadata("benefit"), combinationRoles: metadata("combination_role"),
         verifiedShadeCount: variants.filter(v => v.productId === p.id && v.sourceId === p.sourceId && v.status === "verified").length };
     }).sort((a, b) => a.id.localeCompare(b.id));
     const shades: Shade[] = variants.filter(v => lines.some(p => p.id === v.productId && p.sourceId === v.sourceId))

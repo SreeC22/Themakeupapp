@@ -151,7 +151,7 @@ test("look routes, generated-client wiring and existing discovery/private routes
   for (const path of ["/looks", "/looks/saved", "/quiz", "/profile", "/results", "/saved", "/learn", "/catalog/shades/:shadeId", "/review/new"]) {
     assert.ok(app.includes(`path="${path}"`), `missing route ${path}`);
   }
-  assert.match(app, /onComplete=\{\(\) => navigate\("\/looks"\)\}/);
+  assert.match(app, /onComplete=\{\(\) => navigate\("\/edit"\)\}/);
   const hook = readFileSync(new URL("../src/features/looks/use-look-evidence.ts", import.meta.url), "utf8");
   assert.match(hook, /useGetNeuCatalog/);
   assert.match(hook, /useRecommendNeuShades/);

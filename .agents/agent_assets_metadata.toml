@@ -84,3 +84,31 @@ mtime_ms = 1794538132939
 storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:0417277c-b89f-42fe-9e01-86281ec8ea11/dc37aad0-3120-45a4-b578-0370aa44fc19/7bbcc310-c27f-4c01-9957-3af9c9e17d78"
 storage_version_token = "1794539084606525"
 content_type = "text/markdown"
+
+[[outputs]]
+id = "uZ-O8iYQfiiBYxF7m_PiS"
+uri = "file://docs/STAGE_3_QA.md"
+type = "text"
+title = "Your Neu Look — actual test results"
+description = "189 passing automated tests, the navigation issue found and fixed, and the verified browser journey."
+logical_id = "91e1fae2-2b51-4235-b064-f016a26bcd8e"
+content_hash = "sha256:a28a34d985e56d0a795f401b963bd50a10a79e96baf0a907a5d2ca4e82b98c8a"
+size = 6595
+mtime_ms = 1794542166331
+storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:0417277c-b89f-42fe-9e01-86281ec8ea11/91e1fae2-2b51-4235-b064-f016a26bcd8e/95a101b6-c454-482f-a5d1-2101bb915406"
+storage_version_token = "1794542243888670"
+content_type = "text/markdown"
+
+[[outputs]]
+id = "ClIHsPyCqwiF4che31PWr"
+uri = "file://docs/STAGE_3_IMPLEMENTATION.md"
+type = "text"
+title = "Your Neu Look — implementation and catalog coverage"
+description = "Look-first journey, nine reviewed product lines, verified sources, budget behavior and remaining limitations."
+logical_id = "5b2958d7-efef-4acc-85bd-1762a101bac8"
+content_hash = "sha256:bd322fa22bb663eb4073179a39baa98db815a2bf438dff264e1e006181d19c40"
+size = 10053
+mtime_ms = 1794541682683
+storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:0417277c-b89f-42fe-9e01-86281ec8ea11/5b2958d7-efef-4acc-85bd-1762a101bac8/e0cfa61e-6314-4a10-9e66-0780e9c54b3c"
+storage_version_token = "1794542244415130"
+content_type = "text/markdown"

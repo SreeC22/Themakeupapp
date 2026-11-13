@@ -7,7 +7,7 @@ import { ProfileSummary } from "@/features/mvp/ProfileSummary";
 import { usePreview } from "@/features/mvp/use-preview";
 import { buildLook, LOOK_CATEGORIES, OCCASIONS, OCCASION_NOTES, type LookBudget, type LookOption, type LookSelections, type Occasion, type SavedLook } from "@/features/looks/model";
 import { validBudget } from "@/features/looks/storage";
-import { choiceLabel, collectSelections, emptySelections, generatedSelections, replaceSlot } from "@/features/looks/helpers";
+import { choiceLabel, collectSelections, emptySelections, generatedSelections, isLegacyLookCategory, replaceSlot } from "@/features/looks/helpers";
 import { useLooks } from "@/features/looks/use-looks";
 import { useLookEvidence } from "@/features/looks/use-look-evidence";
 import { LooksStorageNotice } from "@/features/looks/LooksStorageNotice";
@@ -174,8 +174,13 @@ export default function LooksPage() {
         </section>}
       </section>
       <OwnedInventory catalog={evidence.catalog} onReuse={item => {
+        const category = item.category;
+        if (!isLegacyLookCategory(category)) {
+          setMessage(`${item.product} belongs to ${category}, outside the four earlier slots. Review it in Your Neu Edit without relabeling its category.`);
+          return;
+        }
         setIntent(null);
-        setSelections(current => replaceSlot(current, item.category, { kind: "owned", ownedId: item.id }));
+        setSelections(current => replaceSlot(current, category, { kind: "owned", ownedId: item.id }));
         setActive(true); setDirty(true); setMessage(`Your owned ${item.product} was explicitly selected for ${item.category}. Other slots were kept.`);
       }} />
       <section className="mvp-panel" aria-labelledby="save-look-heading">

@@ -1,6 +1,10 @@
 # Neu website handoff
 
-## Current Your Neu Look handoff
+## Current Neu Edit and adaptive routines
+
+The revised Stage 3 specification makes the reusable collection central: Onboarding → Complexion Profile → Your Neu Edit → Explore Looks → Customize → Save or Shop. `/edit`, `/routines` and `/research` extend the existing website and protected local store. Current roadmap, coverage and limits: `STAGE_3_WARDROBE.md`; actual checks: `STAGE_3_WARDROBE_QA.md`. No push, deployment, production changes or public community activation. Public community is additionally gated on 500+ registered users and owner approval.
+
+## Historical Your Neu Look handoff
 
 The owner accepted Stage 2 based on its report and confirmed the look-first core product. Stage 3 extends it without replacing the existing website, design system or catalog. The primary journey and review gate are documented in `STAGE_3_REQUIREMENTS.md`; implementation/coverage and actual checks are in `STAGE_3_IMPLEMENTATION.md` / `STAGE_3_QA.md`. `/looks` and `/looks/saved` add local planning/editing/owned reuse; `/results` remains individual discovery. Community stays out. Stop for review; no push or deploy.
 

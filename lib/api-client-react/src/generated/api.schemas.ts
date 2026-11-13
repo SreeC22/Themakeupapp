@@ -47,6 +47,9 @@ export const NeuProductCategory = {
   Concealer: 'Concealer',
   Blush: 'Blush',
   Lips: 'Lips',
+  Eyes: 'Eyes',
+  'Multi-use': 'Multi-use',
+  Setting: 'Setting',
 } as const;
 
 export type NeuProductRangeStatus = typeof NeuProductRangeStatus[keyof typeof NeuProductRangeStatus];
@@ -63,6 +66,12 @@ export interface NeuProduct {
   brandId: string;
   name: string;
   category: NeuProductCategory;
+  applicationAreas?: string[];
+  routineRoles?: string[];
+  lipSubcategories?: string[];
+  versatility?: string[];
+  benefits?: string[];
+  combinationRoles?: string[];
   sourceUrl: string;
   checkedOn: string;
   rangeStatus: NeuProductRangeStatus;
@@ -71,6 +80,37 @@ export interface NeuProduct {
   verifiedShadeCount: number;
   notes: string[];
   claims: NeuClaim[];
+}
+
+export type NeuResearchEntryStatus = typeof NeuResearchEntryStatus[keyof typeof NeuResearchEntryStatus];
+
+
+export const NeuResearchEntryStatus = {
+  research_candidate: 'research_candidate',
+  supported_favorite: 'supported_favorite',
+} as const;
+
+export interface NeuResearchEntry {
+  id: string;
+  productName: string;
+  shade: string;
+  sourceUrl: string;
+  observedOn: string;
+  platform: string;
+  reportedCharacteristics: string[];
+  positive: string[];
+  negative: string[];
+  routines: string[];
+  disclosure: string;
+  strength: string;
+  /** @nullable */
+  independentGroup: string | null;
+  status: NeuResearchEntryStatus;
+}
+
+export interface NeuResearch {
+  entries: NeuResearchEntry[];
+  notes: string[];
 }
 
 export type NeuShadeStatus = typeof NeuShadeStatus[keyof typeof NeuShadeStatus];
@@ -539,6 +579,7 @@ category?: CategoryParameter;
  */
 scope?: ScopeParameter;
 };
+
 export type GetCatalogTaxonomy200 = {
   divisions: CatalogDivision[];
   categories: CatalogCategory[];
@@ -565,3 +606,4 @@ category?: CategoryParameter;
  */
 scope?: ScopeParameter;
 };
+

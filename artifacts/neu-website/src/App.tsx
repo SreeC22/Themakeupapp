@@ -13,6 +13,9 @@ import ReviewDraftPage from "@/pages/ReviewDraftPage";
 import SavedProductsPage from "@/pages/SavedProductsPage";
 import LooksPage from "@/pages/LooksPage";
 import SavedLooksPage from "@/pages/SavedLooksPage";
+import NeuEditPage from "@/pages/NeuEditPage";
+import RoutinesPage from "@/pages/RoutinesPage";
+import ResearchPage from "@/pages/ResearchPage";
 import LocalProfilePage from "@/pages/LocalProfilePage";
 import AdminUnavailablePage from "@/pages/AdminUnavailablePage";
 import { NotFoundPage } from "@/pages/UtilityPages";
@@ -20,7 +23,7 @@ import { QuizPage } from "@/features/quiz/QuizPage";
 import { PreviewProvider, usePreview } from "@/features/mvp/use-preview";
 import { StorageNotice } from "@/features/mvp/StorageNotice";
 import { LearnRoute } from "@/features/mvp/LearnRoute";
-import { LooksProvider } from "@/features/looks/use-looks";
+import { LooksProvider, useLooks } from "@/features/looks/use-looks";
 
 const queryClient = new QueryClient({ defaultOptions: { queries: { staleTime: 5 * 60 * 1000, retry: 1, refetchOnWindowFocus: false } } });
 
@@ -33,6 +36,7 @@ function Website() {
   const [location, navigate] = useLocation();
   const search = useSearch();
   const { state, updateQuiz } = usePreview();
+  const { draftEpoch } = useLooks();
   const quizPage = location === "/quiz";
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
@@ -42,13 +46,16 @@ function Website() {
     <StorageNotice />
     <RouteBoundary>
       <Switch>
-        <Route path="/"><PageMeta title="Makeup, your way" description="Build your personal Neu Look. Start with a beauty profile, choose a look and budget, customize your source-backed set, then save locally or shop real product sources." /><HomePage /></Route>
+        <Route path="/"><PageMeta title="More looks. Fewer unnecessary products." description="Maximalism with caution. Build a complexion profile, consider your personal Neu Edit, then create flexible makeup routines using the same collection." /><HomePage /></Route>
+        <Route path="/edit"><PageMeta title="Your Neu Edit" description="A focused, editable makeup collection with thoughtful essentials, optional extras and owned makeup. Explore more looks using the same products." /><NeuEditPage key={draftEpoch} /></Route>
+        <Route path="/routines"><PageMeta title="Explore looks & saved routines" description="Six flexible makeup routines using your same Neu Edit. Compare simple and elaborate versions, skip or add steps, swap labeled uses and save locally." /><RoutinesPage key={`${search}:${draftEpoch}`} /></Route>
+        <Route path="/research"><PageMeta title="Curated makeup research" description="Read-only source research with dates, disclosures and honest limitations. Early candidates stay separate from supported favorites." /><ResearchPage /></Route>
         <Route path="/looks"><PageMeta title="Your Neu Look" description="Choose a look, set a budget and generate a personal makeup starting set. Customize each slot, reuse what you own and save complete selections or an unfinished local draft." /><LooksPage key={search} /></Route>
         <Route path="/looks/saved"><PageMeta title="Your saved looks & drafts" description="Revisit complete look selections and drafts saved in this browser. Revalidate on current evidence, edit or delete looks, and manage your self-reported owned makeup." /><SavedLooksPage /></Route>
         <Route path="/quiz">
           <PageMeta title="Your beauty profile, your way" description="Start with a shade you know or the manual palette, then optional skin type. Both build one editable local beauty profile for your Neu Look. No photos or account needed." />
           <QuizPage draft={state.quiz} onChange={updateQuiz} guideNote={new URLSearchParams(search).get("guideDepth") === "changed" ? "The guide explores broad ranges. Choose a swatch yourself here, or stay unsure." : ""}
-            onHome={() => navigate("/")} onLearn={() => navigate("/learn?returnTo=quiz")} onComplete={() => navigate("/looks")} />
+            onHome={() => navigate("/")} onLearn={() => navigate("/learn?returnTo=quiz")} onComplete={() => navigate("/edit")} />
         </Route>
         <Route path="/results"><PageMeta title="Makeup discovery & evidence" description="Explore four categories with saved contextual preferences, source-backed candidate reasons and honest evidence limits. No exact cross-brand matches or match scores." /><ResultsPage /></Route>
         <Route path="/catalog/shades/:shadeId">{(params) => <CatalogShadePage shadeId={params.shadeId} />}</Route>

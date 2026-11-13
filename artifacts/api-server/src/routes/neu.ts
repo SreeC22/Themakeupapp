@@ -1,8 +1,17 @@
 import { Router, type IRouter } from "express";
-import { loadNeuCatalog, recommend } from "@workspace/db/neu";
-import { GetNeuCatalogResponse, RecommendNeuShadesBody, RecommendNeuShadesResponse } from "@workspace/api-zod";
+import { loadNeuCatalog, loadNeuResearch, recommend } from "@workspace/db/neu";
+import { GetNeuCatalogResponse, GetNeuResearchResponse, RecommendNeuShadesBody, RecommendNeuShadesResponse } from "@workspace/api-zod";
 
 const router: IRouter = Router();
+router.get("/neu/research", async (req, res): Promise<void> => {
+  try {
+    res.setHeader("Cache-Control", "no-store");
+    res.json(GetNeuResearchResponse.parse(await loadNeuResearch()));
+  } catch (error) {
+    req.log.error({ err: error }, "Neu research unavailable");
+    res.status(503).json({ error: "Curated research is unavailable. No review or endorsement is inferred." });
+  }
+});
 router.get("/neu/catalog", async (req, res): Promise<void> => {
   try {
     res.setHeader("Cache-Control", "no-store");

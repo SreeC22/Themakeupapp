@@ -149,6 +149,12 @@
       "name": "Danessa Myricks Beauty",
       "tier": "Luxury",
       "candidate": true
+    },
+    {
+      "id": "makeup-by-mario",
+      "name": "Makeup by Mario",
+      "tier": "Mid-range",
+      "candidate": false
     }
   ],
   "products": [
@@ -486,6 +492,360 @@
           "sourceUrl": "https://www.rarebeauty.com/products/kind-words-matte-lipstick",
           "checkedOn": "2026-11-13",
           "rawText": "Kind Words Matte Lipstick"
+        }
+      ]
+    },
+    {
+      "id": "mario-surreal-natural",
+      "brandId": "makeup-by-mario",
+      "name": "SurrealSkin® Natural Finish Foundation",
+      "category": "Foundation",
+      "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-natural-finish-foundation",
+      "checkedOn": "2026-11-13",
+      "rangeStatus": "enumerated",
+      "declaredShadeCount": 32,
+      "verifiedShadeCount": 32,
+      "notes": [
+        "Current US selector identities were reconciled with the official product page and its public product JSON. Identity does not establish an exact match, current stock, current price or identical wear on different skin.",
+        "Letter codes are retained as identity labels, not decoded into depth, undertone or olive temperature."
+      ],
+      "claims": [
+        {
+          "field": "coverage",
+          "value": "Medium",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-natural-finish-foundation",
+          "checkedOn": "2026-11-13",
+          "rawText": "weightless medium coverage"
+        },
+        {
+          "field": "finish",
+          "value": "Natural",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-natural-finish-foundation",
+          "checkedOn": "2026-11-13",
+          "rawText": "natural finish foundation"
+        },
+        {
+          "field": "application_area",
+          "value": "Face",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-natural-finish-foundation",
+          "checkedOn": "2026-11-13",
+          "rawText": "foundation"
+        }
+      ]
+    },
+    {
+      "id": "mario-awakening-concealer",
+      "brandId": "makeup-by-mario",
+      "name": "SurrealSkin® Awakening Concealer",
+      "category": "Concealer",
+      "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+      "checkedOn": "2026-11-13",
+      "rangeStatus": "enumerated",
+      "declaredShadeCount": 26,
+      "verifiedShadeCount": 26,
+      "notes": [
+        "Current US selector identities were reconciled with the official product page and its public product JSON. Identity does not establish an exact match, current stock, current price or identical wear on different skin."
+      ],
+      "claims": [
+        {
+          "field": "application_area",
+          "value": "Face",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "under-eyes and complexion"
+        },
+        {
+          "field": "routine_role",
+          "value": "Concealer",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "multiuse concealer"
+        }
+      ]
+    },
+    {
+      "id": "mario-ultra-suede-liner",
+      "brandId": "makeup-by-mario",
+      "name": "Ultra Suede® Sculpting Lip Pencil",
+      "category": "Lips",
+      "sourceUrl": "https://www.makeupbymario.com/products/ultra-suede-sculpting-lip-pencil-1",
+      "checkedOn": "2026-11-13",
+      "rangeStatus": "enumerated",
+      "declaredShadeCount": 22,
+      "verifiedShadeCount": 22,
+      "notes": [
+        "Current US selector identities were reconciled with the official product page and its public product JSON. Identity does not establish an exact match, current stock, current price or identical wear on different skin."
+      ],
+      "claims": [
+        {
+          "field": "application_area",
+          "value": "Lips",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/ultra-suede-sculpting-lip-pencil-1",
+          "checkedOn": "2026-11-13",
+          "rawText": "lip liner"
+        },
+        {
+          "field": "lip_subcategory",
+          "value": "Liner",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/ultra-suede-sculpting-lip-pencil-1",
+          "checkedOn": "2026-11-13",
+          "rawText": "dual-ended lip liner"
+        },
+        {
+          "field": "routine_role",
+          "value": "Lip liner",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/ultra-suede-sculpting-lip-pencil-1",
+          "checkedOn": "2026-11-13",
+          "rawText": "defines, sculpts, and limitlessly shapes the lips"
+        }
+      ]
+    },
+    {
+      "id": "mario-supershine-gloss",
+      "brandId": "makeup-by-mario",
+      "name": "SuperShine™ Lip Gloss",
+      "category": "Lips",
+      "sourceUrl": "https://www.makeupbymario.com/products/supershine-lip-gloss",
+      "checkedOn": "2026-11-13",
+      "rangeStatus": "enumerated",
+      "declaredShadeCount": 11,
+      "verifiedShadeCount": 11,
+      "notes": [
+        "Current US selector identities were reconciled with the official product page and its public product JSON. Identity does not establish an exact match, current stock, current price or identical wear on different skin."
+      ],
+      "claims": [
+        {
+          "field": "application_area",
+          "value": "Lips",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/supershine-lip-gloss",
+          "checkedOn": "2026-11-13",
+          "rawText": "lip gloss"
+        },
+        {
+          "field": "lip_subcategory",
+          "value": "Gloss",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/supershine-lip-gloss",
+          "checkedOn": "2026-11-13",
+          "rawText": "highest-shine lip gloss"
+        },
+        {
+          "field": "routine_role",
+          "value": "Lip gloss",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/supershine-lip-gloss",
+          "checkedOn": "2026-11-13",
+          "rawText": "lip gloss"
+        },
+        {
+          "field": "finish",
+          "value": "Glossy",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/supershine-lip-gloss",
+          "checkedOn": "2026-11-13",
+          "rawText": "glass-like finish"
+        },
+        {
+          "field": "versatility",
+          "value": "Wear alone or over lipstick",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/supershine-lip-gloss",
+          "checkedOn": "2026-11-13",
+          "rawText": "Wear alone or over your favorite lipstick"
+        },
+        {
+          "field": "combination_role",
+          "value": "Liner then gloss",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/supershine-lip-gloss",
+          "checkedOn": "2026-11-13",
+          "rawText": "Line your lips with Ultra Suede Lip Liner before applying SuperShine Lip Gloss"
+        }
+      ]
+    },
+    {
+      "id": "mario-ethereal-nature",
+      "brandId": "makeup-by-mario",
+      "name": "Ethereal Eyes™ Eyeshadow Palette: Nature",
+      "category": "Eyes",
+      "sourceUrl": "https://www.makeupbymario.com/products/ethereal-eyes-eyeshadow-palette-nature",
+      "checkedOn": "2026-11-13",
+      "rangeStatus": "enumerated",
+      "declaredShadeCount": 1,
+      "verifiedShadeCount": 1,
+      "notes": [
+        "Current US selector identities were reconciled with the official product page and its public product JSON. Identity does not establish an exact match, current stock, current price or identical wear on different skin.",
+        "One purchasable palette SKU contains 12 pans; pans are not counted as 12 individual product variants. Only its labeled eye use is supported."
+      ],
+      "claims": [
+        {
+          "field": "application_area",
+          "value": "Eyes",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/ethereal-eyes-eyeshadow-palette-nature",
+          "checkedOn": "2026-11-13",
+          "rawText": "Ethereal Eyes Eyeshadow Palette: Nature"
+        },
+        {
+          "field": "routine_role",
+          "value": "Eyes",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/ethereal-eyes-eyeshadow-palette-nature",
+          "checkedOn": "2026-11-13",
+          "rawText": "eyeshadow palette"
+        },
+        {
+          "field": "versatility",
+          "value": "Four finishes in one palette",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/ethereal-eyes-eyeshadow-palette-nature",
+          "checkedOn": "2026-11-13",
+          "rawText": "12 universal neutrals & 4 finishes"
+        }
+      ]
+    },
+    {
+      "id": "mario-soft-pop-veil",
+      "brandId": "makeup-by-mario",
+      "name": "Soft Pop Plumping Blush Veil",
+      "category": "Blush",
+      "sourceUrl": "https://www.makeupbymario.com/products/soft-pop-plumping-blush-veil",
+      "checkedOn": "2026-11-13",
+      "rangeStatus": "enumerated",
+      "declaredShadeCount": 10,
+      "verifiedShadeCount": 10,
+      "notes": [
+        "Current US selector identities were reconciled with the official product page and its public product JSON. Identity does not establish an exact match, current stock, current price or identical wear on different skin."
+      ],
+      "claims": [
+        {
+          "field": "application_area",
+          "value": "Cheeks",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/soft-pop-plumping-blush-veil",
+          "checkedOn": "2026-11-13",
+          "rawText": "cream blush balm"
+        },
+        {
+          "field": "routine_role",
+          "value": "Cheeks",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/soft-pop-plumping-blush-veil",
+          "checkedOn": "2026-11-13",
+          "rawText": "cream blush balm"
+        },
+        {
+          "field": "formula",
+          "value": "Cream",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/soft-pop-plumping-blush-veil",
+          "checkedOn": "2026-11-13",
+          "rawText": "cream blush balm"
+        },
+        {
+          "field": "opacity",
+          "value": "Sheer",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/soft-pop-plumping-blush-veil",
+          "checkedOn": "2026-11-13",
+          "rawText": "sheer veil of color"
+        }
+      ]
+    },
+    {
+      "id": "elf-monochromatic-multi",
+      "brandId": "elf-cosmetics",
+      "name": "Monochromatic Multi-Stick",
+      "category": "Multi-use",
+      "sourceUrl": "https://www.elfcosmetics.com/products/monochromatic-multi-stick",
+      "checkedOn": "2026-11-13",
+      "rangeStatus": "enumerated",
+      "declaredShadeCount": 7,
+      "verifiedShadeCount": 7,
+      "notes": [
+        "Current US selector identities were reconciled with the official product page and its public product JSON. Identity does not establish an exact match, current stock, current price or identical wear on different skin."
+      ],
+      "claims": [
+        {
+          "field": "application_area",
+          "value": "Eyes",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/products/monochromatic-multi-stick",
+          "checkedOn": "2026-11-13",
+          "rawText": "multi stick makeup for eyes, lips, and cheeks"
+        },
+        {
+          "field": "application_area",
+          "value": "Lips",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/products/monochromatic-multi-stick",
+          "checkedOn": "2026-11-13",
+          "rawText": "multi stick makeup for eyes, lips, and cheeks"
+        },
+        {
+          "field": "application_area",
+          "value": "Cheeks",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/products/monochromatic-multi-stick",
+          "checkedOn": "2026-11-13",
+          "rawText": "multi stick makeup for eyes, lips, and cheeks"
+        },
+        {
+          "field": "routine_role",
+          "value": "Cheeks",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/products/monochromatic-multi-stick",
+          "checkedOn": "2026-11-13",
+          "rawText": "eyeshadow, blush, and lipstick"
+        },
+        {
+          "field": "routine_role",
+          "value": "Lip color",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/products/monochromatic-multi-stick",
+          "checkedOn": "2026-11-13",
+          "rawText": "eyeshadow, blush, and lipstick"
+        },
+        {
+          "field": "routine_role",
+          "value": "Eyes",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/products/monochromatic-multi-stick",
+          "checkedOn": "2026-11-13",
+          "rawText": "eyeshadow, blush, and lipstick"
+        },
+        {
+          "field": "formula",
+          "value": "Cream-to-powder",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/products/monochromatic-multi-stick",
+          "checkedOn": "2026-11-13",
+          "rawText": "cream-to-powder"
+        },
+        {
+          "field": "versatility",
+          "value": "One stick for three labeled areas",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/products/monochromatic-multi-stick",
+          "checkedOn": "2026-11-13",
+          "rawText": "multi stick makeup for eyes, lips, and cheeks"
+        },
+        {
+          "field": "benefit",
+          "value": "Manufacturer describes blendable wear",
+          "basis": "verified",
+          "sourceUrl": "https://www.elfcosmetics.com/products/monochromatic-multi-stick",
+          "checkedOn": "2026-11-13",
+          "rawText": "Foolproof, blendable wear"
         }
       ]
     }
@@ -6640,6 +7000,1456 @@
       "productId": "rare-kind-words",
       "name": "Humble",
       "description": "No variant color descriptor captured.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-surreal-natural--42361875923009",
+      "productId": "mario-surreal-natural",
+      "name": ".5 N",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-surreal-natural--42361875955777",
+      "productId": "mario-surreal-natural",
+      "name": "1 C",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-surreal-natural--42361875988545",
+      "productId": "mario-surreal-natural",
+      "name": "2 N",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-surreal-natural--42361876021313",
+      "productId": "mario-surreal-natural",
+      "name": "3 W",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-surreal-natural--42361876054081",
+      "productId": "mario-surreal-natural",
+      "name": "3.5 C",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-surreal-natural--42361876086849",
+      "productId": "mario-surreal-natural",
+      "name": "4.5 N",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-surreal-natural--42361876119617",
+      "productId": "mario-surreal-natural",
+      "name": "5 N",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-surreal-natural--42361876152385",
+      "productId": "mario-surreal-natural",
+      "name": "6 W",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-surreal-natural--42361876185153",
+      "productId": "mario-surreal-natural",
+      "name": "7 C",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-surreal-natural--42361876217921",
+      "productId": "mario-surreal-natural",
+      "name": "8 N",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-surreal-natural--42361876250689",
+      "productId": "mario-surreal-natural",
+      "name": "9 W",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-surreal-natural--42361876283457",
+      "productId": "mario-surreal-natural",
+      "name": "11 N",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-surreal-natural--42361876316225",
+      "productId": "mario-surreal-natural",
+      "name": "11.5 N",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-surreal-natural--42361876348993",
+      "productId": "mario-surreal-natural",
+      "name": "12 O",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-surreal-natural--42361876381761",
+      "productId": "mario-surreal-natural",
+      "name": "14 O",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-surreal-natural--42361876414529",
+      "productId": "mario-surreal-natural",
+      "name": "15 N",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-surreal-natural--42361876447297",
+      "productId": "mario-surreal-natural",
+      "name": "16.5 N",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-surreal-natural--42361876480065",
+      "productId": "mario-surreal-natural",
+      "name": "17 N",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-surreal-natural--42361876512833",
+      "productId": "mario-surreal-natural",
+      "name": "17.5 N",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-surreal-natural--42361876545601",
+      "productId": "mario-surreal-natural",
+      "name": "18 W",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-surreal-natural--42361876578369",
+      "productId": "mario-surreal-natural",
+      "name": "18.5 N",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-surreal-natural--42361876611137",
+      "productId": "mario-surreal-natural",
+      "name": "19 C",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-surreal-natural--42361876643905",
+      "productId": "mario-surreal-natural",
+      "name": "20 N",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-surreal-natural--42361876676673",
+      "productId": "mario-surreal-natural",
+      "name": "22 C",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-surreal-natural--42361876709441",
+      "productId": "mario-surreal-natural",
+      "name": "23 O",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-surreal-natural--42361876742209",
+      "productId": "mario-surreal-natural",
+      "name": "24 N",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-surreal-natural--42361876774977",
+      "productId": "mario-surreal-natural",
+      "name": "25 W",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-surreal-natural--42361876807745",
+      "productId": "mario-surreal-natural",
+      "name": "26 N",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-surreal-natural--42361876840513",
+      "productId": "mario-surreal-natural",
+      "name": "27 W",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-surreal-natural--42361876873281",
+      "productId": "mario-surreal-natural",
+      "name": "28.5 N",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-surreal-natural--42361876906049",
+      "productId": "mario-surreal-natural",
+      "name": "29.5 N",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-surreal-natural--42361876938817",
+      "productId": "mario-surreal-natural",
+      "name": "30 W",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-awakening-concealer--41701886820417",
+      "productId": "mario-awakening-concealer",
+      "name": "110 (Fair Neutral)",
+      "description": "Fair Neutral",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "fair",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "110 (Fair Neutral)"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "110 (Fair Neutral)"
+        }
+      ]
+    },
+    {
+      "id": "mario-awakening-concealer--40464559603777",
+      "productId": "mario-awakening-concealer",
+      "name": "120 (Light Peach)",
+      "description": "Light Peach",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "light",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "120 (Light Peach)"
+        }
+      ]
+    },
+    {
+      "id": "mario-awakening-concealer--40464559636545",
+      "productId": "mario-awakening-concealer",
+      "name": "140 (Light Warm)",
+      "description": "Light Warm",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "light",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "140 (Light Warm)"
+        },
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "140 (Light Warm)"
+        }
+      ]
+    },
+    {
+      "id": "mario-awakening-concealer--40464559669313",
+      "productId": "mario-awakening-concealer",
+      "name": "160 (Light Cool)",
+      "description": "Light Cool",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "light",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "160 (Light Cool)"
+        },
+        {
+          "field": "undertone",
+          "value": "Cool",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "160 (Light Cool)"
+        }
+      ]
+    },
+    {
+      "id": "mario-awakening-concealer--41701886853185",
+      "productId": "mario-awakening-concealer",
+      "name": "170 (Light Neutral)",
+      "description": "Light Neutral",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "light",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "170 (Light Neutral)"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "170 (Light Neutral)"
+        }
+      ]
+    },
+    {
+      "id": "mario-awakening-concealer--40464559702081",
+      "productId": "mario-awakening-concealer",
+      "name": "180 (Light Medium Warm)",
+      "description": "Light Medium Warm",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "light-medium",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "180 (Light Medium Warm)"
+        },
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "180 (Light Medium Warm)"
+        }
+      ]
+    },
+    {
+      "id": "mario-awakening-concealer--41701886885953",
+      "productId": "mario-awakening-concealer",
+      "name": "190 (Light Medium Neutral)",
+      "description": "Light Medium Neutral",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "light-medium",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "190 (Light Medium Neutral)"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "190 (Light Medium Neutral)"
+        }
+      ]
+    },
+    {
+      "id": "mario-awakening-concealer--40464559734849",
+      "productId": "mario-awakening-concealer",
+      "name": "200 (Light Medium Neutral)",
+      "description": "Light Medium Neutral",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "light-medium",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "200 (Light Medium Neutral)"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "200 (Light Medium Neutral)"
+        }
+      ]
+    },
+    {
+      "id": "mario-awakening-concealer--40464559767617",
+      "productId": "mario-awakening-concealer",
+      "name": "220 (Light Medium Peach)",
+      "description": "Light Medium Peach",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "light-medium",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "220 (Light Medium Peach)"
+        }
+      ]
+    },
+    {
+      "id": "mario-awakening-concealer--40464629071937",
+      "productId": "mario-awakening-concealer",
+      "name": "240 (Light Medium Neutral)",
+      "description": "Light Medium Neutral",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "light-medium",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "240 (Light Medium Neutral)"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "240 (Light Medium Neutral)"
+        }
+      ]
+    },
+    {
+      "id": "mario-awakening-concealer--40464632971329",
+      "productId": "mario-awakening-concealer",
+      "name": "260 (Medium Warm)",
+      "description": "Medium Warm",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "medium",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "260 (Medium Warm)"
+        },
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "260 (Medium Warm)"
+        }
+      ]
+    },
+    {
+      "id": "mario-awakening-concealer--40464633397313",
+      "productId": "mario-awakening-concealer",
+      "name": "280 (Medium Peach)",
+      "description": "Medium Peach",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "medium",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "280 (Medium Peach)"
+        }
+      ]
+    },
+    {
+      "id": "mario-awakening-concealer--41701886918721",
+      "productId": "mario-awakening-concealer",
+      "name": "310 (Medium Neutral)",
+      "description": "Medium Neutral",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "medium",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "310 (Medium Neutral)"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "310 (Medium Neutral)"
+        }
+      ]
+    },
+    {
+      "id": "mario-awakening-concealer--40464633430081",
+      "productId": "mario-awakening-concealer",
+      "name": "320 (Medium Peach)",
+      "description": "Medium Peach",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "medium",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "320 (Medium Peach)"
+        }
+      ]
+    },
+    {
+      "id": "mario-awakening-concealer--40464633462849",
+      "productId": "mario-awakening-concealer",
+      "name": "340 (Medium Warm)",
+      "description": "Medium Warm",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "medium",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "340 (Medium Warm)"
+        },
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "340 (Medium Warm)"
+        }
+      ]
+    },
+    {
+      "id": "mario-awakening-concealer--40464633790529",
+      "productId": "mario-awakening-concealer",
+      "name": "360 (Medium Peach)",
+      "description": "Medium Peach",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "medium",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "360 (Medium Peach)"
+        }
+      ]
+    },
+    {
+      "id": "mario-awakening-concealer--40464633823297",
+      "productId": "mario-awakening-concealer",
+      "name": "380 (Medium Golden)",
+      "description": "Medium Golden",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "medium",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "380 (Medium Golden)"
+        }
+      ]
+    },
+    {
+      "id": "mario-awakening-concealer--40464633921601",
+      "productId": "mario-awakening-concealer",
+      "name": "420 (Medium Dark Golden)",
+      "description": "Medium Dark Golden",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "medium-dark",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "420 (Medium Dark Golden)"
+        }
+      ]
+    },
+    {
+      "id": "mario-awakening-concealer--40464633954369",
+      "productId": "mario-awakening-concealer",
+      "name": "440 (Medium Dark Peach)",
+      "description": "Medium Dark Peach",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "medium-dark",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "440 (Medium Dark Peach)"
+        }
+      ]
+    },
+    {
+      "id": "mario-awakening-concealer--40464634052673",
+      "productId": "mario-awakening-concealer",
+      "name": "460 (Medium Dark Neutral)",
+      "description": "Medium Dark Neutral",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "medium-dark",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "460 (Medium Dark Neutral)"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "460 (Medium Dark Neutral)"
+        }
+      ]
+    },
+    {
+      "id": "mario-awakening-concealer--40464634085441",
+      "productId": "mario-awakening-concealer",
+      "name": "520 (Dark Peach)",
+      "description": "Dark Peach",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "dark",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "520 (Dark Peach)"
+        }
+      ]
+    },
+    {
+      "id": "mario-awakening-concealer--40464634118209",
+      "productId": "mario-awakening-concealer",
+      "name": "540 (Dark Golden)",
+      "description": "Dark Golden",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "dark",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "540 (Dark Golden)"
+        }
+      ]
+    },
+    {
+      "id": "mario-awakening-concealer--40464634314817",
+      "productId": "mario-awakening-concealer",
+      "name": "560 (Dark Neutral)",
+      "description": "Dark Neutral",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "dark",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "560 (Dark Neutral)"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "560 (Dark Neutral)"
+        }
+      ]
+    },
+    {
+      "id": "mario-awakening-concealer--40464634445889",
+      "productId": "mario-awakening-concealer",
+      "name": "620 (Dark Warm)",
+      "description": "Dark Warm",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "dark",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "620 (Dark Warm)"
+        },
+        {
+          "field": "undertone",
+          "value": "Warm",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "620 (Dark Warm)"
+        }
+      ]
+    },
+    {
+      "id": "mario-awakening-concealer--40464634511425",
+      "productId": "mario-awakening-concealer",
+      "name": "640 (Dark Cool)",
+      "description": "Dark Cool",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "dark",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "640 (Dark Cool)"
+        },
+        {
+          "field": "undertone",
+          "value": "Cool",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "640 (Dark Cool)"
+        }
+      ]
+    },
+    {
+      "id": "mario-awakening-concealer--40464634708033",
+      "productId": "mario-awakening-concealer",
+      "name": "660 (Dark Neutral)",
+      "description": "Dark Neutral",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "depth",
+          "value": "dark",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "660 (Dark Neutral)"
+        },
+        {
+          "field": "undertone",
+          "value": "Neutral",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/surrealskin-awakening-concealer",
+          "checkedOn": "2026-11-13",
+          "rawText": "660 (Dark Neutral)"
+        }
+      ]
+    },
+    {
+      "id": "mario-ultra-suede-liner--43212214566977",
+      "productId": "mario-ultra-suede-liner",
+      "name": "Toasty (Soft Pink Brown)",
+      "description": "Soft Pink Brown",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Brown",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/ultra-suede-sculpting-lip-pencil-1",
+          "checkedOn": "2026-11-13",
+          "rawText": "Toasty (Soft Pink Brown)"
+        }
+      ]
+    },
+    {
+      "id": "mario-ultra-suede-liner--39477755576385",
+      "productId": "mario-ultra-suede-liner",
+      "name": "Dmitry (Nude Beige)",
+      "description": "Nude Beige",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-ultra-suede-liner--39802089766977",
+      "productId": "mario-ultra-suede-liner",
+      "name": "Smokey Pink (Dusty Nude Pink)",
+      "description": "Dusty Nude Pink",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Pink",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/ultra-suede-sculpting-lip-pencil-1",
+          "checkedOn": "2026-11-13",
+          "rawText": "Smokey Pink (Dusty Nude Pink)"
+        }
+      ]
+    },
+    {
+      "id": "mario-ultra-suede-liner--39477755609153",
+      "productId": "mario-ultra-suede-liner",
+      "name": "Hugh (Pinky Nude)",
+      "description": "Pinky Nude",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-ultra-suede-liner--39802091733057",
+      "productId": "mario-ultra-suede-liner",
+      "name": "Almond (Light Caramel Brown)",
+      "description": "Light Caramel Brown",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Brown",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/ultra-suede-sculpting-lip-pencil-1",
+          "checkedOn": "2026-11-13",
+          "rawText": "Almond (Light Caramel Brown)"
+        }
+      ]
+    },
+    {
+      "id": "mario-ultra-suede-liner--39802092945473",
+      "productId": "mario-ultra-suede-liner",
+      "name": "Milk Chocolate (Soft Milky Brown)",
+      "description": "Soft Milky Brown",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Brown",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/ultra-suede-sculpting-lip-pencil-1",
+          "checkedOn": "2026-11-13",
+          "rawText": "Milk Chocolate (Soft Milky Brown)"
+        }
+      ]
+    },
+    {
+      "id": "mario-ultra-suede-liner--39480539971649",
+      "productId": "mario-ultra-suede-liner",
+      "name": "Travis (Milk Chocolate Brown)",
+      "description": "Milk Chocolate Brown",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Brown",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/ultra-suede-sculpting-lip-pencil-1",
+          "checkedOn": "2026-11-13",
+          "rawText": "Travis (Milk Chocolate Brown)"
+        }
+      ]
+    },
+    {
+      "id": "mario-ultra-suede-liner--39477755641921",
+      "productId": "mario-ultra-suede-liner",
+      "name": "Johnny (Muted Rose Pink)",
+      "description": "Muted Rose Pink",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Rose",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/ultra-suede-sculpting-lip-pencil-1",
+          "checkedOn": "2026-11-13",
+          "rawText": "Johnny (Muted Rose Pink)"
+        }
+      ]
+    },
+    {
+      "id": "mario-ultra-suede-liner--39480489476161",
+      "productId": "mario-ultra-suede-liner",
+      "name": "Daniel (Warm Spiced Brown)",
+      "description": "Warm Spiced Brown",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Brown",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/ultra-suede-sculpting-lip-pencil-1",
+          "checkedOn": "2026-11-13",
+          "rawText": "Daniel (Warm Spiced Brown)"
+        }
+      ]
+    },
+    {
+      "id": "mario-ultra-suede-liner--39480497635393",
+      "productId": "mario-ultra-suede-liner",
+      "name": "Angela (Warm Brick Brown)",
+      "description": "Warm Brick Brown",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Brown",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/ultra-suede-sculpting-lip-pencil-1",
+          "checkedOn": "2026-11-13",
+          "rawText": "Angela (Warm Brick Brown)"
+        }
+      ]
+    },
+    {
+      "id": "mario-ultra-suede-liner--39480500977729",
+      "productId": "mario-ultra-suede-liner",
+      "name": "Lauren (Rich Mauve)",
+      "description": "Rich Mauve",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Mauve",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/ultra-suede-sculpting-lip-pencil-1",
+          "checkedOn": "2026-11-13",
+          "rawText": "Lauren (Rich Mauve)"
+        }
+      ]
+    },
+    {
+      "id": "mario-ultra-suede-liner--39480540758081",
+      "productId": "mario-ultra-suede-liner",
+      "name": "Jeff (Intense Deep Brown)",
+      "description": "Intense Deep Brown",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Brown",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/ultra-suede-sculpting-lip-pencil-1",
+          "checkedOn": "2026-11-13",
+          "rawText": "Jeff (Intense Deep Brown)"
+        }
+      ]
+    },
+    {
+      "id": "mario-ultra-suede-liner--39480534532161",
+      "productId": "mario-ultra-suede-liner",
+      "name": "Kevin (Pinky Mauve)",
+      "description": "Pinky Mauve",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Mauve",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/ultra-suede-sculpting-lip-pencil-1",
+          "checkedOn": "2026-11-13",
+          "rawText": "Kevin (Pinky Mauve)"
+        }
+      ]
+    },
+    {
+      "id": "mario-ultra-suede-liner--39480539578433",
+      "productId": "mario-ultra-suede-liner",
+      "name": "Kelley (Rich Wine Bordeaux)",
+      "description": "Rich Wine Bordeaux",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-ultra-suede-liner--39480539185217",
+      "productId": "mario-ultra-suede-liner",
+      "name": "Niels (Bright Neutral Red)",
+      "description": "Bright Neutral Red",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Red",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/ultra-suede-sculpting-lip-pencil-1",
+          "checkedOn": "2026-11-13",
+          "rawText": "Niels (Bright Neutral Red)"
+        }
+      ]
+    },
+    {
+      "id": "mario-ultra-suede-liner--40676332634177",
+      "productId": "mario-ultra-suede-liner",
+      "name": "Pink Peony (Vivid Blue Pink)",
+      "description": "Vivid Blue Pink",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Pink",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/ultra-suede-sculpting-lip-pencil-1",
+          "checkedOn": "2026-11-13",
+          "rawText": "Pink Peony (Vivid Blue Pink)"
+        }
+      ]
+    },
+    {
+      "id": "mario-ultra-suede-liner--40676337123393",
+      "productId": "mario-ultra-suede-liner",
+      "name": "Spiced Chai (Neutral Medium Brown)",
+      "description": "Neutral Medium Brown",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Brown",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/ultra-suede-sculpting-lip-pencil-1",
+          "checkedOn": "2026-11-13",
+          "rawText": "Spiced Chai (Neutral Medium Brown)"
+        }
+      ]
+    },
+    {
+      "id": "mario-ultra-suede-liner--40676338827329",
+      "productId": "mario-ultra-suede-liner",
+      "name": "Flame Red (Vibrant Orange Red)",
+      "description": "Vibrant Orange Red",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Red",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/ultra-suede-sculpting-lip-pencil-1",
+          "checkedOn": "2026-11-13",
+          "rawText": "Flame Red (Vibrant Orange Red)"
+        }
+      ]
+    },
+    {
+      "id": "mario-ultra-suede-liner--40676340990017",
+      "productId": "mario-ultra-suede-liner",
+      "name": "Burnt Sienna (Soft Terracotta)",
+      "description": "Soft Terracotta",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-ultra-suede-liner--39802088456257",
+      "productId": "mario-ultra-suede-liner",
+      "name": "Tan (Beige Camel Nude)",
+      "description": "Beige Camel Nude",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-ultra-suede-liner--39802090848321",
+      "productId": "mario-ultra-suede-liner",
+      "name": "Rich Mauve (Spiced Mauve)",
+      "description": "Spiced Mauve",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Mauve",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/ultra-suede-sculpting-lip-pencil-1",
+          "checkedOn": "2026-11-13",
+          "rawText": "Rich Mauve (Spiced Mauve)"
+        }
+      ]
+    },
+    {
+      "id": "mario-ultra-suede-liner--39802097369153",
+      "productId": "mario-ultra-suede-liner",
+      "name": "Dark Chocolate (Deep Cocoa Brown)",
+      "description": "Deep Cocoa Brown",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Brown",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/ultra-suede-sculpting-lip-pencil-1",
+          "checkedOn": "2026-11-13",
+          "rawText": "Dark Chocolate (Deep Cocoa Brown)"
+        }
+      ]
+    },
+    {
+      "id": "mario-supershine-gloss--41818507444289",
+      "productId": "mario-supershine-gloss",
+      "name": "Perfect Pink",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-supershine-gloss--41818507411521",
+      "productId": "mario-supershine-gloss",
+      "name": "Rosewater",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-supershine-gloss--41818507477057",
+      "productId": "mario-supershine-gloss",
+      "name": "Dragonfruit",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-supershine-gloss--41818507509825",
+      "productId": "mario-supershine-gloss",
+      "name": "Watermelon",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-supershine-gloss--41818507542593",
+      "productId": "mario-supershine-gloss",
+      "name": "Sunlit",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-supershine-gloss--41818507575361",
+      "productId": "mario-supershine-gloss",
+      "name": "Bare",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-supershine-gloss--41818507608129",
+      "productId": "mario-supershine-gloss",
+      "name": "Rose Crush",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-supershine-gloss--41818507640897",
+      "productId": "mario-supershine-gloss",
+      "name": "Rustic Pink",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-supershine-gloss--41818507673665",
+      "productId": "mario-supershine-gloss",
+      "name": "Midnight Mauve",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-supershine-gloss--41818507706433",
+      "productId": "mario-supershine-gloss",
+      "name": "Cocoa",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-supershine-gloss--41818507739201",
+      "productId": "mario-supershine-gloss",
+      "name": "Berry",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-ethereal-nature--42430563811393",
+      "productId": "mario-ethereal-nature",
+      "name": "Default Title",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-soft-pop-veil--40403213615169",
+      "productId": "mario-soft-pop-veil",
+      "name": "Pinch Me Pink (Pale Pink)",
+      "description": "Pale Pink",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Pink",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/soft-pop-plumping-blush-veil",
+          "checkedOn": "2026-11-13",
+          "rawText": "Pinch Me Pink (Pale Pink)"
+        }
+      ]
+    },
+    {
+      "id": "mario-soft-pop-veil--41553179574337",
+      "productId": "mario-soft-pop-veil",
+      "name": "Pink Peony (Soft Blue Pink)",
+      "description": "Soft Blue Pink",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Pink",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/soft-pop-plumping-blush-veil",
+          "checkedOn": "2026-11-13",
+          "rawText": "Pink Peony (Soft Blue Pink)"
+        }
+      ]
+    },
+    {
+      "id": "mario-soft-pop-veil--41553179607105",
+      "productId": "mario-soft-pop-veil",
+      "name": "Strawberry Sunset (Cherry Pink)",
+      "description": "Cherry Pink",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Pink",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/soft-pop-plumping-blush-veil",
+          "checkedOn": "2026-11-13",
+          "rawText": "Strawberry Sunset (Cherry Pink)"
+        }
+      ]
+    },
+    {
+      "id": "mario-soft-pop-veil--41553179639873",
+      "productId": "mario-soft-pop-veil",
+      "name": "Paradise Pink (Vibrant Blue Pink)",
+      "description": "Vibrant Blue Pink",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Pink",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/soft-pop-plumping-blush-veil",
+          "checkedOn": "2026-11-13",
+          "rawText": "Paradise Pink (Vibrant Blue Pink)"
+        }
+      ]
+    },
+    {
+      "id": "mario-soft-pop-veil--41553179672641",
+      "productId": "mario-soft-pop-veil",
+      "name": "Papaya Pop (Bright Peachy Orange)",
+      "description": "Bright Peachy Orange",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-soft-pop-veil--40403213516865",
+      "productId": "mario-soft-pop-veil",
+      "name": "Barely Blushing (Natural Flush)",
+      "description": "Natural Flush",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "mario-soft-pop-veil--40403213549633",
+      "productId": "mario-soft-pop-veil",
+      "name": "Just Peachy (Peachy Coral)",
+      "description": "Peachy Coral",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Coral",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/soft-pop-plumping-blush-veil",
+          "checkedOn": "2026-11-13",
+          "rawText": "Just Peachy (Peachy Coral)"
+        }
+      ]
+    },
+    {
+      "id": "mario-soft-pop-veil--40403213484097",
+      "productId": "mario-soft-pop-veil",
+      "name": "Perfect Pink (Cool Pink)",
+      "description": "Cool Pink",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Pink",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/soft-pop-plumping-blush-veil",
+          "checkedOn": "2026-11-13",
+          "rawText": "Perfect Pink (Cool Pink)"
+        }
+      ]
+    },
+    {
+      "id": "mario-soft-pop-veil--40403213582401",
+      "productId": "mario-soft-pop-veil",
+      "name": "Rose Crush (Spiced Rose)",
+      "description": "Spiced Rose",
+      "status": "verified",
+      "claims": [
+        {
+          "field": "color_family",
+          "value": "Rose",
+          "basis": "verified",
+          "sourceUrl": "https://www.makeupbymario.com/products/soft-pop-plumping-blush-veil",
+          "checkedOn": "2026-11-13",
+          "rawText": "Rose Crush (Spiced Rose)"
+        }
+      ]
+    },
+    {
+      "id": "mario-soft-pop-veil--40403711000641",
+      "productId": "mario-soft-pop-veil",
+      "name": "Berry Punch (Soft Plum)",
+      "description": "Soft Plum",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-monochromatic-multi--bronzed-cherry",
+      "productId": "elf-monochromatic-multi",
+      "name": "Bronzed Cherry - Terracotta Red w/ Gold & Bronze Shimmer",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-monochromatic-multi--dazzling-peony",
+      "productId": "elf-monochromatic-multi",
+      "name": "Dazzling Peony - Neutral Pink w/ Pink Shimmer",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-monochromatic-multi--glimmering-guava",
+      "productId": "elf-monochromatic-multi",
+      "name": "Glimmering Guava - Mid-Tone Peach Pink w/ Gold Shimmer",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-monochromatic-multi--glistening-peach",
+      "productId": "elf-monochromatic-multi",
+      "name": "Glistening Peach - Light Peach Pink w/ Pink & Gold Shimmer",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-monochromatic-multi--glowing-mango",
+      "productId": "elf-monochromatic-multi",
+      "name": "Glowing Mango - Tangerine Orange w/ Gold Shimmer",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-monochromatic-multi--luminous-berry",
+      "productId": "elf-monochromatic-multi",
+      "name": "Luminous Berry - Berry w/ Pink Multicolor Shimmer",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
+      "status": "verified",
+      "claims": []
+    },
+    {
+      "id": "elf-monochromatic-multi--sparkling-rose",
+      "productId": "elf-monochromatic-multi",
+      "name": "Sparkling Rose - Rosy Mauve / Multi-Color Shimmer",
+      "description": "Manufacturer selector identity; additional shade descriptors are not confirmed.",
       "status": "verified",
       "claims": []
     }

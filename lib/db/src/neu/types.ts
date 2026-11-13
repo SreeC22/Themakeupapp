@@ -1,13 +1,16 @@
 export type Category = "Foundation" | "Concealer" | "Blush" | "Lips";
+export type CatalogCategory = Category | "Eyes" | "Multi-use" | "Setting";
 export type Claim = {
   field: string; value: string; basis: "verified" | "estimate" | "user_report";
   sourceUrl: string; checkedOn: string; rawText: string;
 };
 export type Brand = { id: string; name: string; tier: "Drugstore" | "Mid-range" | "Luxury"; candidate: boolean };
 export type Product = {
-  id: string; brandId: string; name: string; category: Category; sourceUrl: string; checkedOn: string;
+  id: string; brandId: string; name: string; category: CatalogCategory; sourceUrl: string; checkedOn: string;
   rangeStatus: "enumerated" | "partial" | "needs_review"; declaredShadeCount: number | null;
   verifiedShadeCount: number; notes: string[]; claims: Claim[];
+  applicationAreas?: string[]; routineRoles?: string[]; lipSubcategories?: string[];
+  versatility?: string[]; benefits?: string[]; combinationRoles?: string[];
 };
 export type Shade = {
   id: string; productId: string; name: string; description: string; status: "verified" | "needs_review"; claims: Claim[];

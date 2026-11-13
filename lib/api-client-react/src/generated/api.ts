@@ -34,7 +34,8 @@ import type {
   ListCatalogBrandsParams,
   NeuCatalog,
   NeuProfileInput,
-  NeuRecommendations
+  NeuRecommendations,
+  NeuResearch
 } from './api.schemas';
 
 import { customFetch } from '../custom-fetch';
@@ -63,6 +64,83 @@ const withQueryKey = <T extends object, K>(query: T, queryKey: K): T & { queryKe
   }
   return result;
 };
+
+export const getGetNeuResearchUrl = () => {
+
+
+
+
+  return `/api/neu/research`
+}
+
+/**
+ * @summary Curated public-source observations, not public reviews or popularity claims
+ */
+export const getNeuResearch = async ( options?: Parameters<typeof customFetch>[1]): Promise<NeuResearch> => {
+
+  return customFetch<NeuResearch>(getGetNeuResearchUrl(),
+  {
+    ...options,
+    method: 'GET'
+
+
+  }
+);}
+
+
+
+
+
+export const getGetNeuResearchQueryKey = () => {
+    return [
+    `/api/neu/research`
+    ] as const;
+    }
+
+
+export const getGetNeuResearchQueryOptions = <TData = Awaited<ReturnType<typeof getNeuResearch>>, TError = ErrorType<CatalogUnavailableResponse>>( options?: { query?:UseQueryOptions<Awaited<ReturnType<typeof getNeuResearch>>, TError, TData>, request?: SecondParameter<typeof customFetch>}
+) => {
+
+const {query: queryOptions, request: requestOptions} = options ?? {};
+
+  const queryKey =  queryOptions?.queryKey ?? getGetNeuResearchQueryKey();
+
+
+
+    const queryFn: QueryFunction<Awaited<ReturnType<typeof getNeuResearch>>> = ({ signal }) => getNeuResearch({ signal, ...requestOptions });
+
+
+
+
+
+   return  { queryKey, queryFn, ...queryOptions} as UseQueryOptions<Awaited<ReturnType<typeof getNeuResearch>>, TError, TData> & { queryKey: QueryKey }
+}
+
+export type GetNeuResearchQueryResult = NonNullable<Awaited<ReturnType<typeof getNeuResearch>>>
+export type GetNeuResearchQueryError = ErrorType<CatalogUnavailableResponse>
+
+
+/**
+ * @summary Curated public-source observations, not public reviews or popularity claims
+ */
+
+export function useGetNeuResearch<TData = Awaited<ReturnType<typeof getNeuResearch>>, TError = ErrorType<CatalogUnavailableResponse>>(
+  options?: { query?:UseQueryOptions<Awaited<ReturnType<typeof getNeuResearch>>, TError, TData>, request?: SecondParameter<typeof customFetch>}
+
+ ):  UseQueryResult<TData, TError> & { queryKey: QueryKey } {
+
+  const queryOptions = getGetNeuResearchQueryOptions(options)
+
+  const query = useQuery(queryOptions) as  UseQueryResult<TData, TError> & { queryKey: QueryKey };
+
+  return withQueryKey(query, queryOptions.queryKey);
+}
+
+
+
+
+
+
 
 export const getGetNeuCatalogUrl = () => {
 
@@ -785,3 +863,10 @@ export function useHealthCheck<TData = Awaited<ReturnType<typeof healthCheck>>, 
 
   return withQueryKey(query, queryOptions.queryKey);
 }
+
+
+
+
+
+
+

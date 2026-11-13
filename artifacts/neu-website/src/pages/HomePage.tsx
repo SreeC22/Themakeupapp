@@ -14,12 +14,12 @@ export default function HomePage() {
     <main className="content">
       <section className="hero">
         <div className="hero-copy">
-          <span className="eyebrow">Room for every shade story</span>
-          <h1>Makeup is a way<br />to <em>be more you.</em></h1>
-          <p className="hero-lede">Your beauty profile. Your mood. Your budget. Build a personal makeup look, make it your own and reuse what you have, with room for every complexion depth and color story.</p>
+          <span className="eyebrow">Maximalism with caution</span>
+          <h1>More looks.<br /><em>Fewer unnecessary<br />products.</em></h1>
+          <p className="hero-lede">Make room for creative possibilities, not more things you do not need. Build your personal makeup wardrobe, reuse what you own and discover new ways to wear it.</p>
           <div className="hero-actions">
-            <Button onClick={() => navigate(hasProfile ? "/looks" : "/quiz")} data-testid="button-home-build-look">{hasProfile ? "Build your Neu Look" : "Start your beauty profile"} <ArrowRight size={17} /></Button>
-            <Link className="text-button" href="/results">Explore product research <span aria-hidden="true">↗</span></Link>
+            <Button onClick={() => navigate(hasProfile ? "/edit" : "/quiz")} data-testid="button-home-build-look">{hasProfile ? "Open your Neu Edit" : "Start your complexion profile"} <ArrowRight size={17} /></Button>
+            <Link className="text-button" href="/edit">Explore your Neu Edit <span aria-hidden="true">↗</span></Link>
           </div>
           <div className="hero-note"><i />Explore first. No account needed.</div>
         </div>
@@ -29,18 +29,18 @@ export default function HomePage() {
       </section>
 
       <section aria-labelledby="how-title">
-        <h2 id="how-title" className="section-kicker">Your profile. Your look. Your way.</h2>
+        <h2 id="how-title" className="section-kicker">Your profile. Your Edit. Your expression.</h2>
         <div className="how-grid">
           <article className="how-step"><span className="step-num">01</span><div><h2>Start with you.</h2><p>Build your beauty profile with a shade you know or the manual palette. Unsure is always welcome.</p></div></article>
-          <article className="how-step"><span className="step-num">02</span><div><h2>Choose your direction.</h2><p>Everyday, Soft Glam, Party Glam or Work & College. Set a budget and generate a personal starting set with honest evidence limits.</p></div></article>
-          <article className="how-step"><span className="step-num">03</span><div><h2>Make it your own.</h2><p>Customize one slot at a time, reuse your own products, then save your look locally or visit the real product sources to shop.</p></div></article>
+          <article className="how-step"><span className="step-num">02</span><div><h2>Consider your essentials.</h2><p>Your Neu Edit is a focused collection, with options you already own, thoughtful extras and honest evidence gaps. Nothing is a must-have.</p></div></article>
+          <article className="how-step"><span className="step-num">03</span><div><h2>Make more of it.</h2><p>Explore six flexible looks using the same collection. Skip steps, swap safely, then save your routine or visit a real product source.</p></div></article>
         </div>
       </section>
 
       <section className="mvp-home-categories" aria-labelledby="launch-categories-heading">
         <span className="mono">FOUR PLACES TO BEGIN</span><h2 id="launch-categories-heading">Explore what interests you.</h2>
         <nav aria-label="Launch makeup categories">{LAUNCH_CATEGORIES.map((category) => <Link key={category} className="mvp-link" href={`/results?category=${encodeURIComponent(category)}`}>{category} <ArrowRight size={14} /></Link>)}</nav>
-        <p>Explore a growing reviewed catalog alongside clearly separate historical research. Manufacturer descriptors are not laboratory validation, exact cross-brand matches or a current stock check.</p>
+        <p>Explore a growing reviewed catalog alongside clearly separate curated research. Manufacturer descriptors are not laboratory validation, exact cross-brand matches or a current stock check.</p>
         <p>Public community is outside the MVP. Your personal notes and profile stay private in this browser.</p>
         <Link href="/profile" className="mvp-link">Your profile & private drafts <ArrowRight size={14} /></Link>
       </section>
@@ -48,7 +48,7 @@ export default function HomePage() {
       <section className="home-bottom">
         <div><span className="mono">A LITTLE REMINDER</span><h2>There is not one right way to wear it.</h2></div>
         <p>Bare skin, sharp liner, a favorite shade. Start wherever you are, and keep what feels like you.</p>
-        <Link className="round-link" href="/looks" aria-label="Build your Neu Look"><ArrowRight size={19} /></Link>
+        <Link className="round-link" href="/edit" aria-label="Open your Neu Edit"><ArrowRight size={19} /></Link>
       </section>
 
       <section className="learn-invite">

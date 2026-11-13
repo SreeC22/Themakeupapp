@@ -4,8 +4,8 @@ import { Button } from "@workspace/neu-design-system/components/neu/button";
 import { Typeahead } from "@workspace/neu-design-system/components/neu/typeahead";
 import type { NeuCatalog } from "@workspace/api-client-react";
 import { Disclosure, EmptyState, Options } from "../mvp/Controls";
-import { LOOK_CATEGORIES, type LookCategory, type OwnedProduct } from "./model";
-import { looksUsingOwned } from "./helpers";
+import { OWNED_CATEGORIES, type OwnedCategory, type OwnedProduct } from "./model";
+import { isLegacyLookCategory, looksUsingOwned } from "./helpers";
 import { useLooks } from "./use-looks";
 import { usePreview } from "../mvp/use-preview";
 
@@ -56,12 +56,12 @@ export function OwnedInventory({ catalog, onReuse }: { catalog?: NeuCatalog; onR
         <h3>{item.product}</h3><p>{[item.brand, item.shade].filter(Boolean).join(" · ") || "Brand and shade left open"}</p>
         <p className="mvp-muted">{item.category} · {item.shadeId ? "Catalog identity recorded; ownership is self-reported" : "Self-reported item, no catalog identity"}</p>
         <div className="mvp-actions">
-          {onReuse ? <Button variant="secondary" onClick={() => onReuse(item)} data-testid={`button-reuse-owned-${item.id}`}>Use in {item.category}</Button> : <Button variant="text" onClick={() => navigate(startNewLook())}>Use in a new look</Button>}
+          {onReuse ? <Button variant="secondary" onClick={() => onReuse(item)} data-testid={`button-reuse-owned-${item.id}`}>Consider in collection or look</Button> : <Button variant="text" onClick={() => navigate(isLegacyLookCategory(item.category) ? startNewLook() : "/edit")}>Review for {isLegacyLookCategory(item.category) ? "an earlier look" : "your Neu Edit"}</Button>}
           <Button variant="text" onClick={() => { setDraft({ ...item }); setDraftBase(JSON.stringify(item)); setEditing(true); }} data-testid={`button-edit-owned-${item.id}`}>Edit item</Button>
           <Button variant="text" disabled={!writable} onClick={() => setRemoveId(item.id)} data-testid={`button-remove-owned-${item.id}`}>Remove item</Button>
         </div>
         {removeId === item.id && <div className="mvp-notice" role="group" aria-label="Confirm removing owned product">
-          <p>Remove this inventory item? {looksUsingOwned(data.looks, item.id).length} saved looks reference it. Their references will remain unchanged and become unresolved. A working look using this item will also keep its reference. No replacement is selected.</p>
+          <p>Remove this inventory item? {looksUsingOwned(data.looks, item.id).length} earlier saved looks reference it. Neu Edit, adaptive routines and earlier looks keep their references; affected steps become unresolved. No replacement is selected.</p>
           <div className="mvp-actions"><Button variant="secondary" onClick={() => {
             setMessage("");
             if (commit(current => ({ ...current, owned: current.owned.filter(o => o.id !== item.id) }))) {
@@ -81,7 +81,7 @@ export function OwnedInventory({ catalog, onReuse }: { catalog?: NeuCatalog; onR
           <Button variant="text" onClick={() => setDraft(item => ({ ...item, id: "" }))}>Keep edited values as a new owned item</Button>
         </div>
       </div>}
-      <Options label="Product category" options={LOOK_CATEGORIES} value={draft.category} onChange={category => setDraft(d => ({ ...d, category: category as LookCategory, product: "", shade: "", shadeId: undefined }))} />
+      <Options label="Product category" options={OWNED_CATEGORIES} value={draft.category} onChange={category => setDraft(d => ({ ...d, category: category as OwnedCategory, product: "", shade: "", shadeId: undefined }))} />
       <Typeahead label="Brand (optional)" value={draft.brand} placeholder="Type your brand" suggestions={catalog?.brands.map(b => b.name) ?? []} onChange={value => setDraft(d => ({ ...d, brand: value, product: "", shade: "", shadeId: undefined }))} />
       <Typeahead label="Product" value={draft.product} placeholder="Type a product, including one not listed" suggestions={products.map(p => p.name)} onChange={value => setDraft(d => ({ ...d, product: value, shade: "", shadeId: undefined }))} />
       <Typeahead label="Shade (optional)" value={draft.shade} placeholder="Type your shade" suggestions={shades.map(s => s.name)} onChange={value => setDraft(d => ({ ...d, shade: value, shadeId: undefined }))} />

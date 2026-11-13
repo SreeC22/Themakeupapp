@@ -9,6 +9,30 @@ import * as zod from 'zod';
 
 
 /**
+ * @summary Curated public-source observations, not public reviews or popularity claims
+ */
+export const GetNeuResearchResponse = zod.object({
+  "entries": zod.array(zod.object({
+  "id": zod.string(),
+  "productName": zod.string(),
+  "shade": zod.string(),
+  "sourceUrl": zod.string(),
+  "observedOn": zod.string(),
+  "platform": zod.string(),
+  "reportedCharacteristics": zod.array(zod.string()),
+  "positive": zod.array(zod.string()),
+  "negative": zod.array(zod.string()),
+  "routines": zod.array(zod.string()),
+  "disclosure": zod.string(),
+  "strength": zod.string(),
+  "independentGroup": zod.string().nullable(),
+  "status": zod.enum(['research_candidate', 'supported_favorite'])
+})),
+  "notes": zod.array(zod.string())
+})
+
+
+/**
  * @summary Reviewed US product lines and source-backed shade observations, never live stock
  */
 export const GetNeuCatalogResponse = zod.object({
@@ -22,7 +46,13 @@ export const GetNeuCatalogResponse = zod.object({
   "id": zod.string(),
   "brandId": zod.string(),
   "name": zod.string(),
-  "category": zod.enum(['Foundation', 'Concealer', 'Blush', 'Lips']),
+  "category": zod.enum(['Foundation', 'Concealer', 'Blush', 'Lips', 'Eyes', 'Multi-use', 'Setting']),
+  "applicationAreas": zod.array(zod.string()).optional(),
+  "routineRoles": zod.array(zod.string()).optional(),
+  "lipSubcategories": zod.array(zod.string()).optional(),
+  "versatility": zod.array(zod.string()).optional(),
+  "benefits": zod.array(zod.string()).optional(),
+  "combinationRoles": zod.array(zod.string()).optional(),
   "sourceUrl": zod.string(),
   "checkedOn": zod.string(),
   "rangeStatus": zod.enum(['enumerated', 'partial', 'needs_review']),
@@ -494,3 +524,5 @@ export const ExportCatalogCsvResponse = zod.unknown()
 export const HealthCheckResponse = zod.object({
   "status": zod.string()
 })
+
+

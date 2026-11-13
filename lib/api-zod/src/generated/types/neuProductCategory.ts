@@ -14,4 +14,7 @@ export const NeuProductCategory = {
   Concealer: 'Concealer',
   Blush: 'Blush',
   Lips: 'Lips',
+  Eyes: 'Eyes',
+  'Multi-use': 'Multi-use',
+  Setting: 'Setting',
 } as const;

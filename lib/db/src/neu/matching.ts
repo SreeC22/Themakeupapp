@@ -76,7 +76,8 @@ export function recommend(catalog: Catalog, input: ProfileInput, asOf = new Date
   const ranked: { candidate: Candidate; order: number }[] = [];
   for (const shade of catalog.shades) {
     const product = products.get(shade.productId);
-    if (!product || shade.status !== "verified" || avoid.has(shade.id)) { excludedCount++; continue; }
+    if (!product || !CATEGORIES.includes(product.category as Category) || shade.status !== "verified" || avoid.has(shade.id)) { excludedCount++; continue; }
+    const category = product.category as Category;
     const complexion = ["Foundation", "Concealer"].includes(product.category);
     const reasons: string[] = [];
     const limitations: string[] = [];
@@ -121,7 +122,7 @@ export function recommend(catalog: Catalog, input: ProfileInput, asOf = new Date
       if (types?.split("|").includes(input.skinType!)) { order += 2; reasons.push(`Manufacturer lists ${input.skinType!.toLowerCase()} skin among supported types; this is not a safety guarantee.`); }
       else limitations.push("Suitability for your skin type is not established by the reviewed evidence.");
     }
-    const pref = input.preferences?.[product.category];
+    const pref = input.preferences?.[category];
     for (const [field, desired] of [["coverage", pref?.coverage], ["finish", pref?.finish], ["formula", pref?.formula]] as const) {
       if (!chosen(desired)) continue;
       const known = scalar(field);
@@ -168,7 +169,7 @@ export function recommend(catalog: Catalog, input: ProfileInput, asOf = new Date
     if (!reasons.length) reasons.push("A source-observed product shade you can explore; no personal shade alignment has been established.");
     limitations.push("Check the source for current range, price and availability. Compare on your own skin/lips before choosing.");
     if (exclude) { excludedCount++; continue; }
-    ranked.push({ order, candidate: { shadeId: shade.id, productId: product.id, category: product.category,
+    ranked.push({ order, candidate: { shadeId: shade.id, productId: product.id, category,
       label: complexion ? limited ? "Limited-evidence suggestion" : "Descriptor-aligned candidate" : "Color exploration",
       reasons, limitations, sourceUrl: product.sourceUrl, checkedOn: product.checkedOn } });
   }

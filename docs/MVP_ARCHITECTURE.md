@@ -27,7 +27,11 @@ Retain the current stable forty-swatch identifiers and approximate-color disclai
 
 The Stage 1 product projection contains only source-backed names, categories and URLs from existing research. Record its source observation date. Unknown prices/finish/coverage/shades stay null. Sorting is browsing, not a disguised match algorithm. No calibrated scores, stock assertions or paid placements.
 
-## Current roadmap: look-first product direction
+## Current roadmap: collection-first product direction
+
+The revised Stage 3 scope supersedes the earlier fixed-bundle journey. Your Neu Edit is a reusable personal collection; six adaptive routines use that same collection with optional steps and labeled-use restrictions. See `STAGE_3_WARDROBE.md` / `STAGE_3_WARDROBE_QA.md`. PostgreSQL manufacturer evidence remains separate from curated research observations; public community remains gated. Earlier look-first scope below is historical and retained for provenance.
+
+### Historical look-first scope
 
 The owner accepted Stage 2 based on its implementation report and authorized **Stage 3: Your Neu Look**. Neu's primary product is now explicitly a personalized makeup look builder: Beauty Profile → Choose a Look → Budget → Personalized Set → Customize → Save or Shop. Foundation matching is supporting infrastructure, not the main product destination.
 

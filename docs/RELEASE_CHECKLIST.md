@@ -2,7 +2,7 @@
 
 ## Current gate
 
-The newer active gate is **Stage 3: Your Neu Look**, after owner acceptance of Stage 2. Neu is a look builder, not primarily foundation matching. Preserve previous safeguards; review the tested preview, nine-line coverage subset and gaps in `STAGE_3_QA.md` / `STAGE_3_IMPLEMENTATION.md`. No public community, remote push or deployment. The prior Stage 2 gate below is historical.
+The active gate is **Stage 3: Personalized Makeup Wardrobe & Adaptive Looks**. Review `/edit`, same-collection `/routines`, source-separated `/research`, actual tests and remaining beta gaps in `STAGE_3_WARDROBE.md` / `STAGE_3_WARDROBE_QA.md`. Preserve all earlier data and safeguards. Public community additionally needs 500+ registered users AND owner approval. No remote push, production changes or deployment. Earlier look-first/Stage 2 gates are historical.
 
 Stage 1 was accepted by the owner. Stage 2 now includes two-path onboarding, a representative normalized catalog and initial explainable recommendations. Its scope is `STAGE_2_REQUIREMENTS.md`; observed implementation/coverage is `STAGE_2_IMPLEMENTATION.md` and actual verification is `STAGE_2_QA.md`. Stop for review at this gate. Full catalog targets are progressive. Public community remains outside MVP until 500+ registered users and phase approval. Do not push or deploy.
 

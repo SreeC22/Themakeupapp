@@ -1,9 +1,12 @@
 import type { NeuCatalog } from "@workspace/api-client-react";
 import { LOOK_CATEGORIES } from "./model.ts";
-import type { LookChoice, LookPlan, LookSelections, OwnedProduct, SavedLook } from "./model.ts";
+import type { LookCategory, LookChoice, LookPlan, LookSelections, OwnedProduct, SavedLook } from "./model.ts";
 import { LOOKS_KEY, readLooks } from "./storage.ts";
 
 export const emptySelections = (): LookSelections => Object.fromEntries(LOOK_CATEGORIES.map(category => [category, null]));
+export function isLegacyLookCategory(category: string): category is LookCategory {
+  return LOOK_CATEGORIES.some(value => value === category);
+}
 
 /** Capture every slot, including a deliberately empty slot and an unavailable saved identity. */
 export function collectSelections(plan: LookPlan, previous: LookSelections = {}): LookSelections {

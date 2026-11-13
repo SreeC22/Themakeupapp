@@ -14,6 +14,12 @@ export interface NeuProduct {
   brandId: string;
   name: string;
   category: NeuProductCategory;
+  applicationAreas?: string[];
+  routineRoles?: string[];
+  lipSubcategories?: string[];
+  versatility?: string[];
+  benefits?: string[];
+  combinationRoles?: string[];
   sourceUrl: string;
   checkedOn: string;
   rangeStatus: NeuProductRangeStatus;

@@ -1,4 +1,4 @@
-import { pgTable, text, integer, date, uniqueIndex, index, foreignKey, check } from "drizzle-orm/pg-core";
+import { pgTable, text, integer, date, timestamp, uniqueIndex, index, foreignKey, check } from "drizzle-orm/pg-core";
 import { sql } from "drizzle-orm";
 import { createInsertSchema } from "drizzle-zod";
 import { catalogBrands } from "./catalog";
@@ -28,7 +28,7 @@ export const neuProductLines = pgTable("neu_product_lines", {
   declaredShadeCount: integer("declared_shade_count"),
   notes: text("notes").array().notNull().default([]),
 }, t => [
-  check("neu_category", sql`${t.category} IN ('Foundation','Concealer','Blush','Lips')`),
+  check("neu_category", sql`${t.category} IN ('Foundation','Concealer','Blush','Lips','Eyes','Multi-use','Setting')`),
   check("neu_range_status", sql`${t.rangeStatus} IN ('enumerated','partial','needs_review')`),
   check("neu_range_count", sql`${t.declaredShadeCount} IS NULL OR ${t.declaredShadeCount} >= 0`),
 ]);
@@ -63,5 +63,22 @@ export const neuMatchingEvidence = pgTable("neu_matching_evidence", {
 export const insertNeuProductSchema = createInsertSchema(neuProductLines);
 export const insertNeuShadeSchema = createInsertSchema(neuShades);
 export const insertNeuEvidenceSchema = createInsertSchema(neuMatchingEvidence);
+// Read-only curated source observations. This is not a public community/review table.
+export const neuResearchObservations = pgTable("neu_research_observations", {
+  id: text("id").primaryKey(),
+  sourceId: text("source_id").notNull().references(() => neuSources.id),
+  productName: text("product_name").notNull(),
+  shade: text("shade").notNull(),
+  platform: text("platform").notNull(),
+  reportedCharacteristics: text("reported_characteristics").array().notNull().default([]),
+  positive: text("positive").array().notNull().default([]),
+  negative: text("negative").array().notNull().default([]),
+  routines: text("routines").array().notNull().default([]),
+  disclosure: text("disclosure").notNull(),
+  strength: text("strength").notNull(),
+  independentGroup: text("independent_group"),
+  status: text("status").notNull().default("research_candidate"),
+  createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+}, t => [check("neu_research_status", sql`${t.status} IN ('research_candidate','supported_favorite')`)]);
 export type NeuProductRow = typeof neuProductLines.$inferSelect;
 export type NeuShadeRow = typeof neuShades.$inferSelect;
