@@ -2,13 +2,26 @@
 
 ## Current Neu Edit and adaptive routines
 
-The revised Stage 3 specification makes the reusable collection central: Onboarding → Complexion Profile → Your Neu Edit → Explore Looks → Customize → Save or Shop. `/edit`, `/routines` and `/research` extend the existing website and protected local store. Current roadmap, coverage and limits: `STAGE_3_WARDROBE.md`; actual checks: `STAGE_3_WARDROBE_QA.md`. No push, deployment, production changes or public community activation. Public community is additionally gated on 500+ registered users and owner approval.
+The reusable collection is central: Onboarding → Complexion Profile → Your Neu Edit → Explore Looks → Customize → Save or Shop. `/edit`, `/routines` and `/research` extend the existing website and protected local store. Current specifications: `STAGE_3_WARDROBE.md`; actual checks and limits: `STAGE_3_WARDROBE_QA.md`.
+
+### Current status
+
+- Stage 3 is committed on local `main`. This is not a GitHub push or deployment.
+- 231 automated tests passed; workspace typecheck, post-fix website typecheck and production website build passed.
+- The browser check verified onboarding, Edit save, owned multi-use makeup, Cheeks/Eyes reuse and simple/elaborate collection reuse. It found a false “item unavailable” warning on skipped steps; this was fixed and regression-tested.
+- **Still unverified in the browser:** save/edit/reload a routine; its same-ID and note/step persistence; UI protection of future-version data; `/research` presentation; and the remaining mobile/tablet viewports. Do not mark the Stage 3 browser journey fully verified.
+- The browser run used isolated `TEST` data. It did not touch owner-browser data or member accounts.
+- Current development catalog: 26 selected brands, 16 lines, 399 shade/palette identities (one is a palette SKU, not 12 separately sold pans), and one unresolved shade identity. Fifteen selector ranges are reconciled; one is partial. Only four individual variants have verified prices. Six research observations are candidate-only; no independently supported favorites are established.
+- Existing profiles, feedback, four-slot looks and saved products remain available. Local edits and routines are not cloud-synced.
+- No production/Supabase or native-app changes, remote push, deployment or public community activation. Public community remains gated on 500+ registered users **and** separate owner approval.
+
+Use the two Stage 3 documents above as the current source of truth. Sections explicitly marked historical below are context, not the active product roadmap.
 
 ## Historical Your Neu Look handoff
 
 The owner accepted Stage 2 based on its report and confirmed the look-first core product. Stage 3 extends it without replacing the existing website, design system or catalog. The primary journey and review gate are documented in `STAGE_3_REQUIREMENTS.md`; implementation/coverage and actual checks are in `STAGE_3_IMPLEMENTATION.md` / `STAGE_3_QA.md`. `/looks` and `/looks/saved` add local planning/editing/owned reuse; `/results` remains individual discovery. Community stays out. Stop for review; no push or deploy.
 
-## Current Stage 2 handoff
+## Historical Stage 2 handoff
 
 The owner approved Stage 1 based on its report. The newer requirements add two short onboarding paths, contextual category preferences, a normalized development catalog and initial explainable matching. Use `STAGE_2_REQUIREMENTS.md`, `STAGE_2_IMPLEMENTATION.md` and `STAGE_2_QA.md` as the current stage handoff; the sections below retain prior-phase context. The existing design system, historical IDs, forty swatches, browser storage keys and private draft data remain preserved. Public community is deferred until 500+ registered users and owner approval. No push/deploy is authorized.
 
@@ -49,7 +62,7 @@ The homepage, public education, guest exploration and local profile interactions
 
 Do not invite people to create real shared posts or claim that accounts, cloud saves, moderation or database permissions are verified. These remain part of the unfinished Supabase work.
 
-## Current website journey and storage
+## Historical Stage 1 website journey and storage
 
 The updated web MVP brief preserves a compact consultation and changes its first question to depth:
 
@@ -102,6 +115,10 @@ From the workspace root:
 ```sh
 pnpm install
 pnpm --filter @workspace/neu-website run typecheck
+pnpm --filter @workspace/neu-website test
+pnpm --filter @workspace/scripts run neu:test
+pnpm --filter @workspace/scripts run neu:db:test
+pnpm --filter @workspace/scripts run neu:api:test
 ```
 
 The Vite commands require `PORT` and `BASE_PATH`. Replit supplies these through the artifact workflow. For a standalone static build outside the workflow, supply them explicitly, for example:
@@ -112,14 +129,8 @@ PORT=5173 BASE_PATH=/ pnpm --filter @workspace/neu-website run build
 
 The output is `artifacts/neu-website/dist/public/`. Use an SPA fallback when serving route URLs directly.
 
+The development-only catalog and research imports are `pnpm --filter @workspace/scripts run neu:seed` and `pnpm --filter @workspace/scripts run neu:research:seed`. Never run those against production.
+
 ## Git and publishing
 
-A local Git commit is not a GitHub push or a deployment. The owner subsequently authorized pushing the approved website and repository organization to GitHub main.
-
-GitHub has separate history from this Replit workspace. The prepared source port is based on GitHub main, on local branch `sync/neu-website-main`, commit `7e0f32a`, with a linked worktree under `generated-artifacts/neu-github-main`. Verify its Git top-level before operating there. It adds an isolated `website/site` and `website/design-system` workspace with portable Vite configurations, a lockfile, contributor guidance and updated root documentation. Existing native code, root static pages and database scripts are unchanged.
-
-The subsequent Stage 0/1 work is on `feature/neu-web-mvp-stage-1` and is not included in that older pending source-port commit. No new GitHub push is attempted as part of the stage preview.
-
-The portable workspace installed successfully; both typechecks and production builds passed. GitHub rejected the push with an invalid username/token error, including one retry after attaching the existing connection. GitHub CLI is not authenticated here. The source port is committed locally, not pushed. Restore write authentication before retrying a normal fast-forward push; do not force-push or merge the unrelated Replit history into GitHub.
-
-Nothing should be published automatically. The owner decides what stays and when the website is ready to share.
+The active source repository is the Replit workspace. Stage 3 is committed on local `main`; no remote push was performed. This user explicitly withheld push and deployment approval for this stage. Do not attempt GitHub operations, change deployment settings, or publish until they are separately approved. A local commit is not a push, release, or production database migration.

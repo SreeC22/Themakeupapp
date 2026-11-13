@@ -112,3 +112,45 @@ mtime_ms = 1794541682683
 storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:0417277c-b89f-42fe-9e01-86281ec8ea11/5b2958d7-efef-4acc-85bd-1762a101bac8/e0cfa61e-6314-4a10-9e66-0780e9c54b3c"
 storage_version_token = "1794542244415130"
 content_type = "text/markdown"
+
+[[outputs]]
+id = "xpA2pi6VSreFNlmjv91I_"
+uri = "file://docs/STAGE_3_WARDROBE.md"
+type = "text"
+title = "Neu Stage 3 — roadmap and coverage"
+description = "The collection-first direction, six reusable routines, verified catalog coverage, sources, and remaining beta work."
+logical_id = "9cbeeefa-8b3f-4d33-a251-fe00e16c138d"
+content_hash = "sha256:2afab4320feb3332ce9916456663a303e8a4a47d92024137f46745435618eb96"
+size = 6110
+mtime_ms = 1794545620756
+storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:0417277c-b89f-42fe-9e01-86281ec8ea11/9cbeeefa-8b3f-4d33-a251-fe00e16c138d/d0ce50cd-5709-47f4-9802-df2c22babc7e"
+storage_version_token = "1794545642985574"
+content_type = "text/markdown"
+
+[[outputs]]
+id = "-vJjvdzwjJEMX1cH7xW58"
+uri = "file://docs/STAGE_3_WARDROBE_QA.md"
+type = "text"
+title = "Neu Stage 3 — actual verification and remaining checks"
+description = "231 passing automated tests plus a transparent record of the incomplete routine browser save/reload checks."
+logical_id = "e360dfb1-d5d4-42b3-9dbf-ed8da1f91c75"
+content_hash = "sha256:cffbf7c7082e9c07db0c47676d78e42f5e0650f4cd25213994cc1ff748525448"
+size = 4191
+mtime_ms = 1794545620756
+storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:0417277c-b89f-42fe-9e01-86281ec8ea11/e360dfb1-d5d4-42b3-9dbf-ed8da1f91c75/270db169-0933-4f5d-b272-20b6bc6c4155"
+storage_version_token = "1794545643560933"
+content_type = "text/markdown"
+
+[[outputs]]
+id = "FIhrXeBxvHl_5Wt3gUW0J"
+uri = "file://docs/neu-handoff.md"
+type = "text"
+title = "Neu website — current handoff notes"
+description = "Current local main status, what passed, browser checks still open, catalog coverage and no-push/no-deploy boundary."
+logical_id = "ca8560b0-4546-41de-9523-5176488241d8"
+content_hash = "sha256:1df446debd6d845ed5bc590d19a30b689a30d776c1da95460cf1b09aabbe1893"
+size = 10767
+mtime_ms = 1794545739599
+storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:0417277c-b89f-42fe-9e01-86281ec8ea11/ca8560b0-4546-41de-9523-5176488241d8/3ad06b07-0746-49ad-8e80-86fb32944804"
+storage_version_token = "1794545747441807"
+content_type = "text/markdown"
