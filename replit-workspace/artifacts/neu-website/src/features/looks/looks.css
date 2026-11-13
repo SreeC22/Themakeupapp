@@ -1,0 +1,13 @@
+/* Domain compositions only. Controls and every visual value use the Neu system. */
+.looks-slots, .looks-skeleton { @apply grid grid-cols-1 gap-5 my-6; }
+.looks-slots > *, .looks-skeleton > * { @apply min-w-0; }
+@media (min-width: 768px) {
+  .looks-slots, .looks-skeleton { @apply grid-cols-2; }
+}
+@media (min-width: 701px) and (max-width: 767px) {
+  .site-header { @apply grid-cols-2; min-height: calc(var(--spacing) * 17); }
+  .main-nav { @apply hidden; }
+  .mobile-nav { @apply flex flex-wrap justify-around border-b border-border bg-card; top: calc(var(--spacing) * 17); }
+  .mobile-nav a { @apply px-3 py-2 text-sm text-muted-foreground no-underline; }
+  .mobile-nav a.is-active { @apply text-primary underline underline-offset-4; }
+}

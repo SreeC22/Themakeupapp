@@ -1,0 +1,124 @@
+[
+  {
+    "observedOn": "2026-11-13",
+    "reportedCharacteristics": [],
+    "positive": [],
+    "negative": [],
+    "routines": [
+      "Manufacturer labels this stick for eyes, lips and cheeks. Safety is taken from current labeling, not creator usage."
+    ],
+    "independentGroup": null,
+    "status": "research_candidate",
+    "productName": "e.l.f. Monochromatic Multi-Stick",
+    "shade": "",
+    "sourceUrl": "https://www.elfcosmetics.com/products/monochromatic-multi-stick",
+    "platform": "Brand guidance",
+    "market": "US",
+    "disclosure": "Brand-owned product guidance, not an independent experience.",
+    "strength": "manufacturer_guidance"
+  },
+  {
+    "observedOn": "2026-11-13",
+    "reportedCharacteristics": [],
+    "positive": [],
+    "negative": [],
+    "routines": [
+      "Manufacturer suggests wearing alone or over lipstick, and lip liner before gloss. This does not establish identical results on different natural lip pigmentation."
+    ],
+    "independentGroup": null,
+    "status": "research_candidate",
+    "productName": "Makeup by Mario SuperShine Lip Gloss",
+    "shade": "",
+    "sourceUrl": "https://www.makeupbymario.com/products/supershine-lip-gloss",
+    "platform": "Brand tutorial",
+    "market": "US",
+    "disclosure": "Brand-owned product guidance, not an independent experience.",
+    "strength": "manufacturer_guidance"
+  },
+  {
+    "observedOn": "2026-11-13",
+    "reportedCharacteristics": [],
+    "positive": [
+      "The author described a subtle color boost when patted on the lips."
+    ],
+    "negative": [
+      "The author preferred the formula primarily for cheeks; this is not evidence that every use performs equally."
+    ],
+    "routines": [
+      "2018 UK article: Sparkling Rose was used on lips. Historical formula and market equivalence to current US stock is unverified."
+    ],
+    "independentGroup": null,
+    "status": "research_candidate",
+    "productName": "e.l.f. Monochromatic Multi-Stick",
+    "shade": "Sparkling Rose",
+    "sourceUrl": "https://britishbeautyblogger.com/makeup/elf-monochromatic-multi-stick",
+    "platform": "Editorial experience",
+    "market": "UK",
+    "disclosure": "Purchase, gift and sponsorship were not disclosed in the retrieved article.",
+    "strength": "historical_2018_single_report"
+  },
+  {
+    "observedOn": "2026-11-13",
+    "reportedCharacteristics": [],
+    "positive": [
+      "The author reported enjoying this shade on eyes and cheeks."
+    ],
+    "negative": [],
+    "routines": [
+      "2018 UK monochromatic look. This report cannot authorize cross-use; current manufacturer labeling is required."
+    ],
+    "independentGroup": null,
+    "status": "research_candidate",
+    "productName": "e.l.f. Monochromatic Multi-Stick",
+    "shade": "Glistening Peach",
+    "sourceUrl": "https://britishbeautyblogger.com/makeup/elf-monochromatic-multi-stick",
+    "platform": "Editorial experience",
+    "market": "UK",
+    "disclosure": "Purchase, gift and sponsorship were not disclosed in the retrieved article.",
+    "strength": "historical_2018_single_report"
+  },
+  {
+    "observedOn": "2026-11-13",
+    "reportedCharacteristics": [],
+    "positive": [
+      "The author described lightweight, sheer color for low-makeup days and reported also using it on lips."
+    ],
+    "negative": [
+      "The author reported that the stick contained too little product for their preference."
+    ],
+    "routines": [
+      "Historical UK review. The misspelled shade is retained as reported, not silently reconciled to a current verified SKU."
+    ],
+    "independentGroup": null,
+    "status": "research_candidate",
+    "productName": "e.l.f. Monochromatic Multi-Stick",
+    "shade": "dazzling pheony (source spelling; identity not reconciled)",
+    "sourceUrl": "https://midlifeandbeyond.co.uk/midlife-makeup-finds-for-summer-and-beyond",
+    "platform": "Editorial experience",
+    "market": "UK",
+    "disclosure": "Author states the post is not sponsored and all products are my own; affiliate links disclosed. Purchase versus gift is not explicitly established.",
+    "strength": "historical_single_report"
+  },
+  {
+    "observedOn": "2026-11-13",
+    "reportedCharacteristics": [],
+    "positive": [
+      "The author described easy finger blending and a peach-toned result after settling."
+    ],
+    "negative": [
+      "The author cautioned that a very small amount was enough because of strong pigmentation."
+    ],
+    "routines": [
+      "Historical UK cheek application; not evidence for current US formula equivalence or lip/eye safety."
+    ],
+    "independentGroup": null,
+    "status": "research_candidate",
+    "productName": "e.l.f. Camo Liquid Blush",
+    "shade": "Coral Crush",
+    "sourceUrl": "https://midlifeandbeyond.co.uk/midlife-makeup-finds-for-summer-and-beyond",
+    "platform": "Editorial experience",
+    "market": "UK",
+    "disclosure": "Author states the post is not sponsored and all products are my own; affiliate links disclosed. Purchase versus gift is not explicitly established.",
+    "strength": "historical_single_report"
+  }
+]

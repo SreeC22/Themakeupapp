@@ -1,0 +1,296 @@
+[
+  {
+    "retailer": "sephora",
+    "slug": "rare-beauty-by-selena-gomez",
+    "url": "https://www.sephora.com/brand/rare-beauty-by-selena-gomez",
+    "length": 36854,
+    "truncated": false
+  },
+  {
+    "retailer": "sephora",
+    "slug": "fenty-beauty-rihanna",
+    "url": "https://www.sephora.com/brand/fenty-beauty-rihanna",
+    "length": 13384,
+    "truncated": false
+  },
+  {
+    "retailer": "sephora",
+    "slug": "nars",
+    "url": "https://www.sephora.com/brand/nars",
+    "length": 11322,
+    "truncated": false
+  },
+  {
+    "retailer": "sephora",
+    "slug": "charlotte-tilbury",
+    "url": "https://www.sephora.com/brand/charlotte-tilbury",
+    "length": 8085,
+    "truncated": false
+  },
+  {
+    "retailer": "sephora",
+    "slug": "makeup-by-mario",
+    "url": "https://www.sephora.com/brand/makeup-by-mario",
+    "length": 9312,
+    "truncated": false
+  },
+  {
+    "retailer": "sephora",
+    "slug": "haus-labs-by-lady-gaga",
+    "url": "https://www.sephora.com/brand/haus-labs-by-lady-gaga",
+    "length": 11587,
+    "truncated": false
+  },
+  {
+    "retailer": "sephora",
+    "slug": "saie",
+    "url": "https://www.sephora.com/brand/saie",
+    "length": 21318,
+    "truncated": false
+  },
+  {
+    "retailer": "sephora",
+    "slug": "tower-28-beauty",
+    "url": "https://www.sephora.com/brand/tower-28-beauty",
+    "length": 477,
+    "truncated": false
+  },
+  {
+    "retailer": "sephora",
+    "slug": "ilia",
+    "url": "https://www.sephora.com/brand/ilia",
+    "length": 8559,
+    "truncated": false
+  },
+  {
+    "retailer": "sephora",
+    "slug": "milk-makeup",
+    "url": "https://www.sephora.com/brand/milk-makeup",
+    "length": 11354,
+    "truncated": false
+  },
+  {
+    "retailer": "sephora",
+    "slug": "anastasia-beverly-hills",
+    "url": "https://www.sephora.com/brand/anastasia-beverly-hills",
+    "length": 11996,
+    "truncated": false
+  },
+  {
+    "retailer": "sephora",
+    "slug": "benefit-cosmetics",
+    "url": "https://www.sephora.com/brand/benefit-cosmetics",
+    "length": 36285,
+    "truncated": false
+  },
+  {
+    "retailer": "sephora",
+    "slug": "urban-decay",
+    "url": "https://www.sephora.com/brand/urban-decay",
+    "length": 31566,
+    "truncated": false
+  },
+  {
+    "retailer": "sephora",
+    "slug": "laura-mercier",
+    "url": "https://www.sephora.com/brand/laura-mercier",
+    "length": 8877,
+    "truncated": false
+  },
+  {
+    "retailer": "sephora",
+    "slug": "supergoop",
+    "url": "https://www.sephora.com/brand/supergoop",
+    "length": 9075,
+    "truncated": false
+  },
+  {
+    "retailer": "sephora",
+    "slug": "tatcha",
+    "url": "https://www.sephora.com/brand/tatcha",
+    "length": 29160,
+    "truncated": false
+  },
+  {
+    "retailer": "sephora",
+    "slug": "the-ordinary",
+    "url": "https://www.sephora.com/brand/the-ordinary",
+    "length": 11723,
+    "truncated": false
+  },
+  {
+    "retailer": "sephora",
+    "slug": "clinique",
+    "url": "https://www.sephora.com/brand/clinique",
+    "length": 30479,
+    "truncated": false
+  },
+  {
+    "retailer": "sephora",
+    "slug": "dior",
+    "url": "https://www.sephora.com/brand/dior",
+    "length": 8266,
+    "truncated": false
+  },
+  {
+    "retailer": "sephora",
+    "slug": "sephora-collection",
+    "url": "https://www.sephora.com/brand/sephora-collection",
+    "length": 10587,
+    "truncated": false
+  },
+  {
+    "retailer": "ulta",
+    "slug": "elf-cosmetics",
+    "url": "https://www.ulta.com/brand/elf-cosmetics",
+    "length": 50013,
+    "truncated": true
+  },
+  {
+    "retailer": "ulta",
+    "slug": "nyx-professional-makeup",
+    "url": "https://www.ulta.com/brand/nyx-professional-makeup",
+    "length": 50013,
+    "truncated": true
+  },
+  {
+    "retailer": "ulta",
+    "slug": "maybelline",
+    "url": "https://www.ulta.com/brand/maybelline",
+    "length": 49437,
+    "truncated": false
+  },
+  {
+    "retailer": "ulta",
+    "slug": "loreal",
+    "url": "https://www.ulta.com/brand/loreal",
+    "length": 50013,
+    "truncated": true
+  },
+  {
+    "retailer": "ulta",
+    "slug": "milani",
+    "url": "https://www.ulta.com/brand/milani",
+    "length": 47113,
+    "truncated": false
+  },
+  {
+    "retailer": "ulta",
+    "slug": "essence",
+    "url": "https://www.ulta.com/brand/essence",
+    "length": 44348,
+    "truncated": false
+  },
+  {
+    "retailer": "ulta",
+    "slug": "colourpop",
+    "url": "https://www.ulta.com/brand/colourpop",
+    "length": 40505,
+    "truncated": false
+  },
+  {
+    "retailer": "ulta",
+    "slug": "morphe",
+    "url": "https://www.ulta.com/brand/morphe",
+    "length": 48113,
+    "truncated": false
+  },
+  {
+    "retailer": "ulta",
+    "slug": "mac",
+    "url": "https://www.ulta.com/brand/mac",
+    "length": 50013,
+    "truncated": true
+  },
+  {
+    "retailer": "ulta",
+    "slug": "tarte",
+    "url": "https://www.ulta.com/brand/tarte",
+    "length": 50013,
+    "truncated": true
+  },
+  {
+    "retailer": "ulta",
+    "slug": "too-faced",
+    "url": "https://www.ulta.com/brand/too-faced",
+    "length": 41261,
+    "truncated": false
+  },
+  {
+    "retailer": "ulta",
+    "slug": "it-cosmetics",
+    "url": "https://www.ulta.com/brand/it-cosmetics",
+    "length": 48963,
+    "truncated": false
+  },
+  {
+    "retailer": "ulta",
+    "slug": "bareminerals",
+    "url": "https://www.ulta.com/brand/bareminerals",
+    "length": 46795,
+    "truncated": false
+  },
+  {
+    "retailer": "ulta",
+    "slug": "benefit-cosmetics",
+    "url": "https://www.ulta.com/brand/benefit-cosmetics",
+    "length": 50013,
+    "truncated": true
+  },
+  {
+    "retailer": "ulta",
+    "slug": "clinique",
+    "url": "https://www.ulta.com/brand/clinique",
+    "length": 50013,
+    "truncated": true
+  },
+  {
+    "retailer": "ulta",
+    "slug": "cerave",
+    "url": "https://www.ulta.com/brand/cerave",
+    "length": 43694,
+    "truncated": false
+  },
+  {
+    "retailer": "ulta",
+    "slug": "la-roche-posay",
+    "url": "https://www.ulta.com/brand/la-roche-posay",
+    "length": 48225,
+    "truncated": false
+  },
+  {
+    "retailer": "ulta",
+    "slug": "neutrogena",
+    "url": "https://www.ulta.com/brand/neutrogena",
+    "length": 36365,
+    "truncated": false
+  },
+  {
+    "retailer": "ulta",
+    "slug": "olay",
+    "url": "https://www.ulta.com/brand/olay",
+    "length": 6112,
+    "truncated": false
+  },
+  {
+    "retailer": "ulta",
+    "slug": "black-girl-sunscreen",
+    "url": "https://www.ulta.com/brand/black-girl-sunscreen",
+    "length": 11586,
+    "truncated": false
+  },
+  {
+    "retailer": "sephora",
+    "slug": "tower-28",
+    "url": "https://www.sephora.com/brand/tower-28",
+    "length": 11246,
+    "truncated": false
+  },
+  {
+    "retailer": "ulta",
+    "slug": "loreal-paris",
+    "url": "https://www.ulta.com/brand/loreal-paris",
+    "length": 50013,
+    "truncated": true
+  }
+]

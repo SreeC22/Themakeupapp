@@ -1,0 +1,4 @@
+- [Neu product direction](neu-product-direction.md) — finalize the website preview before building; include public education on undertones and color theory.
+- [Neu web MVP scope](neu-web-mvp-scope.md) — collection-first creative reuse, labeled-use safety, source-backed evidence, 26 brands and owner-reviewed stages.
+- [External repository reviews](external-repository-reviews.md) — preserve website sources in tracked files; ignored checkout Git metadata may disappear across task sessions.
+- [Retailer research limits](retailer-research.md) — product URL slugs can disagree with returned items; navigation-only pages are incomplete evidence, not absence.

@@ -1,0 +1,556 @@
+# NEU: Complete Skin Tone & Makeup Discovery Quiz Design
+
+## Your task
+
+Design and build the complete interactive frontend experience for Neu's skin-tone and makeup discovery quiz.
+
+**This is a UI/UX design task only.**
+
+Do not build backend integrations, databases, authentication, recommendation algorithms, APIs, or account systems. Use illustrative data clearly labeled as examples.
+
+The quiz must feel like a personalized beauty consultation, not a clinical assessment, personality test, or lengthy questionnaire.
+
+Users should leave feeling that Neu understands their skin and can help them discover makeup worth exploring.
+
+## 1. Design direction
+
+Follow Neu's existing approved website aesthetic.
+
+**Visual identity**
+
+- Main background: `#FBF7F2`
+- Soft secondary background: `#F3ECEB`
+- Primary button: `#514659`
+- Main text: `#322B34`
+- Accent: `#786B88`
+- Secondary accent: `#B85F78`
+- Headlines: Cormorant Garamond
+- Body: DM Sans
+- Utility labels: Space Mono, used sparingly
+
+**Design principles**
+
+- Minimal, sophisticated, welcoming and editorial.
+- Lots of intentional whitespace.
+- One primary question per screen.
+- Large, readable headlines.
+- Accessible color contrast.
+- Subtle transitions.
+- No heavy shadows or floating cards.
+- No human faces or photographs.
+- No excessive icons, gradients, or decorative illustrations.
+- No unnecessary information panels.
+- No horizontal overflow on mobile.
+- Never use tiny or faded instructional text.
+- Do not use em dashes or emojis.
+
+The quiz should visually belong to the existing Neu homepage.
+
+## 2. Overall quiz layout
+
+Use a consistent layout throughout.
+
+**Top navigation**
+
+- Small Neu wordmark on the left.
+- Thin progress indicator.
+- Close button on the right.
+
+**Main content**
+
+- Centered question.
+- One or two sentences of helpful explanation.
+- Beautiful, spacious selection interface.
+- Contextual "Need help?" information where relevant.
+
+**Bottom navigation**
+
+- Back
+- Continue
+- Skip, when appropriate
+
+On mobile, keep navigation easy to reach without covering content.
+
+Answers should remain selected when navigating backward.
+
+Create a smooth, clickable frontend prototype.
+
+Do not require users to create an account to explore the quiz.
+
+## 3. Screen 1: Welcome
+
+**Headline: Let's get to know your skin.**
+
+Supporting text:
+
+Tell us a little about your skin, the makeup you already love, and what you're looking for. We'll help you discover products worth trying.
+
+Primary button:
+
+**Find my match**
+
+Below the button:
+
+No camera needed. No makeup expertise required.
+
+Keep this screen extremely minimal.
+
+## 4. Screen 2: Current makeup
+
+**Headline: What complexion makeup do you currently use?**
+
+Supporting text:
+
+Your current products can help us understand what shades have worked for you.
+
+Provide options:
+
+- Foundation
+- Concealer
+- Skin tint
+- BB or CC cream
+- I don't use complexion makeup
+- I'm new to makeup
+
+If the user selects a product type, display:
+
+- Search brand
+- Search product
+- Select exact shade
+
+Show recognizable brand names, including drugstore and prestige brands.
+
+Examples include Maybelline, L'Oréal, NYX, e.l.f., Milani, Revlon, CoverGirl, Fenty Beauty, NARS, MAC, Rare Beauty, Huda Beauty, Estée Lauder and Clinique.
+
+Use example content only where verified catalog information is unavailable. Do not invent shade names and present them as genuine products.
+
+Allow users to add more than one product.
+
+Provide "I don't know my shade" and Skip options.
+
+## 5. Screen 3: How well does your makeup match?
+
+**Headline: How does your current shade look on you?**
+
+Supporting text:
+
+There are no wrong answers. Tell us what you've noticed.
+
+Design large, clean selectable choices:
+
+- It blends in perfectly
+- A little too light
+- A little too dark
+- Too orange
+- Too pink
+- Too yellow
+- Gray or ashy
+- Changes color after application
+- I'm not sure
+
+Allow multiple selections when appropriate, but keep contradictory choices understandable.
+
+If the user entered more than one product, show this screen for each relevant product without overwhelming them.
+
+## 6. Screen 4: Inclusive skin-depth selection
+
+**Headline: Which shade looks closest to your skin?**
+
+Supporting text:
+
+Choose your closest starting shade. You can always change it later.
+
+### The palette is extremely important
+
+Create an inclusive visual skin-depth palette representing people from the very fairest through the very deepest complexions.
+
+Use **40 thoughtfully distributed starting shades**.
+
+Ensure meaningful visual differences across the full spectrum.
+
+Do not represent fair skin with 15 choices and deep skin with only three.
+
+The deepest complexions must receive the same design attention and selection precision as the lightest.
+
+Suggested visual groupings:
+
+1. Very fair
+2. Fair
+3. Light
+4. Light-medium
+5. Medium
+6. Tan
+7. Deep
+8. Very deep
+
+Five shades per grouping can serve as an initial design structure, but these categories should not become rigid biological classifications.
+
+### Selection interaction
+
+**A slider is not required.**
+
+Choose the best interaction design.
+
+Preferred direction:
+
+A beautiful, responsive grid of individual skin-tone swatches, organized into clearly labeled depth groups.
+
+When someone selects a swatch:
+
+- Highlight it elegantly.
+- Show a larger selected-color preview.
+- Display an accessible shade label.
+- Offer nearby shades for easy comparison.
+- Allow users to change selections freely.
+
+If useful, add a "Show nearby shades" interaction or a zoomed comparison view.
+
+Do not introduce a slider unless it genuinely improves usability.
+
+### Important inclusivity requirements
+
+- Include very fair through very deep complexions.
+- Ensure fair, medium, tan, deep and very deep shades are meaningfully represented.
+- Do not assume warm, cool, neutral or olive characteristics from shade depth alone.
+- Do not represent olive simply by making a depth swatch green.
+- Ensure every selectable swatch has an accessible text label.
+- Don't rely solely on color to indicate selection.
+- Support keyboard navigation.
+- Include an "I'm not sure" option.
+- Include an option to use an existing foundation shade as a starting reference.
+
+Use the existing Neu shade palette where appropriate, refining the interface for inclusivity.
+
+Digital colors are approximations. Do not claim that an on-screen swatch identifies someone's exact real-world complexion.
+
+Add a short note:
+
+"Screen colors and lighting can affect how shades appear. This is just a starting point."
+
+## 7. Screen 5: Undertone education
+
+**Headline: Let's understand your undertone.**
+
+Supporting text:
+
+Your skin depth tells us how light or deep your skin is. Your undertone helps explain why certain makeup shades may look different on you.
+
+Create a minimal, educational visual explanation of:
+
+**Warm**
+
+Golden, yellow or peach characteristics.
+
+**Cool**
+
+Pink, rosy or sometimes bluish characteristics.
+
+**Neutral**
+
+A balance of warm and cool characteristics.
+
+**Olive**
+
+A muted greenish or gray-green quality that can appear alongside warm, cool or neutral undertones.
+
+Make it clear that olive is not limited to medium or tan skin.
+
+All undertone characteristics can appear across a broad range of skin depths.
+
+Use elegant color examples, simple typography and plenty of whitespace.
+
+Provide a Continue button.
+
+## 8. Screen 6: Wrist vein guide
+
+**Headline: What color do your wrist veins look?**
+
+Supporting text:
+
+This can give us a clue about your undertone, but it won't determine it on its own.
+
+Include an expandable section titled:
+
+**How to check your wrist veins**
+
+Explain clearly:
+
+1. Stand near a window in indirect natural daylight.
+2. Turn your wrist so your palm faces upward.
+3. Relax your hand.
+4. Look at the thin lines beneath the skin on your inner wrist or forearm.
+5. Choose the appearance closest to what you see.
+
+Use minimal, understandable visual illustrations of vein colors on different skin depths.
+
+Do not use human-face photography.
+
+Options:
+
+- Mostly blue or purple
+- Mostly green or teal
+- Both blue and green
+- I can't see them clearly
+- I'm not sure
+
+Provide a small explanation of the traditional associations:
+
+Blue or purple is sometimes associated with cool undertones.
+
+Green or teal is sometimes associated with warm undertones.
+
+Mixed colors are sometimes associated with neutral undertones.
+
+**Important:** Vein color is not a scientifically reliable standalone undertone test.
+
+Do not treat green veins as proof of olive skin.
+
+Users who cannot see their veins must feel equally included and should be able to continue without difficulty.
+
+## 9. Screen 7: Additional undertone clues
+
+**Headline: What have you noticed about your skin?**
+
+Supporting text:
+
+Sometimes your makeup tells you more than your veins do.
+
+Provide clean selectable answers:
+
+- My skin looks more golden or peachy
+- My skin looks more rosy or pink
+- My skin looks fairly balanced
+- My skin sometimes looks muted or gray-green
+- I'm not sure
+
+Add a subtle "Need help understanding these?" expandable explanation.
+
+Do not require users to identify their own undertone.
+
+Avoid asking the same makeup-mismatch question again if it was already answered earlier.
+
+## 10. Screen 8: Olive characteristics
+
+**Headline: Does your skin have a slightly muted or greenish cast?**
+
+Supporting text:
+
+Some people notice that their skin has a subtle green-gray quality, even when they're fair, medium or deep.
+
+Options:
+
+- Yes, I've noticed this
+- Maybe
+- No
+- I'm not sure
+
+Include a "What does olive mean?" explanation.
+
+Explain that warm olive, neutral olive and cool olive are possible.
+
+Do not visually associate olive with only one depth range.
+
+Do not force users to identify as olive.
+
+## 11. Screen 9: Makeup discovery preferences
+
+**Headline: What makeup would you love to discover?**
+
+Supporting text:
+
+Choose as many as you'd like.
+
+Design a clean, multi-select category grid.
+
+Categories:
+
+- Foundation
+- Concealer
+- Skin tint
+- Blush
+- Bronzer
+- Contour
+- Highlighter
+- Lipstick
+- Lip liner
+- Lip gloss
+- Eyeshadow
+- Setting powder
+- Setting spray
+- Primer
+- SPF
+- Everything
+
+Each selection should have a clear selected state.
+
+Avoid large colorful category cards or unnecessary illustrations.
+
+## 12. Screen 10: Your beauty preferences
+
+**Headline: A little more about what you like.**
+
+Use compact, optional selection controls.
+
+**Budget**
+
+- Drugstore
+- Mid-range
+- Luxury
+- No preference
+
+**Finish**
+
+- Natural
+- Dewy
+- Matte
+- Satin
+- No preference
+
+**Skin type**
+
+- Dry
+- Oily
+- Combination
+- Normal
+- Not sure
+
+Let users skip these questions.
+
+Avoid making this screen overly dense.
+
+If necessary, reveal each preference progressively.
+
+## 13. Screen 11: Your profile preview
+
+**Headline: Your skin, a little more understood.**
+
+Show an elegant, editable skin-profile summary.
+
+Include:
+
+- Selected skin-depth swatch
+- Tentative undertone
+- Olive characteristics, if selected
+- Current makeup products
+- Makeup categories of interest
+- Optional budget and finish preferences
+
+Show a short section:
+
+**What brought us here**
+
+Explain which answers contributed to the example profile.
+
+Never present a definite undertone result based only on wrist veins.
+
+When information is uncertain, use "Still exploring" or "Possibly."
+
+Make it clear that this is a design prototype and results are illustrative.
+
+Primary action:
+
+**Discover makeup for my skin**
+
+Secondary action:
+
+**Edit my answers**
+
+## 14. Final discovery preview
+
+Show a minimalist preview of what the user will eventually discover.
+
+Include clearly labeled sample product recommendations showing:
+
+- Brand
+- Product name
+- Shade
+- Category
+- Brief reason it may be relevant
+
+Show a small "Products loved by people with skin like yours" preview using clearly labeled illustrative content.
+
+Do not invent genuine user reviews, ratings or matches.
+
+The purpose is to demonstrate the intended product experience visually.
+
+## 15. Interaction and usability
+
+Build the full quiz as a clickable frontend prototype.
+
+All screens must connect correctly.
+
+Users must be able to:
+
+- Start the quiz
+- Select or deselect answers
+- Navigate backward
+- Skip optional questions
+- Expand educational explanations
+- Explore all skin-depth swatches
+- Compare nearby shades
+- Change their selected shade
+- Select multiple makeup categories
+- Review their choices
+- Edit previous answers
+- Reach the final preview
+
+Preserve selections during navigation.
+
+Use realistic interaction states, including validation and responsive layout.
+
+Do not require account creation.
+
+## 16. Accessibility and inclusivity
+
+This must be a priority throughout the design.
+
+- Support the full skin-depth spectrum.
+- Give equal visual importance to very fair and very deep skin.
+- Keep skin depth separate from undertone.
+- Represent olive characteristics across skin depths.
+- Never assume someone's race or ethnicity from their shade.
+- Allow uncertainty and skipped answers.
+- Use large enough text and touch targets.
+- Meet appropriate WCAG AA contrast requirements.
+- Make all controls keyboard-accessible.
+- Provide visible focus states.
+- Use text labels in addition to colors.
+- Respect reduced-motion preferences.
+- Test across mobile, tablet and desktop.
+- Avoid presenting subjective undertone clues as scientific diagnoses.
+
+## 17. What not to build
+
+Do not:
+
+- Redesign the homepage.
+- Build Supabase integrations.
+- Build authentication or two-factor authentication.
+- Modify database schemas.
+- Build a recommendation engine.
+- Implement image uploads.
+- Add camera or face scanning.
+- Build shopping checkout.
+- Generate fake reviews.
+- Invent real community statistics.
+- Add excessive dashboard cards.
+- Add unnecessary animations.
+- Use AI-generated human faces.
+- Use a slider simply because it is conventional.
+- Deploy or push changes without approval.
+
+## 18. Final deliverable
+
+Build a polished, fully clickable, responsive quiz design that follows the approved Neu brand identity.
+
+The flow should feel natural:
+
+**Current makeup → Makeup experience → Skin depth → Undertone education → Wrist veins → Additional clues → Olive characteristics → Makeup interests → Preferences → Skin profile → Discovery preview**
+
+Keep the experience adaptive. Skip irrelevant screens when the user has already provided the necessary information.
+
+The quiz should be enjoyable for someone who understands makeup and equally approachable for someone who has never purchased foundation.
+
+Most importantly, **no one should feel that their complexion, undertone, makeup experience or level of knowledge has been overlooked.**
+
+Present the completed frontend prototype for visual approval before implementing backend functionality.
