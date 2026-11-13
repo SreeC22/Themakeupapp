@@ -11,7 +11,9 @@ the complete tracked Replit workspace snapshot under `replit-workspace/`.
 - The older standalone website port remains under `website/`; the new snapshot
   is separate on purpose. The owner can later choose what to keep, merge, or
   delete.
-- No files at the GitHub repository root were replaced. This branch does not
+- Existing native-app source files at the GitHub repository root remain intact.
+  The earlier website-port commit adds or updates only the root README and
+  handoff documents, plus its separate `website/` tree. This branch does not
   update GitHub `main`, deploy the website, or apply database changes.
 
 The snapshot is an archive of the Replit project, not yet a migration of every
