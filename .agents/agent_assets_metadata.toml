@@ -42,3 +42,17 @@ mtime_ms = 1792280685293
 storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:0417277c-b89f-42fe-9e01-86281ec8ea11/7cf192dc-6075-4ddf-aef5-49fd04617960/7cfe7c39-97c1-4c15-a07d-46c8a2fac62f"
 storage_version_token = "1792280708268719"
 content_type = "application/pdf"
+
+[[outputs]]
+id = "NU7JHTGOGHFyCqO6Mo3GV"
+uri = "file://docs/QA_TEST_PLAN.md"
+type = "text"
+title = "Neu Stage 1 test results"
+description = "Actual test outcomes, the draft reload fix, coverage and remaining limitations."
+logical_id = "6a98270f-1a4d-4b31-aca8-3fe07de305e6"
+content_hash = "sha256:4ddaba0717b2c36cc47cabee32f097cf721acdec98635c6b09813fa662581029"
+size = 6634
+mtime_ms = 1794535941210
+storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:0417277c-b89f-42fe-9e01-86281ec8ea11/6a98270f-1a4d-4b31-aca8-3fe07de305e6/83b0f951-69e7-4391-a5b5-f3a16a391102"
+storage_version_token = "1794536098937661"
+content_type = "text/markdown"
