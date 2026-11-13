@@ -75,8 +75,8 @@ Quiz screens should be compact, centered consultation steps, not long marketing 
 
 **How to apply:** Keep one short question, concise help, compact choices and simple Back/Continue controls. Avoid excessive space and lengthy stacking on mobile while retaining readable text and accessible targets.
 
-The owner approved four short quiz sections followed by one combined starting-point page, replacing the longer quiz brief.
+Keep the consultation compact, with progressive optional details and one combined outcome. The accepted web MVP specification now makes complexion depth the first question and olive a first-class undertone choice.
 
-**Why:** The owner said there were too many repetitions and approved the shorter flow after an explicit critique.
+**Why:** The owner rejected repetitive flows, then explicitly instructed us to follow the updated web MVP specification while preserving Neu's design and existing functionality.
 
-**How to apply:** Keep current makeup and fit notes together; depth; optional undertone with olive asked independently on the same screen; interests with expandable preferences; then one editable summary with clearly illustrative examples. Do not reintroduce mandatory vein tests, extra questions for uncertainty, or separate review, discovery-preview and results endings.
+**How to apply:** Start with depth, retain typed optional makeup history and fit notes, offer olive temperature/saturation and lip preferences progressively, and finish with one editable profile and evidence-aware browsing. Keep uncertainty valid. Do not reintroduce mandatory vein tests, repeated technical questions or multiple results endings.

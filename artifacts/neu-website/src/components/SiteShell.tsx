@@ -4,8 +4,10 @@ import { Link, useLocation } from "wouter";
 
 const primaryLinks = [
   { href: "/", label: "Home" },
-  { href: "/discover", label: "Discover" },
+  { href: "/results", label: "Explore" },
+  { href: "/community", label: "Community" },
   { href: "/learn", label: "Learn" },
+  { href: "/saved", label: "Saved" },
 ];
 
 export function SiteHeader() {
@@ -21,7 +23,7 @@ export function SiteHeader() {
             <Link key={item.href} className={`nav-link ${location === item.href ? "is-active" : ""}`} href={item.href}>{item.label}</Link>
           ))}
         </nav>
-        <Link className="header-profile" href="/quiz">Your starting point <ArrowRight size={14} /></Link>
+        <Link className="header-profile" href="/profile">Your profile <ArrowRight size={14} /></Link>
       </header>
       <nav className="mobile-nav" aria-label="Mobile navigation">
         {primaryLinks.map((item) => (
@@ -41,10 +43,11 @@ export function SiteFooter() {
       </Link>
       <nav className="footer-links" aria-label="Footer navigation">
         <Link className="footer-link" href="/learn">Learn about color</Link>
-        <Link className="footer-link" href="/discover">Browse examples</Link>
+        <Link className="footer-link" href="/results">Product research</Link>
         <Link className="footer-link" href="/profile">Skin profile</Link>
         <Link className="footer-link" href="/saved">Saved</Link>
-        <Link className="footer-link" href="/share">Share</Link>
+        <Link className="footer-link" href="/review/new">Local review draft</Link>
+        <Link className="footer-link" href="/community">Community</Link>
         <Link className="footer-link" href="/design-guide">Design guide</Link>
       </nav>
     </footer>

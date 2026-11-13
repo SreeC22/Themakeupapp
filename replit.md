@@ -1,10 +1,13 @@
-# [Project name]
+# Neu
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+Browser-first makeup discovery, public color education and an evidence-aware website preview, with the existing native app preserved separately.
 
 ## Run & Operate
 
-- `pnpm --filter @workspace/api-server run dev` — run the API server (port 5000)
+- `pnpm --filter @workspace/neu-website test` — preview state, evidence and browsing regression tests
+- `pnpm --filter @workspace/neu-website typecheck` — website typecheck
+- `PORT=5173 BASE_PATH=/ pnpm --filter @workspace/neu-website build` — standalone website build
+- `pnpm --filter @workspace/api-server run dev` — run the existing API service
 - `pnpm run typecheck` — full typecheck across all packages
 - `pnpm run build` — typecheck + build all packages
 - `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
@@ -22,23 +25,30 @@ _Replace the heading above with the project's name, and this line with one sente
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/neu-website/`: actual website, not the mockup sandbox.
+- `artifacts/neu-design-system/`: shared Neu tokens, components and documentation.
+- `artifacts/mockup-sandbox/`: retained design explorations.
+- `artifacts/api-server/` and `lib/db/`: existing API and additive research catalog.
+- `docs/EXISTING_SYSTEM_AUDIT.md`: baseline findings and integration boundaries.
+- `docs/NEU_WEB_MVP_SPEC.md`: preserved owner-provided web MVP specification.
+- `docs/MVP_ARCHITECTURE.md`, `docs/DECISIONS.md`: reuse plan and current stage decisions.
+- `docs/QA_TEST_PLAN.md`: actual checks, results and gaps.
+- `docs/neu-handoff.md`: source locations, storage and GitHub handoff.
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+See `docs/DECISIONS.md`. The GitHub native/static repository and this Replit workspace have different histories; do not merge them blindly. Preserve legacy parity and public waitlist behavior.
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
-
-## User preferences
-
-_Populate as you build — explicit user instructions worth remembering across sessions._
+The Stage 1 preview has a local anonymous profile, source-linked product exploration, comparison, local saves and private review drafts. Real member features and verified shade matching are not connected. Stage and release boundaries are documented in `docs/RELEASE_CHECKLIST.md`.
 
 ## Gotchas
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
+- Use the registered managed workflows for previews; they inject `PORT` and `BASE_PATH`.
+- Edit design-system `tokens.json`, not generated CSS/token outputs.
+- Keep existing browser storage keys and owner-administered Supabase data separate from preview state.
+- Test logs, screenshots and linked external source-port worktrees belong under ignored `generated-artifacts/`, not in source commits.
 
 ## Pointers
 

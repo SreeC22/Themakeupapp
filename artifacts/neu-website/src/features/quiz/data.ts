@@ -1,6 +1,6 @@
 // Illustrative quiz content, not verified shade matches.
 export type NeuPage = "home" | "quiz" | "profile" | "learn" | "discover";
-export type Undertone = "Warm" | "Cool" | "Neutral" | "Still exploring";
+export type Undertone = "Warm" | "Cool" | "Neutral" | "Olive" | "Still exploring";
 
 export type Profile = {
   depth: number | null;

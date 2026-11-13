@@ -39,17 +39,19 @@ Do not invite people to create real shared posts or claim that accounts, cloud s
 
 ## Current website journey and storage
 
-The owner approved a shorter flow instead of the original long questionnaire:
+The updated web MVP brief preserves a compact consultation and changes its first question to depth:
 
-1. Current makeup, optional. Brand and product fields support typed suggestions and manual entry. Product fit observations expand within each product.
-2. Forty illustrative depth swatches, or an unsure answer.
-3. Optional undertone and independent olive characteristics on the same screen.
-4. Makeup interests, with optional preferences in an expandable section.
-5. One editable starting-point page with clearly labeled illustrative examples.
+1. Forty approximate depth swatches, or an unsure answer.
+2. Undertone, including first-class olive and optional subtype, saturation and skin-type refinements.
+3. Optional current makeup, typed brand/product notes and personal fit observations.
+4. Four launch shopping categories and progressive optional formula, concealer and lip preferences.
+5. One combined editable profile and evidence-aware research browsing page.
 
-The final action goes directly to `/discover`. There is no second results page or account gate. `/profile` aliases `/quiz` rather than exposing a second, conflicting profile editor.
+The final action goes to `/results`. `/discover` is a compatibility alias. `/profile` uses the same shared state for editing, privacy, export and confirmed preview-only deletion, not a competing profile store.
 
-Quiz answers are held in the current page session. Back, closing the quiz, navigating to Learn and returning preserve the draft. Refreshing clears it, as stated on the first question. The pre-existing coarse local profile store remains for backward compatibility with educational controls; it is not a cloud account or the new forty-swatch quiz store. Unknown quiz depth and undertone are never silently converted into a personal match. Profile-example comparison is shown only when the visitor supplies depth and a definite undertone.
+Versioned browser storage preserves the anonymous quiz, local saves and explicitly private review drafts across reload when storage is available. Corrupt/future-version storage is preserved rather than silently overwritten; blocked storage uses a clearly labeled in-memory session. The older guest-profile key is separate and is not erased by this preview's reset. This is not an account or cloud sync. Unknown depth and undertone remain unknown; comparing research listings never implies an exact shade match.
+
+Stage 1 adds product detail, comparison, genuine empty community evidence, local review drafting with a moderation simulation, and protected/unavailable admin state. Sixteen source-backed historical product observations replace the earlier illustrative catalog in the active journey. Exact shades, formulas, current price/stock and personalized ranking are not established. See `EXISTING_SYSTEM_AUDIT.md`, `MVP_ARCHITECTURE.md`, `DECISIONS.md` and `QA_TEST_PLAN.md` for the current stage boundary and verification.
 
 The mobile hero uses the existing makeup textures at full width in normal document flow, blending its edges into the page background. It has no card, frame, profile overlay or fixed-height empty image container.
 
@@ -103,6 +105,8 @@ The output is `artifacts/neu-website/dist/public/`. Use an SPA fallback when ser
 A local Git commit is not a GitHub push or a deployment. The owner subsequently authorized pushing the approved website and repository organization to GitHub main.
 
 GitHub has separate history from this Replit workspace. The prepared source port is based on GitHub main, on local branch `sync/neu-website-main`, commit `7e0f32a`, with a linked worktree under `generated-artifacts/neu-github-main`. Verify its Git top-level before operating there. It adds an isolated `website/site` and `website/design-system` workspace with portable Vite configurations, a lockfile, contributor guidance and updated root documentation. Existing native code, root static pages and database scripts are unchanged.
+
+The subsequent Stage 0/1 work is on `feature/neu-web-mvp-stage-1` and is not included in that older pending source-port commit. No new GitHub push is attempted as part of the stage preview.
 
 The portable workspace installed successfully; both typechecks and production builds passed. GitHub rejected the push with an invalid username/token error, including one retry after attaching the existing connection. GitHub CLI is not authenticated here. The source port is committed locally, not pushed. Restore write authentication before retrying a normal fast-forward push; do not force-push or merge the unrelated Replit history into GitHub.
 

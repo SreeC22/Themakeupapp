@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { DEFAULT_PROFILE, type Profile } from "@/data/neu";
 
 const STORAGE_KEY = "neu.guest-profile.v1";
@@ -16,6 +16,7 @@ function validProfile(value: unknown): value is Profile {
 
 export function useGuestProfile() {
   const [profile, setProfile] = useState<Profile>(DEFAULT_PROFILE);
+  const profileRef = useRef(profile);
   const [storageStatus, setStorageStatus] = useState<"loading" | "saved" | "unavailable">("loading");
 
   useEffect(() => {
@@ -23,7 +24,8 @@ export function useGuestProfile() {
       const raw = window.localStorage.getItem(STORAGE_KEY);
       if (raw) {
         const parsed: unknown = JSON.parse(raw);
-        if (validProfile(parsed)) setProfile(parsed);
+        if (validProfile(parsed)) { profileRef.current = parsed; setProfile(parsed); }
+        else { setStorageStatus("unavailable"); return; }
       }
       setStorageStatus("saved");
     } catch {
@@ -31,19 +33,20 @@ export function useGuestProfile() {
     }
   }, []);
 
-  useEffect(() => {
-    if (storageStatus === "loading") return;
-    try {
-      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(profile));
-      setStorageStatus("saved");
-    } catch {
-      setStorageStatus("unavailable");
-    }
-  }, [profile, storageStatus]);
-
   return {
     profile,
     storageStatus,
-    updateProfile: (patch: Partial<Profile>) => setProfile((current) => ({ ...current, ...patch })),
+    // Legacy compatibility only. Do not write defaults on mount or overwrite unreadable data.
+    updateProfile: (patch: Partial<Profile>) => {
+      const next = { ...profileRef.current, ...patch };
+      profileRef.current = next;
+      setProfile(next);
+      try {
+        const raw = window.localStorage.getItem(STORAGE_KEY);
+        if (raw && !validProfile(JSON.parse(raw))) { setStorageStatus("unavailable"); return; }
+        window.localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
+        setStorageStatus("saved");
+      } catch { setStorageStatus("unavailable"); }
+    },
   };
 }

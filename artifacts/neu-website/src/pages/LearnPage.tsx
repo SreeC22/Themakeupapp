@@ -1,6 +1,9 @@
 import { ArrowRight, Info } from "lucide-react";
 import { useState } from "react";
 import { Link } from "wouter";
+import { Button } from "@workspace/neu-design-system/components/neu/button";
+import { Choice } from "@workspace/neu-design-system/components/neu/choice";
+import { ToneSwatch } from "@workspace/neu-design-system/components/neu/tone-swatch";
 import { COLOR_WHEEL, DEPTHS, UNDERTONES, type Profile, type Undertone } from "@/data/neu";
 
 const EXAMPLES = ["Foundation", "Blush", "Lip", "Eyeshadow", "Color corrector"] as const;
@@ -45,6 +48,8 @@ export default function LearnPage({ profile, onUseProfile }: { profile: Profile;
   const [selectedHue, setSelectedHue] = useState(2);
   const [harmony, setHarmony] = useState<"analogous" | "complementary">("complementary");
   const [example, setExample] = useState<Example>("Foundation");
+  const [edited, setEdited] = useState({ depth: false, undertone: false, olive: false });
+  const hasEdits = edited.depth || edited.undertone || edited.olive;
   const harmonyIndices = harmony === "complementary"
     ? [selectedHue, (selectedHue + 6) % 12]
     : [(selectedHue + 10) % 12, (selectedHue + 11) % 12, selectedHue, (selectedHue + 1) % 12, (selectedHue + 2) % 12];
@@ -103,29 +108,29 @@ export default function LearnPage({ profile, onUseProfile }: { profile: Profile;
       </section>
 
       <section className="learn-panel" id="color-lab">
-        <header className="learn-panel-head"><span className="eyebrow">Try it, change it, try again</span><h2>Your little <em>color lab.</em></h2><p>Explore a few variables. Nothing here is a rule or a final answer.</p></header>
+        <header className="learn-panel-head"><span className="eyebrow">Try it, change it, try again</span><h2>Your little <em>color lab.</em></h2><p>Explore a few variables. Open answers use illustrative controls here, not known traits. Nothing is saved to your profile unless you explicitly choose it below.</p></header>
         <div className="lab-controls">
           <div className="lab-control"><div className="control-heading"><span>01 · Depth</span><strong>{selectedDepth.label} · {depth}/10</strong></div>
-            <div className="lab-depth" role="radiogroup" aria-label="Try a skin depth">{DEPTHS.map((item) => <button key={item.depth} type="button" role="radio" aria-checked={depth === item.depth} aria-label={`Depth ${item.depth}: ${item.label}`} className={depth === item.depth ? "is-selected" : ""} style={{ backgroundColor: item.hex }} onClick={() => setDepth(item.depth)} />)}</div><p>Choose a swatch to change the examples below.</p>
+            <div className="lab-depth" role="group" aria-label="Try a broad skin depth">{DEPTHS.map((item) => <ToneSwatch key={item.depth} label={`Depth ${item.depth}: ${item.label}`} selected={depth === item.depth} color={item.hex} onClick={() => { setDepth(item.depth); setEdited((current) => ({ ...current, depth: true })); }} />)}</div><p>Broad examples, not the quiz’s forty-swatch selection.</p>
           </div>
           <div className="lab-control"><div className="control-heading"><span>02 · Temperature</span><strong>{undertone}</strong></div>
-            <div className="lab-undertone">{(["Warm", "Cool", "Neutral", "Not sure"] as Undertone[]).map((item) => <button type="button" key={item} className={`pill ${undertone === item ? "is-selected" : ""}`} aria-pressed={undertone === item} onClick={() => setUndertone(item)}>{item}</button>)}</div>
-            <button type="button" className={`pill ${olive ? "is-selected" : ""}`} aria-pressed={olive} onClick={() => setOlive((current) => !current)}>Explore an olive cast too</button>
+            <div className="lab-undertone">{(["Warm", "Cool", "Neutral", "Not sure"] as Undertone[]).map((item) => <Choice key={item} title={item} selected={undertone === item} onClick={() => { setUndertone(item); setEdited((current) => ({ ...current, undertone: true })); }} />)}</div>
+            <Choice title="Explore an olive cast too" selected={olive} onClick={() => { setOlive((current) => !current); setEdited((current) => ({ ...current, olive: true })); }} />
           </div>
         </div>
         <div className="harmony-row">
           <ColorWheel selected={selectedHue} onSelect={setSelectedHue} />
           <div className="harmony-copy"><span className="mono">COLOR THEORY, LOOSELY HELD</span><h3>Choose a mood.</h3>
-            <div className="toggle-row"><button type="button" className={`pill ${harmony === "analogous" ? "is-selected" : ""}`} aria-pressed={harmony === "analogous"} onClick={() => setHarmony("analogous")}>Analogous</button>
-              <button type="button" className={`pill ${harmony === "complementary" ? "is-selected" : ""}`} aria-pressed={harmony === "complementary"} onClick={() => setHarmony("complementary")}>Complementary</button></div>
+            <div className="toggle-row"><Choice title="Analogous" selected={harmony === "analogous"} onClick={() => setHarmony("analogous")} />
+              <Choice title="Complementary" selected={harmony === "complementary"} onClick={() => setHarmony("complementary")} /></div>
             <p>{harmony === "analogous" ? "Neighboring hues feel connected and tonal. Try a soft gradient or repeat one color in a smaller detail." : "Opposite hues create a livelier contrast. One can be the main event; the other can be a small accent."}</p>
-            <div className="swatch-row">{harmonyIndices.map((index) => <button type="button" key={index} className="example-swatch" style={{ backgroundColor: COLOR_WHEEL[index].hex }} title={`Try ${COLOR_WHEEL[index].name}`} aria-label={`Try ${COLOR_WHEEL[index].name}`} onClick={() => setSelectedHue(index)} />)}</div>
+            <div className="swatch-row">{harmonyIndices.map((index) => <ToneSwatch key={index} label={`Try ${COLOR_WHEEL[index].name}`} color={COLOR_WHEEL[index].hex} selected={selectedHue === index} onClick={() => setSelectedHue(index)} />)}</div>
             <p>Your skin depth changes contrast, not permission.</p>
           </div>
         </div>
         <div className="editor-section">
           <span className="eyebrow">Bring the ideas to makeup</span><h3>Try a color story.</h3>
-          <div className="example-tabs" role="tablist" aria-label="Makeup color examples">{EXAMPLES.map((item) => <button key={item} type="button" role="tab" aria-selected={example === item} className={`pill ${example === item ? "is-selected" : ""}`} onClick={() => setExample(item)}>{item}</button>)}</div>
+          <div className="example-tabs" role="group" aria-label="Educational makeup color examples">{EXAMPLES.map((item) => <Choice key={item} title={item} selected={example === item} onClick={() => setExample(item)} />)}</div>
           <div className="example-content"><div className="swatch-row">{samplePalettes[example].map((color, index) => <span key={`${color}-${index}`} className="example-swatch" style={{ backgroundColor: color }} />)}</div>
             <div><h3>{exampleCopy[example].title}</h3><p>{exampleCopy[example].body}</p></div>
           </div>
@@ -137,8 +142,10 @@ export default function LearnPage({ profile, onUseProfile }: { profile: Profile;
         <div><p>Screens, lighting, wear time and product formulas all shift how a shade looks. A product can oxidize, sheer out or read differently beside your natural lip or cheek color.</p>
           <p>Compare swatches in daylight when you can, give complexion products time to dry down, and use sample sizes or store testers if available. Your own mirror is more useful than a rigid chart.</p></div>
       </section>
-      <section className="learn-cta"><div><span className="mono">TAKE YOUR NOTES WITH YOU</span><h2>Keep exploring on your own terms.</h2><p>Use these choices in your local profile, or head straight to product examples.</p></div>
-        <div className="hero-actions"><button className="primary" type="button" onClick={() => onUseProfile({ depth, undertone, oliveCast: olive })}>Use in my profile <ArrowRight size={15} /></button><Link className="text-button" href="/discover">Explore examples <ArrowRight size={14} /></Link></div>
+      <section className="learn-cta"><div><span className="mono">TAKE YOUR NOTES WITH YOU</span><h2>Keep exploring on your own terms.</h2><p>Only controls you explicitly change can update your quiz. A broad depth change asks you to choose an exact quiz swatch again. No defaults become known traits.</p>{!hasEdits && <p>Change a depth, temperature or olive control to enable using those choices.</p>}</div>
+        <div className="hero-actions"><Button disabled={!hasEdits} onClick={() => onUseProfile({
+          ...(edited.depth ? { depth } : {}), ...(edited.undertone ? { undertone } : {}), ...(edited.olive ? { oliveCast: olive } : {}),
+        })}>Use my changed choices <ArrowRight size={15} /></Button><Link className="text-button" href="/results">Explore product research <ArrowRight size={14} /></Link></div>
       </section>
     </main>
   );

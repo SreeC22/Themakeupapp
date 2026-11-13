@@ -1,7 +1,7 @@
 import type { Undertone } from "../data";
 
 export const QUIZ_STEPS = [
-  "products", "depth", "undertone", "categories", "review",
+  "depth", "undertone", "categories", "products", "review",
 ] as const;
 
 export type QuizStep = typeof QUIZ_STEPS[number];
@@ -41,10 +41,21 @@ export type QuizDraft = {
   budget: string;
   finish: string;
   skinType: string;
+  oliveSubtype?: string;
+  saturation?: string;
+  coverage?: string;
+  concealerIntent?: string[];
+  lipPigmentation?: string;
+  lipOpacity?: string;
+  colorFamilies?: string[];
+  fragrancePreference?: string;
+  sensitivityPreference?: string;
+  applicationStyle?: string;
+  surfaceRedness?: string;
 };
 
 export const INITIAL_QUIZ_DRAFT: QuizDraft = {
-  step: "products",
+  step: "depth",
   products: [],
   productMatchIndex: 0,
   noCurrentMakeup: false,
