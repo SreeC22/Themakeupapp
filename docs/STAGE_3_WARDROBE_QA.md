@@ -37,7 +37,11 @@ The real browser run used its own TEST-labeled local data, not the owner's brows
 
 It found a display bug: skipping Foundation hid its assessment product and incorrectly triggered a “no longer available” warning, although the saved collection reference remained intact. The condition now checks actual collection membership. A dedicated regression test covers present, skipped, unselected and genuinely removed references.
 
-The follow-up continues the same browser session over the fix and the remaining routine-save/reload/protection checks. Final observations are appended below after that pass.
+The browser session stopped at the skipped-step warning. The warning is now fixed and covered by a regression test, but the planned browser follow-up was blocked before it could run. Therefore the following are **not verified in the browser**: routine save/edit/reload, routine-ID preservation, future-version save protection through the UI, the research page, and the remaining responsive sizes. Automated browser testing was unavailable in the current session; passing code tests are not a substitute for those checks.
+
+Before stopping, the browser did verify known-shade onboarding; saving and retaining a draft through an internal detail-page round trip; saving a TEST-labeled Neu Edit; adding and marking the exact multi-use variant as owned; and reusing that same item for both Cheeks and Eyes. It verified the ordinary blush picker omitted Eyes and Lip color, simple mode did not require Foundation, and simple/elaborate views referenced the same collection. It stopped before routine save, so saved routines remain to be checked end to end.
+
+The display-warning fix was typechecked, covered by the dedicated membership test, and included in the final website build. The TEST-labeled browser data remained in that isolated test browser. No owner-browser, production or authenticated data was touched.
 
 ## Scope limits
 
