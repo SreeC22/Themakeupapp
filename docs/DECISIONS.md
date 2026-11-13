@@ -6,15 +6,17 @@ Use the existing React website and shared design system. Keep the native app, ro
 
 Reason: the owner explicitly requested extension, not a rebuild or silent replacement.
 
-## New brief versus older quiz
+## Stage 1 quiz baseline and newer onboarding
 
-The updated brief supersedes the old current-makeup-first order and asks for a depth-first consultation, first-class olive, optional saturation and lip pigmentation, and four shopping categories only. Preserve typed brand entry and compact progressive questions instead of restoring the old long quiz. Preserve forty-swatch identifiers; do not substitute Pantone identifiers.
+Stage 1 superseded the old current-makeup-first order with a depth-first consultation, first-class olive and four shopping categories. Preserve typed brand entry, forty-swatch identifiers and Pantone restrictions.
+
+The newer onboarding brief now supersedes a single mandatory depth-first path. Start with equally prominent known-reference and manual-complexion options, producing one editable profile. Collect only essentials up front and persist category preferences in discovery instead of repeating a long questionnaire.
 
 ## Honest product preview
 
 Reuse historical research records instead of inventing demonstration products or copying older illustrative examples into a supposedly verified catalog. Names and recorded source URLs can be shown with the observation date. They do not establish current availability, precise shade identity, compatibility, price or formula.
 
-With no exact-shade evidence, show an exploratory listing and an honest no-exact-match explanation. Blush/lips use color-family exploration, not complexion shade-match claims. The ranking engine and full catalog remain later stages.
+With no exact-shade evidence, show an exploratory listing and an honest no-exact-match explanation. Blush/lips use color exploration, not complexion shade-match claims. The owner now authorizes initial explainable matching in Stage 2 alongside a representative verified catalog subset. The full catalog remains progressive, not a Stage 2 exit requirement.
 
 ## Local-only state
 
@@ -28,8 +30,10 @@ Do not reproduce Pantone's proprietary library or label the selector certified. 
 
 ## Hosting and repository boundary
 
-Work on a feature branch in the existing workspace. GitHub push authentication is unresolved and is not a prerequisite for a local preview. No production deployment, database migration, waitlist submission or retailer purchase is authorized.
+Work on a feature branch in the existing workspace. Remote push is not a prerequisite for a local preview. Stage 2 authorizes additive development catalog work, not replacement of the owner's existing database. No production deployment/migration, push, waitlist submission or retailer purchase is authorized.
 
 ## Stage gates
 
-The owner authorized Stage 0 and Stage 1 together in this request. Stage 0 baseline results are reported before Stage 1 implementation. Stop after showing Stage 1's working preview, actual verification results and limitations. Stages 2 through 5 require the next review checkpoint.
+The owner accepted Stage 1 based on its report and authorized Stage 2. The initial matching work previously labeled Stage 3 and the subsequent two-path onboarding brief now belong to Stage 2. Stop for review after its working preview, actual tests, verified coverage and data gaps. Do not automatically start another phase.
+
+Public community is outside the MVP until 500+ registered users and explicit phase approval. Existing private draft data must be preserved, not presented as published experiences. Real accounts and private syncing remain separate work.

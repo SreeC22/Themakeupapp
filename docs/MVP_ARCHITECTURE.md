@@ -6,7 +6,7 @@ Extend the existing website and shared Neu package. Keep its responsive homepage
 
 Stage 1 is a working browser preview. Historical product metadata comes from existing research, with source dates and explicit shade/availability limits. Do not add invented variants, prices, formula facts, images, users or reviews.
 
-## Routes
+## Stage 1 routes (implemented baseline)
 
 - `/`: approved homepage, four launch categories, quiz and guest browsing.
 - `/quiz`: compact depth-first consultation, unknown/skip paths and optional refinements.
@@ -27,12 +27,31 @@ Retain the current stable forty-swatch identifiers and approximate-color disclai
 
 The Stage 1 product projection contains only source-backed names, categories and URLs from existing research. Record its source observation date. Unknown prices/finish/coverage/shades stay null. Sorting is browsing, not a disguised match algorithm. No calibrated scores, stock assertions or paid placements.
 
-## Later stages, not silently implemented now
+## Revised roadmap after Stage 1 approval
 
-Stage 2: normalized product/shade/offer/source entities, approved catalog curation and source-permission review, reconciliation with existing Supabase data and explicit migrations.
+The owner accepted the Stage 1 report and authorized Stage 2, including explainable recommendations previously listed under Stage 3. The subsequent onboarding brief also belongs in Stage 2. See [Stage 2 requirements](STAGE_2_REQUIREMENTS.md). The uploaded original specification remains unchanged as historical source material; these newer instructions take precedence where they differ.
 
-Stage 3: versioned deterministic category-specific ranking with confidence separate from fit and regression fixtures.
+### Stage 2: verified catalog, shorter onboarding and explainable discovery
 
-Stage 4: real authentication, review ownership, private saves, rate limits, reporting, moderation and two-account RLS verification. Use the owner's existing Supabase project. A server/edge layer may be justified for privileged moderation and rate limiting; credentials must never enter browser code. Static hosting can still serve the frontend with authorized APIs, so a wholesale hosting replacement is not required.
+- Add normalized brand, product line, shade/color variant, source and matching-evidence entities without replacing existing data or the owner's Supabase project.
+- Work toward 25 selected US-market beauty brands, 100–150 product lines and approximately 2,000–4,000 variants across Foundation, Concealer, Blush and Lips. These are progressive targets, not Stage 2 exit requirements.
+- Each selected line should eventually include its complete current US range. Track enumerated variants, source-declared range size, missing variants, observation date and completeness status separately. A partial verified subset must not be labeled a complete range.
+- Prioritize a representative verified subset across drugstore, mid-range and luxury. Separate verified facts, estimates and user experiences; report evidence gaps independently of coverage.
+- Begin with equally prominent "I already know my shade" and "Help me find my shade" paths. Both produce the same editable complexion profile. Preserve typed brand search, the manual forty-swatch palette, unknowns and backtracking.
+- Keep shared onboarding limited to essential complexion inputs, oily/dry/combination skin type and optional undertone confirmation. Move category preferences into discovery, persist them and avoid repeated questions.
+- Immediately show all four categories with explainable, versioned, category-specific recommendations. Handle olive temperatures, saturation, reference fit/oxidation corrections and two-toned lips without invented shade equivalences, percentages or confidence scores.
+- Preserve references when catalog entries or evidence are missing. Insufficient evidence means limited suggestions or no precise cross-brand match, never fabricated certainty.
+- Preserve existing Stage 1 design, local data, learning, saves, comparison, export/deletion and compatibility paths. No account gate before discovery.
+- Test both onboarding paths, selections and missing entries, persistence/editing, reference corrections, explanations, incorrect undertones, mobile layouts and existing regressions.
 
-Stage 5: release hardening, real-device/accessibility/security checks and owner-approved hosting migration. No new tracking, camera/selfie processing, paid services or public deployment in this delivery.
+Stop after showing a working Stage 2 preview, actual test results, verified coverage and outstanding gaps. Do not push or deploy without approval.
+
+### Following phases: only after another owner review
+
+Further catalog expansion, calibration and discovery refinement can follow Stage 2 approval. Do not start a separate ranking phase automatically; its initial explainable logic is now included in Stage 2.
+
+Public community features are outside the MVP. Introduce them only after 500+ registered users **and** explicit approval of that phase. Preserve existing private local drafts/data without representing them as public reviews. Real authentication and private account functionality remain separately scoped; no synthetic registration counts or fake users.
+
+When approved, community work must include ownership, private saves, rate limits, reporting, moderation and two-account RLS verification against the owner's existing Supabase project. A server/edge layer may be justified for privileged moderation and rate limiting; credentials must never enter browser code.
+
+Release hardening and any hosting change require their own review. No tracking, camera/selfie processing, paid services or public deployment is silently authorized.
