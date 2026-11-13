@@ -47,4 +47,4 @@ The display-warning fix was typechecked, covered by the dedicated membership tes
 
 These results do not establish calibrated shade matches, wear/skin compatibility, complete priced baskets or identical results on two-toned lips. The data coverage and remaining beta work are documented in `STAGE_3_WARDROBE.md`. Links are real product pages but may default to another variant; confirm the exact shade, price and stock at the retailer.
 
-No production/Supabase/native-app changes, pushes, deployments, public review submissions or community activation were performed.
+The history-preserving review branch and separate Replit-history branch were pushed to GitHub with owner approval. GitHub `main` remains unchanged. No production/Supabase/native-app changes, deployments, public review submissions or community activation were performed.

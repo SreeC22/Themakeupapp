@@ -6,14 +6,15 @@ The reusable collection is central: Onboarding → Complexion Profile → Your N
 
 ### Current status
 
-- Stage 3 is committed on local `main`. This is not a GitHub push or deployment.
+- Stage 3 is committed on local `main`. Its complete Replit commit history is on GitHub branch `replit/neu-local-main-history`; the full tracked workspace snapshot is on `review/neu-stage-3-github`.
+- GitHub `main` remains unchanged. The review branch preserves the existing app and keeps the earlier website port separate from the Replit snapshot so the owner can decide what to retain.
 - 231 automated tests passed; workspace typecheck, post-fix website typecheck and production website build passed.
 - The browser check verified onboarding, Edit save, owned multi-use makeup, Cheeks/Eyes reuse and simple/elaborate collection reuse. It found a false “item unavailable” warning on skipped steps; this was fixed and regression-tested.
 - **Still unverified in the browser:** save/edit/reload a routine; its same-ID and note/step persistence; UI protection of future-version data; `/research` presentation; and the remaining mobile/tablet viewports. Do not mark the Stage 3 browser journey fully verified.
 - The browser run used isolated `TEST` data. It did not touch owner-browser data or member accounts.
 - Current development catalog: 26 selected brands, 16 lines, 399 shade/palette identities (one is a palette SKU, not 12 separately sold pans), and one unresolved shade identity. Fifteen selector ranges are reconciled; one is partial. Only four individual variants have verified prices. Six research observations are candidate-only; no independently supported favorites are established.
 - Existing profiles, feedback, four-slot looks and saved products remain available. Local edits and routines are not cloud-synced.
-- No production/Supabase or native-app changes, remote push, deployment or public community activation. Public community remains gated on 500+ registered users **and** separate owner approval.
+- Review and history branches were pushed with owner approval. No production/Supabase or native-app changes, GitHub `main` update, deployment or public community activation. Public community remains gated on 500+ registered users **and** separate owner approval.
 
 Use the two Stage 3 documents above as the current source of truth. Sections explicitly marked historical below are context, not the active product roadmap.
 
@@ -133,4 +134,6 @@ The development-only catalog and research imports are `pnpm --filter @workspace/
 
 ## Git and publishing
 
-The active source repository is the Replit workspace. Stage 3 is committed on local `main`; no remote push was performed. This user explicitly withheld push and deployment approval for this stage. Do not attempt GitHub operations, change deployment settings, or publish until they are separately approved. A local commit is not a push, release, or production database migration.
+The active working source remains the Replit workspace. Its full local `main` commit history is mirrored on GitHub branch `replit/neu-local-main-history`. A separate history-preserving review branch, `review/neu-stage-3-github`, is based on GitHub `main`; it keeps the existing app intact and includes the full tracked Replit workspace under `replit-workspace/`. The older portable website port remains separately under `website/` for owner review.
+
+GitHub `main` was not changed or merged. No deployment or production database migration was performed. Review the two website copies and choose what to retain before merging anything.
